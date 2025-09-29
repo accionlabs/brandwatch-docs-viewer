@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Data Loading</title>
+</head>
+<body>
+    <h1>Testing Data Loading</h1>
+    <div id="results"></div>
+
+    <script>
+        async function testDataLoading() {
+            const results = document.getElementById('results');
+            const modules = ['listen', 'measure', 'publish', 'engage'];
+
+            for (const module of modules) {
+                try {
+                    const response = await fetch(`/data/${module}_user_flows_with_citations.json`);
+                    const data = await response.json();
+
+                    let flows = null;
+                    if (data.flows) {
+                        flows = data.flows;
+                    } else if (data.user_flows) {
+                        flows = data.user_flows;
+                    } else {
+                        // Check nested structure
+                        const keys = Object.keys(data);
+                        for (const key of keys) {
+                            if (data[key]?.flows) {
+                                flows = data[key].flows;
+                                break;
+                            } else if (data[key]?.user_flows) {
+                                flows = data[key].user_flows;
+                                break;
+                            }
+                        }
+                    }
+
+                    results.innerHTML += `
+                        <div style="margin: 20px; padding: 10px; border: 1px solid #ccc;">
+                            <h2>${module}</h2>
+                            <p>Flows found: ${flows ? flows.length : 0}</p>
+                            ${flows && flows[0] ? `<p>First flow: ${flows[0].name || flows[0].flow_name}</p>` : ''}
+                        </div>
+                    `;
+                } catch (error) {
+                    results.innerHTML += `
+                        <div style="margin: 20px; padding: 10px; border: 1px solid red;">
+                            <h2>${module}</h2>
+                            <p>Error: ${error.message}</p>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        // Run when page loads
+        testDataLoading();
+    </script>
+</body>
+</html>

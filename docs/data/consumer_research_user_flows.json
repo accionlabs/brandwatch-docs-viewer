@@ -1,0 +1,595 @@
+{
+  "module": "Consumer Research",
+  "description": "Brandwatch Consumer Research provides digital consumer intelligence through social listening, data analysis, and brand monitoring capabilities.",
+  "user_flows": [
+    {
+      "flow_name": "Project Creation and Management",
+      "description": "Complete workflow for creating, configuring, and managing projects to organize data sources and dashboards",
+      "prerequisites": [
+        "User has access to Consumer Research platform",
+        "User has appropriate permissions (Admin, Regular, or Admin+)"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access project creation",
+          "description": "Navigate to Consumer Research main navigation sidebar and click Projects drop-down menu",
+          "details": "Projects dropdown appears at top of sidebar"
+        },
+        {
+          "step": 2,
+          "action": "Initiate project creation",
+          "description": "Click ellipsis (three dots) icon and select 'Create Project'",
+          "details": "Opens project creation window"
+        },
+        {
+          "step": 3,
+          "action": "Configure project details",
+          "description": "Fill in required project information",
+          "details": [
+            "Enter project name (required)",
+            "Add description (optional)",
+            "Select time zone (required)",
+            "Configure project settings (anonymization if available)"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Set up project sharing",
+          "description": "Configure project access and permissions",
+          "details": [
+            "Click 'Add Project' to proceed to sharing step",
+            "Expand client list by clicking + button",
+            "Select individual users or entire clients via checkboxes",
+            "Users selected will see queries, categories, and tags"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Finalize project creation",
+          "description": "Complete project setup and access",
+          "details": [
+            "Click 'Save Project Members' to finalize",
+            "System creates project and navigates to project screen",
+            "Project becomes accessible via Projects dropdown"
+          ]
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Project Settings",
+          "options": [
+            "Enable anonymization (if available)",
+            "Use standard project settings"
+          ],
+          "note": "Anonymization cannot be changed after project creation"
+        },
+        {
+          "point": "Sharing Configuration",
+          "options": [
+            "Share with individual users",
+            "Share with entire client organizations",
+            "Mix of individual and client-level sharing"
+          ]
+        }
+      ],
+      "outcomes": [
+        "New project created and accessible",
+        "Project members configured with appropriate access",
+        "Data sources and dashboards can be organized within project",
+        "Project appears in user's project list"
+      ],
+      "additional_actions": [
+        "Edit project details via ellipsis > Edit project",
+        "Modify project members via ellipsis > Edit project members",
+        "Manage all projects via Consumer Research admin",
+        "Switch between projects using dropdown"
+      ]
+    },
+    {
+      "flow_name": "Dashboard Creation Using Dashboard Wizard",
+      "description": "Automated dashboard creation process that segments data using AI-generated categories and rules",
+      "prerequisites": [
+        "User has existing data source (query) in project",
+        "User has dashboard creation permissions (Admin, Regular, Admin+)",
+        "Query has at least 24 hours of data available"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access Dashboard Wizard",
+          "description": "Navigate to Add Dashboard section",
+          "details": [
+            "Go to Consumer Research Dashboards section",
+            "Click 'Add Dashboard'",
+            "Scroll to bottom of New dashboard window"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Select wizard type",
+          "description": "Choose between Brand Monitoring or Campaign Tracking wizard",
+          "details": [
+            "Brand Monitoring: Monitor single brand using brand query",
+            "Campaign Tracking: Analyze hashtag impact and campaign performance"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Configure wizard parameters",
+          "description": "Answer wizard questions to define segmentation",
+          "details": [
+            "Select existing data source (query) from project",
+            "Choose segmentation aspects (products, hashtags, people, etc.)",
+            "Enter specific details for each segmentation type",
+            "System uses inputs to create Rules and Categories"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Review and customize segments",
+          "description": "Examine auto-generated segmentation options",
+          "details": [
+            "Review suggested product breakdowns",
+            "Add or remove product aliases",
+            "Customize category definitions",
+            "Modify pre-filled fields based on query template"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Generate dashboard",
+          "description": "Complete wizard process and create dashboard",
+          "details": [
+            "System creates dashboard with segmented data views",
+            "Auto-generates categories and rules with [WIZARD-N] naming",
+            "Dashboard tabs created based on selected segmentation",
+            "Categories and rules appear in respective sections"
+          ]
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Wizard Type Selection",
+          "options": [
+            "Brand Monitoring: For single brand analysis with product/hashtag/people segmentation",
+            "Campaign Tracking: For hashtag-focused campaign impact analysis"
+          ]
+        },
+        {
+          "point": "Segmentation Configuration",
+          "options": [
+            "Product-based segmentation",
+            "Hashtag-based segmentation",
+            "Key people segmentation",
+            "Multiple segmentation types combined"
+          ]
+        },
+        {
+          "point": "Customization Level",
+          "options": [
+            "Accept wizard suggestions as-is",
+            "Modify suggested segmentation",
+            "Add custom elements to segmentation"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Fully functional dashboard created with pre-filtered data views",
+        "Auto-generated categories and rules for data segmentation",
+        "Dashboard accessible in project dashboard list",
+        "Multiple dashboard tabs based on segmentation choices",
+        "Foundation for further customization and analysis"
+      ],
+      "rerun_process": {
+        "description": "Dashboard Wizard can be rerun to modify segmentation",
+        "warning": "Rerunning deletes all existing wizard-generated items and manual edits",
+        "steps": [
+          "Access dashboard More menu",
+          "Select 'Rerun Dashboard Wizard'",
+          "Complete wizard process again with new parameters"
+        ]
+      },
+      "cleanup_options": [
+        "Delete wizard dashboard and all generated items via Delete button",
+        "Choose to delete only dashboard or all associated items",
+        "Items marked with [WIZARD-N] prefix for easy identification"
+      ]
+    },
+    {
+      "flow_name": "Events Feed Monitoring and Analysis",
+      "description": "Real-time event detection and analysis workflow for discovering significant changes in social media conversations",
+      "prerequisites": [
+        "Active queries or channels set up in project",
+        "At least 24 hours of query data available",
+        "Queries actively collecting conversation data"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access Events Feed",
+          "description": "Navigate to Events Feed in Consumer Research",
+          "details": [
+            "Click 'Events feed' in left-hand navigation sidebar",
+            "Events marked as 'NEW' in navigation",
+            "Feed shows events from last 14 days"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Review event cards",
+          "description": "Examine detected events in chronological feed",
+          "details": [
+            "Events displayed as cards with key metrics",
+            "Each card shows percentage of query volume",
+            "Events include Volume shifts, Sentiment spikes, Trending content",
+            "Cards show timestamp and query association"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Filter and prioritize events",
+          "description": "Apply filters to focus on relevant events",
+          "details": [
+            "Use event type filters (Sentiment, Volume, Hashtag, Article, Repost, Country, Author)",
+            "Select specific queries using 'Select queries' dropdown",
+            "Apply filters and click 'Apply' to update feed",
+            "Most relevant events surface automatically"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Analyze specific events",
+          "description": "Deep-dive into individual events for detailed analysis",
+          "details": [
+            "Click on event card to open detailed dashboard",
+            "Examine event-specific tabs (e.g., 'Explore volume shift', 'All activity on the day')",
+            "Review metrics like mention volume over time, sentiment analysis, topics, top authors",
+            "Access all mentions related to the event"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Take action on insights",
+          "description": "Save insights and set up monitoring",
+          "details": [
+            "Save dashboard for ongoing monitoring",
+            "Create Signal from event for future notifications",
+            "Share dashboard components with team",
+            "Set up email alerts for similar events"
+          ]
+        }
+      ],
+      "event_types": [
+        {
+          "type": "Volume Shift",
+          "trigger": "Dramatic upward shift in mention volume",
+          "analysis_tabs": ["Explore volume shift: mention volume over time", "All activity: sentiment by hour, topics, top authors, all mentions"]
+        },
+        {
+          "type": "Sentiment Spike",
+          "trigger": "Dramatic shift in positive or negative sentiment",
+          "analysis_tabs": ["Explore sentiment shift: positive/negative mentions over time", "All activity: sentiment by hour, topics, all mentions"]
+        },
+        {
+          "type": "Country Volume Spike",
+          "trigger": "Dramatic volume shift in specific country",
+          "analysis_tabs": ["Explore trending country: volume comparison by country", "All activity: sentiment, topics, authors, mentions"]
+        },
+        {
+          "type": "Trending Repost",
+          "trigger": "High activity around specific repost/retweet",
+          "analysis_tabs": ["Explore trending repost: volume over time, all mentions", "All activity: complete day analysis"]
+        },
+        {
+          "type": "Trending Article",
+          "trigger": "High activity around specific article",
+          "analysis_tabs": ["Explore trending article: volume, topics, mentions", "All activity: comprehensive analysis"]
+        },
+        {
+          "type": "Trending Hashtag",
+          "trigger": "Spike in specific hashtag usage",
+          "analysis_tabs": ["Explore trending hashtag: volume, topics, mentions", "All activity: full day breakdown"]
+        },
+        {
+          "type": "Trending Author",
+          "trigger": "Author trending on social platforms",
+          "analysis_tabs": ["Explore trending author: volume, mentions", "All activity: sentiment, topics, authors"]
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Event Priority Assessment",
+          "options": [
+            "Focus on high-impact events (high query volume percentage)",
+            "Investigate sentiment-related events for brand reputation",
+            "Monitor geographic trends for regional insights",
+            "Track viral content for engagement opportunities"
+          ]
+        },
+        {
+          "point": "Analysis Depth",
+          "options": [
+            "Quick review via event card summary",
+            "Detailed analysis via dashboard exploration",
+            "Comprehensive investigation including all mentions"
+          ]
+        },
+        {
+          "point": "Response Strategy",
+          "options": [
+            "Save for ongoing monitoring",
+            "Create alerts for similar events",
+            "Share insights with team",
+            "Take immediate action based on findings"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Real-time awareness of significant conversation changes",
+        "Detailed insights into event drivers and context",
+        "Saved dashboards for ongoing event monitoring",
+        "Alert systems for future similar events",
+        "Actionable intelligence for brand management and campaign optimization"
+      ],
+      "automation_features": [
+        "Automatic event detection based on threshold algorithms",
+        "24-hour comparison windows for anomaly detection",
+        "Auto-generated event cards with key metrics",
+        "Integration with existing query and channel data"
+      ]
+    },
+    {
+      "flow_name": "Homepage Overview and Quick Actions",
+      "description": "Central dashboard workflow for project overview, quick insights, and rapid access to key platform features",
+      "prerequisites": [
+        "User logged into Consumer Research platform",
+        "User has access to at least one project",
+        "Data collection active in accessible projects"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access homepage overview",
+          "description": "Navigate to Consumer Research homepage",
+          "details": [
+            "Homepage automatically loads most recently visited project",
+            "For first-time users, loads biggest project (most queries/rules)",
+            "Provides comprehensive project overview"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Review getting started guide",
+          "description": "Follow guided setup for brand monitoring",
+          "details": [
+            "Set up social accounts connection",
+            "Collect conversations through query setup",
+            "Visualize data through dashboard creation",
+            "Segment data using categories and rules",
+            "Get notified via alerts configuration",
+            "Start exploring Consumer Research features"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Use Brandwatch Search",
+          "description": "Perform AI-powered quick searches",
+          "details": [
+            "Enter search terms in quick search interface",
+            "AI technology identifies exact entities",
+            "Excludes irrelevant results automatically",
+            "Provides instant insights without complex setup",
+            "Bypasses need for complex searches and visualizations"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Access quick action links",
+          "description": "Use homepage shortcuts for common tasks",
+          "details": [
+            "Set up data: Optimize searches for relevant conversations",
+            "Analyze data: Explore existing data and share insights",
+            "Segment data: Get deeper insights through targeting",
+            "Manage alerts: Set up notifications for data changes"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Monitor data peaks",
+          "description": "Review unusual activity alerts (Admin+ users only)",
+          "details": [
+            "Examine volume increase alerts",
+            "Review sentiment shift notifications",
+            "Check trending country/hashtag/story alerts",
+            "Investigate mentioned poster spikes",
+            "Click cards to explore further in dashboards"
+          ]
+        }
+      ],
+      "data_peaks_types": [
+        {
+          "type": "Volume Increase",
+          "description": "Sudden spike in mention volume for query"
+        },
+        {
+          "type": "Negative Sentiment Shift",
+          "description": "Net sentiment suddenly shifted to overwhelmingly negative"
+        },
+        {
+          "type": "Positive Sentiment Shift",
+          "description": "Net sentiment suddenly shifted to overwhelmingly positive"
+        },
+        {
+          "type": "Trending Country",
+          "description": "Sudden volume spike from specific country"
+        },
+        {
+          "type": "Trending Post (Tweet)",
+          "description": "High repost/retweet activity on single post"
+        },
+        {
+          "type": "Trending Story",
+          "description": "High sharing activity for same story/article"
+        },
+        {
+          "type": "Trending Hashtag",
+          "description": "Sudden spike in specific hashtag usage"
+        },
+        {
+          "type": "Mentioned Poster (Tweeter)",
+          "description": "Sudden spike in @mentions of specific handle"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Search Method Selection",
+          "options": [
+            "Use Brandwatch Search for quick insights",
+            "Build complex queries for comprehensive monitoring",
+            "Combine both approaches for different needs"
+          ]
+        },
+        {
+          "point": "Data Peaks Response",
+          "options": [
+            "Explore immediately via dashboard creation",
+            "Create Signal for ongoing monitoring",
+            "Share insights with team members"
+          ]
+        },
+        {
+          "point": "Getting Started Approach",
+          "options": [
+            "Follow complete guided setup",
+            "Skip to specific advanced features",
+            "Use sample projects for learning"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Quick project overview and status understanding",
+        "Rapid access to insights via AI-powered search",
+        "Early warning system for data anomalies",
+        "Streamlined access to key platform features",
+        "Foundation for deeper analysis workflows"
+      ],
+      "learning_resources": [
+        "Brandwatch Academy training courses",
+        "Sample projects for exploration",
+        "Help center documentation",
+        "Brandwatch community access"
+      ],
+      "quick_actions": [
+        "Create new queries and dashboards",
+        "Access existing data analysis tools",
+        "Set up data segmentation",
+        "Configure alert systems",
+        "Explore platform capabilities"
+      ]
+    },
+    {
+      "flow_name": "Brandwatch AI Search and Quick Insights",
+      "description": "AI-powered search workflow for rapid insights without complex query building",
+      "prerequisites": [
+        "Access to Consumer Research platform",
+        "Understanding of search terms and entities of interest"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access Brandwatch Search",
+          "description": "Navigate to AI search interface",
+          "details": [
+            "Available from homepage quick search section",
+            "Designed for users pushed for time",
+            "Primary resource for new users"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Enter search terms",
+          "description": "Input brand, person, or topic for analysis",
+          "details": [
+            "Type search terms in search interface",
+            "AI technology provides real-time suggestions",
+            "System identifies exact entities as you type"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Review AI suggestions",
+          "description": "Examine AI-powered entity identification",
+          "details": [
+            "AI automatically excludes irrelevant results",
+            "Ensures more accurate search targeting",
+            "Prevents noise from similar but unrelated entities"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Access instant insights",
+          "description": "Review immediate data analysis",
+          "details": [
+            "Bypass complex search building process",
+            "Get immediate access to conversation data",
+            "View pre-built visualizations and analysis"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Explore deeper analysis",
+          "description": "Move to advanced features if needed",
+          "details": [
+            "Transition to full query building if required",
+            "Create custom dashboards from search results",
+            "Set up ongoing monitoring based on search insights"
+          ]
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Search Complexity",
+          "options": [
+            "Use AI search for quick insights",
+            "Build complex queries for comprehensive monitoring"
+          ]
+        },
+        {
+          "point": "Result Actions",
+          "options": [
+            "Use insights for immediate decisions",
+            "Create formal monitoring setup",
+            "Share results with team"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Rapid access to social media insights",
+        "AI-filtered, relevant conversation data",
+        "Foundation for more complex analysis setup",
+        "Quick validation of search approach before full implementation"
+      ],
+      "advantages": [
+        "Instant insights without setup time",
+        "AI-powered relevance filtering",
+        "Accessible to users without technical expertise",
+        "Gateway to more advanced platform features"
+      ]
+    }
+  ],
+  "integration_points": [
+    "Projects serve as containers for all data sources and dashboards",
+    "Dashboard Wizard integrates with existing query data",
+    "Events Feed connects to active queries and channels",
+    "Homepage provides unified access to all features",
+    "Brandwatch Search can transition to formal query setup"
+  ],
+  "key_features": [
+    "AI-powered entity identification and search",
+    "Automated dashboard creation with data segmentation",
+    "Real-time event detection and analysis",
+    "Project-based organization and sharing",
+    "Integrated learning resources and support"
+  ]
+}

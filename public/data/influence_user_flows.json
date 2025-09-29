@@ -1,0 +1,167 @@
+{
+  "module": "Influence",
+  "description": "Brandwatch Influence is an end-to-end influencer marketing solution that enables searching for influencers, managing relationships via CRM, handling payments, and organizing campaign tracking all in one platform.",
+  "user_flows": [
+    {
+      "flow_name": "Initial Account Setup and Onboarding",
+      "description": "Complete workflow for creating and configuring a new Influence account with security authentication",
+      "prerequisites": [
+        "Invitation email received from Brandwatch administrator",
+        "Valid mobile phone number for verification",
+        "Authenticator app installed (Google Authenticator or Authy recommended)",
+        "Access to email for invitation acceptance"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Accept invitation",
+          "description": "Access the Influence platform through invitation email",
+          "details": [
+            "Check email for Brandwatch Influence invitation",
+            "Click 'Accept invitation' button in email",
+            "Navigate to account creation page"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Create account credentials",
+          "description": "Set up name and secure password",
+          "details": [
+            "Enter full name in Name field",
+            "Create password meeting security requirements:",
+            "- Minimum 8 characters",
+            "- At least 1 uppercase letter",
+            "- At least 1 lowercase letter",
+            "- At least 1 digit",
+            "- At least 1 special character",
+            "Re-type password for confirmation",
+            "Click 'Create Account' button"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Verify mobile phone number",
+          "description": "Add and verify primary mobile number for account security",
+          "details": [
+            "Enter mobile phone number with country code",
+            "Click 'Send verification code' button",
+            "Receive SMS verification code",
+            "Enter verification code in confirmation field",
+            "If code not received, click 'Try sending it again here'",
+            "If still no code after 5 minutes, select 'Confirm that the phone number is correct'"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Configure two-factor authentication",
+          "description": "Set up 2FA for enhanced account security",
+          "details": [
+            "Choose authentication method: Authenticator app (recommended) or text message",
+            "For Authenticator app option:",
+            "- Download Google Authenticator or Authy app",
+            "- Scan QR code displayed on screen",
+            "- Enter 6-digit code from authenticator app",
+            "- Click 'Verify and enable'",
+            "For text message option:",
+            "- Receive SMS code on verified phone number",
+            "- Enter authentication code",
+            "- Click 'Submit Code'"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Complete setup and access platform",
+          "description": "Finalize account creation and access Influence tools",
+          "details": [
+            "Verify 2FA setup is complete",
+            "Automatic login to Influence platform",
+            "Access to Discover, CRM, Campaigns, and Payments tools",
+            "Account ready for influencer marketing activities"
+          ]
+        }
+      ],
+      "security_requirements": {
+        "password_criteria": [
+          "Minimum 8 characters length",
+          "At least 1 uppercase letter",
+          "At least 1 lowercase letter",
+          "At least 1 digit",
+          "At least 1 special character"
+        ],
+        "two_factor_authentication": {
+          "recommended_method": "Authenticator app (Google Authenticator or Authy)",
+          "alternative_method": "SMS text message",
+          "note": "SMS codes not supported in some countries"
+        },
+        "phone_verification": "Required for account recovery and security"
+      },
+      "decision_points": [
+        {
+          "point": "Two-Factor Authentication Method",
+          "options": [
+            "Authenticator app: More secure, works globally, requires smartphone app",
+            "Text message: Simple setup, dependent on SMS service availability",
+            "Recommendation: Use authenticator app for better security and reliability"
+          ]
+        },
+        {
+          "point": "Password Strategy",
+          "options": [
+            "Generate strong password meeting all requirements",
+            "Use password manager for secure storage",
+            "Ensure password is unique to Influence platform"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Fully configured Influence account with secure authentication",
+        "Access to complete influencer marketing platform",
+        "Two-factor authentication enabled for enhanced security",
+        "Verified contact information for account recovery",
+        "Ready to begin influencer discovery and campaign management"
+      ]
+    }
+  ],
+  "core_tools": [
+    {
+      "tool": "Discover",
+      "purpose": "Search and identify influencers suitable for brand partnerships",
+      "capabilities": "Influencer discovery and evaluation"
+    },
+    {
+      "tool": "CRM",
+      "purpose": "Manage relationships and communications with influencers",
+      "capabilities": "Contact management and relationship tracking"
+    },
+    {
+      "tool": "Campaigns",
+      "purpose": "Organize, track, and measure influencer marketing campaigns",
+      "capabilities": "Campaign planning and performance monitoring"
+    },
+    {
+      "tool": "Payments",
+      "purpose": "Handle financial transactions and compensation for influencers",
+      "capabilities": "Payment processing and financial management"
+    }
+  ],
+  "platform_benefits": [
+    "End-to-end influencer marketing solution",
+    "Integrated workflow from discovery to payment",
+    "Centralized influencer relationship management",
+    "Campaign organization and tracking capabilities",
+    "Secure payment processing for influencer compensation"
+  ],
+  "limitations": [
+    "Limited documentation available for detailed workflow analysis",
+    "Advanced features and processes not covered in available materials",
+    "Specific tool functionalities require additional documentation"
+  ],
+  "key_features": [
+    "Comprehensive influencer search and discovery",
+    "Built-in CRM for influencer relationship management",
+    "Campaign planning and tracking tools",
+    "Integrated payment system for influencer compensation",
+    "Secure account setup with two-factor authentication",
+    "Mobile phone verification for account security"
+  ]
+}

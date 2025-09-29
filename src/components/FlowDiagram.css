@@ -1,0 +1,108 @@
+.flow-diagram {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flow-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.flow-node {
+  position: absolute;
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.flow-node:hover {
+  /* Removed transform animation to prevent rotation issues with decision boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.node-start,
+.node-end {
+  border-radius: 2rem;
+}
+
+.node-start {
+  background: #4CAF50;
+  color: white;
+}
+
+.node-end {
+  background: #F44336;
+  color: white;
+}
+
+.node-process {
+  background: #2196F3;
+  color: white;
+}
+
+.node-decision {
+  background: #FF9800;
+  color: white;
+  transform: rotate(45deg);
+  width: 120px;
+  height: 120px;
+}
+
+.node-decision span {
+  transform: rotate(-45deg);
+  display: block;
+  max-width: 85px;
+}
+
+.flow-connection {
+  z-index: 0;
+}
+
+.flow-citations {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #f5f7fa;
+  border-radius: 0.5rem;
+  border-left: 4px solid #2196F3;
+  flex-shrink: 0;
+}
+
+.flow-citations h4 {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.flow-citations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.flow-citations li {
+  font-size: 0.875rem;
+  color: #333;
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flow-citations li:before {
+  content: '📄';
+  font-size: 1rem;
+}

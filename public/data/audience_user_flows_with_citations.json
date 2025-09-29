@@ -1,0 +1,891 @@
+{
+    "module": "Audience",
+    "description": "Brandwatch Audience provides unified customer experience insights by combining information from multiple touchpoints, enabling individual customer interaction management and aggregated customer data analysis from connected channels.",
+    "user_flows": [
+        {
+            "flow_name": "Audience Profile Discovery and Analysis",
+            "description": "Core workflow for exploring and analyzing customer profiles within the Audience database",
+            "prerequisites": [
+                "Access to Audience module",
+                "Profiles indexed from Engage interactions or CSV imports",
+                "Understanding of customer segmentation needs"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access Audience overview",
+                    "description": "Navigate to Audience module for high-level insights",
+                    "details": [
+                        "View total indexed profiles count",
+                        "Review audience growth trends",
+                        "Examine data source distribution",
+                        "Check talking about topics and conversation drivers"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Navigate to People tab",
+                    "description": "Access detailed profile management interface",
+                    "details": [
+                        "View complete list of indexed audience profiles",
+                        "See available filter categories on left sidebar",
+                        "Review profile count indicators for each filter field"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Apply profile filters",
+                    "description": "Segment audience using dynamic filtering system",
+                    "details": [
+                        "Select from available filter fields (demographics, location, social networks, etc.)",
+                        "Use filter operators: 'Is' (contains keyword), 'Is not' (excludes keyword), 'Has [field]' (field not empty)",
+                        "Combine multiple filters for precise targeting",
+                        "View real-time profile count updates"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Analyze filtered results",
+                    "description": "Review aggregated insights from filtered profile set",
+                    "details": [
+                        "View total profile count and gender distribution",
+                        "Click 'Show more' for expanded statistics",
+                        "Review talking about topics, labels, sources, development trends",
+                        "Analyze network distribution and data completeness"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Examine individual profiles",
+                    "description": "Drill down into specific customer profiles",
+                    "details": [
+                        "Click on any profile to open detailed view",
+                        "Review all available profile information",
+                        "Check social media links and engagement history",
+                        "View profile pictures, contact details, and demographics"
+                    ]
+                }
+            ],
+            "filter_capabilities": [
+                {
+                    "category": "Personal Information",
+                    "fields": [
+                        "Full name",
+                        "Gender",
+                        "Location",
+                        "Email",
+                        "Phone",
+                        "Address"
+                    ]
+                },
+                {
+                    "category": "Social Networks",
+                    "fields": [
+                        "Facebook",
+                        "Twitter/X",
+                        "Instagram",
+                        "LinkedIn",
+                        "TikTok",
+                        "YouTube"
+                    ]
+                },
+                {
+                    "category": "Engagement Data",
+                    "fields": [
+                        "Labels",
+                        "Customer ID",
+                        "Source/Channel",
+                        "Handle"
+                    ]
+                },
+                {
+                    "category": "Content Interaction",
+                    "fields": [
+                        "Talking about topics",
+                        "Engagement type",
+                        "Content preferences"
+                    ]
+                }
+            ],
+            "decision_points": [
+                {
+                    "point": "Filter Strategy",
+                    "options": [
+                        "Demographic segmentation: Age, gender, location filters",
+                        "Behavioral segmentation: Interaction patterns and engagement",
+                        "Channel segmentation: Social platform preferences",
+                        "Content segmentation: Topics and interests"
+                    ]
+                },
+                {
+                    "point": "Analysis Depth",
+                    "options": [
+                        "High-level overview: Aggregate statistics only",
+                        "Detailed analysis: Individual profile examination",
+                        "Comparative analysis: Multiple filter combinations"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Clear understanding of customer base composition",
+                "Identification of key customer segments",
+                "Insights into customer preferences and behaviors",
+                "Foundation for targeted marketing strategies"
+            ],
+            "dynamic_updates": {
+                "description": "Filters are dynamic and automatically update as customer profiles gain richer information",
+                "benefits": [
+                    "Always current segmentation",
+                    "Automatic audience growth",
+                    "Real-time data accuracy"
+                ]
+            },
+            "source_documents": [
+                "Audience/Getting Started/Introduction to Audience.pdf"
+            ]
+        },
+        {
+            "flow_name": "Audience Segmentation and Saving",
+            "description": "Workflow for creating and saving specific customer segments based on filtering criteria",
+            "prerequisites": [
+                "Completed profile filtering process",
+                "Defined segmentation criteria",
+                "Access to save audience functionality"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Define filter criteria",
+                    "description": "Apply specific filters to create desired segment",
+                    "details": [
+                        "Use People tab filtering interface",
+                        "Combine multiple filters as needed",
+                        "Review real-time profile count updates",
+                        "Verify segment meets requirements"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Review segment statistics",
+                    "description": "Analyze filtered segment characteristics",
+                    "details": [
+                        "Check total profile count",
+                        "Review gender distribution",
+                        "Expand 'Show more' for detailed insights",
+                        "Validate segment composition"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Save audience segment",
+                    "description": "Create permanent audience from filtered results",
+                    "details": [
+                        "Click 'Save Audience' button",
+                        "Enter descriptive audience name",
+                        "Provide optional description",
+                        "Click 'Create Audience' to finalize"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Access saved audiences",
+                    "description": "Navigate to saved audience management",
+                    "details": [
+                        "Go to Audiences tab",
+                        "View all created audience segments",
+                        "See audience creation dates and profile counts"
+                    ]
+                }
+            ],
+            "audience_management": [
+                {
+                    "action": "View audience details",
+                    "description": "Open saved audience to examine profiles",
+                    "access": "Click on audience name in Audiences tab"
+                },
+                {
+                    "action": "Export audience data",
+                    "description": "Export audience for external use",
+                    "formats": [
+                        "CSV export",
+                        "Integration with other tools"
+                    ]
+                },
+                {
+                    "action": "Create Facebook custom audience",
+                    "description": "Export to Facebook for advertising",
+                    "requirements": [
+                        "Connected Facebook ad account",
+                        "Appropriate data permissions"
+                    ]
+                }
+            ],
+            "decision_points": [
+                {
+                    "point": "Audience Naming Strategy",
+                    "options": [
+                        "Descriptive names: Based on filter criteria",
+                        "Campaign-specific names: Tied to marketing initiatives",
+                        "Date-based names: Include creation or campaign dates",
+                        "Hierarchical names: Nested audience relationships"
+                    ]
+                },
+                {
+                    "point": "Audience Usage",
+                    "options": [
+                        "Internal analysis: Customer insights and research",
+                        "Export for advertising: Facebook custom audiences",
+                        "CRM integration: External system synchronization",
+                        "Team collaboration: Shared audience access"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Permanent customer segments created",
+                "Audiences available for ongoing analysis",
+                "Foundation for targeted marketing campaigns",
+                "Reusable segments for consistent targeting"
+            ],
+            "url_sharing": {
+                "description": "Filter queries stored as permanent URLs for easy sharing and collaboration",
+                "benefits": [
+                    "Easy navigation with back button",
+                    "Share results with team members",
+                    "Bookmark specific segments"
+                ]
+            },
+            "source_documents": [
+                "Listen/Getting Started/Creating and Saving Searches.pdf"
+            ]
+        },
+        {
+            "flow_name": "CSV Data Import and Profile Enrichment",
+            "description": "Complete workflow for importing external customer data via CSV files to create or enrich audience profiles",
+            "prerequisites": [
+                "External customer data in CSV format",
+                "Data properly formatted with unique identifiers",
+                "Permission to merge data with social profiles",
+                "Understanding of data mapping requirements"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Prepare CSV data",
+                    "description": "Format external data for import",
+                    "details": [
+                        "Ensure CSV has unique identifier column (email, customer ID)",
+                        "Merge split name fields into single 'Full Name' column",
+                        "Verify data quality and completeness",
+                        "Remove any unnecessary columns"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Access import interface",
+                    "description": "Navigate to CSV import functionality",
+                    "details": [
+                        "Go to Audience module",
+                        "Click on Import tab",
+                        "Hover over 'CSV File' option",
+                        "Click 'Import new file'"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Upload CSV file",
+                    "description": "Upload and configure file for processing",
+                    "details": [
+                        "Read CSV data requirements",
+                        "Click grey rectangle or drag-drop CSV file",
+                        "Wait for upload completion",
+                        "Review upload success confirmation"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Select unique identifier",
+                    "description": "Choose column for profile matching",
+                    "details": [
+                        "Select unique column header from dropdown",
+                        "Recommended: customer ID or email address",
+                        "This field used for matching existing profiles",
+                        "Critical for update vs. create decisions"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Map data fields",
+                    "description": "Connect CSV columns to Audience fields",
+                    "details": [
+                        "View live preview of CSV columns on left",
+                        "See Audience data fields on right",
+                        "Map each relevant CSV column to corresponding Audience field",
+                        "Unmapped columns will be ignored"
+                    ]
+                },
+                {
+                    "step": 6,
+                    "action": "Configure import settings",
+                    "description": "Set audience name and permissions",
+                    "details": [
+                        "Assign name for new audience to be created",
+                        "Confirm permission to merge data with social profiles",
+                        "Review import settings and field mappings"
+                    ]
+                },
+                {
+                    "step": 7,
+                    "action": "Complete import process",
+                    "description": "Finalize data import",
+                    "details": [
+                        "Execute import process",
+                        "System creates new profiles or updates existing ones",
+                        "New audience created containing imported profiles",
+                        "Choose to view audiences or import another file"
+                    ]
+                }
+            ],
+            "data_mapping_fields": [
+                {
+                    "category": "Personal Information",
+                    "fields": [
+                        "Full Name",
+                        "Email",
+                        "Phone",
+                        "Address",
+                        "City",
+                        "State",
+                        "Country",
+                        "Zip Code"
+                    ]
+                },
+                {
+                    "category": "Demographics",
+                    "fields": [
+                        "Gender",
+                        "Age",
+                        "Company",
+                        "Job Title"
+                    ]
+                },
+                {
+                    "category": "Identifiers",
+                    "fields": [
+                        "Customer ID",
+                        "Account Number",
+                        "Handle"
+                    ]
+                },
+                {
+                    "category": "Custom Fields",
+                    "fields": [
+                        "Custom data specific to organization needs"
+                    ]
+                }
+            ],
+            "import_behavior": {
+                "matching_logic": "If unique identifier matches existing profile, data is merged; otherwise new profile created",
+                "audience_creation": "New audience created for every CSV import regardless of profile updates",
+                "data_enrichment": "Existing profiles updated with additional information from CSV"
+            },
+            "decision_points": [
+                {
+                    "point": "Unique Identifier Selection",
+                    "options": [
+                        "Email address: Best for customer databases",
+                        "Customer ID: Ideal for CRM system imports",
+                        "Phone number: Alternative when email unavailable",
+                        "Custom ID: Organization-specific identifiers"
+                    ]
+                },
+                {
+                    "point": "Field Mapping Strategy",
+                    "options": [
+                        "Complete mapping: Map all available columns",
+                        "Essential mapping: Map only critical fields",
+                        "Progressive mapping: Start minimal, expand over time"
+                    ]
+                },
+                {
+                    "point": "Data Permissions",
+                    "options": [
+                        "Full permissions: Allow merging with social profiles",
+                        "Limited permissions: Import without merge capability"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "External customer data successfully imported",
+                "Existing profiles enriched with additional information",
+                "New audience created containing imported profiles",
+                "Unified customer database with multiple data sources"
+            ],
+            "data_requirements": {
+                "file_format": "CSV (comma-separated values)",
+                "unique_identifier": "Required column with unique values per person",
+                "name_fields": "Must be merged into single Full Name field",
+                "encoding": "Standard UTF-8 encoding recommended"
+            },
+            "source_documents": [
+                "Audience/Importing & Exporting Data/Importing CSV Files into Audience.pdf"
+            ]
+        },
+        {
+            "flow_name": "Profile Merge and Deduplication",
+            "description": "Workflow for identifying and merging duplicate profiles to maintain clean customer database",
+            "prerequisites": [
+                "Multiple profiles potentially belonging to same person",
+                "Access to Merge functionality",
+                "Understanding of profile matching criteria"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access merge candidates",
+                    "description": "Navigate to profile deduplication interface",
+                    "details": [
+                        "Go to Audience module",
+                        "Click on Merge tab",
+                        "System automatically detects potential duplicates"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Review similarity levels",
+                    "description": "Examine different confidence levels for matches",
+                    "details": [
+                        "Select from High, Medium, Low probability matches",
+                        "High: Very likely same person (high confidence)",
+                        "Medium: Possible same person (moderate confidence)",
+                        "Low: Uncertain matches (low confidence)"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Evaluate merge suggestions",
+                    "description": "Review individual merge candidates",
+                    "details": [
+                        "Examine profile details for each suggested match",
+                        "Compare names, social handles, and other identifying information",
+                        "Look for common elements indicating same person",
+                        "Consider different social platforms or engagement times"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Make merge decisions",
+                    "description": "Choose whether to merge or keep separate",
+                    "details": [
+                        "Click 'Merge' for confirmed matches",
+                        "Click 'Dismiss suggestion' for non-matches",
+                        "Consider impact on audience segments",
+                        "Review merged profile data completeness"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Monitor merge results",
+                    "description": "Verify successful profile consolidation",
+                    "details": [
+                        "Check that merged profiles combine all relevant data",
+                        "Verify social media links and contact information",
+                        "Ensure audience counts update appropriately"
+                    ]
+                }
+            ],
+            "matching_indicators": [
+                "Same email address across profiles",
+                "Identical phone numbers",
+                "Similar names with slight variations",
+                "Common social media handles",
+                "Consistent geographic information",
+                "Related engagement patterns"
+            ],
+            "decision_points": [
+                {
+                    "point": "Merge Confidence Level",
+                    "options": [
+                        "High confidence: Obvious matches, safe to merge",
+                        "Medium confidence: Likely matches, review carefully",
+                        "Low confidence: Uncertain matches, investigate thoroughly"
+                    ]
+                },
+                {
+                    "point": "Merge Strategy",
+                    "options": [
+                        "Conservative approach: Only merge high-confidence matches",
+                        "Aggressive approach: Merge medium and high confidence",
+                        "Manual approach: Review each suggestion individually"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Reduced profile duplication in database",
+                "More complete customer profiles with merged data",
+                "Improved audience segmentation accuracy",
+                "Cleaner customer database for analysis"
+            ],
+            "merge_benefits": [
+                "Consolidated customer view across channels",
+                "Enhanced profile data richness",
+                "Improved audience targeting accuracy",
+                "Reduced data fragmentation"
+            ],
+            "source_documents": [
+                "Engage/Team Collaboration/Merging Profiles in Engage.pdf"
+            ]
+        },
+        {
+            "flow_name": "Profile Labeling and Organization",
+            "description": "Workflow for adding custom labels to profiles for enhanced organization and team collaboration",
+            "prerequisites": [
+                "Access to individual profile details",
+                "Understanding of labeling strategy",
+                "Team coordination on label conventions"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access profile details",
+                    "description": "Navigate to specific customer profile",
+                    "details": [
+                        "Go to People tab in Audience",
+                        "Apply filters if needed to find profile",
+                        "Click on specific profile to open detailed view"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Review profile information",
+                    "description": "Examine profile data to determine appropriate labels",
+                    "details": [
+                        "Review contact information and demographics",
+                        "Check social media activity and engagement patterns",
+                        "Identify customer type or category",
+                        "Consider business relevance and priorities"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Add custom labels",
+                    "description": "Apply relevant labels to profile",
+                    "details": [
+                        "Access label functionality in profile view",
+                        "Add descriptive labels for customer categorization",
+                        "Use consistent labeling conventions",
+                        "Consider multiple labels for different attributes"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Verify label application",
+                    "description": "Confirm labels are properly applied",
+                    "details": [
+                        "Check that labels appear in profile view",
+                        "Verify labels are searchable in filter system",
+                        "Test label filtering in People tab"
+                    ]
+                }
+            ],
+            "labeling_strategies": [
+                {
+                    "strategy": "Customer Type Labeling",
+                    "examples": [
+                        "VIP Customer",
+                        "New Customer",
+                        "Potential Lead",
+                        "Brand Advocate"
+                    ]
+                },
+                {
+                    "strategy": "Engagement Level Labeling",
+                    "examples": [
+                        "High Engager",
+                        "Occasional Commenter",
+                        "Silent Follower",
+                        "Frequent Complainer"
+                    ]
+                },
+                {
+                    "strategy": "Business Category Labeling",
+                    "examples": [
+                        "Enterprise Client",
+                        "SMB Customer",
+                        "Individual Consumer",
+                        "Partner"
+                    ]
+                },
+                {
+                    "strategy": "Campaign Labeling",
+                    "examples": [
+                        "Holiday Campaign",
+                        "Product Launch",
+                        "Event Attendee",
+                        "Survey Respondent"
+                    ]
+                }
+            ],
+            "decision_points": [
+                {
+                    "point": "Label Granularity",
+                    "options": [
+                        "Broad categories: High-level customer types",
+                        "Specific labels: Detailed behavioral descriptors",
+                        "Hierarchical labels: Nested categorization system"
+                    ]
+                },
+                {
+                    "point": "Label Strategy",
+                    "options": [
+                        "Standardized labels: Consistent across team",
+                        "Flexible labels: Individual user preferences",
+                        "Hybrid approach: Core standards with custom additions"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Enhanced profile organization and searchability",
+                "Improved team collaboration on customer categorization",
+                "Easier identification of customer types",
+                "Better audience segmentation capabilities"
+            ],
+            "team_benefits": [
+                "Quick customer type identification",
+                "Consistent customer categorization across team",
+                "Enhanced filtering and search capabilities",
+                "Improved customer service preparation"
+            ],
+            "source_documents": [
+                "Listen/Interacting with Data/Mention Tags.pdf"
+            ]
+        },
+        {
+            "flow_name": "Audience Export and Integration",
+            "description": "Workflow for exporting audience data to external systems and creating Facebook custom audiences",
+            "prerequisites": [
+                "Saved audience segments created",
+                "External system integration requirements defined",
+                "Appropriate data export permissions",
+                "Connected Facebook ad account (for Facebook export)"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access saved audiences",
+                    "description": "Navigate to audience management interface",
+                    "details": [
+                        "Go to Audiences tab",
+                        "View all created audience segments",
+                        "Select audience for export"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Choose export method",
+                    "description": "Select appropriate export option",
+                    "details": [
+                        "CSV export for external systems",
+                        "Facebook custom audience creation",
+                        "Integration with CRM or marketing tools",
+                        "API-based data synchronization"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Configure export settings",
+                    "description": "Set up export parameters",
+                    "details": [
+                        "Select data fields to include",
+                        "Choose export format and structure",
+                        "Set privacy and permission levels",
+                        "Configure destination system settings"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Execute export process",
+                    "description": "Complete data export",
+                    "details": [
+                        "Initiate export process",
+                        "Monitor export progress",
+                        "Verify successful data transfer",
+                        "Download or access exported data"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Verify integration",
+                    "description": "Confirm successful external system integration",
+                    "details": [
+                        "Check data appearance in destination system",
+                        "Verify field mapping accuracy",
+                        "Test functionality in target platform",
+                        "Validate audience availability for campaigns"
+                    ]
+                }
+            ],
+            "export_options": [
+                {
+                    "type": "CSV Export",
+                    "description": "Export to spreadsheet format for analysis or import",
+                    "use_cases": [
+                        "External analysis",
+                        "CRM import",
+                        "Email marketing lists"
+                    ]
+                },
+                {
+                    "type": "Facebook Custom Audience",
+                    "description": "Create advertising audience in Facebook Ads Manager",
+                    "use_cases": [
+                        "Targeted advertising",
+                        "Lookalike audience creation",
+                        "Retargeting campaigns"
+                    ]
+                },
+                {
+                    "type": "CRM Integration",
+                    "description": "Direct integration with customer relationship management systems",
+                    "use_cases": [
+                        "Salesforce sync",
+                        "Customer database updates",
+                        "Lead management"
+                    ]
+                }
+            ],
+            "decision_points": [
+                {
+                    "point": "Export Format",
+                    "options": [
+                        "CSV: Standard spreadsheet format",
+                        "API: Real-time integration",
+                        "Platform-specific: Facebook, CRM systems"
+                    ]
+                },
+                {
+                    "point": "Data Selection",
+                    "options": [
+                        "Full profile data: Complete customer information",
+                        "Essential fields only: Core identifiers and demographics",
+                        "Custom selection: Specific fields for particular use case"
+                    ]
+                },
+                {
+                    "point": "Privacy Considerations",
+                    "options": [
+                        "Full data export: All available information",
+                        "Anonymized export: Remove personal identifiers",
+                        "Hashed data: Secure data for advertising platforms"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Customer data available in external systems",
+                "Facebook custom audiences ready for advertising",
+                "Integrated customer database across platforms",
+                "Enhanced marketing campaign capabilities"
+            ],
+            "integration_benefits": [
+                "Unified customer data across tools",
+                "Enhanced targeting capabilities",
+                "Improved campaign personalization",
+                "Streamlined marketing operations"
+            ],
+            "source_documents": [
+                "Advertise/Analyzing Performance/Advertise Insights and Analytics.pdf"
+            ]
+        }
+    ],
+    "data_sources": [
+        {
+            "source": "Engage Integration",
+            "description": "Automatic profile creation from social media interactions",
+            "trigger_events": [
+                "Posts",
+                "Comments",
+                "Direct messages",
+                "Tweets"
+            ],
+            "exclusions": [
+                "Likes (no profile created)",
+                "Instagram interactions (anonymized data)"
+            ]
+        },
+        {
+            "source": "CSV Import",
+            "description": "Manual import of external customer data",
+            "capabilities": [
+                "New profile creation",
+                "Existing profile enrichment",
+                "Custom field mapping"
+            ]
+        },
+        {
+            "source": "CRM Integration",
+            "description": "Potential integration with external customer systems",
+            "examples": [
+                "Salesforce",
+                "HubSpot",
+                "Other customer databases"
+            ]
+        }
+    ],
+    "profile_fields": [
+        {
+            "category": "Personal Information",
+            "fields": [
+                "Full name",
+                "Email",
+                "Phone number",
+                "Address",
+                "Profile picture"
+            ]
+        },
+        {
+            "category": "Demographics",
+            "fields": [
+                "Gender",
+                "Location",
+                "Job title",
+                "Company",
+                "Age"
+            ]
+        },
+        {
+            "category": "Social Media",
+            "fields": [
+                "Facebook profile",
+                "Twitter handle",
+                "Instagram account",
+                "LinkedIn profile",
+                "Other social links"
+            ]
+        },
+        {
+            "category": "Engagement",
+            "fields": [
+                "Labels",
+                "Source/Channel",
+                "Interaction history",
+                "Content preferences"
+            ]
+        }
+    ],
+    "platform_limitations": [
+        "Instagram data anonymized (no profile creation possible)",
+        "Google Reviews not supported for audience profiles",
+        "Profile merging requires appropriate data permissions",
+        "Some integrations may require custom development"
+    ],
+    "key_features": [
+        "Unified customer view across multiple touchpoints",
+        "Dynamic audience segmentation with real-time updates",
+        "Automated profile creation from social interactions",
+        "CSV import for external data integration",
+        "Intelligent profile merging and deduplication",
+        "Custom labeling for enhanced organization",
+        "Export capabilities for external system integration",
+        "Facebook custom audience creation",
+        "Shareable filter URLs for team collaboration"
+    ]
+}

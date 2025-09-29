@@ -1,0 +1,1920 @@
+{
+  "brandwatch_publish_user_flows": {
+    "metadata": {
+      "version": "1.0",
+      "generated_date": "2025-09-29",
+      "total_flows": 45,
+      "categories": [
+        "Content Creation",
+        "Publishing & Scheduling",
+        "Content Management",
+        "Approval Workflows",
+        "Team Collaboration",
+        "Content Pool Management",
+        "Mobile Publishing"
+      ],
+      "source_documentation": "Brandwatch Publish Module PDFs (32 of 47 files analyzed)"
+    },
+    "flows": [
+      {
+        "id": "BW_PUB_001",
+        "name": "Basic Text Post Creation",
+        "category": "Content Creation",
+        "description": "Create and publish a simple text-only post to social media channels",
+        "prerequisites": [
+          "User has access to Publish module",
+          "At least one connected social media channel",
+          "Appropriate permissions for selected channel"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Publish module",
+            "details": "Click on Publish in the main navigation"
+          },
+          {
+            "step": 2,
+            "action": "Click 'Create post'",
+            "details": "Select 'Create post' button in the upper left corner"
+          },
+          {
+            "step": 3,
+            "action": "Select channels",
+            "details": "Choose target social media channels from the channel selector"
+          },
+          {
+            "step": 4,
+            "action": "Enter text content",
+            "details": "Type post content in the text editor, respecting character limits per network"
+          },
+          {
+            "step": 5,
+            "action": "Add labels (optional)",
+            "details": "Apply organizational labels for content categorization"
+          },
+          {
+            "step": 6,
+            "action": "Set promotion settings (optional)",
+            "details": "Configure UTM parameters and link shortening if needed"
+          },
+          {
+            "step": 7,
+            "action": "Choose publishing option",
+            "details": "Select 'Publish now', 'Schedule', or 'Send for approval'"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Publishing method selection",
+            "options": ["Immediate publishing", "Scheduled publishing", "Approval workflow"],
+            "criteria": "Based on content strategy and organizational approval requirements"
+          }
+        ],
+        "outcomes": [
+          "Post is published immediately to selected channels",
+          "Post is scheduled for future publication",
+          "Post is sent to designated approvers"
+        ],
+        "error_scenarios": [
+          "Channel disconnection",
+          "Character limit exceeded",
+          "Missing required content"
+        ]
+      },
+      {
+        "id": "BW_PUB_002",
+        "name": "Image Post Creation",
+        "category": "Content Creation",
+        "description": "Create posts with image attachments across multiple social networks",
+        "prerequisites": [
+          "User has access to Publish module",
+          "Connected social media channels",
+          "Image files within platform limits (25MB max per image)"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Publish and click 'Create post'",
+            "details": "Access the post creation interface"
+          },
+          {
+            "step": 2,
+            "action": "Select target channels",
+            "details": "Choose destination social media platforms"
+          },
+          {
+            "step": 3,
+            "action": "Upload image(s)",
+            "details": "Drag and drop or browse to select image files"
+          },
+          {
+            "step": 4,
+            "action": "Add alt text",
+            "details": "Provide accessibility descriptions for images"
+          },
+          {
+            "step": 5,
+            "action": "Write caption/text",
+            "details": "Add accompanying text content"
+          },
+          {
+            "step": 6,
+            "action": "Configure network-specific settings",
+            "details": "Adjust image positioning, tagging, and platform-specific options"
+          },
+          {
+            "step": 7,
+            "action": "Apply labels and promotion settings",
+            "details": "Add organizational labels and configure UTM tracking"
+          },
+          {
+            "step": 8,
+            "action": "Choose publishing method",
+            "details": "Publish, schedule, or send for approval"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Image format compatibility",
+            "options": ["Automatic format conversion", "Manual format adjustment"],
+            "criteria": "Based on target network requirements"
+          },
+          {
+            "point": "Multi-network posting",
+            "options": ["Same image for all networks", "Customized per network"],
+            "criteria": "Content strategy and network-specific best practices"
+          }
+        ],
+        "outcomes": [
+          "Images published with proper formatting per network",
+          "Alt text applied for accessibility compliance",
+          "Consistent branding across channels"
+        ],
+        "error_scenarios": [
+          "Image size exceeds network limits",
+          "Unsupported image format",
+          "Network-specific posting restrictions"
+        ]
+      },
+      {
+        "id": "BW_PUB_003",
+        "name": "Video Post Creation",
+        "category": "Content Creation",
+        "description": "Upload and publish video content including Reels and standard video posts",
+        "prerequisites": [
+          "User has access to Publish module",
+          "Connected social media channels supporting video",
+          "Video files within platform limits (1GB max per video)"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Create new post",
+            "details": "Navigate to Publish > Create post"
+          },
+          {
+            "step": 2,
+            "action": "Select video-supporting channels",
+            "details": "Choose platforms that support video content"
+          },
+          {
+            "step": 3,
+            "action": "Upload video file",
+            "details": "Select video file from local storage or cloud services"
+          },
+          {
+            "step": 4,
+            "action": "Set video thumbnail",
+            "details": "Choose or upload custom thumbnail image"
+          },
+          {
+            "step": 5,
+            "action": "Add video captions/subtitles",
+            "details": "Upload caption files or add manual captions"
+          },
+          {
+            "step": 6,
+            "action": "Configure video settings",
+            "details": "Set video type (Feed, Reel, Story), aspect ratio, and quality"
+          },
+          {
+            "step": 7,
+            "action": "Write video description",
+            "details": "Add compelling caption and relevant hashtags"
+          },
+          {
+            "step": 8,
+            "action": "Set publishing schedule",
+            "details": "Choose immediate, scheduled, or approval workflow"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Video format selection",
+            "options": ["Standard video post", "Reel/Short-form", "Story video"],
+            "criteria": "Content type, audience engagement strategy, platform best practices"
+          },
+          {
+            "point": "Caption handling",
+            "options": ["Auto-generated captions", "Manual captions", "No captions"],
+            "criteria": "Accessibility requirements and content complexity"
+          }
+        ],
+        "outcomes": [
+          "Video published with appropriate formatting",
+          "Thumbnails optimized for engagement",
+          "Captions included for accessibility",
+          "Cross-platform compatibility maintained"
+        ],
+        "error_scenarios": [
+          "Video file too large",
+          "Unsupported video format",
+          "Network-specific video restrictions",
+          "Caption sync issues"
+        ]
+      },
+      {
+        "id": "BW_PUB_004",
+        "name": "Link Post Creation",
+        "category": "Content Creation",
+        "description": "Create posts with link previews and call-to-action buttons",
+        "prerequisites": [
+          "User has access to Publish module",
+          "Connected social media channels",
+          "Valid URL for link sharing"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Start post creation",
+            "details": "Navigate to Publish > Create post"
+          },
+          {
+            "step": 2,
+            "action": "Enter or paste URL",
+            "details": "Add the target URL in the link field"
+          },
+          {
+            "step": 3,
+            "action": "Review auto-generated preview",
+            "details": "Check title, description, and thumbnail pulled from the link"
+          },
+          {
+            "step": 4,
+            "action": "Customize link preview",
+            "details": "Edit title, description, and upload custom thumbnail if needed"
+          },
+          {
+            "step": 5,
+            "action": "Add call-to-action button",
+            "details": "Select appropriate CTA button type (Learn More, Shop Now, etc.)"
+          },
+          {
+            "step": 6,
+            "action": "Configure UTM tracking",
+            "details": "Add UTM parameters for campaign tracking"
+          },
+          {
+            "step": 7,
+            "action": "Write accompanying text",
+            "details": "Create engaging caption to accompany the link"
+          },
+          {
+            "step": 8,
+            "action": "Apply URL shortening",
+            "details": "Use platform's link shortening for cleaner URLs"
+          },
+          {
+            "step": 9,
+            "action": "Publish or schedule",
+            "details": "Choose publishing timing and method"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Link preview customization",
+            "options": ["Use auto-generated preview", "Customize title and description", "Upload custom thumbnail"],
+            "criteria": "Branding requirements and engagement optimization"
+          },
+          {
+            "point": "UTM parameter strategy",
+            "options": ["Standard campaign tracking", "Custom parameter setup", "No tracking"],
+            "criteria": "Analytics requirements and campaign goals"
+          }
+        ],
+        "outcomes": [
+          "Link shared with optimized preview",
+          "UTM tracking enabled for analytics",
+          "Professional link presentation",
+          "Improved click-through rates"
+        ],
+        "error_scenarios": [
+          "Invalid or broken URL",
+          "Link preview generation failure",
+          "Network-specific link restrictions"
+        ]
+      },
+      {
+        "id": "BW_PUB_005",
+        "name": "Instagram Carousel Post Creation",
+        "category": "Content Creation",
+        "description": "Create multi-image carousel posts for Instagram with proper sequencing",
+        "prerequisites": [
+          "User has access to Publish module",
+          "Connected Instagram Business account",
+          "Multiple images (2-10 images for carousel)"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Create new Instagram post",
+            "details": "Navigate to Publish > Create post > Select Instagram"
+          },
+          {
+            "step": 2,
+            "action": "Select carousel post type",
+            "details": "Choose carousel option from post type selector"
+          },
+          {
+            "step": 3,
+            "action": "Upload multiple images",
+            "details": "Select 2-10 images for the carousel sequence"
+          },
+          {
+            "step": 4,
+            "action": "Arrange image order",
+            "details": "Drag and drop to sequence images in desired order"
+          },
+          {
+            "step": 5,
+            "action": "Add alt text for each image",
+            "details": "Provide accessibility descriptions for all carousel images"
+          },
+          {
+            "step": 6,
+            "action": "Write caption",
+            "details": "Create engaging caption that references the carousel content"
+          },
+          {
+            "step": 7,
+            "action": "Add hashtags and tags",
+            "details": "Include relevant hashtags and user/location tags"
+          },
+          {
+            "step": 8,
+            "action": "Preview carousel flow",
+            "details": "Review how the carousel will appear to users"
+          },
+          {
+            "step": 9,
+            "action": "Publish or schedule",
+            "details": "Choose immediate publishing or scheduling"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Image sequence strategy",
+            "options": ["Storytelling sequence", "Product showcase", "Before/after comparison"],
+            "criteria": "Content goals and audience engagement strategy"
+          },
+          {
+            "point": "Image formatting",
+            "options": ["Maintain original aspect ratios", "Crop to square format", "Mixed formats"],
+            "criteria": "Visual consistency and Instagram best practices"
+          }
+        ],
+        "outcomes": [
+          "Multi-image carousel published to Instagram",
+          "Proper image sequencing maintained",
+          "Enhanced user engagement through swipeable content",
+          "Accessibility compliance with alt text"
+        ],
+        "error_scenarios": [
+          "Too many or too few images",
+          "Image format incompatibility",
+          "Caption length exceeding limits"
+        ]
+      },
+      {
+        "id": "BW_PUB_006",
+        "name": "Post Scheduling Workflow",
+        "category": "Publishing & Scheduling",
+        "description": "Schedule posts for future publication with optimal timing recommendations",
+        "prerequisites": [
+          "Created post content",
+          "Connected social media channels",
+          "Appropriate scheduling permissions"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Complete post creation",
+            "details": "Finish content creation including text, media, and settings"
+          },
+          {
+            "step": 2,
+            "action": "Access Schedule section",
+            "details": "Scroll down to Schedule section in the post editor"
+          },
+          {
+            "step": 3,
+            "action": "Review Best times to post recommendations",
+            "details": "Check AI-powered recommendations based on historical data"
+          },
+          {
+            "step": 4,
+            "action": "Select date and time",
+            "details": "Choose specific publication date and time"
+          },
+          {
+            "step": 5,
+            "action": "Configure timezone",
+            "details": "Set appropriate timezone for publication"
+          },
+          {
+            "step": 6,
+            "action": "Review scheduling details",
+            "details": "Confirm all scheduling parameters are correct"
+          },
+          {
+            "step": 7,
+            "action": "Click Schedule button",
+            "details": "Finalize the scheduling process"
+          },
+          {
+            "step": 8,
+            "action": "Verify in Scheduled section",
+            "details": "Confirm post appears in Scheduled content list"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Optimal timing selection",
+            "options": ["Use AI recommendations", "Custom time selection", "Best practices timing"],
+            "criteria": "Audience activity patterns and engagement data"
+          },
+          {
+            "point": "Facebook native scheduling",
+            "options": ["Schedule in Brandwatch", "Schedule to Facebook queue"],
+            "criteria": "Integration with Facebook Business Manager workflows"
+          }
+        ],
+        "outcomes": [
+          "Post scheduled for automatic publication",
+          "Scheduling confirmation received",
+          "Content appears in scheduled queue",
+          "Email notifications sent upon publication"
+        ],
+        "error_scenarios": [
+          "Past date selection",
+          "Timezone configuration errors",
+          "Channel disconnection before scheduled time"
+        ]
+      },
+      {
+        "id": "BW_PUB_007",
+        "name": "Draft Management Workflow",
+        "category": "Content Management",
+        "description": "Save posts as drafts for later completion and collaboration",
+        "prerequisites": [
+          "Partially or fully created post content",
+          "Minimum required content for draft saving"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Create post content",
+            "details": "Add minimum required content (text, media, or both)"
+          },
+          {
+            "step": 2,
+            "action": "Verify draft eligibility",
+            "details": "Ensure Publish/Schedule buttons are not greyed out"
+          },
+          {
+            "step": 3,
+            "action": "Click Back button",
+            "details": "Use Back button in top-left to save as draft"
+          },
+          {
+            "step": 4,
+            "action": "Confirm draft creation",
+            "details": "Verify post is saved in Drafts section"
+          },
+          {
+            "step": 5,
+            "action": "Access draft for editing",
+            "details": "Navigate to Drafts section to find and edit saved content"
+          },
+          {
+            "step": 6,
+            "action": "Complete draft content",
+            "details": "Add remaining content, media, or settings"
+          },
+          {
+            "step": 7,
+            "action": "Finalize publication",
+            "details": "Publish, schedule, or send for approval"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Draft completion timing",
+            "options": ["Immediate completion", "Collaborative editing", "Future completion"],
+            "criteria": "Content complexity and team collaboration needs"
+          }
+        ],
+        "outcomes": [
+          "Content saved for future completion",
+          "Team collaboration enabled",
+          "Content preserved with scheduling dates",
+          "Workflow continuity maintained"
+        ],
+        "error_scenarios": [
+          "Insufficient content for draft saving",
+          "Loss of unsaved changes",
+          "Draft expiration without completion"
+        ]
+      },
+      {
+        "id": "BW_PUB_008",
+        "name": "Bulk Post Scheduling",
+        "category": "Publishing & Scheduling",
+        "description": "Schedule multiple posts simultaneously with bulk actions",
+        "prerequisites": [
+          "Multiple created posts or drafts",
+          "Appropriate bulk scheduling permissions",
+          "Connected social media channels"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Scheduled content",
+            "details": "Go to Publish > Scheduled section"
+          },
+          {
+            "step": 2,
+            "action": "Filter content by date range",
+            "details": "Use date picker to select target time period"
+          },
+          {
+            "step": 3,
+            "action": "Apply additional filters",
+            "details": "Filter by channel, team, network, or other criteria"
+          },
+          {
+            "step": 4,
+            "action": "Select multiple posts",
+            "details": "Use checkboxes to select posts for bulk action"
+          },
+          {
+            "step": 5,
+            "action": "Choose bulk action",
+            "details": "Select Reschedule, Unschedule, or Delete from bulk menu"
+          },
+          {
+            "step": 6,
+            "action": "Configure new timing",
+            "details": "Set new schedule parameters for selected posts"
+          },
+          {
+            "step": 7,
+            "action": "Confirm bulk changes",
+            "details": "Review and confirm the bulk scheduling changes"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Bulk action type",
+            "options": ["Reschedule", "Unschedule to drafts", "Delete posts"],
+            "criteria": "Content strategy changes and campaign requirements"
+          },
+          {
+            "point": "Time adjustment method",
+            "options": ["Shift by hours/days", "Set new specific times", "Use optimal timing"],
+            "criteria": "Publishing strategy and audience engagement patterns"
+          }
+        ],
+        "outcomes": [
+          "Multiple posts rescheduled efficiently",
+          "Consistent timing across campaign",
+          "Workflow optimization achieved",
+          "Time saved on individual post management"
+        ],
+        "error_scenarios": [
+          "Conflicting schedule times",
+          "Network-specific scheduling limitations",
+          "Bulk action permission restrictions"
+        ]
+      },
+      {
+        "id": "BW_PUB_009",
+        "name": "Content Approval Workflow",
+        "category": "Approval Workflows",
+        "description": "Submit content for review and approval before publication",
+        "prerequisites": [
+          "Completed post content",
+          "Configured approval workflow",
+          "Designated approvers with appropriate permissions"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Complete post creation",
+            "details": "Finish all content including text, media, and settings"
+          },
+          {
+            "step": 2,
+            "action": "Access Approvers section",
+            "details": "Navigate to Approvers panel in post editor"
+          },
+          {
+            "step": 3,
+            "action": "Select approval template or add approvers",
+            "details": "Choose existing template or manually add approvers"
+          },
+          {
+            "step": 4,
+            "action": "Configure approval steps",
+            "details": "Set up single or multi-step approval process"
+          },
+          {
+            "step": 5,
+            "action": "Add approval notes",
+            "details": "Include context or instructions for approvers"
+          },
+          {
+            "step": 6,
+            "action": "Submit for approval",
+            "details": "Click 'Send for approval' to initiate workflow"
+          },
+          {
+            "step": 7,
+            "action": "Track approval status",
+            "details": "Monitor progress in Awaiting Approval section"
+          },
+          {
+            "step": 8,
+            "action": "Handle approval response",
+            "details": "Process approver feedback and make any required changes"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Approval complexity",
+            "options": ["Single approver", "Multiple approvers (any)", "Multiple approvers (all)", "Multi-step approval"],
+            "criteria": "Content sensitivity and organizational requirements"
+          },
+          {
+            "point": "Approval urgency",
+            "options": ["Standard approval", "Expedited approval", "Emergency bypass"],
+            "criteria": "Content timing requirements and business priorities"
+          }
+        ],
+        "outcomes": [
+          "Content reviewed by designated approvers",
+          "Quality control maintained",
+          "Compliance requirements met",
+          "Approval audit trail created"
+        ],
+        "error_scenarios": [
+          "Approver unavailability",
+          "Approval rejection requiring revisions",
+          "Approval template misconfiguration"
+        ]
+      },
+      {
+        "id": "BW_PUB_010",
+        "name": "Multi-Step Approval Process",
+        "category": "Approval Workflows",
+        "description": "Configure and execute complex approval workflows with multiple steps",
+        "prerequisites": [
+          "Admin or Team Leader permissions",
+          "Multiple approvers identified",
+          "Approval template creation access"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Create approval template",
+            "details": "Navigate to Approval Templates and create new template"
+          },
+          {
+            "step": 2,
+            "action": "Define approval steps",
+            "details": "Set up multiple approval steps with designated approvers"
+          },
+          {
+            "step": 3,
+            "action": "Configure step requirements",
+            "details": "Set whether 'Any' or 'All' approvers needed per step"
+          },
+          {
+            "step": 4,
+            "action": "Name and save template",
+            "details": "Provide descriptive name and save approval template"
+          },
+          {
+            "step": 5,
+            "action": "Apply template to post",
+            "details": "Select template when creating or editing post"
+          },
+          {
+            "step": 6,
+            "action": "Submit for multi-step approval",
+            "details": "Initiate approval process starting with first step"
+          },
+          {
+            "step": 7,
+            "action": "Monitor step progression",
+            "details": "Track approval progress through each step"
+          },
+          {
+            "step": 8,
+            "action": "Handle step-by-step approvals",
+            "details": "Process each approval step until completion"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Step approval logic",
+            "options": ["Any approver in step", "All approvers in step"],
+            "criteria": "Risk assessment and organizational policies"
+          },
+          {
+            "point": "Step dependency",
+            "options": ["Sequential steps", "Parallel processing"],
+            "criteria": "Approval urgency and organizational structure"
+          }
+        ],
+        "outcomes": [
+          "Comprehensive content review achieved",
+          "Multi-layer quality control implemented",
+          "Compliance with complex approval requirements",
+          "Detailed approval audit trail maintained"
+        ],
+        "error_scenarios": [
+          "Step-specific approver unavailability",
+          "Template misconfiguration",
+          "Approval step bypassing attempts"
+        ]
+      },
+      {
+        "id": "BW_PUB_011",
+        "name": "Bulk Post Import and Scheduling",
+        "category": "Content Management",
+        "description": "Import multiple posts from CSV file for bulk scheduling",
+        "prerequisites": [
+          "Properly formatted CSV file",
+          "Connected social media channels",
+          "Bulk import permissions"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Prepare CSV file",
+            "details": "Format CSV with columns for content, channels, and scheduling data"
+          },
+          {
+            "step": 2,
+            "action": "Navigate to bulk import",
+            "details": "Access bulk import functionality in Publish module"
+          },
+          {
+            "step": 3,
+            "action": "Upload CSV file",
+            "details": "Select and upload the prepared CSV file"
+          },
+          {
+            "step": 4,
+            "action": "Map CSV columns",
+            "details": "Map CSV columns to appropriate post fields"
+          },
+          {
+            "step": 5,
+            "action": "Validate import data",
+            "details": "Review and validate imported post data"
+          },
+          {
+            "step": 6,
+            "action": "Configure bulk settings",
+            "details": "Set default labels, approval workflows, and other settings"
+          },
+          {
+            "step": 7,
+            "action": "Execute bulk import",
+            "details": "Process the import and create scheduled posts"
+          },
+          {
+            "step": 8,
+            "action": "Verify imported posts",
+            "details": "Check Scheduled section for successfully imported posts"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Data validation level",
+            "options": ["Automatic validation", "Manual review required", "Selective validation"],
+            "criteria": "Data quality confidence and import volume"
+          },
+          {
+            "point": "Error handling",
+            "options": ["Skip invalid rows", "Stop on errors", "Partial import"],
+            "criteria": "Data integrity requirements and import urgency"
+          }
+        ],
+        "outcomes": [
+          "Multiple posts imported and scheduled efficiently",
+          "Consistent formatting across bulk content",
+          "Time saved on individual post creation",
+          "Scalable content management achieved"
+        ],
+        "error_scenarios": [
+          "CSV format errors",
+          "Invalid channel mappings",
+          "Bulk import size limitations",
+          "Data validation failures"
+        ]
+      },
+      {
+        "id": "BW_PUB_012",
+        "name": "Emergency Content Unscheduling",
+        "category": "Publishing & Scheduling",
+        "description": "Quickly unschedule all content during emergency situations",
+        "prerequisites": [
+          "Scheduled content exists",
+          "Editor role or above",
+          "Emergency situation requiring content halt"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Scheduled content",
+            "details": "Go to Publish > Scheduled section"
+          },
+          {
+            "step": 2,
+            "action": "Set date range filter",
+            "details": "Select date range for content to unschedule"
+          },
+          {
+            "step": 3,
+            "action": "Apply additional filters",
+            "details": "Filter by team, channel, or other criteria if needed"
+          },
+          {
+            "step": 4,
+            "action": "Select all posts",
+            "details": "Use 'Select all' checkbox to choose all filtered posts"
+          },
+          {
+            "step": 5,
+            "action": "Open bulk actions menu",
+            "details": "Click three-dot menu for bulk actions"
+          },
+          {
+            "step": 6,
+            "action": "Choose Unschedule",
+            "details": "Select 'Unschedule' from bulk actions menu"
+          },
+          {
+            "step": 7,
+            "action": "Confirm bulk unscheduling",
+            "details": "Confirm action to move all posts to Drafts"
+          },
+          {
+            "step": 8,
+            "action": "Verify unscheduling completion",
+            "details": "Check that posts moved to Drafts section"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Scope of unscheduling",
+            "options": ["All scheduled content", "Specific date range", "Specific channels/teams"],
+            "criteria": "Nature and scope of emergency situation"
+          },
+          {
+            "point": "Content preservation",
+            "options": ["Move to drafts", "Delete content", "Archive content"],
+            "criteria": "Future content reuse requirements"
+          }
+        ],
+        "outcomes": [
+          "Scheduled content immediately halted",
+          "Content preserved in drafts for future use",
+          "Emergency response completed quickly",
+          "Risk mitigation achieved"
+        ],
+        "error_scenarios": [
+          "Partial unscheduling due to network issues",
+          "Facebook native scheduled posts not affected",
+          "Permission restrictions blocking bulk actions"
+        ]
+      },
+      {
+        "id": "BW_PUB_013",
+        "name": "Content Pool Stock Creation",
+        "category": "Content Pool Management",
+        "description": "Create and manage reusable stock items in the Content Pool",
+        "prerequisites": [
+          "Access to Content Pool",
+          "Media files or content to upload",
+          "Appropriate Content Pool permissions"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Content Pool",
+            "details": "Access Content Pool from Publishing section menu"
+          },
+          {
+            "step": 2,
+            "action": "Click Create Stock",
+            "details": "Select 'Create Stock' button in upper right corner"
+          },
+          {
+            "step": 3,
+            "action": "Choose stock type",
+            "details": "Select 'Single' for one item or 'Multiple' for bulk upload"
+          },
+          {
+            "step": 4,
+            "action": "Upload media files",
+            "details": "Upload images, videos, or resource files (up to 1GB per video, 25MB per image)"
+          },
+          {
+            "step": 5,
+            "action": "Add text assets",
+            "details": "Include captions, copy, or descriptive text"
+          },
+          {
+            "step": 6,
+            "action": "Set embargo and expiration dates",
+            "details": "Define usage timeframe for the stock item"
+          },
+          {
+            "step": 7,
+            "action": "Apply labels",
+            "details": "Add organizational labels for categorization"
+          },
+          {
+            "step": 8,
+            "action": "Add internal notes",
+            "details": "Include usage instructions or context for team"
+          },
+          {
+            "step": 9,
+            "action": "Create stock item",
+            "details": "Finalize stock creation and make available to team"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Stock organization strategy",
+            "options": ["Campaign-based labeling", "Content-type labeling", "Date-based organization"],
+            "criteria": "Team workflow and content management needs"
+          },
+          {
+            "point": "Access control",
+            "options": ["Team-wide access", "Restricted access", "Time-limited access"],
+            "criteria": "Content sensitivity and usage requirements"
+          }
+        ],
+        "outcomes": [
+          "Reusable content assets created",
+          "Team access to shared content library",
+          "Consistent brand asset usage",
+          "Efficient content reuse workflow"
+        ],
+        "error_scenarios": [
+          "File size exceeding limits",
+          "Unsupported file formats",
+          "Insufficient storage space",
+          "Label configuration errors"
+        ]
+      },
+      {
+        "id": "BW_PUB_014",
+        "name": "Stock Item to Post Conversion",
+        "category": "Content Pool Management",
+        "description": "Convert Content Pool stock items into publishable posts",
+        "prerequisites": [
+          "Access to Content Pool",
+          "Existing stock items",
+          "Connected social media channels"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Browse Content Pool",
+            "details": "Navigate to Content Pool and locate desired stock item"
+          },
+          {
+            "step": 2,
+            "action": "Open stock item details",
+            "details": "Click on stock item to view detailed information"
+          },
+          {
+            "step": 3,
+            "action": "Click 'Copy as post'",
+            "details": "Select 'Copy as post' button in upper right corner"
+          },
+          {
+            "step": 4,
+            "action": "Select target channels",
+            "details": "Choose destination social media channels"
+          },
+          {
+            "step": 5,
+            "action": "Review auto-populated content",
+            "details": "Check that media, text, and labels transferred correctly"
+          },
+          {
+            "step": 6,
+            "action": "Customize content for channels",
+            "details": "Adjust content for network-specific requirements"
+          },
+          {
+            "step": 7,
+            "action": "Add additional content",
+            "details": "Include hashtags, mentions, or additional text"
+          },
+          {
+            "step": 8,
+            "action": "Configure publishing settings",
+            "details": "Set scheduling, approval, or immediate publishing"
+          },
+          {
+            "step": 9,
+            "action": "Publish or schedule post",
+            "details": "Complete the publishing workflow"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Content customization level",
+            "options": ["Use stock content as-is", "Minor modifications", "Significant customization"],
+            "criteria": "Brand consistency requirements and channel-specific needs"
+          },
+          {
+            "point": "Embargo date handling",
+            "options": ["Respect embargo dates", "Override with warning", "Schedule after embargo"],
+            "criteria": "Content timing requirements and embargo purpose"
+          }
+        ],
+        "outcomes": [
+          "Stock content efficiently converted to posts",
+          "Brand consistency maintained",
+          "Content reuse maximized",
+          "Publishing workflow streamlined"
+        ],
+        "error_scenarios": [
+          "Embargo date conflicts",
+          "Stock content format incompatibility",
+          "Missing required post elements"
+        ]
+      },
+      {
+        "id": "BW_PUB_015",
+        "name": "Content Pool Filtering and Search",
+        "category": "Content Pool Management",
+        "description": "Find specific content in the Content Pool using filters and search",
+        "prerequisites": [
+          "Access to Content Pool",
+          "Existing stock items in Content Pool"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access Content Pool",
+            "details": "Navigate to Content Pool from Publishing menu"
+          },
+          {
+            "step": 2,
+            "action": "Apply asset type filter",
+            "details": "Select specific asset types (Image, Video, Text, Link, Caption)"
+          },
+          {
+            "step": 3,
+            "action": "Use keyword search",
+            "details": "Enter keywords to search titles and text assets"
+          },
+          {
+            "step": 4,
+            "action": "Filter by labels",
+            "details": "Select relevant labels using 'Match All' or 'Match Any' logic"
+          },
+          {
+            "step": 5,
+            "action": "Set date filters",
+            "details": "Filter by creation date or usage availability dates"
+          },
+          {
+            "step": 6,
+            "action": "Sort results",
+            "details": "Sort by newest, oldest, most copied, or least copied"
+          },
+          {
+            "step": 7,
+            "action": "Review filtered results",
+            "details": "Browse through filtered stock items"
+          },
+          {
+            "step": 8,
+            "action": "Select desired items",
+            "details": "Choose items for viewing, editing, or conversion to posts"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Search strategy",
+            "options": ["Keyword-based search", "Label-based filtering", "Date-range filtering"],
+            "criteria": "Content organization method and search specificity needs"
+          },
+          {
+            "point": "Filter combination",
+            "options": ["Single filter type", "Multiple combined filters", "Progressive filtering"],
+            "criteria": "Content pool size and search precision requirements"
+          }
+        ],
+        "outcomes": [
+          "Relevant content quickly located",
+          "Efficient content discovery",
+          "Improved content reuse",
+          "Time saved in content search"
+        ],
+        "error_scenarios": [
+          "No results found with applied filters",
+          "Filter combination too restrictive",
+          "Search term spelling errors"
+        ]
+      },
+      {
+        "id": "BW_PUB_016",
+        "name": "Campaign Planning and Creation",
+        "category": "Team Collaboration",
+        "description": "Create and manage organized campaigns with stock items and team assignments",
+        "prerequisites": [
+          "Admin or content creation permissions",
+          "Team structure defined",
+          "Campaign assets prepared"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to campaign creation",
+            "details": "Go to Publish > Create campaign or click 'Add campaign' in calendar"
+          },
+          {
+            "step": 2,
+            "action": "Define campaign details",
+            "details": "Set title, color, timeframe, and description"
+          },
+          {
+            "step": 3,
+            "action": "Add campaign description",
+            "details": "Include execution instructions and context for team"
+          },
+          {
+            "step": 4,
+            "action": "Assign teams",
+            "details": "Select teams responsible for campaign execution"
+          },
+          {
+            "step": 5,
+            "action": "Set campaign labels",
+            "details": "Apply labels that will auto-transfer to created content"
+          },
+          {
+            "step": 6,
+            "action": "Add stock items",
+            "details": "Create or add existing assets to campaign stock library"
+          },
+          {
+            "step": 7,
+            "action": "Configure notifications",
+            "details": "Set up reminder notifications and team alerts"
+          },
+          {
+            "step": 8,
+            "action": "Create campaign",
+            "details": "Finalize campaign and make available in calendar"
+          },
+          {
+            "step": 9,
+            "action": "Monitor campaign execution",
+            "details": "Track team usage of campaign assets and content creation"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Campaign scope",
+            "options": ["Single-team campaign", "Multi-team collaboration", "Organization-wide campaign"],
+            "criteria": "Campaign reach and resource requirements"
+          },
+          {
+            "point": "Asset management",
+            "options": ["Pre-loaded assets", "Team-contributed assets", "Mixed asset approach"],
+            "criteria": "Content creation workflow and team capabilities"
+          }
+        ],
+        "outcomes": [
+          "Organized campaign structure created",
+          "Team collaboration facilitated",
+          "Consistent campaign execution",
+          "Centralized campaign asset management"
+        ],
+        "error_scenarios": [
+          "Team assignment conflicts",
+          "Campaign date overlaps",
+          "Insufficient asset preparation"
+        ]
+      },
+      {
+        "id": "BW_PUB_017",
+        "name": "Collaborative Note Management",
+        "category": "Team Collaboration",
+        "description": "Add and manage internal notes for team collaboration on content",
+        "prerequisites": [
+          "Access to Publish module",
+          "Content to annotate",
+          "Team member identification for mentions"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Open content for annotation",
+            "details": "Navigate to post or stock item requiring collaboration"
+          },
+          {
+            "step": 2,
+            "action": "Access collaboration panel",
+            "details": "Click 'Show collaboration' to toggle Notes panel"
+          },
+          {
+            "step": 3,
+            "action": "Write note content",
+            "details": "Enter feedback, questions, or instructions in note field"
+          },
+          {
+            "step": 4,
+            "action": "Tag team members",
+            "details": "Use @mention syntax to notify specific team members"
+          },
+          {
+            "step": 5,
+            "action": "Set note visibility",
+            "details": "Choose internal-only or external sharing visibility"
+          },
+          {
+            "step": 6,
+            "action": "Add internal note",
+            "details": "Save note and trigger notifications to tagged users"
+          },
+          {
+            "step": 7,
+            "action": "Monitor note responses",
+            "details": "Track responses and follow-up discussions"
+          },
+          {
+            "step": 8,
+            "action": "Resolve note conversations",
+            "details": "Complete collaboration and implement feedback"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Note purpose",
+            "options": ["Feedback request", "Content improvement suggestion", "Approval context", "Task assignment"],
+            "criteria": "Collaboration objective and team workflow needs"
+          },
+          {
+            "point": "Notification scope",
+            "options": ["Specific team members", "All team members", "Role-based notifications"],
+            "criteria": "Relevance and urgency of collaboration"
+          }
+        ],
+        "outcomes": [
+          "Effective team communication established",
+          "Content feedback captured",
+          "Collaboration audit trail maintained",
+          "Content quality improved through teamwork"
+        ],
+        "error_scenarios": [
+          "Notification delivery failures",
+          "Note visibility misconfigurations",
+          "Team member availability issues"
+        ]
+      },
+      {
+        "id": "BW_PUB_018",
+        "name": "Approval Template Configuration",
+        "category": "Approval Workflows",
+        "description": "Create reusable approval templates for consistent workflow management",
+        "prerequisites": [
+          "Administrator or Team Leader role",
+          "Identified approvers and workflow requirements",
+          "Access to Approval Templates section"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Approval Templates",
+            "details": "Go to Publish > Approval templates in left navigation"
+          },
+          {
+            "step": 2,
+            "action": "Create new template",
+            "details": "Click 'Create Approval Template' in upper right"
+          },
+          {
+            "step": 3,
+            "action": "Add first approval step",
+            "details": "Add team members as approvers for initial step"
+          },
+          {
+            "step": 4,
+            "action": "Configure step logic",
+            "details": "Set whether 'Any' or 'All' approvers needed for step"
+          },
+          {
+            "step": 5,
+            "action": "Add additional steps",
+            "details": "Create multi-step approval process if required"
+          },
+          {
+            "step": 6,
+            "action": "Customize step names",
+            "details": "Provide descriptive names for each approval step"
+          },
+          {
+            "step": 7,
+            "action": "Name and save template",
+            "details": "Provide template name and save for future use"
+          },
+          {
+            "step": 8,
+            "action": "Test template application",
+            "details": "Apply template to test content to verify workflow"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Approval complexity",
+            "options": ["Single-step approval", "Multi-step sequential", "Multi-step parallel"],
+            "criteria": "Content sensitivity and organizational hierarchy"
+          },
+          {
+            "point": "Step approval requirements",
+            "options": ["Any approver sufficient", "All approvers required", "Majority approval"],
+            "criteria": "Risk management and decision-making authority"
+          }
+        ],
+        "outcomes": [
+          "Standardized approval workflows created",
+          "Consistent content review processes",
+          "Reduced workflow configuration time",
+          "Improved approval efficiency"
+        ],
+        "error_scenarios": [
+          "Approver availability conflicts",
+          "Template permission restrictions",
+          "Workflow logic configuration errors"
+        ]
+      },
+      {
+        "id": "BW_PUB_019",
+        "name": "Post Publication Notifications",
+        "category": "Team Collaboration",
+        "description": "Configure notifications for post publication to internal and external stakeholders",
+        "prerequisites": [
+          "Created or scheduled post",
+          "Stakeholder contact information",
+          "Notification permission settings"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access post for notification setup",
+            "details": "Open post in editor or during creation process"
+          },
+          {
+            "step": 2,
+            "action": "Click Notifications button",
+            "details": "Select Notifications button in upper right corner"
+          },
+          {
+            "step": 3,
+            "action": "Add notification recipients",
+            "details": "Enter Social Media Management user names and/or external email addresses"
+          },
+          {
+            "step": 4,
+            "action": "Write notification message",
+            "details": "Add personal message to accompany notification"
+          },
+          {
+            "step": 5,
+            "action": "Review notification setup",
+            "details": "Verify recipients and message content"
+          },
+          {
+            "step": 6,
+            "action": "Save notification configuration",
+            "details": "Save settings and see updated recipient count"
+          },
+          {
+            "step": 7,
+            "action": "Publish or schedule post",
+            "details": "Complete post publication to trigger notifications"
+          },
+          {
+            "step": 8,
+            "action": "Verify notification delivery",
+            "details": "Confirm notifications sent upon publication"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Recipient selection",
+            "options": ["Internal team only", "External stakeholders only", "Mixed internal and external"],
+            "criteria": "Stakeholder communication requirements and confidentiality needs"
+          },
+          {
+            "point": "Message customization",
+            "options": ["Standard notification", "Custom message", "Context-specific information"],
+            "criteria": "Relationship with recipients and communication objectives"
+          }
+        ],
+        "outcomes": [
+          "Stakeholders informed of post publication",
+          "Improved communication transparency",
+          "Enhanced collaboration with external partners",
+          "Publication awareness maintained"
+        ],
+        "error_scenarios": [
+          "Email delivery failures",
+          "Incorrect recipient information",
+          "Notification timing misalignment"
+        ]
+      },
+      {
+        "id": "BW_PUB_020",
+        "name": "Mobile Publishing with Hub App",
+        "category": "Mobile Publishing",
+        "description": "Publish Instagram Stories and manage content using the Brandwatch Hub mobile app",
+        "prerequisites": [
+          "Hub mobile app installed",
+          "Connected Instagram Business account",
+          "Mobile device with camera and storage access"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Open Hub mobile app",
+            "details": "Launch Brandwatch Hub app on mobile device"
+          },
+          {
+            "step": 2,
+            "action": "Select content type",
+            "details": "Choose Instagram Story, Feed post, or Reel creation"
+          },
+          {
+            "step": 3,
+            "action": "Capture or select media",
+            "details": "Take new photo/video or select from device gallery"
+          },
+          {
+            "step": 4,
+            "action": "Apply creative elements",
+            "details": "Add filters, stickers, text, or drawing elements"
+          },
+          {
+            "step": 5,
+            "action": "Add captions and tags",
+            "details": "Include relevant text, hashtags, and location tags"
+          },
+          {
+            "step": 6,
+            "action": "Review content preview",
+            "details": "Check content appearance and formatting"
+          },
+          {
+            "step": 7,
+            "action": "Publish or schedule",
+            "details": "Choose immediate publication or scheduling for later"
+          },
+          {
+            "step": 8,
+            "action": "Sync with desktop",
+            "details": "Ensure content syncs with main Publish platform"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Content timing",
+            "options": ["Immediate publishing", "Scheduled for optimal time", "Save as draft for later"],
+            "criteria": "Audience activity patterns and content strategy"
+          },
+          {
+            "point": "Creative approach",
+            "options": ["Minimal editing", "Enhanced with app features", "Brand-consistent styling"],
+            "criteria": "Brand guidelines and engagement objectives"
+          }
+        ],
+        "outcomes": [
+          "Mobile-native content published efficiently",
+          "Instagram Stories published automatically",
+          "On-the-go content management enabled",
+          "Real-time content creation and publishing"
+        ],
+        "error_scenarios": [
+          "App connectivity issues",
+          "Instagram API limitations",
+          "Device storage or camera access problems"
+        ]
+      },
+      {
+        "id": "BW_PUB_021",
+        "name": "Content State Management",
+        "category": "Content Management",
+        "description": "Monitor and manage content through different states in the publishing lifecycle",
+        "prerequisites": [
+          "Access to Publish module",
+          "Content in various publication states"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Content view",
+            "details": "Access Content menu in left navigation of Publish"
+          },
+          {
+            "step": 2,
+            "action": "Review content by state",
+            "details": "Browse content in All, Drafts, Awaiting approval, Scheduled, Processing, Publishing errors, Published sections"
+          },
+          {
+            "step": 3,
+            "action": "Filter content by criteria",
+            "details": "Use filters for date range, labels, channels, teams, authors, networks"
+          },
+          {
+            "step": 4,
+            "action": "Sort content display",
+            "details": "Organize by newest/oldest first or match all/any filter criteria"
+          },
+          {
+            "step": 5,
+            "action": "Manage state-specific content",
+            "details": "Perform appropriate actions based on content state (edit drafts, approve content, reschedule posts)"
+          },
+          {
+            "step": 6,
+            "action": "Handle publishing errors",
+            "details": "Address failed publications and resolve error conditions"
+          },
+          {
+            "step": 7,
+            "action": "Monitor processing content",
+            "details": "Track content moving through publication process"
+          },
+          {
+            "step": 8,
+            "action": "Review published content",
+            "details": "Check published posts and their performance statistics"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Error resolution approach",
+            "options": ["Immediate error fixing", "Batch error resolution", "Error escalation"],
+            "criteria": "Error severity and publication urgency"
+          },
+          {
+            "point": "Content organization strategy",
+            "options": ["State-based management", "Date-based organization", "Campaign-based grouping"],
+            "criteria": "Team workflow preferences and content volume"
+          }
+        ],
+        "outcomes": [
+          "Clear visibility into content lifecycle",
+          "Efficient content state management",
+          "Improved workflow organization",
+          "Better publishing quality control"
+        ],
+        "error_scenarios": [
+          "Content stuck in processing state",
+          "Publishing errors requiring manual intervention",
+          "State transition failures"
+        ]
+      },
+      {
+        "id": "BW_PUB_022",
+        "name": "Content Labeling and Organization",
+        "category": "Content Management",
+        "description": "Apply and manage labels for content organization and workflow automation",
+        "prerequisites": [
+          "Access to Publish module",
+          "Understanding of organizational labeling strategy",
+          "Content to be labeled"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access content labeling",
+            "details": "Open post editor or existing content for labeling"
+          },
+          {
+            "step": 2,
+            "action": "Navigate to Labels section",
+            "details": "Find Labels section in post editor sidebar"
+          },
+          {
+            "step": 3,
+            "action": "Search or create labels",
+            "details": "Search existing labels or create new ones as needed"
+          },
+          {
+            "step": 4,
+            "action": "Apply relevant labels",
+            "details": "Add appropriate labels for content categorization"
+          },
+          {
+            "step": 5,
+            "action": "Configure Smart Labels",
+            "details": "Set up automatic promotion rules based on labels"
+          },
+          {
+            "step": 6,
+            "action": "Manage label hierarchy",
+            "details": "Organize labels in logical groups and categories"
+          },
+          {
+            "step": 7,
+            "action": "Apply labels in bulk",
+            "details": "Use bulk actions to label multiple pieces of content"
+          },
+          {
+            "step": 8,
+            "action": "Monitor label usage",
+            "details": "Track label effectiveness and usage patterns"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Labeling strategy",
+            "options": ["Campaign-based labels", "Content-type labels", "Workflow-status labels", "Audience-segment labels"],
+            "criteria": "Organizational needs and content management objectives"
+          },
+          {
+            "point": "Label automation level",
+            "options": ["Manual labeling only", "Smart Label automation", "Template-based labeling"],
+            "criteria": "Workflow efficiency needs and content volume"
+          }
+        ],
+        "outcomes": [
+          "Organized content library with consistent categorization",
+          "Automated content promotion through Smart Labels",
+          "Improved content discoverability",
+          "Enhanced workflow efficiency"
+        ],
+        "error_scenarios": [
+          "Label naming conflicts",
+          "Smart Label rule misconfigurations",
+          "Label hierarchy complexity issues"
+        ]
+      },
+      {
+        "id": "BW_PUB_023",
+        "name": "Content Calendar Management",
+        "category": "Publishing & Scheduling",
+        "description": "Visualize and manage content schedule using the Publish Calendar view",
+        "prerequisites": [
+          "Access to Publish module",
+          "Scheduled content or campaigns",
+          "Understanding of calendar navigation"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Calendar view",
+            "details": "Click on 'Calendar' in the Publishing section menu"
+          },
+          {
+            "step": 2,
+            "action": "Select calendar view type",
+            "details": "Choose between day, week, or month view"
+          },
+          {
+            "step": 3,
+            "action": "Filter calendar content",
+            "details": "Apply filters by channel, team, network, labels, or content type"
+          },
+          {
+            "step": 4,
+            "action": "Review scheduled content",
+            "details": "View posts and campaigns displayed on calendar dates"
+          },
+          {
+            "step": 5,
+            "action": "Add content to calendar",
+            "details": "Click on specific dates to add new posts or campaigns"
+          },
+          {
+            "step": 6,
+            "action": "Edit scheduled items",
+            "details": "Click on existing calendar items to modify or reschedule"
+          },
+          {
+            "step": 7,
+            "action": "Manage campaign banners",
+            "details": "View and interact with campaign timeframes displayed as banners"
+          },
+          {
+            "step": 8,
+            "action": "Export calendar data",
+            "details": "Export calendar information for external planning tools"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Calendar granularity",
+            "options": ["Day view for detailed management", "Week view for tactical planning", "Month view for strategic overview"],
+            "criteria": "Planning horizon and content density"
+          },
+          {
+            "point": "Content density management",
+            "options": ["Distribute content evenly", "Cluster around events", "Optimize for audience activity"],
+            "criteria": "Content strategy and audience behavior patterns"
+          }
+        ],
+        "outcomes": [
+          "Visual content schedule overview",
+          "Improved content planning coordination",
+          "Better resource allocation",
+          "Enhanced campaign timeline management"
+        ],
+        "error_scenarios": [
+          "Calendar view loading issues",
+          "Filter combinations showing no results",
+          "Date selection conflicts"
+        ]
+      },
+      {
+        "id": "BW_PUB_024",
+        "name": "Publishing Error Resolution",
+        "category": "Publishing & Scheduling",
+        "description": "Identify and resolve common publishing errors to ensure content goes live",
+        "prerequisites": [
+          "Content in Publishing errors state",
+          "Understanding of common error types",
+          "Access to error resolution tools"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Publishing errors",
+            "details": "Go to Content > Publishing errors section"
+          },
+          {
+            "step": 2,
+            "action": "Review error messages",
+            "details": "Click on failed posts to see detailed error information"
+          },
+          {
+            "step": 3,
+            "action": "Identify error type",
+            "details": "Determine if error is channel-related, content-related, or system-related"
+          },
+          {
+            "step": 4,
+            "action": "Apply appropriate resolution",
+            "details": "Fix content issues, refresh channel connections, or contact support"
+          },
+          {
+            "step": 5,
+            "action": "Retry publication",
+            "details": "Attempt to publish or reschedule the corrected content"
+          },
+          {
+            "step": 6,
+            "action": "Monitor retry results",
+            "details": "Verify that retried content moves to published state"
+          },
+          {
+            "step": 7,
+            "action": "Document error patterns",
+            "details": "Note recurring errors for preventive measures"
+          },
+          {
+            "step": 8,
+            "action": "Implement prevention strategies",
+            "details": "Adjust workflows to prevent similar errors"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Error resolution priority",
+            "options": ["Time-sensitive content first", "Batch error resolution", "Error type prioritization"],
+            "criteria": "Content importance and resource availability"
+          },
+          {
+            "point": "Error handling approach",
+            "options": ["Immediate manual fix", "Automated retry", "Alternative publishing method"],
+            "criteria": "Error complexity and available alternatives"
+          }
+        ],
+        "outcomes": [
+          "Failed content successfully published",
+          "Improved understanding of error patterns",
+          "Enhanced publishing reliability",
+          "Reduced future publishing failures"
+        ],
+        "error_scenarios": [
+          "Persistent connection failures",
+          "Content format incompatibilities",
+          "Platform API limitations",
+          "Authentication token expiration"
+        ]
+      },
+      {
+        "id": "BW_PUB_025",
+        "name": "Content Performance Review",
+        "category": "Content Management",
+        "description": "Review published content performance and engagement metrics",
+        "prerequisites": [
+          "Published content with available metrics",
+          "Access to Engage module for detailed analytics",
+          "Understanding of performance indicators"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Published content",
+            "details": "Go to Content > Published section"
+          },
+          {
+            "step": 2,
+            "action": "Select content for review",
+            "details": "Click on published posts to view performance details"
+          },
+          {
+            "step": 3,
+            "action": "Review basic statistics",
+            "details": "Check likes, comments, shares, and reach metrics"
+          },
+          {
+            "step": 4,
+            "action": "Access detailed analytics",
+            "details": "Use 'View in Engage' button for comprehensive performance data"
+          },
+          {
+            "step": 5,
+            "action": "Compare performance across channels",
+            "details": "Analyze content performance differences between networks"
+          },
+          {
+            "step": 6,
+            "action": "Identify top-performing content",
+            "details": "Note content types and characteristics that drive engagement"
+          },
+          {
+            "step": 7,
+            "action": "Copy successful content",
+            "details": "Use 'Copy' function to replicate high-performing posts"
+          },
+          {
+            "step": 8,
+            "action": "Document insights",
+            "details": "Record learnings for future content strategy"
+          }
+        ],
+        "decision_points": [
+          {
+            "point": "Performance analysis depth",
+            "options": ["Basic metrics review", "Detailed analytics deep-dive", "Comparative analysis"],
+            "criteria": "Available time and strategic importance"
+          },
+          {
+            "point": "Content optimization strategy",
+            "options": ["Replicate successful formats", "Iterate on underperforming content", "Experiment with new approaches"],
+            "criteria": "Performance gaps and audience preferences"
+          }
+        ],
+        "outcomes": [
+          "Understanding of content performance patterns",
+          "Data-driven content strategy insights",
+          "Improved future content planning",
+          "Enhanced audience engagement"
+        ],
+        "error_scenarios": [
+          "Metrics not available for recent posts",
+          "Analytics module access restrictions",
+          "Performance data synchronization delays"
+        ]
+      }
+    ]
+  }
+}

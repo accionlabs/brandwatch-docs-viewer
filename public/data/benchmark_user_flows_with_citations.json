@@ -1,0 +1,624 @@
+{
+    "module": "Benchmark",
+    "description": "Brandwatch Benchmark is an add-on module that enables monitoring and comparison of social media metrics between your brands and competitors' brands, providing real-time competitive intelligence insights.",
+    "user_flows": [
+        {
+            "flow_name": "Initial Benchmark Setup and Configuration",
+            "description": "Complete workflow for setting up Benchmark module and creating initial brand comparisons",
+            "prerequisites": [
+                "Benchmark module purchased and activated",
+                "Administrator role in Social Media Management",
+                "At least one owned brand and one competitor identified",
+                "Social media channels identified for monitoring"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access Benchmark module",
+                    "description": "Navigate to Benchmark for initial setup",
+                    "details": [
+                        "Click Benchmark icon in Social Media Management sidebar",
+                        "View 'Welcome to Benchmark!' landing page",
+                        "Click 'Get Started' button to begin setup"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Configure owned brand",
+                    "description": "Set up your brand for monitoring",
+                    "details": [
+                        "Enter brand name in 'My Brand' section",
+                        "Add Facebook, Instagram, and/or Twitter channels",
+                        "Use suggested channels list that appears after typing",
+                        "Minimum requirement: one channel per brand"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Configure competitor brand",
+                    "description": "Set up competitor brand for comparison",
+                    "details": [
+                        "Enter competitor brand name",
+                        "Add competitor's social media channels",
+                        "Ensure exact Instagram handle names if adding Instagram",
+                        "Verify channel suggestions are accurate"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Initialize comparison",
+                    "description": "Complete setup and generate dashboards",
+                    "details": [
+                        "Click 'Compare' button after entering brand information",
+                        "System sets up Brand Insights and Content Analysis dashboards",
+                        "Wait for data aggregation to complete"
+                    ]
+                }
+            ],
+            "channel_requirements": {
+                "minimum": "One channel per brand to begin benchmarking",
+                "default_slots": "20 channel slots available",
+                "supported_networks": [
+                    "Facebook",
+                    "Instagram",
+                    "Twitter/X",
+                    "YouTube"
+                ],
+                "instagram_note": "Must provide exact Instagram handle name"
+            },
+            "decision_points": [
+                {
+                    "point": "Channel Selection Strategy",
+                    "options": [
+                        "Single platform focus: Compare same networks (e.g., Facebook vs Facebook)",
+                        "Multi-platform approach: Include multiple networks per brand",
+                        "Comprehensive coverage: Use all available channels for complete picture"
+                    ]
+                },
+                {
+                    "point": "Competitor Selection",
+                    "options": [
+                        "Direct competitors: Same industry and market",
+                        "Aspirational brands: Larger competitors to benchmark against",
+                        "Niche competitors: Specialized players in specific segments"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Benchmark module configured with initial brands",
+                "Brand Insights dashboard available for channel-level metrics",
+                "Content Analysis dashboard ready for post-level analysis",
+                "Foundation for ongoing competitive intelligence"
+            ],
+            "source_documents": [
+                "Benchmark/Benchmark Dashboards/Using the Brand Insights Dashboard.pdf"
+            ]
+        },
+        {
+            "flow_name": "Brand Creation and Management",
+            "description": "Administrative workflow for creating and managing brands within Benchmark system",
+            "prerequisites": [
+                "Administrator role in organization",
+                "Access to Social Media Management Administration",
+                "Channel information for brands to be added"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access brand administration",
+                    "description": "Navigate to Benchmark brand management",
+                    "details": [
+                        "Go to Social Media Management Administration",
+                        "Select Benchmark > Brands section",
+                        "View existing brands and channel usage"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Create new brand",
+                    "description": "Initiate brand creation process",
+                    "details": [
+                        "Click 'Create Brand' button",
+                        "Enter descriptive brand name",
+                        "Prepare to add social media channels"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Add social media channels",
+                    "description": "Associate channels with the brand",
+                    "details": [
+                        "Search for Facebook, Instagram, Twitter, YouTube channels",
+                        "Add relevant channels to the brand",
+                        "Verify channel details: name, network, fans, username, indexing status"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Configure brand ownership",
+                    "description": "Set brand classification",
+                    "details": [
+                        "Use 'Mark as My Brand' toggle for owned brands",
+                        "Leave toggle deactivated for competitor brands",
+                        "Owned brands indicated by crown icon in brand list"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Verify brand setup",
+                    "description": "Confirm brand configuration",
+                    "details": [
+                        "Review channel count and slot usage",
+                        "Check data availability for all channels",
+                        "Ensure brand appears in dashboard brand selection"
+                    ]
+                }
+            ],
+            "brand_management_features": [
+                {
+                    "feature": "Brand Filtering",
+                    "options": [
+                        "All Brands",
+                        "My Brands",
+                        "Competitors"
+                    ],
+                    "purpose": "Organize and quickly find specific brand types"
+                },
+                {
+                    "feature": "Channel Information Display",
+                    "details": [
+                        "Channel name",
+                        "Network type",
+                        "Fan count",
+                        "Username/handle",
+                        "Indexing status",
+                        "Data availability"
+                    ]
+                },
+                {
+                    "feature": "Search and Discovery",
+                    "capability": "Search brand lists and find specific brands quickly"
+                }
+            ],
+            "decision_points": [
+                {
+                    "point": "Brand Categorization",
+                    "options": [
+                        "My Brand: Owned brands with crown icon indicator",
+                        "Competitor: External brands for comparison analysis"
+                    ]
+                },
+                {
+                    "point": "Channel Selection Strategy",
+                    "options": [
+                        "Core channels: Primary platforms for the brand",
+                        "Comprehensive coverage: All available social presence",
+                        "Strategic selection: Channels most relevant to analysis goals"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Brands properly configured for benchmarking analysis",
+                "Channel associations established and verified",
+                "Brand ownership clearly identified",
+                "Brands available for selection in analysis dashboards"
+            ],
+            "source_documents": [
+                "Benchmark/Benchmark Dashboards/Using the Content Analysis Dashboard.pdf"
+            ]
+        },
+        {
+            "flow_name": "Brand Insights Dashboard Analysis",
+            "description": "Workflow for analyzing channel-level metrics and brand performance comparisons",
+            "prerequisites": [
+                "Brands configured in Benchmark",
+                "Data collection period established",
+                "Access to Brand Insights dashboard"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access Brand Insights dashboard",
+                    "description": "Navigate to channel-level analytics",
+                    "details": [
+                        "Open Benchmark module",
+                        "Select Brand Insights dashboard",
+                        "View Brand Overview widget and supporting metrics"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Configure analysis parameters",
+                    "description": "Set filters and comparison criteria",
+                    "details": [
+                        "Select time period for analysis",
+                        "Choose specific brands to compare",
+                        "Select networks to include in analysis",
+                        "Configure aggregated vs. individual network views"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Analyze brand overview metrics",
+                    "description": "Review high-level brand performance",
+                    "details": [
+                        "Examine posts count per brand",
+                        "Review fan growth and total engagement metrics",
+                        "Compare average engagement per post across brands",
+                        "Identify performance leaders and gaps"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Deep-dive into specific insights",
+                    "description": "Analyze detailed fan and engagement metrics",
+                    "details": [
+                        "Review fan demographics and growth patterns",
+                        "Analyze engagement types and quality",
+                        "Compare performance across different content types",
+                        "Identify trending patterns and anomalies"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Export and share insights",
+                    "description": "Generate reports and share findings",
+                    "details": [
+                        "Export Brand Insights PDF report",
+                        "Share insights with stakeholders",
+                        "Document key findings and recommendations"
+                    ]
+                }
+            ],
+            "key_metrics": [
+                {
+                    "category": "Audience Metrics",
+                    "metrics": [
+                        "Total fans",
+                        "Fan growth rate",
+                        "Fan demographics"
+                    ]
+                },
+                {
+                    "category": "Content Performance",
+                    "metrics": [
+                        "Total posts",
+                        "Average engagement per post",
+                        "Post frequency"
+                    ]
+                },
+                {
+                    "category": "Engagement Analysis",
+                    "metrics": [
+                        "Total engagement",
+                        "Engagement rate",
+                        "Engagement quality"
+                    ]
+                }
+            ],
+            "analysis_capabilities": [
+                "Cross-network aggregated metrics when multiple networks selected",
+                "Time period filtering for trend analysis",
+                "Brand-to-brand comparison widgets",
+                "Fan and engagement drill-down insights"
+            ],
+            "decision_points": [
+                {
+                    "point": "Analysis Scope",
+                    "options": [
+                        "Single network focus: Deep-dive into specific platform",
+                        "Multi-network aggregate: Overall brand performance",
+                        "Comparative analysis: Side-by-side brand comparison"
+                    ]
+                },
+                {
+                    "point": "Time Period Selection",
+                    "options": [
+                        "Recent performance: Last 30 days for current trends",
+                        "Quarterly analysis: 90 days for pattern identification",
+                        "Annual comparison: Year-over-year performance"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Clear understanding of brand performance vs. competitors",
+                "Identification of content and engagement opportunities",
+                "Actionable insights for social media strategy",
+                "Exportable reports for stakeholder communication"
+            ],
+            "source_documents": [
+                "Benchmark/Benchmark Dashboards/Using the Brand Insights Dashboard.pdf"
+            ]
+        },
+        {
+            "flow_name": "Content Analysis Dashboard Deep-Dive",
+            "description": "Workflow for analyzing post-level content performance and competitive content strategies",
+            "prerequisites": [
+                "Brands with active content publishing",
+                "Content data available for analysis period",
+                "Understanding of content strategy goals"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Access Content Analysis dashboard",
+                    "description": "Navigate to post-level content analytics",
+                    "details": [
+                        "Open Content Analysis dashboard in Benchmark",
+                        "Choose between Content and Analysis tabs",
+                        "Set initial filters for analysis scope"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Analyze individual content performance",
+                    "description": "Review specific posts and content types",
+                    "details": [
+                        "Use Content tab to view individual posts",
+                        "Filter by post types to focus analysis",
+                        "Review post content alongside performance metrics",
+                        "Identify high-performing content patterns"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Examine content strategy patterns",
+                    "description": "Analyze publishing and engagement trends",
+                    "details": [
+                        "Switch to Analysis tab for aggregated insights",
+                        "Review Analysis Summary widget",
+                        "Examine Publishing Activity patterns",
+                        "Analyze Engagement trends and correlations"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Competitive content intelligence",
+                    "description": "Compare content strategies across brands",
+                    "details": [
+                        "Compare content themes and topics",
+                        "Analyze posting frequency and timing",
+                        "Identify competitor content gaps and opportunities",
+                        "Use Share of Voice widget for topic analysis"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Content insights application",
+                    "description": "Apply findings to content strategy",
+                    "details": [
+                        "Document high-performing content types",
+                        "Identify optimal posting patterns",
+                        "Plan content calendar improvements",
+                        "Export analysis for team sharing"
+                    ]
+                }
+            ],
+            "content_analysis_features": [
+                {
+                    "tab": "Content",
+                    "capabilities": [
+                        "Individual post content and metrics display",
+                        "Post type filtering",
+                        "Performance comparison across brands"
+                    ]
+                },
+                {
+                    "tab": "Analysis",
+                    "capabilities": [
+                        "Analysis Summary widget",
+                        "Publishing Activity insights",
+                        "Engagement pattern analysis",
+                        "Share of Voice content analysis"
+                    ]
+                }
+            ],
+            "content_insights": [
+                "Keyword search for competitive campaign topics",
+                "Share of Voice analysis for content themes",
+                "Publishing frequency optimization",
+                "Content format performance comparison"
+            ],
+            "decision_points": [
+                {
+                    "point": "Content Analysis Focus",
+                    "options": [
+                        "Post-level analysis: Individual content performance",
+                        "Strategic analysis: Overall content patterns and trends",
+                        "Competitive intelligence: Competitor content strategy"
+                    ]
+                },
+                {
+                    "point": "Content Filtering Strategy",
+                    "options": [
+                        "Content type focus: Specific post formats (video, image, link)",
+                        "Time-based analysis: Recent vs. historical content",
+                        "Brand comparison: Own content vs. competitor content"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Deep understanding of content performance drivers",
+                "Competitive intelligence on content strategies",
+                "Actionable insights for content optimization",
+                "Content calendar and strategy improvements"
+            ],
+            "source_documents": [
+                "Benchmark/Benchmark Dashboards/Using the Content Analysis Dashboard.pdf"
+            ]
+        },
+        {
+            "flow_name": "Competitive Intelligence and Strategy Development",
+            "description": "Advanced workflow for leveraging Benchmark insights to inform marketing strategy and competitive positioning",
+            "prerequisites": [
+                "Established benchmarking data collection",
+                "Understanding of business objectives",
+                "Access to both Brand Insights and Content Analysis dashboards"
+            ],
+            "steps": [
+                {
+                    "step": 1,
+                    "action": "Competitive landscape analysis",
+                    "description": "Map competitive positioning and performance",
+                    "details": [
+                        "Compare brand performance across all metrics",
+                        "Identify market leaders and laggards",
+                        "Map competitive strengths and weaknesses",
+                        "Establish benchmarking baselines"
+                    ]
+                },
+                {
+                    "step": 2,
+                    "action": "Content strategy intelligence",
+                    "description": "Analyze competitor content approaches",
+                    "details": [
+                        "Perform keyword searches for campaign topics",
+                        "Use Share of Voice widget for content analysis",
+                        "Identify trending topics and themes",
+                        "Map content calendar patterns"
+                    ]
+                },
+                {
+                    "step": 3,
+                    "action": "Performance gap identification",
+                    "description": "Find opportunities for improvement",
+                    "details": [
+                        "Identify underperforming areas vs. competitors",
+                        "Find content types with growth potential",
+                        "Discover untapped audience segments",
+                        "Map engagement optimization opportunities"
+                    ]
+                },
+                {
+                    "step": 4,
+                    "action": "Strategic insights development",
+                    "description": "Transform analysis into actionable strategy",
+                    "details": [
+                        "Document key competitive advantages",
+                        "Identify areas requiring strategic focus",
+                        "Develop content inspiration from high performers",
+                        "Create competitive response strategies"
+                    ]
+                },
+                {
+                    "step": 5,
+                    "action": "Strategy implementation planning",
+                    "description": "Create actionable plans from insights",
+                    "details": [
+                        "Adjust content calendar based on findings",
+                        "Implement best practices from competitor analysis",
+                        "Set performance targets based on competitive benchmarks",
+                        "Schedule regular competitive monitoring"
+                    ]
+                }
+            ],
+            "competitive_analysis_techniques": [
+                {
+                    "technique": "Performance Benchmarking",
+                    "application": "Compare engagement rates, fan growth, content frequency against competitors"
+                },
+                {
+                    "technique": "Content Gap Analysis",
+                    "application": "Identify topics and content types competitors are using successfully"
+                },
+                {
+                    "technique": "Timing Analysis",
+                    "application": "Understand optimal posting patterns from competitor data"
+                },
+                {
+                    "technique": "Share of Voice Tracking",
+                    "application": "Monitor competitive presence around key topics and campaigns"
+                }
+            ],
+            "strategic_applications": [
+                "Marketing strategy adjustment based on competitive positioning",
+                "Content calendar optimization using competitor insights",
+                "Audience targeting refinement based on competitor analysis",
+                "Campaign planning informed by competitive intelligence"
+            ],
+            "decision_points": [
+                {
+                    "point": "Competitive Response Strategy",
+                    "options": [
+                        "Direct competition: Match or exceed competitor performance",
+                        "Differentiation: Find unique positioning opportunities",
+                        "Blue ocean: Identify uncontested content spaces"
+                    ]
+                },
+                {
+                    "point": "Analysis Frequency",
+                    "options": [
+                        "Continuous monitoring: Real-time competitive tracking",
+                        "Periodic analysis: Monthly or quarterly competitive reviews",
+                        "Campaign-specific: Analysis around major initiatives"
+                    ]
+                }
+            ],
+            "outcomes": [
+                "Data-driven competitive strategy development",
+                "Improved market positioning and performance",
+                "Enhanced content strategy based on competitive intelligence",
+                "Proactive competitive response capabilities"
+            ],
+            "source_documents": [
+                "Benchmark/Benchmark Dashboards/Iris Content Insights in Benchmark.pdf"
+            ]
+        }
+    ],
+    "supported_platforms": [
+        {
+            "platform": "Facebook",
+            "metrics": "Channel-level metrics, post performance, engagement analysis"
+        },
+        {
+            "platform": "Instagram",
+            "metrics": "Profile metrics, content performance (exact handle required)"
+        },
+        {
+            "platform": "Twitter/X",
+            "metrics": "Account metrics, tweet performance, engagement tracking"
+        },
+        {
+            "platform": "YouTube",
+            "metrics": "Channel statistics, video performance metrics"
+        }
+    ],
+    "dashboard_types": [
+        {
+            "dashboard": "Brand Insights",
+            "focus": "Channel-level metrics and brand performance comparison",
+            "features": [
+                "Brand Overview widget",
+                "Fan analysis",
+                "Engagement insights",
+                "Cross-network aggregation"
+            ]
+        },
+        {
+            "dashboard": "Content Analysis",
+            "focus": "Post-level content performance and strategy analysis",
+            "features": [
+                "Individual post metrics",
+                "Publishing activity analysis",
+                "Content type performance",
+                "Share of Voice analysis"
+            ]
+        }
+    ],
+    "limitations": [
+        "20 channel slots by default (additional slots purchasable)",
+        "Only specific metrics available for each platform",
+        "Requires Administrator role for setup and brand management",
+        "Instagram requires exact handle names for channel addition"
+    ],
+    "key_features": [
+        "Real-time competitive social media monitoring",
+        "Cross-network brand performance comparison",
+        "Post-level content analysis and intelligence",
+        "Automated dashboard setup and data aggregation",
+        "PDF report export capabilities",
+        "Share of Voice analysis for content topics",
+        "Channel slot management and optimization",
+        "Crown icon identification for owned brands"
+    ]
+}

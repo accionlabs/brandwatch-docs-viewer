@@ -1,0 +1,730 @@
+{
+  "module": "VIZIA",
+  "description": "Brandwatch VIZIA is a flexible, dynamic, multi-screen data visualization platform that brings social and marketing data to everyone in your business. Powered by Brandwatch Consumer Research data and key social and marketing integrations, it provides comprehensive overview of your marketing world with customizable displays that can be broadcast on any screen and controlled remotely.",
+  "user_flows": [
+    {
+      "flow_name": "Initial VIZIA Setup and Organization",
+      "description": "Complete workflow for setting up VIZIA platform and organizing content structure through folders and basic configuration",
+      "prerequisites": [
+        "VIZIA module access and permissions",
+        "Understanding of organizational data structure",
+        "Access to Brandwatch Consumer Research (if creating BCR-based content)",
+        "Chrome browser for administration (recommended)"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Create organizational folder structure",
+          "description": "Set up folders to categorize different groups of data and content",
+          "details": [
+            "Navigate to VIZIA platform",
+            "Click '+' button next to 'Folders' to create new folder",
+            "Name folder descriptively (e.g., by team, department, or data type)",
+            "Configure folder settings: locale, time zone, theme",
+            "Set content moderation filters if needed",
+            "Configure folder permissions for team access"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure folder permissions and settings",
+          "description": "Set up access controls and content filtering for folders",
+          "details": [
+            "Access folder management through 3-dots menu",
+            "Configure content moderation: Explicit images, Gore, Drugs filtering",
+            "Set permission levels for collaborators and viewers",
+            "Configure locale and time zone settings",
+            "Select appropriate theme (e.g., Brandwatch Dark)",
+            "Save folder configuration"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Plan content strategy and data sources",
+          "description": "Determine what data sources and visualizations will be needed",
+          "details": [
+            "Identify available data sources (Brandwatch, Google Analytics, Facebook, etc.)",
+            "Plan deck themes and purposes",
+            "Determine which teams need access to which content",
+            "Consider screen deployment locations and audience needs",
+            "Plan folder organization strategy"
+          ]
+        }
+      ],
+      "folder_management_features": {
+        "organization": [
+          "Unlimited folder creation capability",
+          "Hierarchical content organization",
+          "Team-based folder structure options"
+        ],
+        "settings": [
+          "Locale configuration",
+          "Time zone customization",
+          "Theme selection",
+          "Content moderation controls"
+        ],
+        "permissions": [
+          "Collaborator access (can edit)",
+          "Viewer access (read-only)",
+          "Admin controls for folder management"
+        ]
+      },
+      "decision_points": [
+        {
+          "point": "Folder Organization Strategy",
+          "options": [
+            "Team-based: Separate folders for different departments",
+            "Content-type based: Folders by data source or visualization type",
+            "Project-based: Folders organized around specific initiatives",
+            "Hybrid approach: Combination of organizational methods"
+          ]
+        },
+        {
+          "point": "Permission Structure",
+          "options": [
+            "Open access: Most users have broad viewing permissions",
+            "Restricted access: Limited permissions based on role",
+            "Department-specific: Access aligned with organizational structure"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Organized folder structure for content management",
+        "Proper permissions and access controls established",
+        "Content moderation settings configured",
+        "Foundation ready for deck and slide creation",
+        "Team access properly configured"
+      ]
+    },
+    {
+      "flow_name": "Deck Creation and Management",
+      "description": "Workflow for creating, organizing, and managing VIZIA decks as containers for data visualization slides",
+      "prerequisites": [
+        "Folders created and configured",
+        "Understanding of content requirements",
+        "Access to data sources for visualizations",
+        "Deck naming and organizational strategy"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Create new deck",
+          "description": "Initialize a new deck container within a folder",
+          "details": [
+            "Navigate to desired folder",
+            "Click '+ NEW DECK' button",
+            "Name the deck descriptively",
+            "Choose folder location (existing or create new)",
+            "Select creation option: 'CREATE & OPEN DECK' or 'CREATE DECK & VIEW IN FOLDER'"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure deck properties",
+          "description": "Set up deck-level settings and organization",
+          "details": [
+            "Access deck through content management interface",
+            "Preview deck content by clicking on deck (not title)",
+            "View slide count and component information",
+            "Set deck-level permissions if needed",
+            "Organize deck position within folder"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Manage deck lifecycle",
+          "description": "Handle deck operations throughout its lifecycle",
+          "details": [
+            "Use 3-dots menu for deck operations:",
+            "Rename deck for clarity",
+            "Duplicate deck to same or different folder",
+            "Move deck between folders",
+            "Preview deck content and slides",
+            "Delete deck when no longer needed"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Organize deck collections",
+          "description": "Manage multiple decks and their relationships",
+          "details": [
+            "Use 'Recent Decks' for quick access to recently edited content",
+            "Star important decks for easy retrieval",
+            "Manage shared decks received from other users",
+            "Handle deleted decks (available for 90 days)",
+            "Drag and drop slides between decks"
+          ]
+        }
+      ],
+      "deck_management_features": {
+        "creation_options": [
+          "Folder-based organization",
+          "Immediate editing vs. folder viewing options",
+          "Template-based creation capability"
+        ],
+        "organization_tools": [
+          "Recent Decks view (10 most recent)",
+          "Starred Decks for favorites",
+          "Shared Decks for collaboration",
+          "Deleted Decks recovery (90-day retention)"
+        ],
+        "operations": [
+          "Rename for clarity",
+          "Duplicate for reuse",
+          "Move between folders",
+          "Preview without editing",
+          "Delete with recovery option"
+        ]
+      },
+      "decision_points": [
+        {
+          "point": "Deck Naming Strategy",
+          "options": [
+            "Descriptive naming: Clear purpose and content indication",
+            "Date-based naming: Include creation or update dates",
+            "Project-based naming: Align with specific initiatives",
+            "Audience-based naming: Indicate intended viewers"
+          ]
+        },
+        {
+          "point": "Deck Organization Approach",
+          "options": [
+            "Single-purpose decks: One deck per specific use case",
+            "Multi-purpose decks: Comprehensive dashboards",
+            "Template decks: Reusable deck structures"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Well-organized deck structure within folders",
+        "Clear deck naming and categorization",
+        "Efficient deck management workflow established",
+        "Foundation ready for slide and component addition",
+        "Deck lifecycle management processes in place"
+      ]
+    },
+    {
+      "flow_name": "Slide Creation and Component Management",
+      "description": "Detailed workflow for creating slides, adding data visualization components, and configuring display settings",
+      "prerequisites": [
+        "Deck created and accessible",
+        "Understanding of available data sources",
+        "Knowledge of visualization requirements",
+        "Access to Deck Editor interface"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access Deck Editor and create slides",
+          "description": "Enter slide creation mode and add new slides",
+          "details": [
+            "Open deck to access Deck Editor interface",
+            "Click '+' button on top left to add new slide",
+            "Name slide by triple-clicking 'Untitled Slide' title",
+            "View slide in left sidebar for organization",
+            "Drag and drop slides to reorder if needed"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Add and configure components",
+          "description": "Add data visualization components to slides",
+          "details": [
+            "Click '+ Add Component' or 'ADD COMPONENT' button",
+            "Browse Component Picker by data source categories",
+            "Select appropriate component from available data sources:",
+            "- Brandwatch: Social media insights and analytics",
+            "- Google Analytics: Website performance data",
+            "- Salesforce: CRM and sales data",
+            "- Microsoft Excel: Spreadsheet data",
+            "- Hootsuite: Social media management data",
+            "Configure component settings and data connections"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Customize slide layout and timing",
+          "description": "Configure slide appearance and display settings",
+          "details": [
+            "Use 'Slide Layout' option in Deck Editor",
+            "Arrange components within slide using drag and drop",
+            "Select layout options based on component count",
+            "Configure slide timing intervals:",
+            "- 30 seconds, 1 minute, 2 minutes, 3 minutes",
+            "- 4 minutes, 5 minutes, 10 minutes",
+            "Set individual timing for each slide as needed"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Manage slide operations",
+          "description": "Handle slide lifecycle and organization",
+          "details": [
+            "Access slide control options through component menu:",
+            "Rename slides for clarity",
+            "Duplicate slides for consistency",
+            "Delete slides when no longer needed",
+            "Configure time intervals for rotation",
+            "Test slide display and component functionality"
+          ]
+        }
+      ],
+      "component_categories": {
+        "brandwatch": [
+          "Featured Content",
+          "Aggregated Reach",
+          "Total Mentions",
+          "Benchmark data",
+          "Topic analysis",
+          "Social media insights"
+        ],
+        "integrations": [
+          "Google Analytics",
+          "Google Sheets",
+          "Google Slides",
+          "Salesforce",
+          "Microsoft Excel",
+          "Hootsuite",
+          "Buzzsumo",
+          "Pi Datametrics",
+          "Quintly",
+          "IQ Media"
+        ],
+        "display_options": [
+          "1-9 components per slide",
+          "Dynamic and animated visualizations",
+          "Real-time data updates",
+          "Customizable layouts"
+        ]
+      },
+      "slide_timing_options": [
+        "30 seconds - Quick rotation for overview displays",
+        "1-2 minutes - Standard rotation for most content",
+        "3-5 minutes - Detailed analysis viewing",
+        "10 minutes - In-depth dashboard review"
+      ],
+      "decision_points": [
+        {
+          "point": "Component Selection Strategy",
+          "options": [
+            "Single source focus: All components from one data source",
+            "Multi-source integration: Components from various sources",
+            "Audience-specific: Components chosen for specific viewers",
+            "Purpose-driven: Components aligned with specific objectives"
+          ]
+        },
+        {
+          "point": "Slide Timing Configuration",
+          "options": [
+            "Uniform timing: Same interval for all slides",
+            "Variable timing: Different intervals based on content complexity",
+            "Audience-based timing: Timing matched to viewing context"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Functional slides with data visualization components",
+        "Properly configured slide timing for display rotation",
+        "Well-organized slide structure within deck",
+        "Components connected to appropriate data sources",
+        "Slides ready for distribution and display"
+      ]
+    },
+    {
+      "flow_name": "Content Distribution and Screen Management",
+      "description": "Workflow for distributing VIZIA content to screens and managing display across multiple locations",
+      "prerequisites": [
+        "Completed decks with slides and components",
+        "Chrome extension installed on target devices",
+        "Network connectivity for target screens",
+        "Understanding of deployment locations"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access Distribution Hub",
+          "description": "Navigate to content distribution interface",
+          "details": [
+            "From Deck Editor, click 'Share' button",
+            "Select 'Cast to screen' option",
+            "Access Distribution Hub interface",
+            "View available installations and screens",
+            "Review current content deployment status"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Prepare target screens",
+          "description": "Set up Chrome extension on display devices",
+          "details": [
+            "Install Chrome extension on target devices",
+            "Ensure devices are connected to network",
+            "Open Chrome browser on display screens",
+            "Verify extension is active and connected",
+            "Test connection to Distribution Hub"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Deploy content to screens",
+          "description": "Distribute decks to specific screen installations",
+          "details": [
+            "Select target installation from available list",
+            "Drag and drop deck onto desired screen",
+            "Monitor deployment status",
+            "Verify content appears on target screen",
+            "Test content rotation and component functionality"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Manage ongoing distribution",
+          "description": "Handle content updates and screen management",
+          "details": [
+            "Monitor screen status through Distribution Hub",
+            "Update content by replacing decks",
+            "Manage multiple installations across organization",
+            "Handle offline installations and reconnection",
+            "Use 'Replace content on installation' for updates"
+          ]
+        }
+      ],
+      "distribution_features": {
+        "deployment_methods": [
+          "Drag and drop deck deployment",
+          "Cast to screen from Deck Editor",
+          "Central management through Distribution Hub"
+        ],
+        "screen_management": [
+          "Multiple installation support",
+          "Installation status monitoring",
+          "Content replacement capabilities",
+          "Network connectivity management"
+        ],
+        "technical_requirements": [
+          "Chrome extension on display devices",
+          "Network connectivity",
+          "Chrome browser for administration",
+          "Compatible display hardware"
+        ]
+      },
+      "decision_points": [
+        {
+          "point": "Screen Deployment Strategy",
+          "options": [
+            "Centralized control: All screens managed from single hub",
+            "Distributed management: Local control of specific screens",
+            "Content-specific deployment: Different content for different locations"
+          ]
+        },
+        {
+          "point": "Content Update Approach",
+          "options": [
+            "Scheduled updates: Regular content refresh cycles",
+            "Event-driven updates: Content changes based on business needs",
+            "Real-time updates: Continuous content evolution"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Content successfully deployed to target screens",
+        "Screen network established and managed",
+        "Real-time data visualization displays active",
+        "Content update and management processes established",
+        "Multi-location display capability operational"
+      ]
+    },
+    {
+      "flow_name": "User Access Management and Administration",
+      "description": "Administrative workflow for managing user access, permissions, and team collaboration within VIZIA",
+      "prerequisites": [
+        "Administrator access to Brandwatch platform",
+        "Access to my.brandwatch.com or accounts.brandwatch.com",
+        "Understanding of organizational user roles",
+        "Team member information for account creation"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access user management portal",
+          "description": "Navigate to Brandwatch user administration",
+          "details": [
+            "Go to my.brandwatch.com or accounts.brandwatch.com",
+            "Access account administration section",
+            "Navigate to user management interface",
+            "View current user list and access levels"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Create new user accounts",
+          "description": "Add new team members to VIZIA platform",
+          "details": [
+            "Click '+ New User' button",
+            "Enter required user information:",
+            "- Email address",
+            "- First name",
+            "- Last name",
+            "Select product access including VIZIA",
+            "Configure account administrator status if needed"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Configure user permissions",
+          "description": "Set appropriate access levels and product permissions",
+          "details": [
+            "Choose product access permissions:",
+            "- Audiences",
+            "- Consumer Research",
+            "- Qriously",
+            "- VIZIA (ensure this is selected)",
+            "Set user role level:",
+            "- Admin: Full control over everything in VIZIA account",
+            "- Member: Can create and edit folders and decks with limited access based on folder permissions"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Complete user setup",
+          "description": "Finalize user account creation and access",
+          "details": [
+            "Review all user settings and permissions",
+            "Click 'Create' to complete user setup",
+            "User receives access to VIZIA account",
+            "If user has Consumer Research access, same credentials work for VIZIA",
+            "Configure folder permissions for specific access control"
+          ]
+        }
+      ],
+      "user_roles": {
+        "admin": {
+          "description": "Full control over everything in the VIZIA account",
+          "capabilities": [
+            "View and edit all folders and decks",
+            "Manage user access and permissions",
+            "Configure system-wide settings",
+            "Control content distribution",
+            "Manage integrations and data sources"
+          ]
+        },
+        "member": {
+          "description": "Can create and edit folders and decks but may have limited access to certain content depending on folder permissions",
+          "capabilities": [
+            "Create and edit assigned folders and decks",
+            "Access content based on folder permissions",
+            "Collaborate on shared projects",
+            "View and interact with permitted content"
+          ]
+        }
+      },
+      "access_management_features": [
+        "Product-specific access control",
+        "Role-based permission system",
+        "Folder-level permission management",
+        "Cross-product credential integration",
+        "User lifecycle management"
+      ],
+      "decision_points": [
+        {
+          "point": "User Role Assignment Strategy",
+          "options": [
+            "Minimal privilege: Start with Member role and upgrade as needed",
+            "Role-based assignment: Align roles with organizational responsibilities",
+            "Project-based access: Temporary elevated access for specific initiatives"
+          ]
+        },
+        {
+          "point": "Permission Management Approach",
+          "options": [
+            "Centralized control: Admin manages all permissions",
+            "Distributed management: Team leads manage their group access",
+            "Self-service model: Users request access as needed"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Team members have appropriate VIZIA access",
+        "User roles aligned with organizational responsibilities",
+        "Proper permission structure established",
+        "Folder-level access controls configured",
+        "User lifecycle management process in place"
+      ]
+    },
+    {
+      "flow_name": "External Sharing and Reporting",
+      "description": "Workflow for sharing VIZIA decks with external stakeholders and managing secure reporting distribution",
+      "prerequisites": [
+        "Completed VIZIA decks ready for sharing",
+        "Recipient email addresses identified",
+        "Understanding of data sensitivity and security requirements",
+        "Customer Success Manager contact for subscription setup"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access sharing interface",
+          "description": "Navigate to deck sharing options",
+          "details": [
+            "Open deck to be shared",
+            "Click 'Share' button in top-right corner",
+            "Select 'Send to people' option",
+            "Access email sharing interface"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure recipient access",
+          "description": "Set up email addresses and sharing message",
+          "details": [
+            "Enter recipient email addresses:",
+            "- Input emails one by one, or",
+            "- Copy and paste list separated by commas or semicolons",
+            "Compose sharing message with context",
+            "Review recipient list for accuracy",
+            "Ensure external recipients have valid email addresses"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Deploy shared deck",
+          "description": "Send secure link and manage access",
+          "details": [
+            "Click 'Share with 1 person' (or appropriate count) button",
+            "Recipients receive email with shared deck notification",
+            "Shared link is live for one year by default",
+            "Recipients can access deck without VIZIA login",
+            "Monitor sharing status and recipient engagement"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Manage ongoing access",
+          "description": "Handle shared link lifecycle and security",
+          "details": [
+            "Monitor recipient access through Share by Email menu",
+            "View access statistics and engagement metrics:",
+            "- Number of people with access",
+            "- Total link clicks",
+            "- Individual view counts per recipient",
+            "Manage access: resend invites, remove recipients",
+            "Toggle 'Emailed links' to Off to revoke access if needed"
+          ]
+        }
+      ],
+      "sharing_features": {
+        "security_measures": [
+          "Device-specific access (link tied to recipient device)",
+          "Non-transferable links (cannot be forwarded)",
+          "One-year default expiration",
+          "Admin-controlled access revocation",
+          "Real-time access monitoring"
+        ],
+        "recipient_experience": [
+          "No VIZIA login required",
+          "Cross-browser support (Chrome, Firefox, Edge, Safari)",
+          "Mobile-optimized viewing",
+          "Real-time data updates",
+          "Request fresh link for new devices"
+        ],
+        "analytics_tracking": [
+          "View count per recipient",
+          "Total engagement metrics",
+          "Access frequency monitoring",
+          "Link utilization reporting"
+        ]
+      },
+      "sharing_limitations": [
+        "Links work on one device per recipient",
+        "Cannot share to mailing lists (individual emails only)",
+        "Admin-only VIZIA interface access (Chrome only)",
+        "One-year maximum link lifetime"
+      ],
+      "decision_points": [
+        {
+          "point": "Sharing Security Level",
+          "options": [
+            "Open sharing: Extended access for ongoing collaboration",
+            "Restricted sharing: Limited-time access for specific reviews",
+            "Monitored sharing: Regular review of access and usage"
+          ]
+        },
+        {
+          "point": "Recipient Management Strategy",
+          "options": [
+            "Individual management: Add/remove recipients as needed",
+            "Group-based sharing: Consistent recipient lists for regular reports",
+            "Project-specific sharing: Temporary access for specific initiatives"
+          ]
+        }
+      ],
+      "outcomes": [
+        "External stakeholders have secure access to VIZIA content",
+        "Real-time data sharing without platform access requirements",
+        "Controlled and monitored external content distribution",
+        "Streamlined reporting workflow for stakeholders",
+        "Secure link management and access control"
+      ]
+    }
+  ],
+  "platform_architecture": {
+    "core_components": [
+      "Folders: Organizational containers for content management",
+      "Decks: Collections of slides for specific display purposes",
+      "Slides: Individual screens containing 1-9 data visualization components",
+      "Components: Data visualizations from various integrated sources"
+    ],
+    "data_sources": [
+      "Brandwatch Consumer Research",
+      "Google Analytics",
+      "Google Sheets",
+      "Google Slides",
+      "Salesforce",
+      "Microsoft Excel",
+      "Hootsuite",
+      "Buzzsumo",
+      "Pi Datametrics",
+      "Quintly",
+      "IQ Media",
+      "Facebook and Instagram Ads",
+      "Facebook Page Insights",
+      "Custom URL integrations"
+    ],
+    "display_capabilities": [
+      "Multi-screen deployment",
+      "Real-time data updates",
+      "Customizable display timing",
+      "Remote content management",
+      "Cross-browser compatibility"
+    ]
+  },
+  "key_features": [
+    "Flexible multi-screen data visualization platform",
+    "Real-time data integration from multiple sources",
+    "Drag-and-drop content creation and management",
+    "Secure external sharing without platform access requirements",
+    "Centralized distribution hub for screen management",
+    "Role-based access control and permissions",
+    "Content moderation and filtering capabilities",
+    "Cross-device and cross-browser compatibility",
+    "Automated slide rotation with customizable timing",
+    "Live data updates with stakeholder access tracking"
+  ],
+  "limitations": [
+    "Chrome extension required for screen displays",
+    "Administration interface requires Chrome browser",
+    "External sharing limited to individual email addresses (no mailing lists)",
+    "Shared links tied to specific devices for security",
+    "One-year maximum lifetime for shared links",
+    "Network connectivity required for real-time updates"
+  ],
+  "integration_capabilities": [
+    "Brandwatch Consumer Research data integration",
+    "Google Workspace integration (Analytics, Sheets, Slides)",
+    "Social media platform integrations (Facebook, Instagram, Hootsuite)",
+    "CRM system integration (Salesforce)",
+    "Business intelligence tool connections",
+    "Custom data source integration via URL",
+    "Real-time API connections for live data"
+  ]
+}

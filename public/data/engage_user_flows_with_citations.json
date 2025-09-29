@@ -1,0 +1,1547 @@
+{
+    "brandwatch_engage_user_flows": {
+        "metadata": {
+            "analysis_date": "2025-09-29",
+            "source": "Brandwatch Engage Documentation Analysis",
+            "total_flows": 25,
+            "categories": [
+                "Feed Management",
+                "Message Management",
+                "Team Collaboration",
+                "Automation",
+                "Templates",
+                "Case Management",
+                "Content Moderation",
+                "Bulk Operations",
+                "Direct Messaging",
+                "Mobile App"
+            ]
+        },
+        "user_flows": [
+            {
+                "flow_id": "FEED_001",
+                "flow_name": "Create and Manage Engage Feeds",
+                "category": "Feed Management",
+                "description": "Set up custom feeds to organize and filter incoming social media content",
+                "prerequisites": [
+                    "User has Admin or Team Lead permissions",
+                    "Connected social media channels exist"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Navigate to Feed overview in Engage",
+                        "description": "Access the central hub for content monitoring"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Click 'Create Feed' button",
+                        "description": "Initiate feed creation process"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Select basic filtering options",
+                        "description": "Choose networks, channels, message types, read status, assignments"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Configure advanced filters (optional)",
+                        "description": "Set spam filters, language, labels, keywords, sentiment, priority"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Name and save the feed",
+                        "description": "Provide descriptive title for easy identification"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Filter Configuration",
+                        "options": [
+                            "Basic filters only",
+                            "Include advanced filters"
+                        ],
+                        "impact": "Determines content specificity and relevance"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Custom feed appears in sidebar navigation",
+                    "Content matching filters displays in feed column",
+                    "Team members can access shared feeds"
+                ],
+                "related_flows": [
+                    "FEED_002",
+                    "TEAM_001"
+                ],
+                "source_documents": [
+                    "Engage/Getting Started with Engage/The Feed.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Creating Feeds & Viewing Content/Creating and Managing Feeds.pdf"
+                ]
+            },
+            {
+                "flow_id": "FEED_002",
+                "flow_name": "Feed Best Practices Workflow",
+                "category": "Feed Management",
+                "description": "Implement recommended feed structure for efficient content management",
+                "prerequisites": [
+                    "Understanding of team workflow requirements"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Create 'Unread' feed",
+                        "description": "Set filter 'Marked as read by: Nobody' for new content"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Create 'My Assignments' feed",
+                        "description": "Set filters 'Marked as read by: Nobody' and 'Assigned to: Me'"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Create 'Handled' feed",
+                        "description": "Set filters 'Marked as read by: Me' and 'Marked as read by: Anybody'"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Organize feeds by priority",
+                        "description": "Drag and drop feeds to reorder by importance"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Feed Structure",
+                        "options": [
+                            "Three-feed system",
+                            "Custom arrangement"
+                        ],
+                        "impact": "Affects team workflow efficiency"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Clear content progression from unread to handled",
+                    "Improved team collaboration and accountability",
+                    "Reduced duplicate work on messages"
+                ],
+                "related_flows": [
+                    "FEED_001",
+                    "MSG_001"
+                ],
+                "source_documents": [
+                    "Engage/Getting Started with Engage/Advanced search and filters.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Creating Feeds & Viewing Content/Feed Best Practices.pdf"
+                ]
+            },
+            {
+                "flow_id": "MSG_001",
+                "flow_name": "Message Response and Management",
+                "category": "Message Management",
+                "description": "Respond to and manage incoming social media messages across platforms",
+                "prerequisites": [
+                    "Content appears in Engage feed",
+                    "User has appropriate channel permissions"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Select message from feed",
+                        "description": "Click message to open in Detail View"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Review message context",
+                        "description": "Examine conversation thread and customer profile"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Choose response method",
+                        "description": "Select public reply, private reply, or direct message"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Compose response",
+                        "description": "Write reply or select from templates"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Send and mark as read",
+                        "description": "Publish response and automatically mark message as handled"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Response Type",
+                        "options": [
+                            "Public reply",
+                            "Private reply",
+                            "Direct message",
+                            "No response needed"
+                        ],
+                        "impact": "Determines visibility and privacy of interaction"
+                    },
+                    {
+                        "point": "Template Usage",
+                        "options": [
+                            "Use existing template",
+                            "Write custom response"
+                        ],
+                        "impact": "Affects response speed and consistency"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Customer receives timely response",
+                    "Message marked as handled in system",
+                    "Response time recorded for reporting"
+                ],
+                "related_flows": [
+                    "TEMP_001",
+                    "DM_001",
+                    "CASE_001"
+                ],
+                "source_documents": [
+                    "Engage/Messaging/Using Messaging.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Handling Content/Overview of Handling Content.pdf"
+                ]
+            },
+            {
+                "flow_id": "DM_001",
+                "flow_name": "Reply via Direct Message",
+                "category": "Direct Messaging",
+                "description": "Transition public conversations to private direct messages for sensitive topics",
+                "prerequisites": [
+                    "Applicable content type (Facebook posts/comments, Instagram posts/mentions)",
+                    "Content is within 7-day response window",
+                    "No previous DM reply sent to this content"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Locate content in Engage feed",
+                        "description": "Find Facebook post or Instagram mention to respond to"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Open content in Detail View",
+                        "description": "Click to expand content for interaction options"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Hover over content",
+                        "description": "Reveal action buttons including Message option"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Click 'Message' button",
+                        "description": "Initiate direct message reply process"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Compose private message",
+                        "description": "Write response in popup dialog"
+                    },
+                    {
+                        "step": 6,
+                        "action": "Send direct message",
+                        "description": "Click send to deliver private reply"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Privacy Requirement",
+                        "options": [
+                            "Keep conversation public",
+                            "Move to private"
+                        ],
+                        "impact": "Determines conversation visibility and customer experience"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Direct message conversation created",
+                    "Original content marked with 'Replied with direct message' indicator",
+                    "New DM thread appears in direct message feeds"
+                ],
+                "related_flows": [
+                    "MSG_001",
+                    "FEED_001"
+                ],
+                "source_documents": [
+                    "Engage/Direct Messages/Managing Direct Messages.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Handling Content/Replying via Direct Message.pdf"
+                ]
+            },
+            {
+                "flow_id": "TEMP_001",
+                "flow_name": "Create and Use Response Templates",
+                "category": "Templates",
+                "description": "Create reusable message templates for consistent customer responses",
+                "prerequisites": [
+                    "User has Admin or Team Leader role",
+                    "Common response scenarios identified"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Access template settings",
+                        "description": "Navigate via Engage message or Settings > Organization admin"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Click 'New Template'",
+                        "description": "Start template creation process"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Enter template details",
+                        "description": "Provide name and message content"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Configure sharing settings",
+                        "description": "Select teams and channels with access"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Save template",
+                        "description": "Make template available for use"
+                    },
+                    {
+                        "step": 6,
+                        "action": "Use template in responses",
+                        "description": "Select from template dropdown when replying"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Template Scope",
+                        "options": [
+                            "All teams",
+                            "Selected teams only",
+                            "Specific channels"
+                        ],
+                        "impact": "Determines template availability and governance"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Consistent messaging across team responses",
+                    "Faster response times",
+                    "Reduced errors in standard communications"
+                ],
+                "related_flows": [
+                    "MSG_001",
+                    "TEAM_001"
+                ],
+                "source_documents": [
+                    "Engage/Templates/Using Templates.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Handling Content/Response Templates in Engage.pdf"
+                ]
+            },
+            {
+                "flow_id": "AUTO_001",
+                "flow_name": "Set Up Automation Rules",
+                "category": "Automation",
+                "description": "Create automated actions for repetitive content management tasks",
+                "prerequisites": [
+                    "User has Admin or Team Lead permissions",
+                    "Pro/Premium account (US clients)",
+                    "Clear automation requirements defined"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Navigate to Automation rules",
+                        "description": "Access Engage > Automation > Automation rules"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Click 'Create Rule'",
+                        "description": "Start automation rule creation"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Define 'If' conditions",
+                        "description": "Set triggers based on language, text, network, channel, content type"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Configure 'Then' actions",
+                        "description": "Choose actions: assign, label, mark as read/spam, hide, create case"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Set rule matching logic",
+                        "description": "Choose 'Match Any' or 'Match All' conditions"
+                    },
+                    {
+                        "step": 6,
+                        "action": "Name and apply rule",
+                        "description": "Provide descriptive name and set content scope"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Condition Matching",
+                        "options": [
+                            "Match Any condition",
+                            "Match All conditions"
+                        ],
+                        "impact": "Determines rule trigger sensitivity"
+                    },
+                    {
+                        "point": "Content Scope",
+                        "options": [
+                            "Incoming content",
+                            "Own content",
+                            "Both"
+                        ],
+                        "impact": "Defines which content the rule affects"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Automated content processing reduces manual work",
+                    "Consistent application of business rules",
+                    "Improved response times for routine tasks"
+                ],
+                "related_flows": [
+                    "AUTO_002",
+                    "CASE_002"
+                ],
+                "source_documents": [
+                    "Engage/Automation/Automations Overview.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Additional Features & Automation/Automation Rules.pdf"
+                ]
+            },
+            {
+                "flow_id": "AUTO_002",
+                "flow_name": "Configure Automated Messages",
+                "category": "Automation",
+                "description": "Set up welcome and away messages for customer communications",
+                "prerequisites": [
+                    "User has Admin permissions",
+                    "Connected channels for automated messaging"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Access Automated messages",
+                        "description": "Navigate to Engage > Automation > Automated messages"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Create message group",
+                        "description": "Define group name and select applicable channels"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Set up welcome message",
+                        "description": "Create greeting for first customer contact"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Configure away message",
+                        "description": "Set message for outside business hours"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Define schedule",
+                        "description": "Set days, times, and timezone for away periods"
+                    },
+                    {
+                        "step": 6,
+                        "action": "Activate messages",
+                        "description": "Enable message toggles for live operation"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Message Types",
+                        "options": [
+                            "Welcome only",
+                            "Away only",
+                            "Both welcome and away"
+                        ],
+                        "impact": "Determines customer experience coverage"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Immediate acknowledgment for customer inquiries",
+                    "Clear expectations during unavailable hours",
+                    "Improved customer satisfaction scores"
+                ],
+                "related_flows": [
+                    "AUTO_001"
+                ],
+                "source_documents": [
+                    "Engage/Automation/Creating Custom Automations.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Additional Features & Automation/Automated Messages.pdf"
+                ]
+            },
+            {
+                "flow_id": "CASE_001",
+                "flow_name": "Create and Manage Cases",
+                "category": "Case Management",
+                "description": "Escalate complex customer issues to structured case management",
+                "prerequisites": [
+                    "Pro/Premium account (US clients)",
+                    "User role above 'View only'",
+                    "Message requiring escalation identified"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Identify escalation need",
+                        "description": "Determine message requires case management"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Click 'Create case' icon",
+                        "description": "Click briefcase icon on applicable message"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Configure case details",
+                        "description": "Set title, priority, assignee, and internal notes"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Create and track case",
+                        "description": "Save case and monitor in case tab"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Update case status",
+                        "description": "Progress through Open, In Progress, On Hold, Closed"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Case Priority",
+                        "options": [
+                            "Low",
+                            "Medium",
+                            "High",
+                            "Critical"
+                        ],
+                        "impact": "Affects response expectations and resource allocation"
+                    },
+                    {
+                        "point": "Assignment",
+                        "options": [
+                            "Self",
+                            "Team member",
+                            "Multiple assignees",
+                            "Unassigned"
+                        ],
+                        "impact": "Determines accountability and workload distribution"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Complex issues tracked systematically",
+                    "Clear escalation path established",
+                    "Case history maintained for future reference"
+                ],
+                "related_flows": [
+                    "CASE_002",
+                    "TEAM_002"
+                ],
+                "source_documents": [
+                    "Engage/Cases/Cases Management.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Additional Features & Automation/Creating and Managing Cases.pdf"
+                ]
+            },
+            {
+                "flow_id": "CASE_002",
+                "flow_name": "Automated Case Creation",
+                "category": "Case Management",
+                "description": "Automatically generate cases based on predefined conditions",
+                "prerequisites": [
+                    "Automation rules configured",
+                    "Case creation action selected"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Configure automation trigger",
+                        "description": "Set conditions that warrant automatic case creation"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Select 'Create case' action",
+                        "description": "Choose automated case creation as rule action"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Monitor automated cases",
+                        "description": "Review auto-created cases in case overview"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Assign and manage",
+                        "description": "Allocate resources to automated cases"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Automation Criteria",
+                        "options": [
+                            "Keyword-based",
+                            "Sentiment-driven",
+                            "Channel-specific",
+                            "Combined conditions"
+                        ],
+                        "impact": "Determines case creation frequency and relevance"
+                    }
+                ],
+                "expected_outcomes": [
+                    "No critical issues missed",
+                    "Consistent escalation process",
+                    "Improved response time tracking"
+                ],
+                "related_flows": [
+                    "AUTO_001",
+                    "CASE_001"
+                ],
+                "source_documents": [
+                    "Engage/Cases/Creating and Managing Cases.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Additional Features & Automation/Creating and Managing Cases.pdf"
+                ]
+            },
+            {
+                "flow_id": "TEAM_001",
+                "flow_name": "Content Assignment and Collaboration",
+                "category": "Team Collaboration",
+                "description": "Assign messages to team members for collaborative handling",
+                "prerequisites": [
+                    "Team members have appropriate access",
+                    "Message requires specific expertise"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Select message for assignment",
+                        "description": "Identify content requiring specific team member"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Click assignment action",
+                        "description": "Access assignment options from message actions"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Choose assignee",
+                        "description": "Select team member or team for assignment"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Add assignment notes",
+                        "description": "Provide context or instructions"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Confirm assignment",
+                        "description": "Save assignment and notify assignee"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Assignment Target",
+                        "options": [
+                            "Individual team member",
+                            "Entire team",
+                            "Multiple individuals"
+                        ],
+                        "impact": "Affects accountability and response coordination"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Clear responsibility established",
+                    "Assignee receives notification",
+                    "Content appears in assignee's feeds"
+                ],
+                "related_flows": [
+                    "TEAM_002",
+                    "FEED_002"
+                ],
+                "source_documents": [
+                    "Engage/Teams/Creating and Managing Teams.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Team Collaboration/Content Assignment in Engage.pdf"
+                ]
+            },
+            {
+                "flow_id": "TEAM_002",
+                "flow_name": "Feed Sharing and Collaboration",
+                "category": "Team Collaboration",
+                "description": "Share custom feeds with team members for collaborative monitoring",
+                "prerequisites": [
+                    "Custom feed created",
+                    "Team collaboration requirements defined"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Create or edit feed",
+                        "description": "Access feed configuration options"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Configure sharing settings",
+                        "description": "Select teams and users for feed access"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Set permissions",
+                        "description": "Define read/write access levels"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Save and share",
+                        "description": "Make feed available to selected team members"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Sharing Scope",
+                        "options": [
+                            "Specific users",
+                            "Entire team",
+                            "Multiple teams"
+                        ],
+                        "impact": "Determines feed accessibility and maintenance responsibility"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Consistent content monitoring across team",
+                    "Shared responsibility for customer engagement",
+                    "Improved collaboration efficiency"
+                ],
+                "related_flows": [
+                    "FEED_001",
+                    "TEAM_001"
+                ],
+                "source_documents": [
+                    "Engage/Teams/Team Permissions.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Team Collaboration/Feed Sharing.pdf"
+                ]
+            },
+            {
+                "flow_id": "BULK_001",
+                "flow_name": "Bulk Content Operations",
+                "category": "Bulk Operations",
+                "description": "Perform actions on multiple pieces of content simultaneously",
+                "prerequisites": [
+                    "Multiple content items selected",
+                    "Admin or Team Lead permissions for bulk operations"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Select multiple content items",
+                        "description": "Use checkboxes to select multiple messages"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Choose bulk action",
+                        "description": "Select from available bulk operations"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Configure action parameters",
+                        "description": "Set specific options for bulk operation"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Execute bulk action",
+                        "description": "Apply action to all selected content"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Verify completion",
+                        "description": "Confirm all items processed correctly"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Bulk Action Type",
+                        "options": [
+                            "Mark as read",
+                            "Mark as spam",
+                            "Assign",
+                            "Label",
+                            "Delete"
+                        ],
+                        "impact": "Determines the change applied to selected content"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Efficient processing of multiple items",
+                    "Consistent action application",
+                    "Time savings for repetitive tasks"
+                ],
+                "related_flows": [
+                    "BULK_002"
+                ],
+                "source_documents": [
+                    "Engage/Bulk Actions/Using Bulk Actions.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Handling Content/Bulk Actions.pdf"
+                ]
+            },
+            {
+                "flow_id": "BULK_002",
+                "flow_name": "Bulk Mark as Read by Date",
+                "category": "Bulk Operations",
+                "description": "Mark all content before a specific date as read for feed cleanup",
+                "prerequisites": [
+                    "Admin or Team Lead permissions",
+                    "Access to Channel admin settings"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Access Channel admin",
+                        "description": "Navigate to Settings > Channel admin"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Select target channel",
+                        "description": "Choose channel for bulk operation"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Access bulk mark feature",
+                        "description": "Find 'Bulk mark as read' section"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Select cutoff date",
+                        "description": "Choose date before which content should be marked read"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Execute bulk marking",
+                        "description": "Click 'Mark as Read' to process all content"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Date Selection",
+                        "options": [
+                            "Recent cleanup",
+                            "Historical cleanup",
+                            "Complete reset"
+                        ],
+                        "impact": "Determines scope of content affected"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Clean feed state established",
+                    "Historical content marked as processed",
+                    "Focus on new incoming content"
+                ],
+                "related_flows": [
+                    "BULK_001"
+                ],
+                "source_documents": [
+                    "Engage/Bulk Actions/Bulk Reply and Label.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Handling Content/Bulk Mark as Read by Date.pdf"
+                ]
+            },
+            {
+                "flow_id": "MOD_001",
+                "flow_name": "Content Moderation and Spam Management",
+                "category": "Content Moderation",
+                "description": "Identify, label, and manage spam or inappropriate content",
+                "prerequisites": [
+                    "Content requiring moderation identified",
+                    "Moderation guidelines established"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Review content for moderation",
+                        "description": "Evaluate content against community guidelines"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Determine moderation action",
+                        "description": "Decide appropriate response based on content type"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Apply moderation action",
+                        "description": "Mark as spam, hide, delete, or label appropriately"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Document decision",
+                        "description": "Add notes explaining moderation rationale"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Moderation Action",
+                        "options": [
+                            "Mark as spam",
+                            "Hide content",
+                            "Delete content",
+                            "Add warning label",
+                            "No action"
+                        ],
+                        "impact": "Affects content visibility and community standards"
+                    },
+                    {
+                        "point": "Network Reporting",
+                        "options": [
+                            "Report to platform",
+                            "Internal marking only"
+                        ],
+                        "impact": "Determines if platform takes additional action"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Community standards maintained",
+                    "Inappropriate content removed or flagged",
+                    "Moderation decisions documented"
+                ],
+                "related_flows": [
+                    "AUTO_001",
+                    "BULK_001"
+                ],
+                "source_documents": [
+                    "Engage/Moderation/Content Moderation.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Handling Content/Moderating Spam.pdf"
+                ]
+            },
+            {
+                "flow_id": "MOBILE_001",
+                "flow_name": "Mobile App Engagement",
+                "category": "Mobile App",
+                "description": "Use Engage mobile app for on-the-go content management",
+                "prerequisites": [
+                    "Engage mobile app installed",
+                    "Account credentials configured"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Open Engage mobile app",
+                        "description": "Launch app and authenticate"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Review feed notifications",
+                        "description": "Check for new content requiring attention"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Respond to urgent items",
+                        "description": "Handle time-sensitive customer communications"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Mark items as read",
+                        "description": "Update content status for team coordination"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Response Priority",
+                        "options": [
+                            "Immediate response",
+                            "Flag for desktop follow-up",
+                            "Assign to colleague"
+                        ],
+                        "impact": "Determines response timing and quality"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Maintained responsiveness while mobile",
+                    "Critical issues addressed promptly",
+                    "Team coordination preserved"
+                ],
+                "related_flows": [
+                    "MSG_001"
+                ],
+                "source_documents": [
+                    "Engage/Mobile/Using Engage Mobile App.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Getting Started/The Hub Mobile App.pdf"
+                ]
+            },
+            {
+                "flow_id": "SEARCH_001",
+                "flow_name": "Create Feed from Search",
+                "category": "Feed Management",
+                "description": "Generate custom feeds based on keyword search results",
+                "prerequisites": [
+                    "Search terms identified",
+                    "Content scope defined"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Perform search query",
+                        "description": "Enter keywords in Engage search"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Review search results",
+                        "description": "Evaluate content relevance and volume"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Click 'Save Feed'",
+                        "description": "Convert search into permanent feed"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Name and configure feed",
+                        "description": "Provide title and adjust filters if needed"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Save feed",
+                        "description": "Make search-based feed available"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Search Scope",
+                        "options": [
+                            "Single keyword",
+                            "Multiple keywords (OR)",
+                            "Exact phrase"
+                        ],
+                        "impact": "Determines content volume and relevance"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Dynamic feed based on keywords",
+                    "Ongoing monitoring of search terms",
+                    "Ability to track brand mentions and topics"
+                ],
+                "related_flows": [
+                    "FEED_001"
+                ],
+                "source_documents": [
+                    "Engage/Search and Filters/Advanced Search Filters.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Creating Feeds & Viewing Content/Creating a Feed from a Search.pdf"
+                ]
+            },
+            {
+                "flow_id": "LABEL_001",
+                "flow_name": "Content Labeling and Organization",
+                "category": "Team Collaboration",
+                "description": "Apply labels to content for categorization and reporting",
+                "prerequisites": [
+                    "Labeling system defined",
+                    "Content requiring categorization"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Select content for labeling",
+                        "description": "Choose message or conversation to categorize"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Access labeling options",
+                        "description": "Click label action or access from menu"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Choose appropriate labels",
+                        "description": "Select from existing labels or create new ones"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Apply labels",
+                        "description": "Save label assignments to content"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Verify label application",
+                        "description": "Confirm labels appear on content"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Label Strategy",
+                        "options": [
+                            "Predefined categories",
+                            "Custom labels",
+                            "Automated labeling"
+                        ],
+                        "impact": "Affects consistency and reporting capability"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Content properly categorized",
+                    "Improved searchability and filtering",
+                    "Enhanced reporting capabilities"
+                ],
+                "related_flows": [
+                    "AUTO_001",
+                    "REPORT_001"
+                ],
+                "source_documents": [
+                    "Engage/Labels/Creating and Managing Labels.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Team Collaboration/Labeling Content.pdf"
+                ]
+            },
+            {
+                "flow_id": "SENTIMENT_001",
+                "flow_name": "Sentiment Analysis and Management",
+                "category": "Content Moderation",
+                "description": "Monitor and respond to content based on emotional sentiment",
+                "prerequisites": [
+                    "Sentiment detection enabled",
+                    "Response protocols for different sentiments"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Review sentiment indicators",
+                        "description": "Check positive, neutral, negative classifications"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Prioritize negative sentiment",
+                        "description": "Focus on potentially problematic content"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Craft appropriate response",
+                        "description": "Tailor response tone to sentiment context"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Escalate if necessary",
+                        "description": "Create cases for serious negative sentiment"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Response Approach",
+                        "options": [
+                            "Direct response",
+                            "Private escalation",
+                            "Manager involvement",
+                            "No immediate action"
+                        ],
+                        "impact": "Affects customer satisfaction and brand perception"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Appropriate responses to customer emotions",
+                    "Early detection of potential issues",
+                    "Improved customer satisfaction metrics"
+                ],
+                "related_flows": [
+                    "MSG_001",
+                    "CASE_001"
+                ],
+                "source_documents": [
+                    "Engage/Sentiment/Sentiment Analysis in Engage.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Creating Feeds & Viewing Content/Sentiment.pdf"
+                ]
+            },
+            {
+                "flow_id": "PROFILE_001",
+                "flow_name": "Customer Profile Management",
+                "category": "Team Collaboration",
+                "description": "View and manage customer profile information for better service",
+                "prerequisites": [
+                    "Customer interaction history available",
+                    "Profile merging permissions if needed"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Access customer profile",
+                        "description": "Click on customer name or profile in conversation"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Review profile information",
+                        "description": "Check interaction history, notes, and previous cases"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Add relevant notes",
+                        "description": "Document important customer information"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Merge profiles if needed",
+                        "description": "Consolidate duplicate customer profiles"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Profile Actions",
+                        "options": [
+                            "Add notes",
+                            "Merge profiles",
+                            "Update information",
+                            "Flag for attention"
+                        ],
+                        "impact": "Affects future customer service quality"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Comprehensive customer view",
+                    "Improved service personalization",
+                    "Better context for future interactions"
+                ],
+                "related_flows": [
+                    "MSG_001",
+                    "CASE_001"
+                ],
+                "source_documents": [
+                    "Engage/Profiles/Customer Profile Management.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Team Collaboration/Customer Profiles.pdf"
+                ]
+            },
+            {
+                "flow_id": "INTEGRATION_001",
+                "flow_name": "Platform Integration Management",
+                "category": "Integration",
+                "description": "Manage content across different social media platforms with awareness of platform-specific limitations",
+                "prerequisites": [
+                    "Multiple social platforms connected",
+                    "Understanding of platform API limitations"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Review platform capabilities",
+                        "description": "Understand what content types are supported per platform"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Configure platform-specific feeds",
+                        "description": "Set up feeds tailored to each platform's content types"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Handle platform limitations",
+                        "description": "Work within API constraints for each network"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Monitor cross-platform consistency",
+                        "description": "Ensure consistent brand voice across all platforms"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Platform Priority",
+                        "options": [
+                            "Equal attention to all",
+                            "Focus on primary platforms",
+                            "Customize by audience"
+                        ],
+                        "impact": "Affects resource allocation and response quality"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Effective multi-platform management",
+                    "Consistent brand presence",
+                    "Optimized use of platform capabilities"
+                ],
+                "related_flows": [
+                    "FEED_001",
+                    "MSG_001"
+                ],
+                "source_documents": [
+                    "Engage/Integrations/Third Party Integrations.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Getting Started/Supported Networks and Channels in Engage.pdf"
+                ]
+            },
+            {
+                "flow_id": "NOTIFICATION_001",
+                "flow_name": "Email Notification Management",
+                "category": "Team Collaboration",
+                "description": "Configure email notifications for feed updates and team coordination",
+                "prerequisites": [
+                    "Email settings access",
+                    "Notification preferences defined"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Access feed settings",
+                        "description": "Open feed configuration options"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Enable email notifications",
+                        "description": "Toggle notification settings for feed"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Configure frequency",
+                        "description": "Set how often notifications are sent"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Test notification delivery",
+                        "description": "Verify notifications work as expected"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Notification Frequency",
+                        "options": [
+                            "Immediate",
+                            "Hourly digest",
+                            "Daily summary",
+                            "None"
+                        ],
+                        "impact": "Affects responsiveness vs. email volume"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Timely awareness of new content",
+                    "Improved response times",
+                    "Better team coordination"
+                ],
+                "related_flows": [
+                    "FEED_001",
+                    "TEAM_001"
+                ],
+                "source_documents": [
+                    "Engage/Notifications/Setting up Notifications.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Team Collaboration/Email notifications in Engage.pdf"
+                ]
+            },
+            {
+                "flow_id": "EXPORT_001",
+                "flow_name": "Data Export and Reporting",
+                "category": "Reporting",
+                "description": "Export Engage data for external analysis and compliance",
+                "prerequisites": [
+                    "Export permissions",
+                    "Data requirements defined"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Access export options",
+                        "description": "Navigate to feed or report export features"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Select data range",
+                        "description": "Choose time period and content scope"
+                    },
+                    {
+                        "step": 3,
+                        "action": "Configure export format",
+                        "description": "Select file format and data fields"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Execute export",
+                        "description": "Generate and download export file"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Export Scope",
+                        "options": [
+                            "Feed content",
+                            "Case data",
+                            "Performance metrics",
+                            "Complete archive"
+                        ],
+                        "impact": "Determines data completeness and file size"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Data available for external analysis",
+                    "Compliance requirements met",
+                    "Historical records preserved"
+                ],
+                "related_flows": [
+                    "REPORT_001"
+                ],
+                "source_documents": [
+                    "Engage/Export and Import/Exporting Data.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Reports/Exporting Data from Engage.pdf"
+                ]
+            },
+            {
+                "flow_id": "REPORT_001",
+                "flow_name": "Performance Reporting and Analytics",
+                "category": "Reporting",
+                "description": "Generate reports on team performance and engagement metrics",
+                "prerequisites": [
+                    "Historical engagement data available",
+                    "Reporting permissions"
+                ],
+                "steps": [
+                    {
+                        "step": 1,
+                        "action": "Access Reports section",
+                        "description": "Navigate to Engage reporting features"
+                    },
+                    {
+                        "step": 2,
+                        "action": "Select report type",
+                        "description": "Choose from team performance, label reports, etc."
+                    },
+                    {
+                        "step": 3,
+                        "action": "Configure report parameters",
+                        "description": "Set date range, teams, and metrics"
+                    },
+                    {
+                        "step": 4,
+                        "action": "Generate and review report",
+                        "description": "Create report and analyze results"
+                    },
+                    {
+                        "step": 5,
+                        "action": "Export or share report",
+                        "description": "Distribute insights to stakeholders"
+                    }
+                ],
+                "decision_points": [
+                    {
+                        "point": "Report Focus",
+                        "options": [
+                            "Team performance",
+                            "Content analysis",
+                            "Response times",
+                            "Customer satisfaction"
+                        ],
+                        "impact": "Determines insights and improvement areas"
+                    }
+                ],
+                "expected_outcomes": [
+                    "Clear performance metrics",
+                    "Actionable insights for improvement",
+                    "Data-driven decision making"
+                ],
+                "related_flows": [
+                    "EXPORT_001"
+                ],
+                "source_documents": [
+                    "Engage/Reports/Creating Engage Reports.pdf"
+                ],
+                "citations": [
+                    "Source: Engage/Reports/Creating Engage Reports.pdf"
+                ]
+            }
+        ],
+        "integration_points": {
+            "salesforce_service_cloud": {
+                "description": "Integration with Salesforce for external case management",
+                "affected_flows": [
+                    "CASE_001",
+                    "CASE_002"
+                ]
+            },
+            "native_platform_apis": {
+                "description": "Direct integration with social media platform APIs",
+                "affected_flows": [
+                    "MSG_001",
+                    "DM_001",
+                    "MOD_001",
+                    "INTEGRATION_001"
+                ]
+            },
+            "team_performance_reporting": {
+                "description": "Integration with reporting systems for analytics",
+                "affected_flows": [
+                    "REPORT_001",
+                    "MSG_001",
+                    "CASE_001"
+                ]
+            }
+        },
+        "limitations_and_considerations": {
+            "api_limitations": {
+                "facebook": [
+                    "No cross-app interactions",
+                    "Unknown authors for personal mentions",
+                    "Limited mention visibility"
+                ],
+                "instagram": [
+                    "No story/promoted post mentions",
+                    "No comment reactions",
+                    "Collaboration post limitations"
+                ],
+                "linkedin": [
+                    "Company pages only",
+                    "Post mentions only",
+                    "No personal profiles"
+                ],
+                "tiktok": [
+                    "No DM support",
+                    "Limited author information"
+                ],
+                "whatsapp": [
+                    "No group chat support",
+                    "No bulk mark as read"
+                ],
+                "google": [
+                    "No review media attachments"
+                ]
+            },
+            "account_requirements": {
+                "automation": "Pro/Premium accounts only (US clients)",
+                "case_management": "Pro/Premium accounts only (US clients)",
+                "templates": "Admin or Team Leader roles required"
+            },
+            "time_constraints": {
+                "dm_replies": "7-day window for reply via DM",
+                "automation": "Only applies to future content",
+                "bulk_read": "May take several minutes to process"
+            }
+        }
+    }
+}

@@ -1,0 +1,596 @@
+{
+  "module": "Brandwatch Reviews",
+  "description": "Brandwatch Reviews is a comprehensive online review monitoring and sentiment analysis platform that enables businesses to track, analyze, and respond to customer reviews across multiple platforms and websites.",
+  "user_flows": [
+    {
+      "flow_name": "Initial Review Collection Setup",
+      "description": "Complete workflow for setting up review collection for brands, products, and categories",
+      "prerequisites": [
+        "Access to Brandwatch Reviews platform",
+        "Administrator permissions for project creation",
+        "List of brands, products, or categories to monitor",
+        "Understanding of review sources to include"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Create new project",
+          "description": "Initiate review collection project setup",
+          "details": [
+            "Navigate to Projects section in Brandwatch Reviews",
+            "Click 'Create New Project' button",
+            "Enter descriptive project name",
+            "Select project type (Brand, Product, or Category monitoring)"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure entity setup",
+          "description": "Define what to monitor for reviews",
+          "details": [
+            "Add primary entity (brand name, product name, or category)",
+            "Include entity variations and aliases",
+            "Add related terms and keywords",
+            "Configure entity hierarchy if monitoring multiple products"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Select review sources",
+          "description": "Choose platforms and websites for review collection",
+          "details": [
+            "Enable major review platforms (Google, Yelp, TripAdvisor, etc.)",
+            "Add industry-specific review sites",
+            "Include e-commerce platforms if applicable",
+            "Configure social media review sources"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Set collection parameters",
+          "description": "Configure data collection settings",
+          "details": [
+            "Set date range for historical review collection",
+            "Configure real-time monitoring settings",
+            "Set review language preferences",
+            "Define geographical scope if needed"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Activate collection and verify",
+          "description": "Start review collection and confirm setup",
+          "details": [
+            "Save project configuration",
+            "Initiate review collection process",
+            "Verify data is being collected correctly",
+            "Check initial review volume and sources"
+          ]
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Entity Type Selection",
+          "options": [
+            "Brand monitoring: Focus on overall brand reputation",
+            "Product monitoring: Specific product review analysis",
+            "Category monitoring: Competitive landscape analysis"
+          ]
+        },
+        {
+          "point": "Source Selection Strategy",
+          "options": [
+            "Comprehensive coverage: All available review sources",
+            "Platform focus: Specific high-value review platforms",
+            "Industry-specific: Relevant industry review sites"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Active review collection project configured",
+        "Review data streaming from selected sources",
+        "Foundation for sentiment analysis and reporting",
+        "Baseline established for ongoing monitoring"
+      ]
+    },
+    {
+      "flow_name": "Dashboard Creation and Configuration",
+      "description": "Workflow for creating custom dashboards to visualize review data and sentiment insights",
+      "prerequisites": [
+        "Active review collection project",
+        "Review data available for analysis",
+        "Understanding of key metrics to track",
+        "Dashboard design requirements defined"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access dashboard creation",
+          "description": "Navigate to dashboard creation interface",
+          "details": [
+            "Go to Dashboards section in Reviews platform",
+            "Click 'Create New Dashboard' button",
+            "Choose dashboard template or start from scratch",
+            "Enter dashboard name and description"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure data sources",
+          "description": "Connect dashboard to review data projects",
+          "details": [
+            "Select review projects to include",
+            "Choose specific entities or all entities",
+            "Set date range for dashboard data",
+            "Configure real-time vs historical data display"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Add visualization components",
+          "description": "Build dashboard with relevant charts and metrics",
+          "details": [
+            "Add sentiment overview widgets",
+            "Include review volume trends",
+            "Add rating distribution charts",
+            "Configure top/bottom reviewed entities",
+            "Include source breakdown analysis"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Customize layout and design",
+          "description": "Arrange and style dashboard components",
+          "details": [
+            "Arrange widgets in logical layout",
+            "Resize components for optimal viewing",
+            "Configure color schemes and branding",
+            "Set up responsive design for different screen sizes"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Set up sharing and access",
+          "description": "Configure dashboard distribution and permissions",
+          "details": [
+            "Set user access permissions",
+            "Configure automated report scheduling",
+            "Set up email alerts for key metrics",
+            "Generate shareable dashboard links"
+          ]
+        }
+      ],
+      "dashboard_components": [
+        {
+          "component": "Sentiment Overview",
+          "purpose": "High-level sentiment distribution across positive, negative, neutral"
+        },
+        {
+          "component": "Review Volume Trends",
+          "purpose": "Track review frequency over time"
+        },
+        {
+          "component": "Rating Distribution",
+          "purpose": "Visualize star rating patterns"
+        },
+        {
+          "component": "Source Analysis",
+          "purpose": "Review platform performance comparison"
+        },
+        {
+          "component": "Entity Comparison",
+          "purpose": "Compare performance across different products/brands"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Dashboard Purpose",
+          "options": [
+            "Executive summary: High-level KPIs for leadership",
+            "Operational monitoring: Detailed metrics for daily management",
+            "Competitive analysis: Comparison-focused visualizations"
+          ]
+        },
+        {
+          "point": "Update Frequency",
+          "options": [
+            "Real-time: Live data updates for immediate insights",
+            "Daily refresh: Regular updates for trend monitoring",
+            "Weekly/Monthly: Periodic analysis for strategic planning"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Custom dashboard tailored to business needs",
+        "Real-time visibility into review performance",
+        "Automated reporting and alert system",
+        "Stakeholder access to review insights"
+      ]
+    },
+    {
+      "flow_name": "Sentiment Analysis Deep-Dive",
+      "description": "Advanced workflow for analyzing sentiment patterns and extracting actionable insights from review data",
+      "prerequisites": [
+        "Established review data collection",
+        "Sufficient review volume for analysis",
+        "Understanding of sentiment analysis goals",
+        "Access to detailed sentiment tools"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access sentiment analysis tools",
+          "description": "Navigate to advanced sentiment analysis features",
+          "details": [
+            "Go to Data section in Reviews platform",
+            "Select Sentiment Analysis module",
+            "Choose entity or time period for analysis",
+            "Set analysis parameters and filters"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Analyze sentiment distribution",
+          "description": "Examine overall sentiment patterns",
+          "details": [
+            "Review positive, negative, neutral percentages",
+            "Identify sentiment trends over time",
+            "Compare sentiment across different entities",
+            "Analyze sentiment by review source"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Identify sentiment drivers",
+          "description": "Discover what drives positive and negative sentiment",
+          "details": [
+            "Extract key themes from positive reviews",
+            "Identify common complaints in negative reviews",
+            "Analyze sentiment correlation with ratings",
+            "Map sentiment to specific product features or services"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Drill down into negative sentiment",
+          "description": "Focus on areas requiring attention",
+          "details": [
+            "Filter for negative and very negative reviews",
+            "Identify most frequent negative themes",
+            "Analyze sentiment severity and urgency",
+            "Map negative sentiment to specific business areas"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Generate actionable insights",
+          "description": "Transform sentiment analysis into business actions",
+          "details": [
+            "Document key sentiment findings",
+            "Prioritize areas for improvement",
+            "Identify successful practices to amplify",
+            "Create sentiment monitoring alerts"
+          ]
+        }
+      ],
+      "sentiment_analysis_features": [
+        {
+          "feature": "Theme Extraction",
+          "capability": "Automatically identify common topics and themes in reviews"
+        },
+        {
+          "feature": "Sentiment Scoring",
+          "capability": "Quantitative sentiment measurement across reviews"
+        },
+        {
+          "feature": "Trend Analysis",
+          "capability": "Track sentiment changes over time periods"
+        },
+        {
+          "feature": "Comparative Analysis",
+          "capability": "Compare sentiment across entities, sources, or time periods"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Analysis Scope",
+          "options": [
+            "Comprehensive analysis: All review data for complete picture",
+            "Focused analysis: Specific time periods or entities",
+            "Comparative analysis: Benchmarking against competitors"
+          ]
+        },
+        {
+          "point": "Action Priority",
+          "options": [
+            "Issue resolution: Focus on negative sentiment themes",
+            "Strength amplification: Leverage positive sentiment drivers",
+            "Balanced approach: Address negatives while building on positives"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Clear understanding of sentiment drivers",
+        "Prioritized list of improvement opportunities",
+        "Insights into successful practices",
+        "Foundation for reputation management strategy"
+      ]
+    },
+    {
+      "flow_name": "Competitive Review Analysis",
+      "description": "Workflow for comparing review performance against competitors and industry benchmarks",
+      "prerequisites": [
+        "Own brand review data established",
+        "Competitor entities identified and configured",
+        "Sufficient data across all entities for comparison",
+        "Understanding of competitive landscape"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Set up competitor monitoring",
+          "description": "Configure competitor entities for review collection",
+          "details": [
+            "Add competitor brands/products to monitoring",
+            "Ensure consistent review source coverage",
+            "Verify entity names and variations",
+            "Set up equal collection parameters"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Create comparative dashboard",
+          "description": "Build dashboard for competitive analysis",
+          "details": [
+            "Add all entities to single dashboard view",
+            "Configure side-by-side comparison widgets",
+            "Include sentiment comparison charts",
+            "Add market share of voice analysis"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Analyze performance gaps",
+          "description": "Identify competitive strengths and weaknesses",
+          "details": [
+            "Compare average ratings across competitors",
+            "Analyze sentiment distribution differences",
+            "Identify review volume disparities",
+            "Map performance to specific categories"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Study competitor strengths",
+          "description": "Learn from high-performing competitors",
+          "details": [
+            "Analyze positive themes in competitor reviews",
+            "Identify competitive advantages",
+            "Study successful practices and features",
+            "Map competitor positioning strategies"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Develop competitive strategy",
+          "description": "Create action plan based on competitive insights",
+          "details": [
+            "Document competitive gaps to address",
+            "Identify differentiation opportunities",
+            "Plan competitive response strategies",
+            "Set performance targets based on benchmarks"
+          ]
+        }
+      ],
+      "competitive_analysis_metrics": [
+        {
+          "metric": "Average Rating Comparison",
+          "purpose": "Overall performance vs competitors"
+        },
+        {
+          "metric": "Sentiment Distribution",
+          "purpose": "Emotional response comparison"
+        },
+        {
+          "metric": "Review Volume",
+          "purpose": "Market presence and engagement"
+        },
+        {
+          "metric": "Review Source Mix",
+          "purpose": "Platform strategy effectiveness"
+        },
+        {
+          "metric": "Theme Analysis",
+          "purpose": "Content and feature comparison"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Competitive Scope",
+          "options": [
+            "Direct competitors: Same category and market position",
+            "Aspirational brands: Industry leaders to benchmark against",
+            "Niche players: Specialized competitors in specific areas"
+          ]
+        },
+        {
+          "point": "Response Strategy",
+          "options": [
+            "Feature parity: Match competitor strengths",
+            "Differentiation: Develop unique value propositions",
+            "Market positioning: Target underserved segments"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Clear competitive positioning understanding",
+        "Identification of performance improvement opportunities",
+        "Benchmark targets for performance improvement",
+        "Competitive intelligence for strategic planning"
+      ]
+    },
+    {
+      "flow_name": "Review Response and Engagement Strategy",
+      "description": "Workflow for managing review responses and building customer engagement through review platforms",
+      "prerequisites": [
+        "Active review monitoring in place",
+        "Review response policy established",
+        "Team members assigned for review management",
+        "Response templates and guidelines prepared"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Set up review monitoring alerts",
+          "description": "Configure notifications for new reviews requiring attention",
+          "details": [
+            "Set up email alerts for new negative reviews",
+            "Configure threshold alerts for rating drops",
+            "Create urgent alerts for very negative reviews",
+            "Set up daily/weekly review summaries"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Prioritize reviews for response",
+          "description": "Triage reviews based on urgency and impact",
+          "details": [
+            "Identify high-priority negative reviews",
+            "Flag reviews on high-visibility platforms",
+            "Prioritize reviews with specific actionable complaints",
+            "Mark reviews requiring immediate attention"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Craft appropriate responses",
+          "description": "Develop personalized responses to reviews",
+          "details": [
+            "Use response templates as starting points",
+            "Personalize responses to specific review content",
+            "Address specific concerns raised",
+            "Include contact information for follow-up"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Execute response strategy",
+          "description": "Deploy responses across review platforms",
+          "details": [
+            "Post responses on original review platforms",
+            "Track response deployment and timing",
+            "Monitor for follow-up customer responses",
+            "Escalate complex issues to appropriate teams"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Measure response effectiveness",
+          "description": "Analyze impact of review response efforts",
+          "details": [
+            "Track response rates and timing",
+            "Monitor sentiment changes after responses",
+            "Measure customer satisfaction with responses",
+            "Analyze impact on overall rating trends"
+          ]
+        }
+      ],
+      "response_categories": [
+        {
+          "category": "Negative Review Response",
+          "approach": "Acknowledge, apologize, offer resolution, invite offline discussion"
+        },
+        {
+          "category": "Positive Review Response",
+          "approach": "Thank customer, reinforce positive experience, encourage loyalty"
+        },
+        {
+          "category": "Neutral Review Response",
+          "approach": "Appreciate feedback, address any concerns, invite further engagement"
+        },
+        {
+          "category": "Crisis Response",
+          "approach": "Immediate acknowledgment, escalation, coordinated response plan"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Response Priority",
+          "options": [
+            "Public platform priority: Focus on high-visibility platforms",
+            "Severity priority: Address most negative reviews first",
+            "Volume priority: Respond to platforms with most reviews"
+          ]
+        },
+        {
+          "point": "Response Tone",
+          "options": [
+            "Professional formal: Corporate and official tone",
+            "Friendly conversational: Personable and approachable",
+            "Industry-specific: Tone matching industry expectations"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Systematic review response process established",
+        "Improved customer relationships through engagement",
+        "Better public perception through visible responsiveness",
+        "Reduced impact of negative reviews through proactive management"
+      ]
+    }
+  ],
+  "supported_platforms": [
+    {
+      "platform": "Google Reviews",
+      "features": "Business listing reviews, local search visibility"
+    },
+    {
+      "platform": "Yelp",
+      "features": "Local business reviews, restaurant and service ratings"
+    },
+    {
+      "platform": "TripAdvisor",
+      "features": "Travel and hospitality reviews, destination ratings"
+    },
+    {
+      "platform": "Amazon Reviews",
+      "features": "Product reviews, e-commerce feedback"
+    },
+    {
+      "platform": "App Store Reviews",
+      "features": "Mobile app ratings and feedback"
+    },
+    {
+      "platform": "Social Media Platforms",
+      "features": "Facebook, Twitter, Instagram review mentions"
+    }
+  ],
+  "key_features": [
+    "Multi-platform review aggregation",
+    "Real-time sentiment analysis",
+    "Automated alert systems",
+    "Competitive benchmarking",
+    "Custom dashboard creation",
+    "Entity-level analysis (brand, product, category)",
+    "Historical trend analysis",
+    "Review response management",
+    "Export and reporting capabilities",
+    "Theme and topic extraction"
+  ],
+  "data_insights": [
+    "Sentiment distribution across review sources",
+    "Rating trends and patterns over time",
+    "Review volume analysis by platform",
+    "Competitive performance comparison",
+    "Customer theme and topic analysis",
+    "Geographic review distribution",
+    "Review response impact measurement",
+    "Alert-driven issue identification"
+  ],
+  "limitations": [
+    "Platform-specific API limitations may affect data collection",
+    "Historical data availability varies by platform",
+    "Sentiment analysis accuracy depends on review language and context",
+    "Some platforms may require additional authentication for data access"
+  ]
+}

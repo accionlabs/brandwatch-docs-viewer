@@ -1,0 +1,860 @@
+{
+  "module": "Advertise",
+  "description": "Brandwatch Advertise enables viewing, creating, and managing paid content across Facebook, Instagram, and LinkedIn with comprehensive analytics and automation features.",
+  "user_flows": [
+    {
+      "flow_name": "Ad Account Setup and Connection",
+      "description": "Initial workflow for connecting Facebook or LinkedIn ad accounts to Social Media Management platform",
+      "prerequisites": [
+        "Valid Facebook or LinkedIn ad account",
+        "Administrator or Team Lead role in Social Media Management",
+        "Ad blocker disabled in browser"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Connect ad account",
+          "description": "Link Facebook or LinkedIn ad account to Social Media Management",
+          "details": "Ad account appears in Advertise module through top left dropdown menu"
+        },
+        {
+          "step": 2,
+          "action": "Assign user roles",
+          "description": "Configure permissions per ad account",
+          "details": [
+            "Advertiser role: Can create, edit, delete campaigns and ads",
+            "Analyst role: Can view ads and analytics",
+            "Roles assigned within Settings by Administrator or Team Lead"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Verify account access",
+          "description": "Ensure proper access to Advertise module",
+          "details": "Must have Advertiser or Analyst role for at least one ad account to access module"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Platform Selection",
+          "options": [
+            "Facebook: Full creation and management capabilities",
+            "LinkedIn: Campaign/campaign group creation, viewing only for ads"
+          ]
+        },
+        {
+          "point": "User Role Assignment",
+          "options": [
+            "Advertiser: Full creation and management rights",
+            "Analyst: View-only access for analytics"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Ad account successfully connected and accessible",
+        "User permissions properly configured",
+        "Platform ready for campaign creation and management"
+      ],
+      "platform_capabilities": {
+        "Facebook/Instagram": {
+          "can_view_ads": true,
+          "can_create_ads": true,
+          "can_edit_delete_ads": true,
+          "can_view_campaigns": true,
+          "can_create_campaigns": true,
+          "can_edit_delete_campaigns": true,
+          "can_view_paid_insights": true
+        },
+        "LinkedIn": {
+          "can_view_ads": true,
+          "can_create_ads": false,
+          "can_edit_delete_ads": false,
+          "can_view_campaigns": true,
+          "can_create_campaigns": true,
+          "can_edit_delete_campaigns": false,
+          "can_view_paid_insights": true
+        }
+      }
+    },
+    {
+      "flow_name": "Facebook/Instagram Campaign Creation",
+      "description": "Complete workflow for creating advertising campaigns on Facebook and Instagram platforms",
+      "prerequisites": [
+        "Connected Facebook ad account",
+        "Advertiser user role",
+        "Campaign objective determined",
+        "Target audience identified"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Initiate campaign creation",
+          "description": "Start new campaign setup process",
+          "details": [
+            "Navigate to Campaigns section",
+            "Click 'Create New Campaign' button",
+            "Pop-up menu guides through process"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Select campaign objective",
+          "description": "Choose marketing goal for campaign",
+          "details": [
+            "Sales: Find people likely to purchase product or service",
+            "Traffic: Send people to website, app, Messenger or WhatsApp",
+            "Engagement: Get more video views, post engagements, page likes or messages",
+            "Leads: Collect leads from people interested in business",
+            "Awareness: Show ads to people most likely to recall them",
+            "App promotion: Get more people to install or engage with app"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Configure campaign details",
+          "description": "Set up campaign parameters and settings",
+          "details": [
+            "Enter campaign name",
+            "Set campaign budget and schedule",
+            "Configure advanced settings if needed"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Create campaign",
+          "description": "Finalize campaign creation",
+          "details": "Campaign becomes available for ad set creation"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Campaign Objective Selection",
+          "options": [
+            "Sales: Product/service purchase focus",
+            "Traffic: Website/app traffic generation",
+            "Engagement: Social interaction optimization",
+            "Leads: Lead generation and collection",
+            "Awareness: Brand awareness and reach",
+            "App promotion: Mobile app downloads/engagement"
+          ],
+          "impact": "Determines available ad formats and optimization options"
+        }
+      ],
+      "outcomes": [
+        "Campaign successfully created and configured",
+        "Foundation established for ad set creation",
+        "Campaign appears in Campaigns section",
+        "Ready for ad set and ad creation workflow"
+      ],
+      "next_steps": [
+        "Create ad sets under campaign",
+        "Configure targeting and budget at ad set level",
+        "Create individual ads within ad sets"
+      ]
+    },
+    {
+      "flow_name": "Ad Set Creation and Configuration",
+      "description": "Detailed workflow for creating and configuring ad sets with targeting, budget, and scheduling parameters",
+      "prerequisites": [
+        "Existing campaign created",
+        "Target audience defined",
+        "Budget allocation determined",
+        "Advertiser user role"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access ad set creation",
+          "description": "Navigate to ad set creation from campaign",
+          "details": [
+            "Go to Campaigns section",
+            "Select target campaign",
+            "Click 'Create Ad Set' in campaign menu"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure ad set basics",
+          "description": "Set up fundamental ad set parameters",
+          "details": [
+            "Enter ad set name",
+            "Add labels for organization (optional)",
+            "Select existing campaign or create new one"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Set budget and schedule",
+          "description": "Configure financial and timing parameters",
+          "details": [
+            "Set daily or lifetime budget",
+            "Configure start and end dates",
+            "Set bid strategy and optimization goals",
+            "Schedule specific times if needed"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Configure targeting",
+          "description": "Define audience targeting parameters",
+          "details": [
+            "Select target locations",
+            "Set age and gender demographics",
+            "Choose interests and behaviors",
+            "Apply custom or lookalike audiences",
+            "Set detailed targeting options"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Select placements",
+          "description": "Choose where ads will appear",
+          "details": [
+            "Automatic placements (recommended)",
+            "Manual placement selection",
+            "Facebook Feed, Instagram Feed, Stories, etc.",
+            "Exclude specific placements if needed"
+          ]
+        },
+        {
+          "step": 6,
+          "action": "Complete ad set creation",
+          "description": "Finalize ad set configuration",
+          "details": "Click 'Continue' to proceed to ad creation"
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Budget Strategy",
+          "options": [
+            "Daily budget: Consistent daily spending",
+            "Lifetime budget: Total campaign spending limit"
+          ]
+        },
+        {
+          "point": "Targeting Approach",
+          "options": [
+            "Broad targeting: Let Facebook optimize",
+            "Detailed targeting: Specific demographics and interests",
+            "Custom audiences: Existing customer data",
+            "Lookalike audiences: Similar to existing customers"
+          ]
+        },
+        {
+          "point": "Placement Strategy",
+          "options": [
+            "Automatic placements: Facebook optimizes",
+            "Manual placements: Specific platform control"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Ad set successfully created with targeting parameters",
+        "Budget and schedule configured",
+        "Audience targeting established",
+        "Ready for individual ad creation within ad set"
+      ],
+      "smart_labels_integration": {
+        "description": "Unique Smart Labels feature for automated ad creation",
+        "workflow": [
+          "Add predefined labels to ad sets",
+          "System automatically promotes posts with matching labels",
+          "Saves time for bulk ad creation",
+          "Labels inherited from campaigns"
+        ]
+      }
+    },
+    {
+      "flow_name": "Facebook/Instagram Ad Creation",
+      "description": "Comprehensive workflow for creating individual ads with creative content, copy, and optimization settings",
+      "prerequisites": [
+        "Existing ad set configured",
+        "Creative assets prepared (images, videos, copy)",
+        "Campaign objective understood",
+        "Advertiser user role"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Initiate ad creation",
+          "description": "Start the ad creation process",
+          "details": [
+            "Navigate to Ads section",
+            "Click 'Create New Ad'",
+            "Select existing ad set or create new one"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure ad setup",
+          "description": "Set basic ad parameters",
+          "details": [
+            "Enter ad name (follows BW-*format*-*channel* convention)",
+            "Select Facebook and Instagram channels",
+            "Choose ad format (image, video, link, carousel)",
+            "Add labels for organization"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Create ad creative",
+          "description": "Build the visual and textual content",
+          "details": [
+            "Upload media files (images or videos)",
+            "Write ad text (125 characters recommended, 1024 max)",
+            "Create headline (27 characters recommended, 255 max)",
+            "Add description and call-to-action",
+            "Use Iris AI features for content assistance"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Configure ad properties",
+          "description": "Set up links, tracking, and advanced options",
+          "details": [
+            "Add website URL or app link",
+            "Set custom display URL if needed",
+            "Configure Facebook Pixel tracking",
+            "Set up conversion domain (for conversion campaigns)",
+            "Add URL parameters for analytics"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Set schedule and tracking",
+          "description": "Configure timing and measurement",
+          "details": [
+            "Set ad start time and date",
+            "Choose ad expiration (inherit from ad set or custom)",
+            "Configure tracking pixel",
+            "Set up conversion tracking if applicable",
+            "Add UTM parameters for analytics"
+          ]
+        },
+        {
+          "step": 6,
+          "action": "Review and create",
+          "description": "Final review and ad creation",
+          "details": [
+            "Preview ad across different placements",
+            "Verify all settings and content",
+            "Click 'Create Ad' to finalize"
+          ]
+        }
+      ],
+      "ad_formats": [
+        {
+          "format": "Image posts",
+          "description": "Single image with text and call-to-action",
+          "requirements": "High-quality image, compelling copy"
+        },
+        {
+          "format": "Video posts",
+          "description": "Video content with accompanying text",
+          "requirements": "Engaging video, optional custom thumbnail"
+        },
+        {
+          "format": "Link posts",
+          "description": "Posts that drive traffic to external websites",
+          "requirements": "Destination URL, headline, description"
+        },
+        {
+          "format": "Carousel posts",
+          "description": "Multiple images or videos in swipeable format",
+          "requirements": "Up to 10 images/videos, individual links"
+        }
+      ],
+      "iris_ai_features": [
+        "Grammar and spelling correction",
+        "Text rephrasing and improvement",
+        "Headline and description generation",
+        "Writing assistance and suggestions",
+        "Content optimization recommendations"
+      ],
+      "decision_points": [
+        {
+          "point": "Ad Format Selection",
+          "options": [
+            "Image: Simple, cost-effective, high reach",
+            "Video: Higher engagement, better storytelling",
+            "Link: Direct traffic driving",
+            "Carousel: Multiple products/features showcase"
+          ],
+          "note": "Format availability depends on campaign objective"
+        },
+        {
+          "point": "Creative Strategy",
+          "options": [
+            "Dark post: Ad-only, doesn't appear on timeline",
+            "Regular post: Appears organically and as ad",
+            "Boosted existing post: Promote organic content"
+          ]
+        },
+        {
+          "point": "Tracking Configuration",
+          "options": [
+            "Basic tracking: Standard Facebook insights",
+            "Advanced tracking: Custom pixels and conversions",
+            "Third-party analytics: UTM parameters and external tools"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Ad successfully created and ready for approval",
+        "Creative content and copy finalized",
+        "Tracking and analytics properly configured",
+        "Ad appears in Ads section for management"
+      ],
+      "content_guidelines": {
+        "ad_text": {
+          "recommended": "125 characters",
+          "maximum": "1024 characters",
+          "note": "Facebook may trim text for some placements"
+        },
+        "headline": {
+          "recommended": "27 characters",
+          "maximum": "255 characters",
+          "note": "Some placements support additional characters"
+        },
+        "description": {
+          "purpose": "Additional text to emphasize website visit value",
+          "placement_dependent": true
+        }
+      }
+    },
+    {
+      "flow_name": "Audience Creation and Management",
+      "description": "Comprehensive workflow for creating and managing custom audiences for targeted advertising",
+      "prerequisites": [
+        "Connected Facebook ad account",
+        "Facebook Custom Audience Terms accepted",
+        "Appropriate data sources available (pixels, customer lists, etc.)",
+        "Advertiser or Analyst role"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access audience creation",
+          "description": "Navigate to audience management section",
+          "details": [
+            "Go to Advertise tool",
+            "Click 'Custom Audiences' under Assets menu",
+            "Click 'Create New Audience' in top right"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Select audience type",
+          "description": "Choose the type of custom audience to create",
+          "details": [
+            "Website Traffic: Based on pixel data",
+            "Customer List: Upload customer data file",
+            "Facebook Page: Based on page interactions",
+            "Instagram Business: Based on profile interactions",
+            "Existing (Lookalike): Based on existing audience"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Configure audience parameters",
+          "description": "Set up audience-specific settings",
+          "details": "Varies by audience type - see specific workflows below"
+        },
+        {
+          "step": 4,
+          "action": "Name and finalize",
+          "description": "Complete audience creation",
+          "details": [
+            "Add descriptive name",
+            "Provide optional description",
+            "Click 'Done' to create audience"
+          ]
+        }
+      ],
+      "audience_types": [
+        {
+          "type": "Website Traffic Audience",
+          "description": "Targets users who visited your website",
+          "prerequisites": ["Facebook Pixel installed on website", "Pixel collecting data"],
+          "configuration_steps": [
+            "Select Facebook Pixel to use",
+            "Choose events for user inclusion",
+            "Add optional rules to include/exclude users",
+            "Set time range for user activity"
+          ],
+          "use_cases": ["Retargeting website visitors", "Conversion optimization", "Abandoned cart recovery"]
+        },
+        {
+          "type": "Customer List Audience",
+          "description": "Targets users based on uploaded customer data",
+          "prerequisites": ["Customer data file in CSV format", "Data properly formatted"],
+          "configuration_steps": [
+            "Upload CSV file with customer data",
+            "Map data columns to Facebook fields",
+            "Specify data source and description",
+            "Review import preview and confirm"
+          ],
+          "data_requirements": {
+            "format": "CSV with specific column headers",
+            "supported_fields": ["EMAIL", "PHONE", "FN", "LN", "GEN", "DOBY", "DOBM", "DOBD", "ST", "CT", "ZIP", "COUNTRY", "MADID"],
+            "example_file": "Available for download"
+          },
+          "use_cases": ["Existing customer targeting", "Customer acquisition", "Loyalty program promotion"]
+        },
+        {
+          "type": "Facebook Page Audience",
+          "description": "Targets users who engaged with Facebook Page",
+          "prerequisites": ["Facebook Page connected", "Page activity to track"],
+          "configuration_steps": [
+            "Define engagement criteria",
+            "Set time range (up to 365 days)",
+            "Choose specific interactions to include",
+            "Configure automatic updates"
+          ],
+          "engagement_criteria": [
+            "Anyone who visited page",
+            "People who engaged with posts/ads",
+            "Users who clicked CTA buttons",
+            "People who sent DM messages",
+            "Users who saved page or posts"
+          ],
+          "use_cases": ["Fan base expansion", "Engagement optimization", "Page promotion"]
+        },
+        {
+          "type": "Instagram Business Audience",
+          "description": "Targets users who interacted with Instagram Business Profile",
+          "prerequisites": ["Instagram Business Account connected", "Profile interactions to track"],
+          "configuration_steps": [
+            "Select Instagram Business Account",
+            "Define interaction criteria",
+            "Set time range for inclusion",
+            "Configure audience updates"
+          ],
+          "interaction_types": ["Profile visits", "Post engagements", "Story interactions", "DM conversations"],
+          "use_cases": ["Instagram follower targeting", "Content engagement boost", "Profile growth"]
+        },
+        {
+          "type": "Lookalike Audience",
+          "description": "Targets users similar to existing audience",
+          "prerequisites": ["Existing audience as source", "Source audience of sufficient size"],
+          "configuration_steps": [
+            "Select source audience",
+            "Choose geographic location",
+            "Set number of audiences to create",
+            "Define similarity percentage ranges",
+            "Review estimated audience sizes"
+          ],
+          "similarity_ranges": {
+            "1%": "Most similar, smallest audience",
+            "2-10%": "Broader reach, less similar",
+            "multiple_audiences": "Non-overlapping percentage brackets"
+          },
+          "use_cases": ["Customer acquisition", "Market expansion", "Cold audience targeting"]
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Audience Type Selection",
+          "options": [
+            "Website Traffic: For retargeting website visitors",
+            "Customer List: For targeting known customers",
+            "Page/Instagram: For social media audience building",
+            "Lookalike: For finding similar users to existing customers"
+          ]
+        },
+        {
+          "point": "Time Range Configuration",
+          "options": [
+            "Short range (30-90 days): More relevant, smaller audience",
+            "Long range (180-365 days): Larger audience, less current relevance"
+          ]
+        },
+        {
+          "point": "Lookalike Similarity Level",
+          "options": [
+            "1-2%: Highest similarity, smallest reach",
+            "3-5%: Balanced similarity and reach",
+            "6-10%: Broader reach, lower similarity"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Custom audience successfully created",
+        "Audience available for ad set targeting",
+        "Automatic updates configured (where applicable)",
+        "Audience appears in Assets section and Facebook natively"
+      ],
+      "data_requirements": {
+        "customer_list_format": {
+          "file_type": "CSV",
+          "structure": "One row per customer, specific column headers",
+          "required_fields": "At least email or phone",
+          "optional_fields": "Demographics, location, mobile advertiser ID"
+        },
+        "privacy_compliance": {
+          "facebook_terms": "Custom Audience Terms must be accepted",
+          "data_handling": "Customer data encrypted and hashed",
+          "user_consent": "Ensure proper consent for data usage"
+        }
+      }
+    },
+    {
+      "flow_name": "Campaign Performance Analysis and Management",
+      "description": "Workflow for monitoring, analyzing, and optimizing advertising campaign performance",
+      "prerequisites": [
+        "Active campaigns with ad spend",
+        "Sufficient data collection period",
+        "Access to Advertise module",
+        "Understanding of KPI goals"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access performance overview",
+          "description": "Navigate to campaign analytics",
+          "details": [
+            "Select appropriate section (Campaigns, Ad Sets, or Ads)",
+            "Use Statistics modules to view performance metrics",
+            "Apply date range filters for analysis period"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Apply filters and segments",
+          "description": "Customize data view for analysis",
+          "details": [
+            "Use Filters menu to narrow results",
+            "Search by labels or campaign names",
+            "Filter by campaign objective or status",
+            "Segment by time periods or demographics"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Analyze key metrics",
+          "description": "Review performance against objectives",
+          "details": [
+            "Examine conversion metrics and costs",
+            "Review reach and frequency data",
+            "Analyze engagement rates and quality",
+            "Compare performance across campaigns/ad sets"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Identify optimization opportunities",
+          "description": "Find areas for improvement",
+          "details": [
+            "Identify underperforming ads or ad sets",
+            "Find high-performing elements to scale",
+            "Analyze audience performance segments",
+            "Review placement performance"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Implement optimizations",
+          "description": "Make data-driven improvements",
+          "details": [
+            "Pause underperforming ads/ad sets",
+            "Adjust budgets for high performers",
+            "Modify targeting parameters",
+            "Update creative assets based on performance"
+          ]
+        },
+        {
+          "step": 6,
+          "action": "Export and report",
+          "description": "Create reports and export data",
+          "details": [
+            "Export performance data for external analysis",
+            "Create automated reports for stakeholders",
+            "Share insights with team members"
+          ]
+        }
+      ],
+      "key_metrics": [
+        {
+          "category": "Reach and Awareness",
+          "metrics": ["Impressions", "Reach", "Frequency", "CPM (Cost per 1000 impressions)"]
+        },
+        {
+          "category": "Engagement",
+          "metrics": ["Clicks", "CTR (Click-through rate)", "CPC (Cost per click)", "Engagement rate"]
+        },
+        {
+          "category": "Conversions",
+          "metrics": ["Conversions", "Conversion rate", "Cost per conversion", "ROAS (Return on ad spend)"]
+        },
+        {
+          "category": "Video Performance",
+          "metrics": ["Video views", "View rate", "Average view duration", "Video completion rate"]
+        }
+      ],
+      "decision_points": [
+        {
+          "point": "Performance Evaluation Period",
+          "options": [
+            "Daily: Quick optimization decisions",
+            "Weekly: Trend analysis and adjustments",
+            "Monthly: Strategic campaign review",
+            "Campaign lifetime: Overall performance assessment"
+          ]
+        },
+        {
+          "point": "Optimization Strategy",
+          "options": [
+            "Budget reallocation: Move spend to high performers",
+            "Audience refinement: Adjust targeting parameters",
+            "Creative refresh: Update underperforming ads",
+            "Placement optimization: Focus on best-performing placements"
+          ]
+        },
+        {
+          "point": "Campaign Management Actions",
+          "options": [
+            "Pause: Stop underperforming elements",
+            "Scale: Increase budget for winners",
+            "Modify: Adjust targeting or creative",
+            "Duplicate: Test variations of successful campaigns"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Clear understanding of campaign performance",
+        "Data-driven optimization decisions made",
+        "Improved campaign efficiency and ROI",
+        "Actionable insights for future campaigns"
+      ],
+      "management_actions": [
+        {
+          "action": "Pause/Play campaigns",
+          "description": "Control campaign active status",
+          "access": "Toggle on left side or three-dots menu"
+        },
+        {
+          "action": "Edit campaigns",
+          "description": "Modify campaign settings and parameters",
+          "access": "Three-dots menu > Edit",
+          "limitations": "Some settings cannot be changed after creation"
+        },
+        {
+          "action": "Filter and organize",
+          "description": "View related assets across campaign hierarchy",
+          "options": ["Filter by this", "Bulk selection and filtering"]
+        },
+        {
+          "action": "Duplicate campaigns",
+          "description": "Create copies for testing variations",
+          "use_cases": ["A/B testing", "Scaling successful campaigns", "Testing new audiences"]
+        }
+      ]
+    },
+    {
+      "flow_name": "Smart Labels Automation Workflow",
+      "description": "Unique automated ad creation workflow using Smart Labels for efficient bulk ad management",
+      "prerequisites": [
+        "Active campaigns and ad sets configured",
+        "Understanding of content labeling strategy",
+        "Regular content publishing workflow",
+        "Advertiser user role"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Create Smart Label setup",
+          "description": "Configure automated ad creation labels",
+          "details": [
+            "Navigate to Additional Features section",
+            "Access Smart Labels configuration",
+            "Define label naming conventions"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Configure label parameters",
+          "description": "Set up automation rules and targeting",
+          "details": [
+            "Define which ad sets to associate with labels",
+            "Set budget and duration parameters",
+            "Configure targeting criteria for labeled content"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Apply labels to content",
+          "description": "Add predefined labels to posts for automation",
+          "details": [
+            "Add labels during content creation",
+            "Apply labels to existing content",
+            "System automatically detects labeled content"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Monitor automated ad creation",
+          "description": "Track and manage automatically generated ads",
+          "details": [
+            "Review ads created from labeled content",
+            "Monitor performance of automated ads",
+            "Make adjustments to automation rules as needed"
+          ]
+        }
+      ],
+      "automation_benefits": [
+        "Rapid ad creation from content",
+        "Consistent promotional strategy",
+        "Reduced manual ad setup time",
+        "Scalable content promotion",
+        "Integrated content and advertising workflow"
+      ],
+      "decision_points": [
+        {
+          "point": "Label Strategy",
+          "options": [
+            "Campaign-specific labels: Different promotions",
+            "Product category labels: Automatic product promotion",
+            "Event-based labels: Seasonal or timely content",
+            "Performance-based labels: Test and scale approach"
+          ]
+        }
+      ],
+      "outcomes": [
+        "Automated ad creation system established",
+        "Streamlined content-to-ad workflow",
+        "Consistent promotional campaigns",
+        "Time savings in ad management"
+      ]
+    }
+  ],
+  "integration_points": [
+    "Connects with Social Media Management platform for unified workflow",
+    "Integrates with Publish module for post boosting and ad creation",
+    "Links with Audience module for audience management and export",
+    "Synchronizes with Facebook Business Manager and LinkedIn Campaign Manager",
+    "Supports Smart Labels for automated content promotion"
+  ],
+  "platform_limitations": {
+    "LinkedIn": [
+      "Cannot create individual ads (campaign groups only)",
+      "Cannot edit or delete campaigns after creation",
+      "Limited to viewing and basic campaign management",
+      "Full ad creation requires LinkedIn Campaign Manager"
+    ],
+    "Facebook/Instagram": [
+      "Requires compliance with Meta's ODAX standards",
+      "Ad blocker must be disabled for proper functionality",
+      "Some legacy campaign objectives not supported",
+      "Facebook Custom Audience Terms must be accepted"
+    ]
+  },
+  "key_features": [
+    "Cross-platform campaign management (Facebook, Instagram, LinkedIn)",
+    "Comprehensive audience creation and management",
+    "AI-powered content creation with Iris features",
+    "Smart Labels for automated ad promotion",
+    "Advanced analytics and performance tracking",
+    "Integration with existing content workflows",
+    "Role-based access control and permissions"
+  ]
+}

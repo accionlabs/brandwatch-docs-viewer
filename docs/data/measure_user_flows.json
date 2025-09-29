@@ -1,0 +1,754 @@
+{
+  "brandwatch_measure_user_flows": {
+    "metadata": {
+      "title": "Brandwatch Measure Module User Flows",
+      "description": "Comprehensive collection of user workflows for dashboard creation, widget configuration, data analysis, and reporting within Brandwatch Measure",
+      "extraction_date": "2025-09-29",
+      "platforms_supported": ["Facebook", "Instagram", "LinkedIn", "X (Twitter)", "TikTok", "YouTube", "Pinterest"],
+      "widget_types_count": 11,
+      "dashboard_templates_count": 16,
+      "metrics_available": "100+"
+    },
+    "flows": [
+      {
+        "flow_id": "dashboard_creation_template",
+        "flow_name": "Create Dashboard Using Template",
+        "flow_description": "Step-by-step process to create a new Measure dashboard using one of the 16 available templates",
+        "prerequisites": [
+          "Access to Brandwatch Measure module",
+          "Connected social media channels",
+          "Appropriate user permissions"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Navigate to Measure dashboard creation",
+            "description": "Access the main Measure interface and select dashboard creation option",
+            "user_input": "Click on 'Create Dashboard' or similar button"
+          },
+          {
+            "step_number": 2,
+            "action": "Select dashboard template",
+            "description": "Choose from 16 available templates including Facebook Overview, Instagram Overview, LinkedIn Overview, etc.",
+            "decision_point": {
+              "question": "Which template best fits your reporting needs?",
+              "options": [
+                "Platform-specific templates (Facebook, Instagram, LinkedIn)",
+                "Cross-network templates",
+                "Specialized templates (Stories, Direct Messages)",
+                "Custom template"
+              ]
+            }
+          },
+          {
+            "step_number": 3,
+            "action": "Configure channel selection",
+            "description": "Select which social media channels to include in the dashboard",
+            "user_input": "Check/uncheck desired channels from connected accounts"
+          },
+          {
+            "step_number": 4,
+            "action": "Set date range",
+            "description": "Define the time period for data analysis",
+            "user_input": "Select start and end dates or choose preset ranges"
+          },
+          {
+            "step_number": 5,
+            "action": "Review and create dashboard",
+            "description": "Preview dashboard configuration and finalize creation",
+            "user_input": "Click 'Create Dashboard' or 'Save'"
+          }
+        ],
+        "expected_outcomes": [
+          "New dashboard created with selected template",
+          "Data populated from chosen channels and date range",
+          "Dashboard available in user's Measure workspace",
+          "Widgets automatically configured based on template"
+        ],
+        "error_handling": [
+          "Insufficient channel data: Select different date range or channels",
+          "Template loading failure: Refresh and retry",
+          "Permission errors: Contact administrator"
+        ]
+      },
+      {
+        "flow_id": "widget_creation_custom",
+        "flow_name": "Create Custom Widget",
+        "flow_description": "Process to create and configure custom widgets with specific metrics and visualizations",
+        "prerequisites": [
+          "Existing dashboard or access to create one",
+          "Understanding of channel vs content metrics",
+          "Knowledge of available metric types"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Access widget creation",
+            "description": "Navigate to widget creation from dashboard view",
+            "user_input": "Click 'Add Widget' or '+' button on dashboard"
+          },
+          {
+            "step_number": 2,
+            "action": "Select widget type",
+            "description": "Choose from 11 available widget types",
+            "decision_point": {
+              "question": "What type of visualization do you need?",
+              "options": [
+                "Key Metrics Widget",
+                "Content Performance Widget",
+                "Channel Performance Widget",
+                "Time Series Widget",
+                "Demographics Widget",
+                "Geographics Widget",
+                "Breakdown Widget",
+                "Network Comparison Widget",
+                "Channel Comparison Widget",
+                "Label Performance Widget",
+                "Audience Widget"
+              ]
+            }
+          },
+          {
+            "step_number": 3,
+            "action": "Configure metrics",
+            "description": "Select up to 16 metrics for Key Metrics widget or appropriate metrics for other widget types",
+            "decision_point": {
+              "question": "Channel metrics or content metrics?",
+              "options": [
+                "Channel metrics (date range specific performance)",
+                "Content metrics (lifetime performance of posts)"
+              ]
+            }
+          },
+          {
+            "step_number": 4,
+            "action": "Choose calculation method",
+            "description": "For applicable metrics, select total vs average calculation",
+            "user_input": "Select 'Total' or 'Average' radio button"
+          },
+          {
+            "step_number": 5,
+            "action": "Apply filters (optional)",
+            "description": "Add content or label performance filters to refine data",
+            "user_input": "Configure filter criteria as needed"
+          },
+          {
+            "step_number": 6,
+            "action": "Set widget title and save",
+            "description": "Provide descriptive title and save widget to dashboard",
+            "user_input": "Enter widget title and click 'Save' or 'Add to Dashboard'"
+          }
+        ],
+        "expected_outcomes": [
+          "Custom widget added to dashboard",
+          "Data displayed according to selected metrics and filters",
+          "Widget title and configuration saved",
+          "Real-time data updates according to refresh schedules"
+        ],
+        "error_handling": [
+          "Metric selection errors: Verify platform compatibility",
+          "Data loading issues: Check channel connections",
+          "Filter conflicts: Review filter logic and criteria"
+        ]
+      },
+      {
+        "flow_id": "data_source_integration",
+        "flow_name": "Integrate Social Media Data Sources",
+        "flow_description": "Process to connect and configure data sources from various social media platforms",
+        "prerequisites": [
+          "Admin access to social media accounts",
+          "Platform-specific API access or authentication",
+          "Understanding of data refresh schedules"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Access data source configuration",
+            "description": "Navigate to channel or data source management section",
+            "user_input": "Access account settings or channel management"
+          },
+          {
+            "step_number": 2,
+            "action": "Select platform to integrate",
+            "description": "Choose from supported platforms",
+            "decision_point": {
+              "question": "Which platform do you want to connect?",
+              "options": [
+                "Facebook (with/without ad account)",
+                "Instagram",
+                "LinkedIn",
+                "X (Twitter)",
+                "TikTok",
+                "YouTube",
+                "Pinterest"
+              ]
+            }
+          },
+          {
+            "step_number": 3,
+            "action": "Authenticate platform access",
+            "description": "Complete OAuth or API key authentication process",
+            "user_input": "Provide credentials and authorize access"
+          },
+          {
+            "step_number": 4,
+            "action": "Configure data collection settings",
+            "description": "Set up historical data backfill and refresh schedules",
+            "platform_specific_rules": {
+              "Facebook": {
+                "historical_data": "15 days backfill for content metrics",
+                "refresh_schedule": "First refresh 15 minutes after post publication, then varying intervals for 14 days",
+                "data_completion": "28 days after most recent engagement"
+              },
+              "Instagram": {
+                "historical_data": "200 days for channel metrics, varies for audience metrics",
+                "refresh_schedule": "Once every 24 hours at 7AM UTC"
+              },
+              "LinkedIn": {
+                "historical_data": "365 days except for fans and net new fans",
+                "refresh_schedule": "Once every 24 hours at 7AM UTC"
+              }
+            }
+          },
+          {
+            "step_number": 5,
+            "action": "Verify data connection",
+            "description": "Test data flow and confirm metrics are populating",
+            "user_input": "Review sample data and confirm accuracy"
+          }
+        ],
+        "expected_outcomes": [
+          "Platform successfully connected to Measure",
+          "Historical data backfilled according to platform rules",
+          "Ongoing data refresh established",
+          "Platform metrics available for dashboard and widget creation"
+        ],
+        "error_handling": [
+          "Authentication failures: Re-authorize or check credentials",
+          "API limit exceeded: Wait for reset or contact support",
+          "Data sync issues: Verify account permissions and try reconnection"
+        ]
+      },
+      {
+        "flow_id": "dashboard_sharing_internal",
+        "flow_name": "Share Dashboard Internally",
+        "flow_description": "Process to share dashboards with team members and set appropriate access levels",
+        "prerequisites": [
+          "Completed dashboard with data",
+          "Knowledge of team member permissions needed",
+          "Understanding of viewer vs editor access levels"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Access dashboard sharing options",
+            "description": "Navigate to sharing settings from dashboard view",
+            "user_input": "Click 'Share' button or sharing icon on dashboard"
+          },
+          {
+            "step_number": 2,
+            "action": "Select sharing scope",
+            "description": "Choose between individual users or team-wide sharing",
+            "decision_point": {
+              "question": "Who should have access?",
+              "options": [
+                "Individual users",
+                "Entire team",
+                "Specific user groups"
+              ]
+            }
+          },
+          {
+            "step_number": 3,
+            "action": "Set access level",
+            "description": "Define what recipients can do with the dashboard",
+            "decision_point": {
+              "question": "What level of access should users have?",
+              "options": [
+                "Viewer (read-only access)",
+                "Editor (can modify dashboard and widgets)"
+              ]
+            }
+          },
+          {
+            "step_number": 4,
+            "action": "Handle restricted channels",
+            "description": "Review any channels that shared users cannot access",
+            "user_input": "Review warning messages about restricted access and decide whether to proceed"
+          },
+          {
+            "step_number": 5,
+            "action": "Send sharing invitation",
+            "description": "Complete sharing process and notify recipients",
+            "user_input": "Click 'Share' or 'Send Invitation'"
+          }
+        ],
+        "expected_outcomes": [
+          "Dashboard shared with selected users/teams",
+          "Recipients receive access notifications",
+          "Appropriate access levels enforced",
+          "Restricted channels handled according to permissions"
+        ],
+        "error_handling": [
+          "User not found: Verify email addresses or usernames",
+          "Permission conflicts: Review and adjust access levels",
+          "Channel restrictions: Remove restricted channels or adjust sharing scope"
+        ]
+      },
+      {
+        "flow_id": "dashboard_export_csv",
+        "flow_name": "Export Dashboard Data to CSV",
+        "flow_description": "Process to export dashboard data in CSV format for external analysis",
+        "prerequisites": [
+          "Dashboard with populated data",
+          "Appropriate export permissions",
+          "Understanding of export format (ZIP with separate CSV per widget)"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Access export options",
+            "description": "Navigate to export functionality from dashboard view",
+            "user_input": "Click 'Export' button or menu option"
+          },
+          {
+            "step_number": 2,
+            "action": "Select export format",
+            "description": "Choose CSV export option",
+            "user_input": "Select 'CSV' from export format options"
+          },
+          {
+            "step_number": 3,
+            "action": "Configure export settings",
+            "description": "Customize what data to include in export",
+            "decision_point": {
+              "question": "Do you want to customize the exported metrics?",
+              "options": [
+                "Export all current metrics",
+                "Add additional metrics not currently displayed",
+                "Remove certain metrics from export"
+              ]
+            }
+          },
+          {
+            "step_number": 4,
+            "action": "Initiate export process",
+            "description": "Start the data export and wait for processing",
+            "user_input": "Click 'Export' or 'Download'"
+          },
+          {
+            "step_number": 5,
+            "action": "Download export file",
+            "description": "Download the generated ZIP file containing CSV files",
+            "user_input": "Click download link when export is complete"
+          }
+        ],
+        "expected_outcomes": [
+          "ZIP file downloaded containing separate CSV for each widget",
+          "All dashboard data exported in structured format",
+          "Data suitable for external analysis tools",
+          "Export process completed successfully"
+        ],
+        "error_handling": [
+          "Export timeout: Try smaller date range or fewer widgets",
+          "File download issues: Check browser settings and retry",
+          "Data formatting problems: Verify widget configurations"
+        ]
+      },
+      {
+        "flow_id": "dashboard_export_pdf",
+        "flow_name": "Export Dashboard to PDF",
+        "flow_description": "Process to export dashboard as PDF document for presentations or reports",
+        "prerequisites": [
+          "Dashboard with visualized data",
+          "Modern web browser with PDF capabilities",
+          "Understanding that export uses browser's native print function"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Prepare dashboard for export",
+            "description": "Ensure dashboard is displaying desired date range and data",
+            "user_input": "Verify dashboard settings and data display"
+          },
+          {
+            "step_number": 2,
+            "action": "Access PDF export",
+            "description": "Navigate to PDF export option",
+            "user_input": "Click 'Export to PDF' or similar option"
+          },
+          {
+            "step_number": 3,
+            "action": "Configure PDF settings",
+            "description": "Set page layout and print options using browser's print dialog",
+            "decision_point": {
+              "question": "How should the PDF be formatted?",
+              "options": [
+                "Portrait orientation",
+                "Landscape orientation",
+                "Fit to page",
+                "Custom scaling"
+              ]
+            }
+          },
+          {
+            "step_number": 4,
+            "action": "Generate PDF",
+            "description": "Create PDF using browser's print to PDF functionality",
+            "user_input": "Select 'Save as PDF' destination and click 'Print'"
+          },
+          {
+            "step_number": 5,
+            "action": "Save PDF file",
+            "description": "Choose location and filename for PDF document",
+            "user_input": "Select save location and enter filename"
+          }
+        ],
+        "expected_outcomes": [
+          "Dashboard exported as PDF document",
+          "Visual formatting preserved",
+          "PDF suitable for sharing and presentations",
+          "File saved to specified location"
+        ],
+        "error_handling": [
+          "Print dialog issues: Refresh page and retry",
+          "Formatting problems: Adjust browser zoom and page settings",
+          "PDF save failures: Check file permissions and disk space"
+        ]
+      },
+      {
+        "flow_id": "widget_filtering_content",
+        "flow_name": "Apply Content Performance Filters",
+        "flow_description": "Process to configure advanced filtering options in Content and Label Performance widgets",
+        "prerequisites": [
+          "Content Performance Widget or Label Performance Widget created",
+          "Understanding of available filter criteria",
+          "Knowledge of content categorization"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Access widget filter settings",
+            "description": "Open filter configuration for Content or Label Performance widget",
+            "user_input": "Click 'Filter' or 'Advanced Options' in widget settings"
+          },
+          {
+            "step_number": 2,
+            "action": "Select filter type",
+            "description": "Choose the type of filter to apply",
+            "decision_point": {
+              "question": "What type of content filtering do you need?",
+              "options": [
+                "Post type filters (text, image, video, link)",
+                "Engagement threshold filters",
+                "Date-based content filters",
+                "Label-based filters",
+                "Performance metric filters"
+              ]
+            }
+          },
+          {
+            "step_number": 3,
+            "action": "Configure filter criteria",
+            "description": "Set specific values and conditions for the selected filter",
+            "user_input": "Enter threshold values, select criteria, or choose labels"
+          },
+          {
+            "step_number": 4,
+            "action": "Preview filtered results",
+            "description": "Review how filters affect the displayed data",
+            "user_input": "Check preview or apply temporarily to see impact"
+          },
+          {
+            "step_number": 5,
+            "action": "Apply and save filters",
+            "description": "Confirm filter settings and update widget",
+            "user_input": "Click 'Apply Filters' or 'Save Changes'"
+          }
+        ],
+        "expected_outcomes": [
+          "Widget displays filtered content according to criteria",
+          "Data focuses on specified content types or performance levels",
+          "Filter settings saved with widget configuration",
+          "Updated visualizations reflect filtered data"
+        ],
+        "error_handling": [
+          "No data after filtering: Adjust filter criteria to be less restrictive",
+          "Filter conflicts: Review multiple filter interactions",
+          "Performance issues: Simplify complex filter combinations"
+        ]
+      },
+      {
+        "flow_id": "cross_network_analysis",
+        "flow_name": "Create Cross-Network Performance Analysis",
+        "flow_description": "Process to set up comparative analysis across multiple social media platforms",
+        "prerequisites": [
+          "Multiple social media platforms connected",
+          "Understanding of platform-specific metrics",
+          "Knowledge of Network Comparison widget capabilities"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Create new dashboard or widget",
+            "description": "Start with dashboard creation or add widget to existing dashboard",
+            "user_input": "Navigate to dashboard creation or widget addition"
+          },
+          {
+            "step_number": 2,
+            "action": "Select Network Comparison widget",
+            "description": "Choose widget type designed for cross-platform analysis",
+            "user_input": "Select 'Network Comparison' from widget type options"
+          },
+          {
+            "step_number": 3,
+            "action": "Select platforms for comparison",
+            "description": "Choose which connected social media platforms to include",
+            "decision_point": {
+              "question": "Which platforms should be compared?",
+              "options": [
+                "All connected platforms",
+                "Specific platform subset",
+                "Similar platform types (e.g., visual platforms: Instagram, Pinterest)"
+              ]
+            }
+          },
+          {
+            "step_number": 4,
+            "action": "Choose comparable metrics",
+            "description": "Select metrics that are available across selected platforms",
+            "user_input": "Select metrics like engagement rate, reach, followers that exist across platforms"
+          },
+          {
+            "step_number": 5,
+            "action": "Set unified date range",
+            "description": "Ensure all platforms use the same date range for fair comparison",
+            "user_input": "Set start and end dates that apply to all selected platforms"
+          },
+          {
+            "step_number": 6,
+            "action": "Configure visualization",
+            "description": "Set up how the cross-network data should be displayed",
+            "user_input": "Choose chart type and display options for comparison"
+          }
+        ],
+        "expected_outcomes": [
+          "Unified view of performance across multiple platforms",
+          "Comparative metrics highlighting platform strengths/weaknesses",
+          "Standardized date range for fair comparison",
+          "Clear visualization of cross-network performance"
+        ],
+        "error_handling": [
+          "Metric availability issues: Select only metrics common to all platforms",
+          "Data synchronization problems: Verify all platform connections",
+          "Date range conflicts: Adjust to overlap period for all platforms"
+        ]
+      },
+      {
+        "flow_id": "template_customization",
+        "flow_name": "Build Custom Dashboard Template",
+        "flow_description": "Process to create and save custom dashboard templates for reuse",
+        "prerequisites": [
+          "Understanding of dashboard structure and widget types",
+          "Knowledge of organizational reporting needs",
+          "Access to template creation functionality"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Start with blank dashboard",
+            "description": "Create new dashboard without using existing template",
+            "user_input": "Select 'Create Custom Dashboard' or 'Blank Dashboard'"
+          },
+          {
+            "step_number": 2,
+            "action": "Design dashboard layout",
+            "description": "Plan and create the widget arrangement and dashboard structure",
+            "decision_point": {
+              "question": "What type of template are you creating?",
+              "options": [
+                "Executive summary template",
+                "Platform-specific deep dive template",
+                "Campaign performance template",
+                "Audience analysis template",
+                "Content performance template"
+              ]
+            }
+          },
+          {
+            "step_number": 3,
+            "action": "Add and configure widgets",
+            "description": "Create all necessary widgets with appropriate metrics and settings",
+            "user_input": "Add widgets systematically, configuring each for template use"
+          },
+          {
+            "step_number": 4,
+            "action": "Set default parameters",
+            "description": "Configure default date ranges, filters, and settings that will apply to template",
+            "user_input": "Set template defaults that work for most use cases"
+          },
+          {
+            "step_number": 5,
+            "action": "Test template functionality",
+            "description": "Verify template works correctly with different data sets and channels",
+            "user_input": "Test with various channel combinations and date ranges"
+          },
+          {
+            "step_number": 6,
+            "action": "Save as template",
+            "description": "Save dashboard as reusable template for organization",
+            "user_input": "Click 'Save as Template' and provide template name and description"
+          }
+        ],
+        "expected_outcomes": [
+          "Custom template available for reuse",
+          "Standardized dashboard format for organization",
+          "Template includes appropriate default settings",
+          "Template documentation for future users"
+        ],
+        "error_handling": [
+          "Template save failures: Check permissions and template name uniqueness",
+          "Widget configuration issues: Verify all widgets function correctly",
+          "Default parameter problems: Test with various scenarios before saving"
+        ]
+      },
+      {
+        "flow_id": "audience_demographic_analysis",
+        "flow_name": "Analyze Audience Demographics",
+        "flow_description": "Process to create detailed audience analysis using demographic and geographic widgets",
+        "prerequisites": [
+          "Connected social media platforms with audience data",
+          "Understanding of available demographic metrics per platform",
+          "Knowledge of demographic widget capabilities"
+        ],
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Create audience-focused dashboard",
+            "description": "Start new dashboard specifically for audience analysis",
+            "user_input": "Create new dashboard with audience analysis focus"
+          },
+          {
+            "step_number": 2,
+            "action": "Add Demographics widget",
+            "description": "Create widget to show age and gender breakdown",
+            "user_input": "Select 'Demographics' widget type and configure for fans by age & gender"
+          },
+          {
+            "step_number": 3,
+            "action": "Add Geographics widget",
+            "description": "Create widget to show geographic distribution of audience",
+            "user_input": "Select 'Geographics' widget type and configure for fans by country"
+          },
+          {
+            "step_number": 4,
+            "action": "Platform-specific audience widgets",
+            "description": "Add platform-specific audience insights",
+            "platform_specific_options": {
+              "LinkedIn": "Add breakdown widgets for fans by function, seniority, and association",
+              "Instagram": "Add fans online by hour widget for timing insights",
+              "Facebook": "Add fan engagement and reach analysis widgets"
+            }
+          },
+          {
+            "step_number": 5,
+            "action": "Configure audience engagement analysis",
+            "description": "Add widgets to analyze how different audience segments engage",
+            "user_input": "Create engagement rate widgets segmented by demographics"
+          },
+          {
+            "step_number": 6,
+            "action": "Set up audience growth tracking",
+            "description": "Add widgets to monitor audience growth over time",
+            "user_input": "Configure time series widgets for fan growth and net new fans"
+          }
+        ],
+        "expected_outcomes": [
+          "Comprehensive audience demographic overview",
+          "Geographic distribution of followers/fans",
+          "Platform-specific audience insights",
+          "Audience engagement patterns analysis",
+          "Audience growth trends visualization"
+        ],
+        "error_handling": [
+          "Limited demographic data: Check platform connection and data availability",
+          "Geographic data issues: Verify location tracking permissions",
+          "Engagement correlation problems: Adjust date ranges for meaningful analysis"
+        ]
+      }
+    ],
+    "common_decision_points": {
+      "metric_selection": {
+        "question": "Which type of metrics do you need?",
+        "options": [
+          "Channel metrics (performance during selected date range)",
+          "Content metrics (lifetime performance of individual posts)"
+        ],
+        "guidance": "Channel metrics measure overall account performance during a specific period, while content metrics measure individual post performance over their lifetime."
+      },
+      "calculation_method": {
+        "question": "How should metrics be calculated?",
+        "options": [
+          "Total (sum of all values)",
+          "Average (mean value across period)"
+        ],
+        "guidance": "Use totals for cumulative metrics like total engagements, use averages for rate-based metrics or when comparing periods of different lengths."
+      },
+      "platform_coverage": {
+        "question": "Which platforms should be included?",
+        "options": [
+          "Single platform analysis",
+          "Multi-platform comparison",
+          "All connected platforms"
+        ],
+        "guidance": "Consider your analysis goals: single platform for deep dives, multi-platform for comparative analysis, all platforms for comprehensive overview."
+      }
+    },
+    "platform_specific_considerations": {
+      "Facebook": {
+        "data_refresh": "Content metrics refresh 15 minutes after publication, then at varying intervals for 14 days, completion at 28 days after last engagement",
+        "historical_data": "15 days backfill for content metrics",
+        "ad_account_impact": "More metrics available with connected ad account, including detailed paid performance data",
+        "unique_features": "Distinction between viral and non-viral reach, extensive video metrics"
+      },
+      "Instagram": {
+        "data_refresh": "Channel metrics refresh once every 24 hours at 7AM UTC",
+        "historical_data": "200 days backfill for most metrics, limited audience metrics backfill",
+        "content_types": "Separate tracking for Posts, Stories, Reels, and IGTV",
+        "unique_features": "Story mentions and replies tracking, detailed Reels analytics"
+      },
+      "LinkedIn": {
+        "data_refresh": "Channel metrics refresh once every 24 hours at 7AM UTC",
+        "historical_data": "365 days backfill except for fans and net new fans",
+        "organic_vs_paid": "Most metrics are organic-only, specific metrics show combined totals",
+        "unique_features": "Professional demographic breakdowns (function, seniority, association)"
+      }
+    },
+    "error_handling_patterns": {
+      "data_connection_issues": [
+        "Verify social media account permissions",
+        "Check API rate limits and quotas",
+        "Reconnect accounts if authentication has expired",
+        "Contact support for persistent connection problems"
+      ],
+      "insufficient_data": [
+        "Adjust date range to include more data",
+        "Verify channels have activity in selected period",
+        "Check if platform has minimum data requirements",
+        "Consider using different metrics with available data"
+      ],
+      "permission_errors": [
+        "Verify user role and permissions within Brandwatch",
+        "Check social media account admin access",
+        "Review sharing permissions for collaborative features",
+        "Contact administrator for permission updates"
+      ],
+      "performance_issues": [
+        "Reduce date range for large data sets",
+        "Limit number of metrics in complex widgets",
+        "Simplify filter criteria",
+        "Consider breaking large dashboards into smaller focused ones"
+      ]
+    }
+  }
+}
