@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { ZoomIn, ZoomOut, Maximize2, Move } from 'lucide-react';
 import './FlowDiagram.css';
 
-const FlowDiagram = ({ flow, showCitations = true }) => {
+const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }) => {
   const [nodes, setNodes] = useState([]);
   const [containerSize, setContainerSize] = useState({ width: 800, height: 600 });
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -477,6 +477,29 @@ const FlowDiagram = ({ flow, showCitations = true }) => {
             {flow.prerequisites.map((prereq, idx) => (
               <li key={idx}>{prereq}</li>
             ))}
+          </ul>
+        </div>
+      )}
+      {flow.related_flows && flow.related_flows.length > 0 && (
+        <div className="flow-dependencies-panel">
+          <h4>Related Flows</h4>
+          <ul>
+            {flow.related_flows.map((flowId, idx) => {
+              const relatedFlow = allFlows.find(f => f.flow_id === flowId);
+              if (!relatedFlow) return <li key={idx}>{flowId}</li>;
+
+              return (
+                <li key={idx}>
+                  <button
+                    className="flow-dependency-link"
+                    onClick={() => onFlowSelect && onFlowSelect(flowId)}
+                    title={relatedFlow.description || ''}
+                  >
+                    {relatedFlow.flow_name || relatedFlow.name || flowId}
+                  </button>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

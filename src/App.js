@@ -441,7 +441,17 @@ function App() {
                   {(viewMode === 'split' || viewMode === 'flow') && (
                     <Panel defaultSize={viewMode === 'flow' ? 100 : 35} minSize={25} maxSize={75}>
                       <div className="panel flow-panel">
-                        <FlowDiagram flow={selectedFlow} showCitations={false} />
+                        <FlowDiagram
+                          flow={selectedFlow}
+                          allFlows={flows}
+                          onFlowSelect={(flowId) => {
+                            const targetFlow = flows.find(f => f.flow_id === flowId);
+                            if (targetFlow) {
+                              setSelectedFlow(targetFlow);
+                            }
+                          }}
+                          showCitations={false}
+                        />
                       </div>
                     </Panel>
                   )}

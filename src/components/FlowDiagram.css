@@ -161,6 +161,60 @@
   margin-top: 2px;
 }
 
+/* Flow Dependencies Panel */
+.flow-dependencies-panel {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #e8f5e9;
+  border-radius: 0.5rem;
+  border-left: 4px solid #4caf50;
+  flex-shrink: 0;
+}
+
+.flow-dependencies-panel h4 {
+  font-size: 0.875rem;
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.flow-dependencies-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flow-dependencies-panel li {
+  font-size: 0.825rem;
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.flow-dependencies-panel li:before {
+  content: '→';
+  color: #4caf50;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.flow-dependency-link {
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.825rem;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.flow-dependency-link:hover {
+  color: #004ba0;
+}
+
 .flow-citations {
   margin-top: 1rem;
   padding: 0.75rem;
