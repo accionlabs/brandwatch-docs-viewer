@@ -80,6 +80,11 @@
                 ],
                 "source_documents": [
                     "Measure/Getting Started/Introduction to Measure.pdf"
+                ],
+                "related_flows": [
+                    "widget_creation_custom",
+                    "data_source_integration",
+                    "dashboard_sharing_internal"
                 ]
             },
             {
@@ -163,6 +168,11 @@
                 ],
                 "source_documents": [
                     "Measure/Creating, Editing, and Deleting Measure Widgets/Creating Measure Widgets.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "dashboard_creation_template",
+                    "data_source_integration"
                 ]
             },
             {
@@ -244,6 +254,11 @@
                 ],
                 "source_documents": [
                     "Measure/Creating, Editing, and Deleting Measure Widgets/Editing and Deleting Measure Widgets.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "widget_creation_custom",
+                    "dashboard_sharing_internal"
                 ]
             },
             {
@@ -313,6 +328,11 @@
                 ],
                 "source_documents": [
                     "Measure/Creating, Editing, and Deleting Measure Dashboards/Editing and Deleting Dashboards.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "data_source_integration",
+                    "dashboard_export_csv"
                 ]
             },
             {
@@ -376,6 +396,11 @@
                 ],
                 "source_documents": [
                     "Measure/Getting Started/Data Refresh Rates in Measure.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "dashboard_sharing_internal",
+                    "dashboard_export_pdf"
                 ]
             },
             {
@@ -440,6 +465,11 @@
                 ],
                 "source_documents": [
                     "Measure/Creating, Editing, and Deleting Measure Widgets/Filtering in Content and Label Performance Widgets.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "dashboard_export_csv",
+                    "widget_filtering_content"
                 ]
             },
             {
@@ -505,6 +535,11 @@
                 ],
                 "source_documents": [
                     "Measure/Additional Features/Sharing Measure Dashboards Internally.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "dashboard_export_pdf",
+                    "cross_network_analysis"
                 ]
             },
             {
@@ -574,6 +609,11 @@
                 ],
                 "source_documents": [
                     "Measure/Measure Widget Types/Guides to Measure Widget Types.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "widget_filtering_content",
+                    "template_customization"
                 ]
             },
             {
@@ -645,6 +685,11 @@
                 ],
                 "source_documents": [
                     "Measure/Measure Dashboard Templates/Guides to Measure Dashboard Templates.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "cross_network_analysis",
+                    "audience_demographic_analysis"
                 ]
             },
             {
@@ -712,6 +757,10 @@
                 ],
                 "source_documents": [
                     "Measure/Additional Features/Exporting Measure Dashboards.pdf"
+                ],
+                "related_flows": [
+                    "dashboard_creation_template",
+                    "template_customization"
                 ]
             }
         ],

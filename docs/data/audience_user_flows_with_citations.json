@@ -142,6 +142,10 @@
             },
             "source_documents": [
                 "Audience/Getting Started/Introduction to Audience.pdf"
+            ],
+            "related_flows": [
+                "Audience_Segmentation_and_Saving",
+                "CSV_Data_Import_and_Profile_Enrichment"
             ]
         },
         {
@@ -256,6 +260,10 @@
             },
             "source_documents": [
                 "Listen/Getting Started/Creating and Saving Searches.pdf"
+            ],
+            "related_flows": [
+                "Audience_Profile_Discovery_and_Analysis",
+                "CSV_Data_Import_and_Profile_Enrichment"
             ]
         },
         {
@@ -428,6 +436,10 @@
             },
             "source_documents": [
                 "Audience/Importing & Exporting Data/Importing CSV Files into Audience.pdf"
+            ],
+            "related_flows": [
+                "Audience_Profile_Discovery_and_Analysis",
+                "Profile_Merge_and_Deduplication"
             ]
         },
         {
@@ -533,6 +545,10 @@
             ],
             "source_documents": [
                 "Engage/Team Collaboration/Merging Profiles in Engage.pdf"
+            ],
+            "related_flows": [
+                "Audience_Profile_Discovery_and_Analysis",
+                "Profile_Labeling_and_Organization"
             ]
         },
         {
@@ -657,6 +673,10 @@
             ],
             "source_documents": [
                 "Listen/Interacting with Data/Mention Tags.pdf"
+            ],
+            "related_flows": [
+                "Audience_Profile_Discovery_and_Analysis",
+                "Audience_Export_and_Integration"
             ]
         },
         {
@@ -793,6 +813,9 @@
             ],
             "source_documents": [
                 "Advertise/Analyzing Performance/Advertise Insights and Analytics.pdf"
+            ],
+            "related_flows": [
+                "Audience_Profile_Discovery_and_Analysis"
             ]
         }
     ],

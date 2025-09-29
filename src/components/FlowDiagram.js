@@ -485,15 +485,45 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
           <h4>Related Flows</h4>
           <ul>
             {flow.related_flows.map((flowId, idx) => {
-              const relatedFlow = allFlows.find(f => f.flow_id === flowId);
-              if (!relatedFlow) return <li key={idx}>{flowId}</li>;
+              // Try to find the related flow by different ID fields
+              const relatedFlow = allFlows.find(f =>
+                f.flow_id === flowId ||
+                f.id === flowId ||
+                (f.flow_name && f.flow_name.replace(/ /g, '_').replace(/-/g, '_') === flowId)
+              );
+
+              if (!relatedFlow) {
+                // If we can't find the flow, at least make the ID more readable
+                const displayName = flowId
+                  .replace(/_/g, ' ')
+                  .replace(/([A-Z])/g, ' $1')
+                  .replace(/^\s+/, '')
+                  .replace(/\b\w/g, c => c.toUpperCase());
+                return (
+                  <li key={idx}>
+                    <span className="flow-dependency-unavailable">{displayName}</span>
+                  </li>
+                );
+              }
 
               return (
                 <li key={idx}>
                   <button
                     className="flow-dependency-link"
-                    onClick={() => onFlowSelect && onFlowSelect(flowId)}
-                    title={relatedFlow.description || ''}
+                    onClick={() => {
+                      if (onFlowSelect) {
+                        // Try to select by different ID fields
+                        const flowToSelect = allFlows.find(f =>
+                          f.flow_id === flowId ||
+                          f.id === flowId ||
+                          (f.flow_name && f.flow_name.replace(/ /g, '_').replace(/-/g, '_') === flowId)
+                        );
+                        if (flowToSelect) {
+                          onFlowSelect(flowToSelect.flow_id || flowToSelect.id || flowId);
+                        }
+                      }
+                    }}
+                    title={relatedFlow.description || relatedFlow.flow_description || ''}
                   >
                     {relatedFlow.flow_name || relatedFlow.name || flowId}
                   </button>

@@ -77,6 +77,10 @@
             },
             "source_documents": [
                 "Advertise/Audiences in Advertise/Creating Audiences in Advertise.pdf"
+            ],
+            "related_flows": [
+                "Facebook_Instagram_Campaign_Creation",
+                "Ad_Set_Creation_and_Configuration"
             ]
         },
         {
@@ -156,6 +160,10 @@
             ],
             "source_documents": [
                 "Advertise/Facebook, Instagram, and WhatsApp in Advertise/Creating and Managing Ad Campaigns for Facebook and Instagram in Advertise.pdf"
+            ],
+            "related_flows": [
+                "Ad_Account_Setup_and_Connection",
+                "Ad_Set_Creation_and_Configuration"
             ]
         },
         {
@@ -271,6 +279,10 @@
             },
             "source_documents": [
                 "Advertise/Facebook, Instagram, and WhatsApp in Advertise/Creating and Managing Ad Sets for Facebook and Instagram in Advertise.pdf"
+            ],
+            "related_flows": [
+                "Ad_Account_Setup_and_Connection",
+                "Facebook_Instagram_Ad_Creation"
             ]
         },
         {
@@ -432,6 +444,10 @@
             },
             "source_documents": [
                 "Advertise/Facebook, Instagram, and WhatsApp in Advertise/Creating and Managing Ad Sets for Facebook and Instagram in Advertise.pdf"
+            ],
+            "related_flows": [
+                "Ad_Account_Setup_and_Connection",
+                "Audience_Creation_and_Management"
             ]
         },
         {
@@ -665,6 +681,10 @@
             },
             "source_documents": [
                 "Audience/Analyzing Profiles & Activity/Filtering in Audience.pdf"
+            ],
+            "related_flows": [
+                "Ad_Account_Setup_and_Connection",
+                "Campaign_Performance_Analysis_and_Management"
             ]
         },
         {
@@ -847,6 +867,10 @@
             ],
             "source_documents": [
                 "Engage/Reports/Team Performance Reports.pdf"
+            ],
+            "related_flows": [
+                "Ad_Account_Setup_and_Connection",
+                "Smart_Labels_Automation_Workflow"
             ]
         },
         {
@@ -926,6 +950,9 @@
             ],
             "source_documents": [
                 "VIZIA/Integrations & Metrics/Integrations/Salesforce.pdf"
+            ],
+            "related_flows": [
+                "Ad_Account_Setup_and_Connection"
             ]
         }
     ],

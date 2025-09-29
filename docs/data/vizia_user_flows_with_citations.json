@@ -97,6 +97,10 @@
             ],
             "source_documents": [
                 "Listen/Getting Started/Introduction to Listen.pdf"
+            ],
+            "related_flows": [
+                "Deck_Creation_and_Management",
+                "Slide_Creation_and_Component_Management"
             ]
         },
         {
@@ -207,6 +211,10 @@
             ],
             "source_documents": [
                 "Publish/Content Pool/Managing a User.pdf"
+            ],
+            "related_flows": [
+                "Initial_VIZIA_Setup_and_Organization",
+                "Slide_Creation_and_Component_Management"
             ]
         },
         {
@@ -337,6 +345,10 @@
             ],
             "source_documents": [
                 "Listen/Getting Started/Creating and Saving Searches.pdf"
+            ],
+            "related_flows": [
+                "Initial_VIZIA_Setup_and_Organization",
+                "Content_Distribution_and_Screen_Management"
             ]
         },
         {
@@ -444,6 +456,10 @@
             ],
             "source_documents": [
                 "VIZIA/Using Vizia/Sharing/The Distribution Hub - setup guide.pdf"
+            ],
+            "related_flows": [
+                "Initial_VIZIA_Setup_and_Organization",
+                "User_Access_Management_and_Administration"
             ]
         },
         {
@@ -564,6 +580,10 @@
             ],
             "source_documents": [
                 "VIZIA/Integrations & Metrics/Integrations/IQ Media.pdf"
+            ],
+            "related_flows": [
+                "Initial_VIZIA_Setup_and_Organization",
+                "External_Sharing_and_Reporting"
             ]
         },
         {
@@ -682,6 +702,9 @@
             ],
             "source_documents": [
                 "VIZIA/Using Vizia/Sharing/The Distribution Hub - setup guide.pdf"
+            ],
+            "related_flows": [
+                "Initial_VIZIA_Setup_and_Organization"
             ]
         }
     ],

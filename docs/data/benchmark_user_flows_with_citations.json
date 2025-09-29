@@ -92,6 +92,10 @@
             ],
             "source_documents": [
                 "Benchmark/Benchmark Dashboards/Using the Brand Insights Dashboard.pdf"
+            ],
+            "related_flows": [
+                "Brand_Creation_and_Management",
+                "Brand_Insights_Dashboard_Analysis"
             ]
         },
         {
@@ -205,6 +209,10 @@
             ],
             "source_documents": [
                 "Benchmark/Benchmark Dashboards/Using the Content Analysis Dashboard.pdf"
+            ],
+            "related_flows": [
+                "Initial_Benchmark_Setup_and_Configuration",
+                "Brand_Insights_Dashboard_Analysis"
             ]
         },
         {
@@ -328,6 +336,10 @@
             ],
             "source_documents": [
                 "Benchmark/Benchmark Dashboards/Using the Brand Insights Dashboard.pdf"
+            ],
+            "related_flows": [
+                "Initial_Benchmark_Setup_and_Configuration",
+                "Content_Analysis_Dashboard_Deep-Dive"
             ]
         },
         {
@@ -445,6 +457,10 @@
             ],
             "source_documents": [
                 "Benchmark/Benchmark Dashboards/Using the Content Analysis Dashboard.pdf"
+            ],
+            "related_flows": [
+                "Initial_Benchmark_Setup_and_Configuration",
+                "Competitive_Intelligence_and_Strategy_Development"
             ]
         },
         {
@@ -562,6 +578,9 @@
             ],
             "source_documents": [
                 "Benchmark/Benchmark Dashboards/Iris Content Insights in Benchmark.pdf"
+            ],
+            "related_flows": [
+                "Initial_Benchmark_Setup_and_Configuration"
             ]
         }
     ],

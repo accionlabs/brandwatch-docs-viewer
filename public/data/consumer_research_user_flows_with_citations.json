@@ -87,6 +87,10 @@
             ],
             "source_documents": [
                 "Consumer Research/Home/Projects.pdf"
+            ],
+            "related_flows": [
+                "Dashboard_Creation_Using_Dashboard_Wizard",
+                "Events_Feed_Monitoring_and_Analysis"
             ]
         },
         {
@@ -201,6 +205,10 @@
             "source_documents": [
                 "Consumer Research/Dashboards/Dashboards/The Dashboard wizard.pdf",
                 "Consumer Research/Dashboards/Dashboards/Dashboards Overview.pdf"
+            ],
+            "related_flows": [
+                "Project_Creation_and_Management",
+                "Events_Feed_Monitoring_and_Analysis"
             ]
         },
         {
@@ -368,6 +376,10 @@
             ],
             "source_documents": [
                 "Consumer Research/Using the Events Feed/Using the Events Feed.pdf"
+            ],
+            "related_flows": [
+                "Project_Creation_and_Management",
+                "Homepage_Overview_and_Quick_Actions"
             ]
         },
         {
@@ -520,6 +532,10 @@
             ],
             "source_documents": [
                 "Consumer Research/Home/Homepage.pdf"
+            ],
+            "related_flows": [
+                "Project_Creation_and_Management",
+                "Brandwatch_AI_Search_and_Quick_Insights"
             ]
         },
         {
@@ -613,6 +629,9 @@
             "source_documents": [
                 "Consumer Research/Home/What is AI Entity Search.pdf",
                 "Consumer Research/Home/Brandwatch Search.pdf"
+            ],
+            "related_flows": [
+                "Project_Creation_and_Management"
             ]
         }
     ],

@@ -445,7 +445,12 @@ function App() {
                           flow={selectedFlow}
                           allFlows={flows}
                           onFlowSelect={(flowId) => {
-                            const targetFlow = flows.find(f => f.flow_id === flowId);
+                            // Try to find the flow by different ID fields
+                            const targetFlow = flows.find(f =>
+                              f.flow_id === flowId ||
+                              f.id === flowId ||
+                              (f.flow_name && f.flow_name.replace(/ /g, '_').replace(/-/g, '_') === flowId)
+                            );
                             if (targetFlow) {
                               setSelectedFlow(targetFlow);
                             }

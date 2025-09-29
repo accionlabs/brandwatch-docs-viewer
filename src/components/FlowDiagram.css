@@ -215,6 +215,12 @@
   color: #004ba0;
 }
 
+.flow-dependency-unavailable {
+  color: #999;
+  font-style: italic;
+  font-size: 0.825rem;
+}
+
 .flow-citations {
   margin-top: 1rem;
   padding: 0.75rem;

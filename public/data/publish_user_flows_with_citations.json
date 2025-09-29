@@ -89,6 +89,10 @@
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating a text post.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_002",
+                    "BW_PUB_003"
                 ]
             },
             {
@@ -177,6 +181,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating an image or GIF post.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_001",
+                    "BW_PUB_003"
                 ]
             },
             {
@@ -268,6 +277,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating a video post.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_002",
+                    "BW_PUB_004"
                 ]
             },
             {
@@ -363,6 +377,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating a link post.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_003",
+                    "BW_PUB_005"
                 ]
             },
             {
@@ -458,6 +477,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating an Instagram Carousel Post.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_004",
+                    "BW_PUB_006"
                 ]
             },
             {
@@ -548,6 +572,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Scheduling posts.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_005",
+                    "BW_PUB_007"
                 ]
             },
             {
@@ -623,6 +652,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Saving as draft.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_006",
+                    "BW_PUB_008"
                 ]
             },
             {
@@ -708,6 +742,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Scheduling posts.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_007",
+                    "BW_PUB_009"
                 ]
             },
             {
@@ -799,6 +838,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/Content Approval in Publish.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_008",
+                    "BW_PUB_010"
                 ]
             },
             {
@@ -887,6 +931,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/Content Approval in Publish.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_009",
+                    "BW_PUB_011"
                 ]
             },
             {
@@ -979,6 +1028,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Bulk Import.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_010",
+                    "BW_PUB_012"
                 ]
             },
             {
@@ -1070,6 +1124,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Unscheduling Posts.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_011",
+                    "BW_PUB_013"
                 ]
             },
             {
@@ -1168,6 +1227,11 @@
                 "citations": [
                     "Source: Publish/Content Pool/Introduction to Content Pool.pdf",
                     "Source: Publish/Content Pool/Managing Stock Items.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_012",
+                    "BW_PUB_014"
                 ]
             },
             {
@@ -1264,6 +1328,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Content Pool/Creating posts from Stock Items.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_013",
+                    "BW_PUB_015"
                 ]
             },
             {
@@ -1354,6 +1423,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Content Pool/Filtering and sorting items in Content Pool.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_014",
+                    "BW_PUB_016"
                 ]
             },
             {
@@ -1449,6 +1523,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Planning Campaigns.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_015",
+                    "BW_PUB_017"
                 ]
             },
             {
@@ -1540,6 +1619,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Notes in Publish.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_016",
+                    "BW_PUB_018"
                 ]
             },
             {
@@ -1631,6 +1715,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Approval Templates.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_017",
+                    "BW_PUB_019"
                 ]
             },
             {
@@ -1722,6 +1811,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Post Publication Notifications.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_018",
+                    "BW_PUB_020"
                 ]
             },
             {
@@ -1813,6 +1907,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/The Hub Mobile App.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_019",
+                    "BW_PUB_021"
                 ]
             },
             {
@@ -1903,6 +2002,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Scheduling posts.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_020",
+                    "BW_PUB_022"
                 ]
             },
             {
@@ -1995,6 +2099,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/Labeling Content.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_021",
+                    "BW_PUB_023"
                 ]
             },
             {
@@ -2086,6 +2195,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Calendar - Content types.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_022",
+                    "BW_PUB_024"
                 ]
             },
             {
@@ -2178,6 +2292,11 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Deleting Posts.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_023",
+                    "BW_PUB_025"
                 ]
             },
             {
@@ -2269,6 +2388,10 @@
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Content View.pdf"
+                ],
+                "related_flows": [
+                    "BW_PUB_001",
+                    "BW_PUB_024"
                 ]
             }
         ]

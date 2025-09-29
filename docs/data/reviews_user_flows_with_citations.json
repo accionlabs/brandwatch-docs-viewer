@@ -94,6 +94,10 @@
             ],
             "source_documents": [
                 "Brandwatch Reviews/Using Brandwatch Reviews/Introduction to Brandwatch Reviews.pdf"
+            ],
+            "related_flows": [
+                "Dashboard_Creation_and_Configuration",
+                "Sentiment_Analysis_Deep_Dive"
             ]
         },
         {
@@ -211,6 +215,10 @@
             ],
             "source_documents": [
                 "Consumer Research/Using the Events Feed/Using the Events Feed.pdf"
+            ],
+            "related_flows": [
+                "Initial_Review_Collection_Setup",
+                "Sentiment_Analysis_Deep_Dive"
             ]
         },
         {
@@ -323,6 +331,10 @@
             ],
             "source_documents": [
                 "VIZIA/Using Vizia/Slides/Creating Slides.pdf"
+            ],
+            "related_flows": [
+                "Initial_Review_Collection_Setup",
+                "Competitive_Review_Analysis"
             ]
         },
         {
@@ -439,6 +451,10 @@
             ],
             "source_documents": [
                 "VIZIA/Integrations & Metrics/Integrations/Google Analytics.pdf"
+            ],
+            "related_flows": [
+                "Initial_Review_Collection_Setup",
+                "Review_Response_and_Engagement_Strategy"
             ]
         },
         {
@@ -551,6 +567,9 @@
             ],
             "source_documents": [
                 "VIZIA/Using Vizia/Slides/Creating Slides.pdf"
+            ],
+            "related_flows": [
+                "Initial_Review_Collection_Setup"
             ]
         }
     ],
