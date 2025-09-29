@@ -79,7 +79,7 @@
                     "Permission errors: Contact administrator"
                 ],
                 "source_documents": [
-                    "Measure/Building your first dashboard/Building your first dashboard.pdf"
+                    "Measure/Getting Started/Introduction to Measure.pdf"
                 ]
             },
             {
@@ -162,7 +162,7 @@
                     "Filter conflicts: Review filter logic and criteria"
                 ],
                 "source_documents": [
-                    "Measure/Creating and Editing Components/Creating Components.pdf"
+                    "Measure/Creating, Editing, and Deleting Measure Widgets/Creating Measure Widgets.pdf"
                 ]
             },
             {
@@ -243,7 +243,7 @@
                     "Data sync issues: Verify account permissions and try reconnection"
                 ],
                 "source_documents": [
-                    "Measure/Creating and Editing Components/Component Management.pdf"
+                    "Measure/Creating, Editing, and Deleting Measure Widgets/Editing and Deleting Measure Widgets.pdf"
                 ]
             },
             {
@@ -312,7 +312,7 @@
                     "Channel restrictions: Remove restricted channels or adjust sharing scope"
                 ],
                 "source_documents": [
-                    "Measure/Dashboard Configuration/Dashboard Settings.pdf"
+                    "Measure/Creating, Editing, and Deleting Measure Dashboards/Editing and Deleting Dashboards.pdf"
                 ]
             },
             {
@@ -375,7 +375,7 @@
                     "Data formatting problems: Verify widget configurations"
                 ],
                 "source_documents": [
-                    "Measure/Data Handling/Data Sources.pdf"
+                    "Measure/Getting Started/Data Refresh Rates in Measure.pdf"
                 ]
             },
             {
@@ -439,7 +439,7 @@
                     "PDF save failures: Check file permissions and disk space"
                 ],
                 "source_documents": [
-                    "Measure/Data Handling/Data Filters.pdf"
+                    "Measure/Creating, Editing, and Deleting Measure Widgets/Filtering in Content and Label Performance Widgets.pdf"
                 ]
             },
             {
@@ -504,7 +504,7 @@
                     "Performance issues: Simplify complex filter combinations"
                 ],
                 "source_documents": [
-                    "Measure/Sharing and Access/Share Dashboards.pdf"
+                    "Measure/Additional Features/Sharing Measure Dashboards Internally.pdf"
                 ]
             },
             {
@@ -573,7 +573,7 @@
                     "Date range conflicts: Adjust to overlap period for all platforms"
                 ],
                 "source_documents": [
-                    "Measure/Visualization/Charts/Chart Types.pdf"
+                    "Measure/Measure Widget Types/Guides to Measure Widget Types.pdf"
                 ]
             },
             {
@@ -644,7 +644,7 @@
                     "Default parameter problems: Test with various scenarios before saving"
                 ],
                 "source_documents": [
-                    "Measure/Visualization/Display Options/Themes and Styling.pdf"
+                    "Measure/Measure Dashboard Templates/Guides to Measure Dashboard Templates.pdf"
                 ]
             },
             {
@@ -711,7 +711,7 @@
                     "Engagement correlation problems: Adjust date ranges for meaningful analysis"
                 ],
                 "source_documents": [
-                    "Measure/Data Handling/Export Data.pdf"
+                    "Measure/Additional Features/Exporting Measure Dashboards.pdf"
                 ]
             }
         ],
