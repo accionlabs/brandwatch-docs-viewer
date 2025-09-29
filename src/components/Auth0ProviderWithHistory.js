@@ -32,7 +32,11 @@ const Auth0ProviderWithHistory = ({ children }) => {
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={getRedirectUri()}
+      authorizationParams={{
+        redirect_uri: getRedirectUri(),
+        audience: `https://${domain}/api/v2/`,
+        scope: "openid profile email"
+      }}
       onRedirectCallback={onRedirectCallback}
       cacheLocation="localstorage"
       useRefreshTokens={true}
