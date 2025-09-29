@@ -7,7 +7,8 @@ const SimplePDFViewer = ({ pdfPath }) => {
 
   // React serves files from public folder at the root
   // So /pdfs/... will serve from public/pdfs/...
-  const fullPdfPath = `/pdfs/${pdfPath}`;
+  // Use PUBLIC_URL for GitHub Pages deployment
+  const fullPdfPath = `${process.env.PUBLIC_URL}/pdfs/${pdfPath}`;
 
   console.log('SimplePDFViewer - Loading PDF:', {
     pdfPath,

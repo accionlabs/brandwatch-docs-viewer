@@ -53,9 +53,9 @@ function App() {
 
     for (const moduleId of moduleIds) {
       try {
-        let response = await fetch(`/data/${moduleId}_user_flows_with_citations.json`);
+        let response = await fetch(`${process.env.PUBLIC_URL}/data/${moduleId}_user_flows_with_citations.json`);
         if (!response.ok) {
-          response = await fetch(`/data/${moduleId}_user_flows.json`);
+          response = await fetch(`${process.env.PUBLIC_URL}/data/${moduleId}_user_flows.json`);
         }
         if (response.ok) {
           const data = await response.json();
@@ -130,11 +130,11 @@ function App() {
     setLoading(true);
     try {
       // Try with citations file first
-      let response = await fetch(`/data/${moduleId}_user_flows_with_citations.json`);
+      let response = await fetch(`${process.env.PUBLIC_URL}/data/${moduleId}_user_flows_with_citations.json`);
 
       // If citations file doesn't exist, try without citations
       if (!response.ok) {
-        response = await fetch(`/data/${moduleId}_user_flows.json`);
+        response = await fetch(`${process.env.PUBLIC_URL}/data/${moduleId}_user_flows.json`);
       }
 
       if (!response.ok) {
