@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ModuleSelector from './components/ModuleSelector';
-import FlowList from './components/FlowList';
 import FlowDiagram from './components/FlowDiagram';
 // import PDFViewer from './components/PDFViewer';
 import SimplePDFViewer from './components/SimplePDFViewer';
-import SearchBar from './components/SearchBar';
-import { FileText, GitBranch, Search, BookOpen, X, Menu, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FileText, GitBranch, Search, BookOpen, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { sortFlowsForModule, sortModules, getModuleMetadata } from './utils/flowOrdering';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
+import { useAuth0 } from '@auth0/auth0-react';
+import { LoginButton, LogoutButton, UserProfile } from './components/AuthButtons';
 
 function App() {
+  const { isAuthenticated, isLoading, error } = useAuth0();
   const [modules, setModules] = useState([]);
   const [selectedModule, setSelectedModule] = useState(null);
   const [flows, setFlows] = useState([]);
@@ -305,6 +306,38 @@ function App() {
 
   console.log('Filtered flows:', filteredFlows.length, 'of', flows.length);
 
+  // Show loading state while Auth0 is initializing
+  if (isLoading) {
+    return (
+      <div className="auth-loading">
+        <div className="loading-spinner"></div>
+        <p>Loading authentication...</p>
+      </div>
+    );
+  }
+
+  // Show error if Auth0 fails
+  if (error) {
+    return (
+      <div className="auth-error">
+        <p>Authentication Error: {error.message}</p>
+        <p>Please refresh the page or contact support.</p>
+      </div>
+    );
+  }
+
+  // Show login screen if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="login-prompt">
+        <BookOpen size={48} className="brandwatch-logo" />
+        <h1>Brandwatch Documentation Viewer</h1>
+        <p>Access comprehensive documentation and user flows for all Brandwatch modules.</p>
+        <LoginButton />
+      </div>
+    );
+  }
+
   return (
     <div className="App">
       <header className="app-header compact">
@@ -364,28 +397,34 @@ function App() {
             )}
           </div>
         </div>
-        <div className="view-mode-selector">
-          <button
-            className={viewMode === 'split' ? 'active' : ''}
-            onClick={() => setViewMode('split')}
-            title="Split View"
-          >
-            Split
-          </button>
-          <button
-            className={viewMode === 'flow' ? 'active' : ''}
-            onClick={() => setViewMode('flow')}
-            title="Flow Only"
-          >
-            Flow
-          </button>
-          <button
-            className={viewMode === 'pdf' ? 'active' : ''}
-            onClick={() => setViewMode('pdf')}
-            title="PDF Only"
-          >
-            PDF
-          </button>
+        <div className="header-actions">
+          <div className="view-mode-selector">
+            <button
+              className={viewMode === 'split' ? 'active' : ''}
+              onClick={() => setViewMode('split')}
+              title="Split View"
+            >
+              Split
+            </button>
+            <button
+              className={viewMode === 'flow' ? 'active' : ''}
+              onClick={() => setViewMode('flow')}
+              title="Flow Only"
+            >
+              Flow
+            </button>
+            <button
+              className={viewMode === 'pdf' ? 'active' : ''}
+              onClick={() => setViewMode('pdf')}
+              title="PDF Only"
+            >
+              PDF
+            </button>
+          </div>
+          <div className="auth-header-right">
+            <UserProfile />
+            <LogoutButton />
+          </div>
         </div>
       </header>
 

@@ -1,0 +1,123 @@
+.auth-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #2196F3;
+  color: white;
+}
+
+.auth-button:hover {
+  background-color: #1976D2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-button {
+  background-color: #4CAF50;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.logout-button {
+  background-color: #f44336;
+}
+
+.logout-button:hover {
+  background-color: #da190b;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: rgba(33, 150, 243, 0.1);
+  border: 1px solid #2196F3;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1976D2;
+}
+
+.auth-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.auth-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.auth-error {
+  padding: 16px;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  color: #c62828;
+  margin: 20px;
+}
+
+.protected-content-wrapper {
+  position: relative;
+}
+
+.login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 24px;
+}
+
+.login-prompt h1 {
+  color: #1976D2;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.login-prompt p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+  max-width: 400px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.brandwatch-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
