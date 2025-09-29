@@ -5,8 +5,7 @@ import ModuleSelector from './components/ModuleSelector';
 import FlowDiagram from './components/FlowDiagram';
 // import PDFViewer from './components/PDFViewer';
 import SimplePDFViewer from './components/SimplePDFViewer';
-import Auth0TestPage from './components/Auth0TestPage';
-import { FileText, GitBranch, Search, BookOpen, X, ChevronLeft, ChevronRight, TestTube } from 'lucide-react';
+import { FileText, GitBranch, Search, BookOpen, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { sortFlowsForModule, sortModules, getModuleMetadata } from './utils/flowOrdering';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -348,6 +347,9 @@ function MainApp() {
           <h1>Brandwatch Documentation Viewer</h1>
           <p>Access comprehensive documentation and user flows for all Brandwatch modules.</p>
           <LoginButton />
+          <p style={{ fontSize: '14px', color: '#666', marginTop: '10px' }}>
+            New users can sign up on the Auth0 login page
+          </p>
         </div>
       );
     }
@@ -437,24 +439,6 @@ function MainApp() {
             </button>
           </div>
           <div className="auth-header-right">
-            <Link
-              to="/auth-test"
-              style={{
-                padding: '8px 16px',
-                backgroundColor: '#9C27B0',
-                color: 'white',
-                borderRadius: '4px',
-                fontSize: '14px',
-                fontWeight: 'bold',
-                textDecoration: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px'
-              }}
-            >
-              <TestTube size={16} />
-              Auth Test
-            </Link>
             {bypassAuth ? (
               <div style={{
                 padding: '8px 16px',
@@ -602,7 +586,6 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<MainApp />} />
-        <Route path="/auth-test" element={<Auth0TestPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

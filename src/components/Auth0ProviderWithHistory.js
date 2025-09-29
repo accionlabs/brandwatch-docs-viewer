@@ -7,11 +7,21 @@ const Auth0ProviderWithHistory = ({ children }) => {
 
   // Use PUBLIC_URL for GitHub Pages deployment
   const getRedirectUri = () => {
-    if (window.location.hostname === 'localhost') {
-      return window.location.origin;
+    // Always include PUBLIC_URL if it exists, even for localhost
+    const baseUrl = window.location.origin;
+    const publicUrl = process.env.PUBLIC_URL || '';
+
+    // For development, we might want to use the full path
+    if (window.location.hostname === 'localhost' && publicUrl) {
+      // Use localhost:3000/brandwatch-docs-viewer for consistency
+      return baseUrl + publicUrl;
+    } else if (window.location.hostname === 'localhost') {
+      // Fallback to just origin if PUBLIC_URL not set
+      return baseUrl;
     }
-    // For GitHub Pages, include the repository path
-    return window.location.origin + (process.env.PUBLIC_URL || '');
+
+    // For production (GitHub Pages), always include the repository path
+    return baseUrl + publicUrl;
   };
 
   const onRedirectCallback = (appState) => {
