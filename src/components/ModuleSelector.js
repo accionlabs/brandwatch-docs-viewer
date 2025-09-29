@@ -14,22 +14,27 @@ const ModuleSelector = ({
   loading,
   searchTerm,
   onSearchChange,
-  filteredFlows
+  filteredFlows,
+  expandedModules,
+  setExpandedModules
 }) => {
-  const [expandedModules, setExpandedModules] = useState({});
+  // Use props if provided, otherwise manage locally
+  const [localExpandedModules, setLocalExpandedModules] = useState({});
+  const expandedState = expandedModules !== undefined ? expandedModules : localExpandedModules;
+  const setExpandedState = setExpandedModules !== undefined ? setExpandedModules : setLocalExpandedModules;
   const moduleRefs = useRef({});
 
   const handleModuleClick = (moduleId) => {
     if (selectedModule === moduleId) {
       // If already selected, toggle expand/collapse
-      setExpandedModules(prev => ({
+      setExpandedState(prev => ({
         ...prev,
         [moduleId]: !prev[moduleId]
       }));
     } else {
       // If selecting a new module, select it and expand it
       onSelectModule(moduleId);
-      setExpandedModules(prev => ({
+      setExpandedState(prev => ({
         ...prev,
         [moduleId]: true
       }));
@@ -38,7 +43,7 @@ const ModuleSelector = ({
 
   // Scroll to module when flows are loaded
   useEffect(() => {
-    if (selectedModule && flows.length > 0 && expandedModules[selectedModule]) {
+    if (selectedModule && flows.length > 0 && expandedState[selectedModule]) {
       // Small delay to ensure DOM is updated
       setTimeout(() => {
         const moduleElement = moduleRefs.current[selectedModule];
@@ -66,10 +71,10 @@ const ModuleSelector = ({
         }
       }, 150); // Slightly longer delay to ensure flows are rendered
     }
-  }, [selectedModule, flows.length, expandedModules]);
+  }, [selectedModule, flows.length, expandedState]);
 
   const isExpanded = (moduleId) => {
-    return expandedModules[moduleId] && selectedModule === moduleId;
+    return expandedState[moduleId] && selectedModule === moduleId;
   };
 
   return (

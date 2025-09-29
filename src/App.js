@@ -23,6 +23,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [searchResults, setSearchResults] = useState(null);
+  const [expandedModules, setExpandedModules] = useState({});
 
   // Debug: Log state changes
   useEffect(() => {
@@ -216,6 +217,11 @@ function App() {
   const handleSearchResultSelect = (flow) => {
     // Select the module
     setSelectedModule(flow.module);
+    // Expand the module
+    setExpandedModules(prev => ({
+      ...prev,
+      [flow.module]: true
+    }));
     // Select the flow
     setSelectedFlow(flow);
     // Clear search
@@ -373,6 +379,8 @@ function App() {
                 searchTerm={searchTerm}
                 onSearchChange={setSearchTerm}
                 filteredFlows={filteredFlows}
+                expandedModules={expandedModules}
+                setExpandedModules={setExpandedModules}
               />
             </div>
           </div>
