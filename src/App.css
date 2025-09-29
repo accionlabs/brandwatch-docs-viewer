@@ -248,6 +248,13 @@ body {
   transform: translateX(-320px);
 }
 
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 .sidebar-section {
   border-bottom: 1px solid #e1e5eb;
   padding: 1rem;

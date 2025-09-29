@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import FlowList from './FlowList';
 import SearchBar from './SearchBar';
 import { ChevronDown, ChevronRight } from 'lucide-react';
@@ -17,6 +17,8 @@ const ModuleSelector = ({
   filteredFlows
 }) => {
   const [expandedModules, setExpandedModules] = useState({});
+  const moduleRefs = useRef({});
+
   const handleModuleClick = (moduleId) => {
     if (selectedModule === moduleId) {
       // If already selected, toggle expand/collapse
@@ -34,6 +36,26 @@ const ModuleSelector = ({
     }
   };
 
+  // Scroll to module when flows are loaded
+  useEffect(() => {
+    if (selectedModule && flows.length > 0 && expandedModules[selectedModule]) {
+      // Small delay to ensure DOM is updated
+      setTimeout(() => {
+        const moduleElement = moduleRefs.current[selectedModule];
+        if (moduleElement) {
+          const sidebar = moduleElement.closest('.sidebar-content');
+          if (sidebar) {
+            const moduleTop = moduleElement.offsetTop;
+            sidebar.scrollTo({
+              top: moduleTop - 10, // Small offset from top
+              behavior: 'smooth'
+            });
+          }
+        }
+      }, 100);
+    }
+  }, [selectedModule, flows.length, expandedModules]);
+
   const isExpanded = (moduleId) => {
     return expandedModules[moduleId] && selectedModule === moduleId;
   };
@@ -45,7 +67,11 @@ const ModuleSelector = ({
         const expanded = isExpanded(module.id);
 
         return (
-          <div key={module.id} className="module-item">
+          <div
+            key={module.id}
+            className="module-item"
+            ref={el => moduleRefs.current[module.id] = el}
+          >
             <div
               className={`module-card ${isSelected ? 'selected' : ''}`}
               onClick={() => handleModuleClick(module.id)}
