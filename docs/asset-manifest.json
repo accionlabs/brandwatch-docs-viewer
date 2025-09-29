@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/brandwatch-docs-viewer/static/css/main.1baf6c2c.css",
-    "main.js": "/brandwatch-docs-viewer/static/js/main.12914b8a.js",
+    "main.css": "/brandwatch-docs-viewer/static/css/main.47d6816c.css",
+    "main.js": "/brandwatch-docs-viewer/static/js/main.c95fed2a.js",
     "index.html": "/brandwatch-docs-viewer/index.html",
-    "main.1baf6c2c.css.map": "/brandwatch-docs-viewer/static/css/main.1baf6c2c.css.map",
-    "main.12914b8a.js.map": "/brandwatch-docs-viewer/static/js/main.12914b8a.js.map"
+    "main.47d6816c.css.map": "/brandwatch-docs-viewer/static/css/main.47d6816c.css.map",
+    "main.c95fed2a.js.map": "/brandwatch-docs-viewer/static/js/main.c95fed2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.1baf6c2c.css",
-    "static/js/main.12914b8a.js"
+    "static/css/main.47d6816c.css",
+    "static/js/main.c95fed2a.js"
   ]
 }
