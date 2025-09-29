@@ -24,6 +24,7 @@ function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [searchResults, setSearchResults] = useState(null);
   const [expandedModules, setExpandedModules] = useState({});
+  const [pendingFlowSelection, setPendingFlowSelection] = useState(null);
 
   // Debug: Log state changes
   useEffect(() => {
@@ -45,6 +46,35 @@ function App() {
       setFlows([]);
     }
   }, [selectedModule]);
+
+  // Handle pending flow selection after flows are loaded
+  useEffect(() => {
+    if (pendingFlowSelection && flows.length > 0) {
+      // Find the matching flow in the loaded flows
+      const matchingFlow = flows.find(f => {
+        // Match by flow_name or name
+        const nameMatch = (f.flow_name || f.name) === (pendingFlowSelection.flow_name || pendingFlowSelection.name);
+        // Also try to match by id if available
+        const idMatch = f.flow_id && pendingFlowSelection.flow_id ?
+          f.flow_id === pendingFlowSelection.flow_id :
+          f.id === pendingFlowSelection.id;
+
+        // Return true if names match, or if IDs are available and match
+        return nameMatch || (idMatch && (f.flow_id || f.id));
+      });
+
+      if (matchingFlow) {
+        console.log('Setting selected flow from pending:', matchingFlow);
+        setSelectedFlow(matchingFlow);
+        // Set PDF if available
+        if (matchingFlow.source_documents && matchingFlow.source_documents.length > 0) {
+          setSelectedPDF(matchingFlow.source_documents[0]);
+        }
+        // Clear pending selection
+        setPendingFlowSelection(null);
+      }
+    }
+  }, [flows, pendingFlowSelection]);
 
   // Load all flows from all modules for global search
   const loadAllFlows = async () => {
@@ -215,6 +245,8 @@ function App() {
 
   // Select a flow from search results
   const handleSearchResultSelect = (flow) => {
+    // Store the flow to be selected after module loads
+    setPendingFlowSelection(flow);
     // Select the module
     setSelectedModule(flow.module);
     // Expand the module
@@ -222,15 +254,9 @@ function App() {
       ...prev,
       [flow.module]: true
     }));
-    // Select the flow
-    setSelectedFlow(flow);
     // Clear search
     setGlobalSearchTerm('');
     setSearchResults(null);
-    // Set PDF if available
-    if (flow.source_documents && flow.source_documents.length > 0) {
-      setSelectedPDF(flow.source_documents[0]);
-    }
   };
 
   // Enhanced search function that searches through all flow data
