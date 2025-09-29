@@ -7,7 +7,7 @@
 
 .search-icon {
   position: absolute;
-  left: 0.75rem;
+  right: 0.75rem;
   color: #999;
   pointer-events: none;
 }

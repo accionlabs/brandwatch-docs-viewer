@@ -6,14 +6,44 @@ import './AuthButtons.css';
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
+  const handleLogin = () => {
+    loginWithRedirect({
+      authorizationParams: {
+        // Force showing the Auth0 Universal Login page with all options
+        connection: undefined, // Don't specify a connection to show all options
+        prompt: 'login', // Force login prompt
+      }
+    });
+  };
+
+  const handleEmailSignup = () => {
+    loginWithRedirect({
+      authorizationParams: {
+        // Force database connection for email/password signup
+        connection: 'Username-Password-Authentication',
+        screen_hint: 'signup'
+      }
+    });
+  };
+
   return (
-    <button
-      className="auth-button login-button"
-      onClick={() => loginWithRedirect()}
-    >
-      <LogIn size={16} />
-      <span>Log In</span>
-    </button>
+    <div className="auth-buttons-group">
+      <button
+        className="auth-button login-button"
+        onClick={handleLogin}
+      >
+        <LogIn size={16} />
+        <span>Log In</span>
+      </button>
+      <button
+        className="auth-button signup-button"
+        onClick={handleEmailSignup}
+        title="Sign up with Email"
+      >
+        <User size={16} />
+        <span>Sign Up with Email</span>
+      </button>
+    </div>
   );
 };
 
