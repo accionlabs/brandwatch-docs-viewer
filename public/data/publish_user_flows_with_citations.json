@@ -85,7 +85,7 @@
                     "Missing required content"
                 ],
                 "source_documents": [
-                    "Publish/Getting Started/Getting Started with Publish.pdf"
+                    "Publish/Getting Started/Introduction to Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating a text post.pdf"
@@ -172,8 +172,8 @@
                     "Network-specific posting restrictions"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/Creating a Post.pdf",
-                    "Publish/Creating Content/Editing Uploaded Media.pdf"
+                    "Publish/Creating Posts/Creating Text Posts.pdf",
+                    "Publish/Designing & Editing Content/Editing Images and Videos in Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating an image or GIF post.pdf"
@@ -264,7 +264,7 @@
                     "Caption sync issues"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/How to Schedule a Post.pdf"
+                    "Publish/Publishing & Scheduling/Scheduling Posts.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating a video post.pdf"
@@ -359,7 +359,7 @@
                     "Network-specific link restrictions"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Using Folders and Labels.pdf"
+                    "Publish/Getting Started/Labeling in Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating a link post.pdf"
@@ -454,7 +454,7 @@
                     "Caption length exceeding limits"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Monitoring Campaign Performance.pdf"
+                    "Publish/Team Collaboration/Planning Campaigns in Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Creating an Instagram Carousel Post.pdf"
@@ -543,8 +543,8 @@
                     "Channel disconnection before scheduled time"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Managing Content.pdf",
-                    "Publish/Managing Your Content/Content Pool.pdf"
+                    "Publish/Publishing & Scheduling/Content View in Publish.pdf",
+                    "Publish/Content Pool/Content Pool Introduction.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Scheduling posts.pdf"
@@ -619,7 +619,7 @@
                     "Draft expiration without completion"
                 ],
                 "source_documents": [
-                    "Publish/Working with Networks/Approvals.pdf"
+                    "Publish/Getting Started/Content Approval.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Saving as draft.pdf"
@@ -704,7 +704,7 @@
                     "Bulk action permission restrictions"
                 ],
                 "source_documents": [
-                    "Publish/Working with Networks/Adding a Network in Publish.pdf"
+                    "Publish/Getting Started/Introduction to Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Scheduling posts.pdf"
@@ -795,7 +795,7 @@
                     "Approval template misconfiguration"
                 ],
                 "source_documents": [
-                    "Publish/Manage Your Team/User Management.pdf"
+                    "Publish/Content Pool/Managing a User.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/Content Approval in Publish.pdf"
@@ -883,7 +883,7 @@
                     "Approval step bypassing attempts"
                 ],
                 "source_documents": [
-                    "Publish/Manage Your Team/What Are User Permissions.pdf"
+                    "Publish/Getting Started/Content Approval.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/Content Approval in Publish.pdf"
@@ -974,8 +974,8 @@
                     "Data validation failures"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/Editing Uploaded Media.pdf",
-                    "Publish/Creating Content/Creating Drafts.pdf"
+                    "Publish/Designing & Editing Content/Editing Images and Videos in Publish.pdf",
+                    "Publish/Publishing & Scheduling/Saving Posts as Drafts.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Creating Posts/Bulk Import.pdf"
@@ -1065,8 +1065,8 @@
                     "Permission restrictions blocking bulk actions"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Using Folders and Labels.pdf",
-                    "Publish/Managing Your Content/Tag posts on Facebook and Instagram.pdf"
+                    "Publish/Getting Started/Labeling in Publish.pdf",
+                    "Publish/Designing & Editing Content/Adding Tags to Posts.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Unscheduling Posts.pdf"
@@ -1162,8 +1162,8 @@
                     "Label configuration errors"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/How to Schedule a Post.pdf",
-                    "Publish/Managing Your Content/Content Calendar.pdf"
+                    "Publish/Publishing & Scheduling/Scheduling Posts.pdf",
+                    "Publish/Publishing & Scheduling/Content View in Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Content Pool/Introduction to Content Pool.pdf",
@@ -1259,8 +1259,8 @@
                     "Missing required post elements"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Monitoring Campaign Performance.pdf",
-                    "Publish/Managing Your Content/Networks Comparison.pdf"
+                    "Publish/Team Collaboration/Planning Campaigns in Publish.pdf",
+                    "Publish/Additional Features/Viewing Post Insights in Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Content Pool/Creating posts from Stock Items.pdf"
@@ -1349,8 +1349,8 @@
                     "Search term spelling errors"
                 ],
                 "source_documents": [
-                    "Publish/Working with Networks/Approvals.pdf",
-                    "Publish/Working with Networks/Adding a Network in Publish.pdf"
+                    "Publish/Getting Started/Content Approval.pdf",
+                    "Publish/Getting Started/Introduction to Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Content Pool/Filtering and sorting items in Content Pool.pdf"
@@ -1445,7 +1445,7 @@
                     "Insufficient asset preparation"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/Using Link Shorteners.pdf"
+                    "Publish/Creating Posts/Creating Link Posts.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Planning Campaigns.pdf"
@@ -1536,7 +1536,7 @@
                     "Team member availability issues"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/Republish as new post.pdf"
+                    "Publish/Creating Posts/Copying Posts and Stock Items.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Notes in Publish.pdf"
@@ -1626,8 +1626,8 @@
                     "Workflow logic configuration errors"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/What Happens to Deleted Data.pdf",
-                    "Publish/Managing Your Content/GDPR Compliance.pdf"
+                    "Publish/Publishing & Scheduling/Deleting Posts.pdf",
+                    "Publish/FAQ & Troubleshooting/FAQ.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Approval Templates.pdf"
@@ -1717,8 +1717,8 @@
                     "Notification timing misalignment"
                 ],
                 "source_documents": [
-                    "Publish/Working with Networks/Adding a Network in Publish.pdf",
-                    "Publish/Working with Networks/Network Integrations.pdf"
+                    "Publish/Getting Started/Introduction to Publish.pdf",
+                    "Publish/Getting Started/The Hub Mobile App.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Team Collaboration/Post Publication Notifications.pdf"
@@ -1808,8 +1808,8 @@
                     "Device storage or camera access problems"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/How to Schedule a Post.pdf",
-                    "Publish/Creating Content/Using Scheduling Suggestions.pdf"
+                    "Publish/Publishing & Scheduling/Scheduling Posts.pdf",
+                    "Publish/Publishing & Scheduling/Scheduling Posts.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/The Hub Mobile App.pdf"
@@ -1898,8 +1898,8 @@
                     "State transition failures"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Monitoring Campaign Performance.pdf",
-                    "Publish/Managing Your Content/Republishing evergreen content.pdf"
+                    "Publish/Team Collaboration/Planning Campaigns in Publish.pdf",
+                    "Publish/Creating Posts/Copying Posts and Stock Items.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Scheduling posts.pdf"
@@ -1990,8 +1990,8 @@
                     "Label hierarchy complexity issues"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Content Calendar.pdf",
-                    "Publish/Managing Your Content/Managing Content.pdf"
+                    "Publish/Publishing & Scheduling/Content View in Publish.pdf",
+                    "Publish/Publishing & Scheduling/Content View in Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Getting Started/Labeling Content.pdf"
@@ -2081,8 +2081,8 @@
                     "Date selection conflicts"
                 ],
                 "source_documents": [
-                    "Publish/Manage Your Team/User Management.pdf",
-                    "Publish/Manage Your Team/What Are User Permissions.pdf"
+                    "Publish/Content Pool/Managing a User.pdf",
+                    "Publish/Getting Started/Content Approval.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Calendar - Content types.pdf"
@@ -2173,8 +2173,8 @@
                     "Authentication token expiration"
                 ],
                 "source_documents": [
-                    "Publish/Managing Your Content/Using Folders and Labels.pdf",
-                    "Publish/Managing Your Content/Filtering and Sorting Content.pdf"
+                    "Publish/Getting Started/Labeling in Publish.pdf",
+                    "Publish/Content Pool/Filtering and Sorting Stock Items in the Content Pool.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Deleting Posts.pdf"
@@ -2264,8 +2264,8 @@
                     "Performance data synchronization delays"
                 ],
                 "source_documents": [
-                    "Publish/Creating Content/Creating a Post.pdf",
-                    "Publish/Creating Content/Choosing the Compose mode.pdf"
+                    "Publish/Creating Posts/Creating Text Posts.pdf",
+                    "Publish/Getting Started/Introduction to Publish.pdf"
                 ],
                 "citations": [
                     "Source: Publish/Publishing & Scheduling/Content View.pdf"
