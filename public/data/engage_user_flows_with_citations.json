@@ -74,10 +74,10 @@
                     "TEAM_001"
                 ],
                 "source_documents": [
-                    "Engage/Getting Started with Engage/The Feed.pdf"
+                    "Engage/Getting Started/Creating and Managing Engage Feeds.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Creating Feeds & Viewing Content/Creating and Managing Feeds.pdf"
+                    "Source: Engage/Getting Started/Creating and Managing Engage Feeds.pdf"
                 ]
             },
             {
@@ -130,10 +130,10 @@
                     "MSG_001"
                 ],
                 "source_documents": [
-                    "Engage/Getting Started with Engage/Advanced search and filters.pdf"
+                    "Engage/Getting Started/Introduction to Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Creating Feeds & Viewing Content/Feed Best Practices.pdf"
+                    "Source: Engage/Getting Started/Creating and Managing Engage Feeds.pdf"
                 ]
             },
             {
@@ -203,10 +203,10 @@
                     "CASE_001"
                 ],
                 "source_documents": [
-                    "Engage/Messaging/Using Messaging.pdf"
+                    "Engage/Creating Feeds & Viewing Content/Viewing Instagram Direct Messages in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Handling Content/Overview of Handling Content.pdf"
+                    "Source: Engage/Handling Content/Marking Content as Read and Unread in Engage.pdf"
                 ]
             },
             {
@@ -271,10 +271,10 @@
                     "FEED_001"
                 ],
                 "source_documents": [
-                    "Engage/Direct Messages/Managing Direct Messages.pdf"
+                    "Engage/Creating Feeds & Viewing Content/Viewing Instagram Direct Messages in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Handling Content/Replying via Direct Message.pdf"
+                    "Source: Engage/Handling Content/Replying to Posts and Comments via Direct Message.pdf"
                 ]
             },
             {
@@ -339,10 +339,10 @@
                     "TEAM_001"
                 ],
                 "source_documents": [
-                    "Engage/Templates/Using Templates.pdf"
+                    "Engage/Getting Started/Templates in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Handling Content/Response Templates in Engage.pdf"
+                    "Source: Engage/Getting Started/Templates in Engage.pdf"
                 ]
             },
             {
@@ -416,10 +416,10 @@
                     "CASE_002"
                 ],
                 "source_documents": [
-                    "Engage/Automation/Automations Overview.pdf"
+                    "Engage/Getting Started/Automation in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Additional Features & Automation/Automation Rules.pdf"
+                    "Source: Engage/Additional Features & Automation/Setting up Automated Labeling in Engage.pdf"
                 ]
             },
             {
@@ -483,10 +483,10 @@
                     "AUTO_001"
                 ],
                 "source_documents": [
-                    "Engage/Automation/Creating Custom Automations.pdf"
+                    "Engage/Getting Started/Automation in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Additional Features & Automation/Automated Messages.pdf"
+                    "Source: Engage/Getting Started/Automation in Engage.pdf"
                 ]
             },
             {
@@ -558,10 +558,10 @@
                     "TEAM_002"
                 ],
                 "source_documents": [
-                    "Engage/Cases/Cases Management.pdf"
+                    "Engage/Handling Content/Using Case Management in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Additional Features & Automation/Creating and Managing Cases.pdf"
+                    "Source: Engage/Handling Content/Using Case Management in Engage.pdf"
                 ]
             },
             {
@@ -617,10 +617,10 @@
                     "CASE_001"
                 ],
                 "source_documents": [
-                    "Engage/Cases/Creating and Managing Cases.pdf"
+                    "Engage/Handling Content/Using Case Management in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Additional Features & Automation/Creating and Managing Cases.pdf"
+                    "Source: Engage/Handling Content/Using Case Management in Engage.pdf"
                 ]
             },
             {
@@ -680,10 +680,10 @@
                     "FEED_002"
                 ],
                 "source_documents": [
-                    "Engage/Teams/Creating and Managing Teams.pdf"
+                    "Engage/Reports/Team Performance Reports.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Team Collaboration/Content Assignment in Engage.pdf"
+                    "Source: Engage/Team Collaboration/Assigning and Viewing Assigned Messages.pdf"
                 ]
             },
             {
@@ -738,10 +738,10 @@
                     "TEAM_001"
                 ],
                 "source_documents": [
-                    "Engage/Teams/Team Permissions.pdf"
+                    "Engage/Reports/Team Performance Reports.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Team Collaboration/Feed Sharing.pdf"
+                    "Source: Engage/Team Collaboration/Feed Sharing in Engage.pdf"
                 ]
             },
             {
@@ -802,10 +802,10 @@
                     "BULK_002"
                 ],
                 "source_documents": [
-                    "Engage/Bulk Actions/Using Bulk Actions.pdf"
+                    "Engage/Additional Features & Automation/Bulk Actions in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Handling Content/Bulk Actions.pdf"
+                    "Source: Engage/Additional Features & Automation/Bulk Actions in Engage.pdf"
                 ]
             },
             {
@@ -864,10 +864,10 @@
                     "BULK_001"
                 ],
                 "source_documents": [
-                    "Engage/Bulk Actions/Bulk Reply and Label.pdf"
+                    "Engage/Additional Features & Automation/Bulk Actions in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Handling Content/Bulk Mark as Read by Date.pdf"
+                    "Source: Engage/Getting Started/Marking Content as Read in Bulk.pdf"
                 ]
             },
             {
@@ -932,10 +932,10 @@
                     "BULK_001"
                 ],
                 "source_documents": [
-                    "Engage/Moderation/Content Moderation.pdf"
+                    "Engage/Handling Content/Managing Spam in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Handling Content/Moderating Spam.pdf"
+                    "Source: Engage/Handling Content/Managing Spam in Engage.pdf"
                 ]
             },
             {
@@ -989,10 +989,10 @@
                     "MSG_001"
                 ],
                 "source_documents": [
-                    "Engage/Mobile/Using Engage Mobile App.pdf"
+                    "Engage/Additional Features & Automation/The Engage Mobile App.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Getting Started/The Hub Mobile App.pdf"
+                    "Source: Engage/Additional Features & Automation/The Engage Mobile App.pdf"
                 ]
             },
             {
@@ -1051,10 +1051,10 @@
                     "FEED_001"
                 ],
                 "source_documents": [
-                    "Engage/Search and Filters/Advanced Search Filters.pdf"
+                    "Engage/Getting Started/Introduction to Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Creating Feeds & Viewing Content/Creating a Feed from a Search.pdf"
+                    "Source: Engage/Getting Started/Creating and Managing Engage Feeds.pdf"
                 ]
             },
             {
@@ -1114,10 +1114,10 @@
                     "REPORT_001"
                 ],
                 "source_documents": [
-                    "Engage/Labels/Creating and Managing Labels.pdf"
+                    "Engage/Team Collaboration/Labeling Conversations, Messages, and Comments in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Team Collaboration/Labeling Content.pdf"
+                    "Source: Engage/Team Collaboration/Labeling Conversations, Messages, and Comments in Engage.pdf"
                 ]
             },
             {
@@ -1173,10 +1173,10 @@
                     "CASE_001"
                 ],
                 "source_documents": [
-                    "Engage/Sentiment/Sentiment Analysis in Engage.pdf"
+                    "Engage/Handling Content/Sentiment in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Creating Feeds & Viewing Content/Sentiment.pdf"
+                    "Source: Engage/Handling Content/Sentiment in Engage.pdf"
                 ]
             },
             {
@@ -1232,10 +1232,10 @@
                     "CASE_001"
                 ],
                 "source_documents": [
-                    "Engage/Profiles/Customer Profile Management.pdf"
+                    "Engage/Team Collaboration/Viewing Customer Profile Cards in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Team Collaboration/Customer Profiles.pdf"
+                    "Source: Engage/Team Collaboration/Viewing Customer Profile Cards in Engage.pdf"
                 ]
             },
             {
@@ -1290,10 +1290,10 @@
                     "MSG_001"
                 ],
                 "source_documents": [
-                    "Engage/Integrations/Third Party Integrations.pdf"
+                    "Engage/Getting Started/Introduction to Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Getting Started/Supported Networks and Channels in Engage.pdf"
+                    "Source: Engage/Getting Started/Which Types of Incoming Content Can I See in Engage.pdf"
                 ]
             },
             {
@@ -1349,10 +1349,10 @@
                     "TEAM_001"
                 ],
                 "source_documents": [
-                    "Engage/Notifications/Setting up Notifications.pdf"
+                    "Engage/Additional Features & Automation/Setting Up Feed Email Notifications in Engage.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Team Collaboration/Email notifications in Engage.pdf"
+                    "Source: Engage/Additional Features & Automation/Setting Up Feed Email Notifications in Engage.pdf"
                 ]
             },
             {
@@ -1407,10 +1407,10 @@
                     "REPORT_001"
                 ],
                 "source_documents": [
-                    "Engage/Export and Import/Exporting Data.pdf"
+                    "Engage/Additional Features & Automation/Exporting Engage Feeds.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Reports/Exporting Data from Engage.pdf"
+                    "Source: Engage/Reports/Exporting Engage Reports.pdf"
                 ]
             },
             {
@@ -1470,10 +1470,10 @@
                     "EXPORT_001"
                 ],
                 "source_documents": [
-                    "Engage/Reports/Creating Engage Reports.pdf"
+                    "Engage/Reports/Team Performance Reports.pdf"
                 ],
                 "citations": [
-                    "Source: Engage/Reports/Creating Engage Reports.pdf"
+                    "Source: Engage/Reports/Team Performance Reports.pdf"
                 ]
             }
         ],
