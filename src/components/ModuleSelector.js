@@ -45,14 +45,26 @@ const ModuleSelector = ({
         if (moduleElement) {
           const sidebar = moduleElement.closest('.sidebar-content');
           if (sidebar) {
-            const moduleTop = moduleElement.offsetTop;
-            sidebar.scrollTo({
-              top: moduleTop - 10, // Small offset from top
-              behavior: 'smooth'
-            });
+            // Find the module card within the module element
+            const moduleCard = moduleElement.querySelector('.module-card');
+            if (moduleCard) {
+              // Get the absolute position of the module card
+              const moduleCardRect = moduleCard.getBoundingClientRect();
+              const sidebarRect = sidebar.getBoundingClientRect();
+
+              // Calculate the scroll position to put module card at the top
+              const currentScroll = sidebar.scrollTop;
+              const relativeTop = moduleCardRect.top - sidebarRect.top;
+              const targetScroll = currentScroll + relativeTop - 10; // 10px padding from top
+
+              sidebar.scrollTo({
+                top: targetScroll,
+                behavior: 'smooth'
+              });
+            }
           }
         }
-      }, 100);
+      }, 150); // Slightly longer delay to ensure flows are rendered
     }
   }, [selectedModule, flows.length, expandedModules]);
 
