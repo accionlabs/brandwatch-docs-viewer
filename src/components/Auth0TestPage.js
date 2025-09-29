@@ -71,6 +71,15 @@ const Auth0TestPage = () => {
       addLog('Signup redirect initiated', 'success');
     } catch (err) {
       addLog(`Signup failed: ${err.message}`, 'error');
+      console.error('Full signup error:', err);
+
+      // Check if error has additional details
+      if (err.error_description) {
+        addLog(`Error details: ${err.error_description}`, 'error');
+      }
+      if (err.statusCode) {
+        addLog(`Status code: ${err.statusCode}`, 'error');
+      }
     }
   };
 
@@ -116,6 +125,30 @@ const Auth0TestPage = () => {
 
     addLog(`Direct Auth0 URL: ${authUrl}`, 'info');
     window.open(authUrl, '_blank');
+  };
+
+  // Test database connection settings
+  const testDatabaseConnection = async () => {
+    addLog('Checking database connection settings...', 'info');
+    const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+
+    try {
+      // Try to get the client configuration
+      const response = await fetch(`https://${domain}/client/${process.env.REACT_APP_AUTH0_CLIENT_ID}.js`);
+
+      if (response.ok) {
+        addLog('Client configuration accessible', 'success');
+      } else {
+        addLog(`Client config check failed: ${response.status} ${response.statusText}`, 'error');
+      }
+
+      // Log important configuration
+      addLog('Database Connection: Username-Password-Authentication', 'info');
+      addLog(`Domain: ${domain}`, 'info');
+      addLog(`Client ID: ${process.env.REACT_APP_AUTH0_CLIENT_ID}`, 'info');
+    } catch (err) {
+      addLog(`Connection test failed: ${err.message}`, 'error');
+    }
   };
 
   // Test logout
@@ -214,6 +247,9 @@ const Auth0TestPage = () => {
               </button>
               <button onClick={testDirectAuth0} className="test-button direct">
                 Test Direct Auth0 URL
+              </button>
+              <button onClick={testDatabaseConnection} className="test-button token">
+                Check DB Connection
               </button>
             </>
           ) : (
