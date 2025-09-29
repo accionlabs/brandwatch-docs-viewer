@@ -1,14 +1,22 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { ZoomIn, ZoomOut, Maximize2, Move } from 'lucide-react';
 import './FlowDiagram.css';
 
 const FlowDiagram = ({ flow, showCitations = true }) => {
   const [nodes, setNodes] = useState([]);
   const [containerSize, setContainerSize] = useState({ width: 800, height: 600 });
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
+  const [isPanning, setIsPanning] = useState(false);
+  const [startPan, setStartPan] = useState({ x: 0, y: 0 });
   const containerRef = useRef(null);
+  const svgRef = useRef(null);
 
   useEffect(() => {
     if (flow) {
       generateNodesFromFlow(flow);
+      setZoomLevel(1); // Reset zoom when flow changes
+      setPanOffset({ x: 0, y: 0 }); // Reset pan when flow changes
     }
   }, [flow]);
 
@@ -31,6 +39,82 @@ const FlowDiagram = ({ flow, showCitations = true }) => {
       resizeObserver.disconnect();
     };
   }, []);
+
+  // Handle mouse wheel zoom
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? -0.1 : 0.1;
+        setZoomLevel(prev => Math.max(0.5, Math.min(3, prev + delta)));
+      }
+    };
+
+    const svgElement = svgRef.current;
+    if (svgElement) {
+      svgElement.addEventListener('wheel', handleWheel, { passive: false });
+    }
+
+    return () => {
+      if (svgElement) {
+        svgElement.removeEventListener('wheel', handleWheel);
+      }
+    };
+  }, []);
+
+  const handleZoomIn = () => {
+    setZoomLevel(prev => Math.min(3, prev + 0.2));
+  };
+
+  const handleZoomOut = () => {
+    setZoomLevel(prev => Math.max(0.5, prev - 0.2));
+  };
+
+  const handleZoomReset = () => {
+    setZoomLevel(1);
+    setPanOffset({ x: 0, y: 0 });
+  };
+
+  // Panning handlers
+  const handleMouseDown = (e) => {
+    if (e.button === 0) { // Left click only
+      setIsPanning(true);
+      setStartPan({
+        x: e.clientX - panOffset.x,
+        y: e.clientY - panOffset.y
+      });
+      e.preventDefault();
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (isPanning) {
+      setPanOffset({
+        x: e.clientX - startPan.x,
+        y: e.clientY - startPan.y
+      });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsPanning(false);
+  };
+
+  // Add mouse event listeners for panning
+  useEffect(() => {
+    const handleDocumentMouseMove = (e) => handleMouseMove(e);
+    const handleDocumentMouseUp = () => handleMouseUp();
+
+    if (isPanning) {
+      document.addEventListener('mousemove', handleDocumentMouseMove);
+      document.addEventListener('mouseup', handleDocumentMouseUp);
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleDocumentMouseMove);
+      document.removeEventListener('mouseup', handleDocumentMouseUp);
+    };
+  }, [isPanning, startPan]);
 
   const generateNodesFromFlow = (flowData) => {
     const generatedNodes = [];
@@ -320,17 +404,39 @@ const FlowDiagram = ({ flow, showCitations = true }) => {
 
   return (
     <div className="flow-diagram" ref={containerRef}>
-      <svg
-        className="flow-svg"
-        viewBox={viewBox}
-        preserveAspectRatio="xMidYMid meet"
-        style={{
-          width: '100%',
-          height: '100%',
-          maxWidth: '100%',
-          maxHeight: '100%'
-        }}
-      >
+      <div className="zoom-controls">
+        <button onClick={handleZoomIn} title="Zoom In (Ctrl + Scroll Up)" className="zoom-btn">
+          <ZoomIn size={18} />
+        </button>
+        <button onClick={handleZoomOut} title="Zoom Out (Ctrl + Scroll Down)" className="zoom-btn">
+          <ZoomOut size={18} />
+        </button>
+        <button onClick={handleZoomReset} title="Reset Zoom & Position" className="zoom-btn">
+          <Maximize2 size={18} />
+        </button>
+        <button onClick={() => setPanOffset({ x: 0, y: 0 })} title="Center View" className="zoom-btn">
+          <Move size={18} />
+        </button>
+        <span className="zoom-level">{Math.round(zoomLevel * 100)}%</span>
+      </div>
+      <div className="svg-container" style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+        <svg
+          ref={svgRef}
+          className={`flow-svg ${isPanning ? 'is-panning' : ''}`}
+          viewBox={viewBox}
+          preserveAspectRatio="xMidYMid meet"
+          onMouseDown={handleMouseDown}
+          style={{
+            width: '100%',
+            height: '100%',
+            maxWidth: '100%',
+            maxHeight: '100%',
+            transform: `translate(${panOffset.x}px, ${panOffset.y}px) scale(${zoomLevel})`,
+            transformOrigin: 'center',
+            transition: isPanning ? 'none' : 'transform 0.2s ease',
+            cursor: isPanning ? 'grabbing' : 'grab'
+          }}
+        >
         <defs>
           <marker
             id="arrowhead"
@@ -363,6 +469,17 @@ const FlowDiagram = ({ flow, showCitations = true }) => {
           {nodes.map(renderNodeAsSVG)}
         </g>
       </svg>
+      </div>
+      {flow.prerequisites && flow.prerequisites.length > 0 && (
+        <div className="flow-prerequisites-panel">
+          <h4>Prerequisites</h4>
+          <ul>
+            {flow.prerequisites.map((prereq, idx) => (
+              <li key={idx}>{prereq}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       {showCitations && flow.source_documents && flow.source_documents.length > 0 && (
         <div className="flow-citations">
           <h4>Source Documentation:</h4>
