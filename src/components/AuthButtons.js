@@ -17,13 +17,51 @@ const LoginButton = () => {
   };
 
   const handleEmailSignup = () => {
+    console.log('Attempting email signup...');
+    try {
+      loginWithRedirect({
+        authorizationParams: {
+          // Force database connection for email/password signup
+          connection: 'Username-Password-Authentication',
+          screen_hint: 'signup'
+        }
+      }).catch(err => {
+        console.error('Signup redirect error:', err);
+        alert('Signup error: ' + err.message);
+      });
+    } catch (error) {
+      console.error('Signup error:', error);
+      alert('Failed to initiate signup: ' + error.message);
+    }
+  };
+
+  const handlePasswordReset = () => {
+    // Navigate to password reset
+    // Auth0 Universal Login will handle this
     loginWithRedirect({
       authorizationParams: {
-        // Force database connection for email/password signup
         connection: 'Username-Password-Authentication',
-        screen_hint: 'signup'
+        screen_hint: 'reset' // This hints to show password reset
       }
     });
+  };
+
+  // Direct Auth0 Universal Login URL for signup
+  const handleDirectSignup = () => {
+    const domain = 'accionlabs.auth0.com';
+    const clientId = 'ul3Dxmk6SgeSnXx1CVCn2n4h8uZL9YOg';
+    const redirectUri = window.location.origin + (process.env.PUBLIC_URL || '');
+
+    const signupUrl = `https://${domain}/authorize?` +
+      `response_type=code&` +
+      `client_id=${clientId}&` +
+      `redirect_uri=${encodeURIComponent(redirectUri)}&` +
+      `scope=openid%20profile%20email&` +
+      `screen_hint=signup&` +
+      `connection=Username-Password-Authentication`;
+
+    console.log('Direct signup URL:', signupUrl);
+    window.location.href = signupUrl;
   };
 
   return (
@@ -42,6 +80,15 @@ const LoginButton = () => {
       >
         <User size={16} />
         <span>Sign Up with Email</span>
+      </button>
+      <button
+        className="auth-button signup-button"
+        onClick={handleDirectSignup}
+        title="Direct Signup"
+        style={{ backgroundColor: '#FF5722' }}
+      >
+        <User size={16} />
+        <span>Direct Signup (Fallback)</span>
       </button>
     </div>
   );

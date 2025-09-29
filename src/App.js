@@ -318,10 +318,14 @@ function App() {
 
   // Show error if Auth0 fails
   if (error) {
+    console.error('Auth0 Error:', error);
     return (
       <div className="auth-error">
         <p>Authentication Error: {error.message}</p>
-        <p>Please refresh the page or contact support.</p>
+        <p>Error Code: {error.error || 'Unknown'}</p>
+        <p>Description: {error.error_description || 'No description available'}</p>
+        <p>Please check the browser console for more details.</p>
+        <button onClick={() => window.location.reload()}>Retry</button>
       </div>
     );
   }
