@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import './App.css';
 import ModuleSelector from './components/ModuleSelector';
 import FlowDiagram from './components/FlowDiagram';
 // import PDFViewer from './components/PDFViewer';
 import SimplePDFViewer from './components/SimplePDFViewer';
-import { FileText, GitBranch, Search, BookOpen, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Auth0TestPage from './components/Auth0TestPage';
+import { FileText, GitBranch, Search, BookOpen, X, ChevronLeft, ChevronRight, TestTube } from 'lucide-react';
 import { sortFlowsForModule, sortModules, getModuleMetadata } from './utils/flowOrdering';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton, LogoutButton, UserProfile } from './components/AuthButtons';
 
-function App() {
+function MainApp() {
   const { isAuthenticated, isLoading, error } = useAuth0();
 
   // Check for auth bypass flag (development/testing only)
@@ -435,6 +437,24 @@ function App() {
             </button>
           </div>
           <div className="auth-header-right">
+            <Link
+              to="/auth-test"
+              style={{
+                padding: '8px 16px',
+                backgroundColor: '#9C27B0',
+                color: 'white',
+                borderRadius: '4px',
+                fontSize: '14px',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px'
+              }}
+            >
+              <TestTube size={16} />
+              Auth Test
+            </Link>
             {bypassAuth ? (
               <div style={{
                 padding: '8px 16px',
@@ -573,6 +593,19 @@ function App() {
         </main>
       </div>
     </div>
+  );
+}
+
+// Main App component with routing
+function App() {
+  return (
+    <Router basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path="/" element={<MainApp />} />
+        <Route path="/auth-test" element={<Auth0TestPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }
 
