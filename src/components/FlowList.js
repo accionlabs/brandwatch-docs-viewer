@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { GitBranch, FileText, ChevronRight, Lock, Unlock } from 'lucide-react';
 import './FlowList.css';
 
 const FlowList = ({ flows, selectedFlow, onSelectFlow, loading }) => {
+  const flowRefs = useRef({});
   console.log('FlowList render - flows:', flows, 'loading:', loading);
+
+  // Scroll to selected flow when it changes
+  useEffect(() => {
+    if (selectedFlow) {
+      const flowId = selectedFlow.flow_id || selectedFlow.id;
+      const flowElement = flowRefs.current[flowId];
+      if (flowElement) {
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+          flowElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        }, 100);
+      }
+    }
+  }, [selectedFlow]);
 
   if (loading) {
     return <div className="loading">Loading flows...</div>;
@@ -49,6 +67,7 @@ const FlowList = ({ flows, selectedFlow, onSelectFlow, loading }) => {
             return (
               <div
                 key={flowId}
+                ref={el => flowRefs.current[flowId] = el}
                 className={`flow-item ${isSelected ? 'selected' : ''} ${flow.isPrerequisite ? 'prerequisite' : ''}`}
                 onClick={() => onSelectFlow(flow)}
               >

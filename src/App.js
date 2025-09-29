@@ -453,6 +453,13 @@ function App() {
                             );
                             if (targetFlow) {
                               setSelectedFlow(targetFlow);
+                              // Ensure the module is expanded to show the selected flow
+                              if (selectedModule) {
+                                setExpandedModules(prev => ({
+                                  ...prev,
+                                  [selectedModule]: true
+                                }));
+                              }
                             }
                           }}
                           showCitations={false}
