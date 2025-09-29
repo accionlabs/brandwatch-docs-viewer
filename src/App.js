@@ -12,6 +12,10 @@ import { LoginButton, LogoutButton, UserProfile } from './components/AuthButtons
 
 function App() {
   const { isAuthenticated, isLoading, error } = useAuth0();
+
+  // Check for auth bypass flag (development/testing only)
+  const bypassAuth = process.env.REACT_APP_BYPASS_AUTH === 'true';
+
   const [modules, setModules] = useState([]);
   const [selectedModule, setSelectedModule] = useState(null);
   const [flows, setFlows] = useState([]);
@@ -306,40 +310,45 @@ function App() {
 
   console.log('Filtered flows:', filteredFlows.length, 'of', flows.length);
 
-  // Show loading state while Auth0 is initializing
-  if (isLoading) {
-    return (
-      <div className="auth-loading">
-        <div className="loading-spinner"></div>
-        <p>Loading authentication...</p>
-      </div>
-    );
-  }
+  // Check if authentication is bypassed
+  if (bypassAuth) {
+    console.warn('⚠️ Authentication bypassed - Development mode');
+  } else {
+    // Show loading state while Auth0 is initializing
+    if (isLoading) {
+      return (
+        <div className="auth-loading">
+          <div className="loading-spinner"></div>
+          <p>Loading authentication...</p>
+        </div>
+      );
+    }
 
-  // Show error if Auth0 fails
-  if (error) {
-    console.error('Auth0 Error:', error);
-    return (
-      <div className="auth-error">
-        <p>Authentication Error: {error.message}</p>
-        <p>Error Code: {error.error || 'Unknown'}</p>
-        <p>Description: {error.error_description || 'No description available'}</p>
-        <p>Please check the browser console for more details.</p>
-        <button onClick={() => window.location.reload()}>Retry</button>
-      </div>
-    );
-  }
+    // Show error if Auth0 fails
+    if (error) {
+      console.error('Auth0 Error:', error);
+      return (
+        <div className="auth-error">
+          <p>Authentication Error: {error.message}</p>
+          <p>Error Code: {error.error || 'Unknown'}</p>
+          <p>Description: {error.error_description || 'No description available'}</p>
+          <p>Please check the browser console for more details.</p>
+          <button onClick={() => window.location.reload()}>Retry</button>
+        </div>
+      );
+    }
 
-  // Show login screen if not authenticated
-  if (!isAuthenticated) {
-    return (
-      <div className="login-prompt">
-        <BookOpen size={48} className="brandwatch-logo" />
-        <h1>Brandwatch Documentation Viewer</h1>
-        <p>Access comprehensive documentation and user flows for all Brandwatch modules.</p>
-        <LoginButton />
-      </div>
-    );
+    // Show login screen if not authenticated
+    if (!isAuthenticated) {
+      return (
+        <div className="login-prompt">
+          <BookOpen size={48} className="brandwatch-logo" />
+          <h1>Brandwatch Documentation Viewer</h1>
+          <p>Access comprehensive documentation and user flows for all Brandwatch modules.</p>
+          <LoginButton />
+        </div>
+      );
+    }
   }
 
   return (
@@ -426,8 +435,23 @@ function App() {
             </button>
           </div>
           <div className="auth-header-right">
-            <UserProfile />
-            <LogoutButton />
+            {bypassAuth ? (
+              <div style={{
+                padding: '8px 16px',
+                backgroundColor: '#ff9800',
+                color: 'white',
+                borderRadius: '4px',
+                fontSize: '14px',
+                fontWeight: 'bold'
+              }}>
+                ⚠️ Auth Bypassed (Dev Mode)
+              </div>
+            ) : (
+              <>
+                <UserProfile />
+                <LogoutButton />
+              </>
+            )}
           </div>
         </div>
       </header>
