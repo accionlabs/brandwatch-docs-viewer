@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate, useParams, useNavigate, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import './App.css';
 import ModuleSelector from './components/ModuleSelector';
 import FlowDiagram from './components/FlowDiagram';
 // import PDFViewer from './components/PDFViewer';
 import SimplePDFViewer from './components/SimplePDFViewer';
 import MarkdownViewer from './components/MarkdownViewer';
-import { FileText, GitBranch, Search, BookOpen, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FileText, GitBranch, Search, BookOpen, X, ChevronLeft, ChevronRight, BarChart3 } from 'lucide-react';
 import { sortFlowsForModule, sortModules, getModuleMetadata } from './utils/flowOrdering';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton, LogoutButton, UserProfile } from './components/AuthButtons';
 import EditSourceModal from './components/EditSourceModal';
+import ComplexityDashboard from './components/ComplexityDashboard';
 
 function MainApp() {
   const { isAuthenticated, isLoading, error, user } = useAuth0();
@@ -633,6 +634,10 @@ function MainApp() {
           </div>
         </div>
         <div className="header-actions">
+          <Link to="/complexity-dashboard" className="complexity-dashboard-link">
+            <BarChart3 size={18} />
+            <span>Complexity Analysis</span>
+          </Link>
           <div className="view-mode-selector">
             <button
               className={viewMode === 'split' ? 'active' : ''}
@@ -840,6 +845,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainApp />} />
+        <Route path="/complexity-dashboard" element={<ComplexityDashboard />} />
         <Route path="/:moduleId/:flowId" element={<MainApp />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

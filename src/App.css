@@ -201,6 +201,30 @@ body {
   gap: 20px;
 }
 
+/* Complexity Dashboard Link */
+.complexity-dashboard-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.complexity-dashboard-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.complexity-dashboard-link span {
+  display: inline-block;
+}
+
 .view-mode-selector {
   display: flex;
   gap: 0.5rem;

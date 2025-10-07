@@ -125,6 +125,498 @@
                 "Ready to begin influencer discovery and campaign management"
             ],
             "related_flows": []
+        },
+        {
+            "flow_name": "Discovering Influencers",
+            "description": "Find and evaluate influencers for your brand",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Navigate to Discover section"
+                },
+                {
+                    "step": 2,
+                    "description": "Set search filters (location, audience size, engagement rate, etc.)"
+                },
+                {
+                    "step": 3,
+                    "description": "Review influencer profiles and metrics"
+                },
+                {
+                    "step": 4,
+                    "description": "Check audience demographics and authenticity"
+                },
+                {
+                    "step": 5,
+                    "description": "Analyze past content and brand collaborations"
+                },
+                {
+                    "step": 6,
+                    "description": "Add influencers to lists for tracking"
+                }
+            ],
+            "source_documents": ["Using Influence/Using Discover/Overview.pdf"]
+        },
+        {
+            "flow_name": "Creating an Influencer Campaign",
+            "description": "Set up and launch an influencer marketing campaign",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Click Create Campaign button"
+                },
+                {
+                    "step": 2,
+                    "description": "Enter campaign name and objectives"
+                },
+                {
+                    "step": 3,
+                    "description": "Set campaign dates and budget"
+                },
+                {
+                    "step": 4,
+                    "description": "Define campaign brief and requirements"
+                },
+                {
+                    "step": 5,
+                    "description": "Select target platforms (Instagram, TikTok, YouTube, etc.)"
+                },
+                {
+                    "step": 6,
+                    "description": "Add influencers from your lists"
+                },
+                {
+                    "step": 7,
+                    "description": "Set individual influencer tasks and deliverables"
+                },
+                {
+                    "step": 8,
+                    "description": "Configure tracking pixels and UTM parameters"
+                },
+                {
+                    "step": 9,
+                    "description": "Review and launch campaign"
+                }
+            ],
+            "source_documents": ["Using Influence/Creating Campaigns/Campaign Creation, Proposal, and Reporting.pdf"]
+        },
+        {
+            "flow_name": "Onboarding New Influencers",
+            "description": "Add and set up new influencers in your system",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Navigate to Influencers section"
+                },
+                {
+                    "step": 2,
+                    "description": "Click Add Influencer"
+                },
+                {
+                    "step": 3,
+                    "description": "Enter influencer social media handles"
+                },
+                {
+                    "step": 4,
+                    "description": "Send onboarding invitation email"
+                },
+                {
+                    "step": 5,
+                    "description": "Influencer accepts invitation"
+                },
+                {
+                    "step": 6,
+                    "description": "Influencer connects social accounts"
+                },
+                {
+                    "step": 7,
+                    "description": "Set influencer tier and rates"
+                },
+                {
+                    "step": 8,
+                    "description": "Configure communication preferences"
+                }
+            ],
+            "source_documents": ["Using Influence/Managing Influencers/Onboarding Influencers.pdf"]
+        },
+        {
+            "flow_name": "Sending Messages to Influencers",
+            "description": "Communicate with influencers through the platform",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Go to Influencers list"
+                },
+                {
+                    "step": 2,
+                    "description": "Select influencers to message"
+                },
+                {
+                    "step": 3,
+                    "description": "Click Message button"
+                },
+                {
+                    "step": 4,
+                    "description": "Choose message template or create custom"
+                },
+                {
+                    "step": 5,
+                    "description": "Personalize message content"
+                },
+                {
+                    "step": 6,
+                    "description": "Add attachments if needed"
+                },
+                {
+                    "step": 7,
+                    "description": "Schedule or send immediately"
+                },
+                {
+                    "step": 8,
+                    "description": "Track message status and responses"
+                }
+            ],
+            "source_documents": ["Using Influence/Managing Influencers/Sending Messages to Influencers.pdf"]
+        },
+        {
+            "flow_name": "Setting Up Influencer Payments",
+            "description": "Configure and process payments to influencers",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Navigate to Payments settings"
+                },
+                {
+                    "step": 2,
+                    "description": "Connect payment processor account"
+                },
+                {
+                    "step": 3,
+                    "description": "Set payment terms and schedules"
+                },
+                {
+                    "step": 4,
+                    "description": "Configure tax forms requirements"
+                },
+                {
+                    "step": 5,
+                    "description": "Invite influencers to payment system"
+                },
+                {
+                    "step": 6,
+                    "description": "Influencer provides payment details"
+                },
+                {
+                    "step": 7,
+                    "description": "Review and approve payment amounts"
+                },
+                {
+                    "step": 8,
+                    "description": "Process payments"
+                },
+                {
+                    "step": 9,
+                    "description": "Track payment history and status"
+                }
+            ],
+            "source_documents": ["Using Influence/Paying Influencers/Configuring Payments.pdf"]
+        },
+        {
+            "flow_name": "Authenticating Influencer Social Accounts",
+            "description": "Connect and verify influencer social media accounts",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Access influencer profile"
+                },
+                {
+                    "step": 2,
+                    "description": "Click Connect Accounts"
+                },
+                {
+                    "step": 3,
+                    "description": "Select social platforms to connect"
+                },
+                {
+                    "step": 4,
+                    "description": "Redirect to platform authentication"
+                },
+                {
+                    "step": 5,
+                    "description": "Influencer logs in and approves permissions"
+                },
+                {
+                    "step": 6,
+                    "description": "Verify account ownership"
+                },
+                {
+                    "step": 7,
+                    "description": "Set data sync preferences"
+                },
+                {
+                    "step": 8,
+                    "description": "Monitor account connection status"
+                }
+            ],
+            "source_documents": ["Using Influence/Managing Influencers/Authenticating Social Accounts in Influence.pdf"]
+        },
+        {
+            "flow_name": "Managing Campaign Reports",
+            "description": "Generate and export campaign performance reports",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Navigate to Campaigns section"
+                },
+                {
+                    "step": 2,
+                    "description": "Select campaign to analyze"
+                },
+                {
+                    "step": 3,
+                    "description": "Click Reports tab"
+                },
+                {
+                    "step": 4,
+                    "description": "Choose report template or create custom"
+                },
+                {
+                    "step": 5,
+                    "description": "Select metrics to include"
+                },
+                {
+                    "step": 6,
+                    "description": "Set date range and filters"
+                },
+                {
+                    "step": 7,
+                    "description": "Add visualizations and charts"
+                },
+                {
+                    "step": 8,
+                    "description": "Preview report layout"
+                },
+                {
+                    "step": 9,
+                    "description": "Export to PDF, Excel, or PowerPoint"
+                },
+                {
+                    "step": 10,
+                    "description": "Share report with stakeholders"
+                }
+            ],
+            "source_documents": ["Using Influence/Creating Campaigns/Managing Campaigns and Exporting Data.pdf"]
+        },
+        {
+            "flow_name": "Connecting Shopify Integration",
+            "description": "Integrate Shopify store with Influence for tracking",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Go to Integrations settings"
+                },
+                {
+                    "step": 2,
+                    "description": "Select Shopify from available integrations"
+                },
+                {
+                    "step": 3,
+                    "description": "Enter Shopify store URL"
+                },
+                {
+                    "step": 4,
+                    "description": "Authenticate with Shopify credentials"
+                },
+                {
+                    "step": 5,
+                    "description": "Approve app permissions"
+                },
+                {
+                    "step": 6,
+                    "description": "Map product categories"
+                },
+                {
+                    "step": 7,
+                    "description": "Configure attribution settings"
+                },
+                {
+                    "step": 8,
+                    "description": "Set up discount code tracking"
+                },
+                {
+                    "step": 9,
+                    "description": "Test integration connection"
+                },
+                {
+                    "step": 10,
+                    "description": "Monitor sales attribution data"
+                }
+            ],
+            "source_documents": ["Integrations/Connecting a Shopify Account to Influence.pdf"]
+        },
+        {
+            "flow_name": "TikTok Creator Marketplace Integration",
+            "description": "Connect with TikTok Creator Marketplace API",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Navigate to Integrations"
+                },
+                {
+                    "step": 2,
+                    "description": "Select TikTok Creator Marketplace"
+                },
+                {
+                    "step": 3,
+                    "description": "Enter TikTok business account credentials"
+                },
+                {
+                    "step": 4,
+                    "description": "Authorize API access"
+                },
+                {
+                    "step": 5,
+                    "description": "Configure creator discovery settings"
+                },
+                {
+                    "step": 6,
+                    "description": "Set campaign sync preferences"
+                },
+                {
+                    "step": 7,
+                    "description": "Import creator data"
+                },
+                {
+                    "step": 8,
+                    "description": "Map campaign workflows"
+                },
+                {
+                    "step": 9,
+                    "description": "Enable automated reporting"
+                }
+            ],
+            "source_documents": ["Integrations/Influence's Integration with the TikTok Creator Marketplace API.pdf"]
+        },
+        {
+            "flow_name": "Customizing Influencer Lists",
+            "description": "Organize and manage custom influencer lists",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Go to Influencers section"
+                },
+                {
+                    "step": 2,
+                    "description": "Click Create List"
+                },
+                {
+                    "step": 3,
+                    "description": "Name the list and add description"
+                },
+                {
+                    "step": 4,
+                    "description": "Set list visibility and sharing permissions"
+                },
+                {
+                    "step": 5,
+                    "description": "Add influencers using search or import"
+                },
+                {
+                    "step": 6,
+                    "description": "Apply tags and categories"
+                },
+                {
+                    "step": 7,
+                    "description": "Set custom fields for tracking"
+                },
+                {
+                    "step": 8,
+                    "description": "Configure list update notifications"
+                }
+            ],
+            "source_documents": ["Using Influence/Managing Influencers/Accessing and Customizing Your Influencers.pdf"]
+        },
+        {
+            "flow_name": "Tracking Influencer Content Performance",
+            "description": "Monitor and analyze influencer-generated content",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Access campaign dashboard"
+                },
+                {
+                    "step": 2,
+                    "description": "Select active campaign"
+                },
+                {
+                    "step": 3,
+                    "description": "View content submission status"
+                },
+                {
+                    "step": 4,
+                    "description": "Review engagement metrics per post"
+                },
+                {
+                    "step": 5,
+                    "description": "Check reach and impressions data"
+                },
+                {
+                    "step": 6,
+                    "description": "Analyze audience sentiment"
+                },
+                {
+                    "step": 7,
+                    "description": "Compare performance across influencers"
+                },
+                {
+                    "step": 8,
+                    "description": "Export performance data"
+                }
+            ],
+            "source_documents": ["Using Influence/Creating Campaigns/Campaign Creation, Proposal, and Reporting.pdf"]
+        },
+        {
+            "flow_name": "Managing Influencer Contracts",
+            "description": "Create and manage legal agreements with influencers",
+            "steps": [
+                {
+                    "step": 1,
+                    "description": "Navigate to Contracts section"
+                },
+                {
+                    "step": 2,
+                    "description": "Select contract template"
+                },
+                {
+                    "step": 3,
+                    "description": "Customize terms and conditions"
+                },
+                {
+                    "step": 4,
+                    "description": "Add deliverables and timelines"
+                },
+                {
+                    "step": 5,
+                    "description": "Set payment terms"
+                },
+                {
+                    "step": 6,
+                    "description": "Include usage rights and exclusivity clauses"
+                },
+                {
+                    "step": 7,
+                    "description": "Send contract for influencer review"
+                },
+                {
+                    "step": 8,
+                    "description": "Track signature status"
+                },
+                {
+                    "step": 9,
+                    "description": "Store signed contracts"
+                }
+            ],
+            "source_documents": ["Using Influence/Managing Influencers/Managing Influencers.pdf"]
         }
     ],
     "core_tools": [
