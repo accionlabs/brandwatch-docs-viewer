@@ -1,0 +1,2362 @@
+{
+  "influence_user_flows": {
+    "account_management": {
+      "account_creation": {
+        "flow_id": "account_creation",
+        "title": "Creating Your Influence Account",
+        "description": "Complete account setup process with verification and security configuration",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to the Influence login page",
+            "details": "Access the Influence platform login interface"
+          },
+          {
+            "step": 2,
+            "action": "Click 'Create Account'",
+            "details": "Select the account creation option from the login page"
+          },
+          {
+            "step": 3,
+            "action": "Enter required account information",
+            "details": "Provide email address, create password (minimum 8 characters with uppercase, lowercase, number, and special character), enter first and last name"
+          },
+          {
+            "step": 4,
+            "action": "Submit account creation form",
+            "details": "Complete the initial account registration"
+          },
+          {
+            "step": 5,
+            "action": "Verify email address",
+            "details": "Check email inbox and click verification link sent by Influence"
+          },
+          {
+            "step": 6,
+            "action": "Complete SMS verification",
+            "details": "Enter phone number, receive SMS verification code, and enter the code to verify"
+          },
+          {
+            "step": 7,
+            "action": "Set up Two-Factor Authentication (optional but recommended)",
+            "details": "Configure 2FA using authenticator app or SMS for enhanced security"
+          },
+          {
+            "step": 8,
+            "action": "Complete profile setup",
+            "details": "Add company information and other required profile details"
+          }
+        ],
+        "prerequisites": [
+          "Valid email address",
+          "Valid phone number for SMS verification",
+          "Access to email account for verification"
+        ],
+        "dependencies": [],
+        "related_flows": [
+          "two_factor_authentication_setup"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Getting Started/Getting Started/Creating Your Influence Account.pdf"
+        ]
+      },
+      "two_factor_authentication_setup": {
+        "flow_id": "two_factor_authentication_setup",
+        "title": "Setting Up Two-Factor Authentication",
+        "description": "Configure 2FA for enhanced account security",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access account security settings",
+            "details": "Navigate to account settings and locate security options"
+          },
+          {
+            "step": 2,
+            "action": "Enable Two-Factor Authentication",
+            "details": "Select 2FA option from security settings"
+          },
+          {
+            "step": 3,
+            "action": "Choose authentication method",
+            "details": "Select between authenticator app or SMS-based verification"
+          },
+          {
+            "step": 4,
+            "action": "Configure chosen method",
+            "details": "Set up authenticator app by scanning QR code or configure SMS number"
+          },
+          {
+            "step": 5,
+            "action": "Verify setup",
+            "details": "Enter verification code to confirm 2FA is working correctly"
+          },
+          {
+            "step": 6,
+            "action": "Save backup codes",
+            "details": "Store backup recovery codes in a secure location"
+          }
+        ],
+        "prerequisites": [
+          "Active Influence account",
+          "Authenticator app installed (if using app method)",
+          "Access to phone number (if using SMS method)"
+        ],
+        "dependencies": [
+          "account_creation"
+        ],
+        "related_flows": [
+          "account_creation"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Getting Started/Getting Started/Creating Your Influence Account.pdf"
+        ]
+      }
+    },
+    "campaign_management": {
+      "campaign_creation": {
+        "flow_id": "campaign_creation",
+        "title": "Creating a New Campaign",
+        "description": "Complete process for creating and setting up a new influencer campaign",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to Campaigns section",
+            "details": "Access the main campaigns dashboard from the navigation menu"
+          },
+          {
+            "step": 2,
+            "action": "Click 'Create Campaign'",
+            "details": "Select the new campaign creation option"
+          },
+          {
+            "step": 3,
+            "action": "Enter campaign basic information",
+            "details": "Provide campaign name, description, and campaign type selection"
+          },
+          {
+            "step": 4,
+            "action": "Set campaign dates and budget",
+            "details": "Define start date, end date, and overall campaign budget parameters"
+          },
+          {
+            "step": 5,
+            "action": "Configure campaign deliverables",
+            "details": "Specify required content types, posting schedules, and performance targets"
+          },
+          {
+            "step": 6,
+            "action": "Set compensation structure",
+            "details": "Define payment terms, rates, and compensation model (flat fee, commission, etc.)"
+          },
+          {
+            "step": 7,
+            "action": "Add campaign brief and guidelines",
+            "details": "Upload brand guidelines, content requirements, and campaign messaging"
+          },
+          {
+            "step": 8,
+            "action": "Review and create campaign",
+            "details": "Validate all campaign settings and create the campaign"
+          }
+        ],
+        "prerequisites": [
+          "Active Influence account with campaign creation permissions",
+          "Campaign strategy and requirements defined",
+          "Budget allocation approved"
+        ],
+        "dependencies": [
+          "account_creation"
+        ],
+        "related_flows": [
+          "adding_influencers_to_campaign",
+          "campaign_proposal_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Campaign Creation, Proposal, and Reporting.pdf"
+        ]
+      },
+      "adding_influencers_to_campaign": {
+        "flow_id": "adding_influencers_to_campaign",
+        "title": "Adding Influencers to Campaign",
+        "description": "Process for selecting and adding influencers to an existing campaign",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Open campaign details",
+            "details": "Navigate to the specific campaign where influencers will be added"
+          },
+          {
+            "step": 2,
+            "action": "Access influencer search",
+            "details": "Use the 'Add Influencers' function within the campaign"
+          },
+          {
+            "step": 3,
+            "action": "Filter influencers by criteria",
+            "details": "Apply filters for demographics, follower count, engagement rates, niche, and location"
+          },
+          {
+            "step": 4,
+            "action": "Review influencer profiles",
+            "details": "Examine influencer statistics, previous work, and alignment with campaign goals"
+          },
+          {
+            "step": 5,
+            "action": "Select influencers for campaign",
+            "details": "Choose influencers that match campaign requirements and add them to the campaign"
+          },
+          {
+            "step": 6,
+            "action": "Set individual compensation rates",
+            "details": "Define specific payment amounts or rates for each selected influencer"
+          },
+          {
+            "step": 7,
+            "action": "Configure deliverable requirements",
+            "details": "Specify content requirements, deadlines, and approval processes for each influencer"
+          },
+          {
+            "step": 8,
+            "action": "Send campaign invitations",
+            "details": "Notify selected influencers about the campaign opportunity"
+          }
+        ],
+        "prerequisites": [
+          "Active campaign created",
+          "Influencer database populated",
+          "Campaign requirements defined"
+        ],
+        "dependencies": [
+          "campaign_creation",
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "campaign_creation",
+          "campaign_proposal_process",
+          "influencer_onboarding_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Campaign Creation, Proposal, and Reporting.pdf",
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Managing Campaigns and Exporting Data.pdf"
+        ]
+      },
+      "campaign_proposal_process": {
+        "flow_id": "campaign_proposal_process",
+        "title": "Campaign Proposal and Approval Process",
+        "description": "Workflow for managing influencer proposals and campaign approvals",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Review incoming proposals",
+            "details": "Check proposals submitted by influencers in response to campaign invitations"
+          },
+          {
+            "step": 2,
+            "action": "Evaluate proposal content",
+            "details": "Assess proposed content ideas, timelines, and deliverables against campaign requirements"
+          },
+          {
+            "step": 3,
+            "action": "Negotiate terms if needed",
+            "details": "Discuss modifications to compensation, deliverables, or timelines with influencers"
+          },
+          {
+            "step": 4,
+            "action": "Approve or reject proposals",
+            "details": "Make final decision on each proposal and communicate status to influencers"
+          },
+          {
+            "step": 5,
+            "action": "Send contracts to approved influencers",
+            "details": "Generate and distribute legal agreements for approved campaign participation"
+          },
+          {
+            "step": 6,
+            "action": "Monitor contract signing",
+            "details": "Track contract completion status and follow up with influencers as needed"
+          },
+          {
+            "step": 7,
+            "action": "Activate influencer onboarding",
+            "details": "Begin the onboarding process for influencers with signed contracts"
+          }
+        ],
+        "prerequisites": [
+          "Campaign with invited influencers",
+          "Proposal evaluation criteria defined",
+          "Contract templates available"
+        ],
+        "dependencies": [
+          "adding_influencers_to_campaign"
+        ],
+        "related_flows": [
+          "adding_influencers_to_campaign",
+          "influencer_onboarding_process",
+          "contract_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Campaign Creation, Proposal, and Reporting.pdf"
+        ]
+      },
+      "campaign_onboarding_state_management": {
+        "flow_id": "campaign_onboarding_state_management",
+        "title": "Managing Campaign Onboarding States",
+        "description": "Process for tracking and managing influencer onboarding progress through various states",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Monitor influencer states dashboard",
+            "details": "Access the campaign dashboard showing all influencers and their current onboarding states"
+          },
+          {
+            "step": 2,
+            "action": "Track 'Invited' state",
+            "details": "Monitor influencers who have been invited but haven't yet responded to campaign"
+          },
+          {
+            "step": 3,
+            "action": "Process 'Applied' state",
+            "details": "Review and respond to influencers who have submitted applications or proposals"
+          },
+          {
+            "step": 4,
+            "action": "Manage 'Approved' state",
+            "details": "Send contracts and onboarding materials to approved influencers"
+          },
+          {
+            "step": 5,
+            "action": "Follow up on 'Contract Sent' state",
+            "details": "Monitor contract signing progress and send reminders if needed"
+          },
+          {
+            "step": 6,
+            "action": "Activate 'Onboarded' influencers",
+            "details": "Begin content creation phase for influencers who have completed onboarding"
+          },
+          {
+            "step": 7,
+            "action": "Update states as needed",
+            "details": "Manually update influencer states based on progress or issues encountered"
+          }
+        ],
+        "prerequisites": [
+          "Active campaign with invited influencers",
+          "Onboarding workflow configured",
+          "Contract templates prepared"
+        ],
+        "dependencies": [
+          "campaign_proposal_process"
+        ],
+        "related_flows": [
+          "campaign_proposal_process",
+          "influencer_onboarding_process",
+          "campaign_reporting"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Campaign Creation, Proposal, and Reporting.pdf"
+        ]
+      },
+      "campaign_reporting": {
+        "flow_id": "campaign_reporting",
+        "title": "Campaign Performance Reporting",
+        "description": "Process for generating and analyzing campaign performance reports",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access campaign reporting dashboard",
+            "details": "Navigate to the reporting section for the specific campaign"
+          },
+          {
+            "step": 2,
+            "action": "Select reporting time period",
+            "details": "Define the date range for the performance report"
+          },
+          {
+            "step": 3,
+            "action": "Choose metrics to include",
+            "details": "Select key performance indicators such as reach, engagement, conversions, and ROI"
+          },
+          {
+            "step": 4,
+            "action": "Generate performance report",
+            "details": "Create comprehensive report showing campaign results and influencer performance"
+          },
+          {
+            "step": 5,
+            "action": "Analyze individual influencer performance",
+            "details": "Review detailed metrics for each participating influencer"
+          },
+          {
+            "step": 6,
+            "action": "Compare against campaign goals",
+            "details": "Evaluate actual performance versus original campaign objectives and KPIs"
+          },
+          {
+            "step": 7,
+            "action": "Export or share report",
+            "details": "Download report in desired format or share with stakeholders"
+          },
+          {
+            "step": 8,
+            "action": "Document insights and recommendations",
+            "details": "Record key learnings and recommendations for future campaigns"
+          }
+        ],
+        "prerequisites": [
+          "Completed or in-progress campaign",
+          "Performance data collected",
+          "Reporting access permissions"
+        ],
+        "dependencies": [
+          "campaign_creation",
+          "campaign_onboarding_state_management"
+        ],
+        "related_flows": [
+          "campaign_creation",
+          "data_export_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Campaign Creation, Proposal, and Reporting.pdf"
+        ]
+      },
+      "editing_influencer_profiles_in_campaign": {
+        "flow_id": "editing_influencer_profiles_in_campaign",
+        "title": "Editing Influencer Profiles Within Campaign",
+        "description": "Process for modifying influencer information and settings within a specific campaign",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Open campaign dashboard",
+            "details": "Navigate to the specific campaign containing the influencer to be edited"
+          },
+          {
+            "step": 2,
+            "action": "Locate influencer in campaign",
+            "details": "Find the specific influencer in the campaign participant list"
+          },
+          {
+            "step": 3,
+            "action": "Access edit options",
+            "details": "Click on influencer profile or edit icon to open modification interface"
+          },
+          {
+            "step": 4,
+            "action": "Modify campaign-specific details",
+            "details": "Update compensation rates, deliverable requirements, or campaign-specific notes"
+          },
+          {
+            "step": 5,
+            "action": "Edit contact information if needed",
+            "details": "Update email address, phone number, or other contact details as required"
+          },
+          {
+            "step": 6,
+            "action": "Adjust campaign deliverables",
+            "details": "Modify content requirements, posting schedules, or approval workflows"
+          },
+          {
+            "step": 7,
+            "action": "Save changes",
+            "details": "Confirm and save all modifications to the influencer's campaign profile"
+          },
+          {
+            "step": 8,
+            "action": "Notify influencer of changes",
+            "details": "Send communication about any changes that affect the influencer's responsibilities"
+          }
+        ],
+        "prerequisites": [
+          "Active campaign with participating influencers",
+          "Edit permissions for campaign",
+          "Specific changes identified"
+        ],
+        "dependencies": [
+          "adding_influencers_to_campaign"
+        ],
+        "related_flows": [
+          "adding_influencers_to_campaign",
+          "influencer_profile_management",
+          "managing_influencer_rates"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Managing Campaigns and Exporting Data.pdf"
+        ]
+      },
+      "managing_influencer_rates": {
+        "flow_id": "managing_influencer_rates",
+        "title": "Managing Influencer Compensation Rates",
+        "description": "Process for setting and updating influencer payment rates within campaigns",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access campaign rate management",
+            "details": "Navigate to the compensation or rates section within the campaign"
+          },
+          {
+            "step": 2,
+            "action": "Review current rate structure",
+            "details": "Examine existing payment rates for all campaign participants"
+          },
+          {
+            "step": 3,
+            "action": "Select influencer for rate modification",
+            "details": "Choose specific influencer whose compensation needs adjustment"
+          },
+          {
+            "step": 4,
+            "action": "Update base rate",
+            "details": "Modify the primary compensation amount for standard deliverables"
+          },
+          {
+            "step": 5,
+            "action": "Set bonus or performance incentives",
+            "details": "Configure additional compensation for performance milestones or bonus content"
+          },
+          {
+            "step": 6,
+            "action": "Define payment terms",
+            "details": "Specify payment schedule, currency, and payment method preferences"
+          },
+          {
+            "step": 7,
+            "action": "Apply rate changes",
+            "details": "Save and activate the new compensation structure"
+          },
+          {
+            "step": 8,
+            "action": "Update contracts if necessary",
+            "details": "Generate amended contracts reflecting the new compensation terms"
+          }
+        ],
+        "prerequisites": [
+          "Active campaign with participating influencers",
+          "Budget approval for rate changes",
+          "Rate modification permissions"
+        ],
+        "dependencies": [
+          "adding_influencers_to_campaign"
+        ],
+        "related_flows": [
+          "adding_influencers_to_campaign",
+          "contract_management",
+          "payment_processing"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Managing Campaigns and Exporting Data.pdf"
+        ]
+      },
+      "data_export_process": {
+        "flow_id": "data_export_process",
+        "title": "Exporting Campaign and Influencer Data",
+        "description": "Process for exporting campaign performance data and influencer information",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Navigate to data export section",
+            "details": "Access the export functionality from campaign or reports menu"
+          },
+          {
+            "step": 2,
+            "action": "Select data scope",
+            "details": "Choose whether to export campaign data, influencer data, or performance metrics"
+          },
+          {
+            "step": 3,
+            "action": "Define date range",
+            "details": "Specify the time period for data to be included in the export"
+          },
+          {
+            "step": 4,
+            "action": "Choose data fields",
+            "details": "Select specific metrics, demographics, or performance indicators to include"
+          },
+          {
+            "step": 5,
+            "action": "Select export format",
+            "details": "Choose file format such as CSV, Excel, or PDF for the exported data"
+          },
+          {
+            "step": 6,
+            "action": "Apply filters if needed",
+            "details": "Filter data by influencer segments, campaign types, or performance thresholds"
+          },
+          {
+            "step": 7,
+            "action": "Generate export file",
+            "details": "Process the data export request and create the downloadable file"
+          },
+          {
+            "step": 8,
+            "action": "Download and verify data",
+            "details": "Download the exported file and verify data accuracy and completeness"
+          }
+        ],
+        "prerequisites": [
+          "Campaign data available for export",
+          "Export permissions granted",
+          "Data export scope defined"
+        ],
+        "dependencies": [
+          "campaign_reporting"
+        ],
+        "related_flows": [
+          "campaign_reporting",
+          "influencer_profile_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Creating Campaigns/Managing Campaigns and Exporting Data.pdf"
+        ]
+      }
+    },
+    "influencer_management": {
+      "influencer_profile_management": {
+        "flow_id": "influencer_profile_management",
+        "title": "Managing Influencer Profiles",
+        "description": "Complete process for creating, editing, and maintaining influencer profiles in the CRM",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access Influencers section",
+            "details": "Navigate to the main influencer management dashboard"
+          },
+          {
+            "step": 2,
+            "action": "Create new influencer profile or select existing",
+            "details": "Either add a new influencer or select an existing profile to edit"
+          },
+          {
+            "step": 3,
+            "action": "Enter basic information",
+            "details": "Add name, email, phone number, and primary social media handles"
+          },
+          {
+            "step": 4,
+            "action": "Add social media accounts",
+            "details": "Connect and verify Instagram, TikTok, YouTube, and other relevant social platforms"
+          },
+          {
+            "step": 5,
+            "action": "Input demographic information",
+            "details": "Record age, location, gender, and other relevant demographic data"
+          },
+          {
+            "step": 6,
+            "action": "Add audience analytics",
+            "details": "Input follower counts, engagement rates, and audience demographics"
+          },
+          {
+            "step": 7,
+            "action": "Set niche and categories",
+            "details": "Tag influencer with relevant industry niches and content categories"
+          },
+          {
+            "step": 8,
+            "action": "Add notes and internal tags",
+            "details": "Include internal notes, collaboration history, and custom tags for organization"
+          },
+          {
+            "step": 9,
+            "action": "Save and activate profile",
+            "details": "Complete profile creation and make it available for campaign inclusion"
+          }
+        ],
+        "prerequisites": [
+          "Influencer management permissions",
+          "Influencer contact information",
+          "Social media account details"
+        ],
+        "dependencies": [
+          "account_creation"
+        ],
+        "related_flows": [
+          "influencer_search_and_filtering",
+          "influencer_tagging_system",
+          "social_account_authentication"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Managing Influencers.pdf"
+        ]
+      },
+      "influencer_search_and_filtering": {
+        "flow_id": "influencer_search_and_filtering",
+        "title": "Searching and Filtering Influencers",
+        "description": "Process for finding influencers using search and filter capabilities",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access influencer database",
+            "details": "Navigate to the main influencer management section"
+          },
+          {
+            "step": 2,
+            "action": "Use basic search function",
+            "details": "Enter keywords, names, or handles in the main search bar"
+          },
+          {
+            "step": 3,
+            "action": "Apply demographic filters",
+            "details": "Filter by age range, gender, location, and other demographic criteria"
+          },
+          {
+            "step": 4,
+            "action": "Set audience size filters",
+            "details": "Define minimum and maximum follower counts across different platforms"
+          },
+          {
+            "step": 5,
+            "action": "Filter by engagement metrics",
+            "details": "Set thresholds for engagement rates, average likes, and interaction quality"
+          },
+          {
+            "step": 6,
+            "action": "Apply niche and category filters",
+            "details": "Select specific industries, content types, or interest categories"
+          },
+          {
+            "step": 7,
+            "action": "Use tag-based filtering",
+            "details": "Filter by custom tags, collaboration history, or internal classifications"
+          },
+          {
+            "step": 8,
+            "action": "Sort and review results",
+            "details": "Order results by relevance, engagement, or other criteria and review matches"
+          },
+          {
+            "step": 9,
+            "action": "Save search criteria",
+            "details": "Save frequently used filter combinations for future searches"
+          }
+        ],
+        "prerequisites": [
+          "Populated influencer database",
+          "Search criteria defined",
+          "Database access permissions"
+        ],
+        "dependencies": [
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "influencer_profile_management",
+          "influencer_tagging_system",
+          "adding_influencers_to_campaign"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Managing Influencers.pdf"
+        ]
+      },
+      "bulk_influencer_actions": {
+        "flow_id": "bulk_influencer_actions",
+        "title": "Performing Bulk Actions on Influencers",
+        "description": "Process for executing actions on multiple influencers simultaneously",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access influencer list view",
+            "details": "Navigate to the influencer management section with list display"
+          },
+          {
+            "step": 2,
+            "action": "Select multiple influencers",
+            "details": "Use checkboxes or selection tools to choose multiple influencer profiles"
+          },
+          {
+            "step": 3,
+            "action": "Choose bulk action type",
+            "details": "Select from available actions such as tagging, messaging, campaign addition, or status updates"
+          },
+          {
+            "step": 4,
+            "action": "Configure action parameters",
+            "details": "Set specific details for the chosen action (tags to add, message content, campaign to join)"
+          },
+          {
+            "step": 5,
+            "action": "Preview action scope",
+            "details": "Review which influencers will be affected and what changes will be made"
+          },
+          {
+            "step": 6,
+            "action": "Execute bulk action",
+            "details": "Confirm and run the bulk operation on all selected influencers"
+          },
+          {
+            "step": 7,
+            "action": "Monitor action progress",
+            "details": "Track the completion status of the bulk operation"
+          },
+          {
+            "step": 8,
+            "action": "Verify action results",
+            "details": "Check that the bulk action was completed successfully for all selected influencers"
+          }
+        ],
+        "prerequisites": [
+          "Multiple influencer profiles available",
+          "Bulk action permissions",
+          "Action parameters defined"
+        ],
+        "dependencies": [
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "influencer_profile_management",
+          "influencer_tagging_system",
+          "bulk_messaging_to_influencers"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Managing Influencers.pdf"
+        ]
+      },
+      "influencer_tagging_system": {
+        "flow_id": "influencer_tagging_system",
+        "title": "Managing Influencer Tags and Categories",
+        "description": "Process for creating and managing tag systems for influencer organization",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access tag management interface",
+            "details": "Navigate to the tagging or categorization section of influencer management"
+          },
+          {
+            "step": 2,
+            "action": "Create new tag categories",
+            "details": "Define new tag types such as performance levels, niches, or collaboration status"
+          },
+          {
+            "step": 3,
+            "action": "Add individual tags",
+            "details": "Create specific tags within categories (e.g., 'High Performer', 'Beauty Niche', 'VIP')"
+          },
+          {
+            "step": 4,
+            "action": "Apply tags to influencers",
+            "details": "Select influencers and assign relevant tags for organization and filtering"
+          },
+          {
+            "step": 5,
+            "action": "Set tag colors and icons",
+            "details": "Customize visual appearance of tags for easy identification"
+          },
+          {
+            "step": 6,
+            "action": "Create tag hierarchies",
+            "details": "Establish parent-child relationships between related tags"
+          },
+          {
+            "step": 7,
+            "action": "Set tag permissions",
+            "details": "Control which team members can create, edit, or apply specific tags"
+          },
+          {
+            "step": 8,
+            "action": "Monitor tag usage",
+            "details": "Review tag distribution and effectiveness for influencer organization"
+          }
+        ],
+        "prerequisites": [
+          "Influencer profiles to organize",
+          "Tag strategy defined",
+          "Tag management permissions"
+        ],
+        "dependencies": [
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "influencer_profile_management",
+          "influencer_search_and_filtering",
+          "bulk_influencer_actions"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Managing Influencers.pdf"
+        ]
+      }
+    },
+    "influencer_onboarding": {
+      "influencer_onboarding_process": {
+        "flow_id": "influencer_onboarding_process",
+        "title": "Complete Influencer Onboarding Process",
+        "description": "End-to-end process for onboarding influencers from application to campaign readiness",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Receive influencer application",
+            "details": "Process incoming applications from influencers interested in joining campaigns"
+          },
+          {
+            "step": 2,
+            "action": "Review application details",
+            "details": "Evaluate influencer profile, social media metrics, and alignment with brand requirements"
+          },
+          {
+            "step": 3,
+            "action": "Approve or decline application",
+            "details": "Make decision on influencer acceptance based on evaluation criteria"
+          },
+          {
+            "step": 4,
+            "action": "Send onboarding invitation",
+            "details": "Invite approved influencers to complete the onboarding process"
+          },
+          {
+            "step": 5,
+            "action": "Guide through profile completion",
+            "details": "Assist influencers in completing their detailed profiles and verification"
+          },
+          {
+            "step": 6,
+            "action": "Facilitate contract signing",
+            "details": "Provide contracts and guide influencers through the legal agreement process"
+          },
+          {
+            "step": 7,
+            "action": "Set up payment information",
+            "details": "Help influencers configure payment details and tax information through Tipalti"
+          },
+          {
+            "step": 8,
+            "action": "Complete verification process",
+            "details": "Verify social media accounts, identity, and other required documentation"
+          },
+          {
+            "step": 9,
+            "action": "Provide platform training",
+            "details": "Offer training on platform features, campaign processes, and best practices"
+          },
+          {
+            "step": 10,
+            "action": "Activate influencer profile",
+            "details": "Mark influencer as fully onboarded and available for campaign participation"
+          }
+        ],
+        "prerequisites": [
+          "Influencer application received",
+          "Onboarding workflow configured",
+          "Contract templates available",
+          "Payment system integrated"
+        ],
+        "dependencies": [
+          "contract_management",
+          "payment_system_configuration"
+        ],
+        "related_flows": [
+          "contract_management",
+          "payment_invitation_process",
+          "social_account_authentication",
+          "influencer_profile_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Onboarding Influencers.pdf"
+        ]
+      },
+      "contract_management": {
+        "flow_id": "contract_management",
+        "title": "Managing Influencer Contracts",
+        "description": "Process for creating, sending, and managing legal agreements with influencers",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access contract management system",
+            "details": "Navigate to the contracts section within influencer management"
+          },
+          {
+            "step": 2,
+            "action": "Select contract template",
+            "details": "Choose appropriate contract template based on influencer type and campaign requirements"
+          },
+          {
+            "step": 3,
+            "action": "Customize contract terms",
+            "details": "Modify standard terms to include specific deliverables, compensation, and campaign details"
+          },
+          {
+            "step": 4,
+            "action": "Add influencer-specific information",
+            "details": "Insert influencer name, contact details, and personalized contract elements"
+          },
+          {
+            "step": 5,
+            "action": "Review contract accuracy",
+            "details": "Verify all terms, compensation amounts, and legal clauses are correct"
+          },
+          {
+            "step": 6,
+            "action": "Send contract to influencer",
+            "details": "Distribute contract via email or platform messaging for influencer review and signature"
+          },
+          {
+            "step": 7,
+            "action": "Monitor signing progress",
+            "details": "Track contract status and send reminders if needed for completion"
+          },
+          {
+            "step": 8,
+            "action": "Store signed contracts",
+            "details": "Archive completed contracts in the system for future reference and compliance"
+          },
+          {
+            "step": 9,
+            "action": "Set contract renewal reminders",
+            "details": "Configure alerts for contract expiration and renewal requirements"
+          }
+        ],
+        "prerequisites": [
+          "Contract templates created",
+          "Legal approval for contract terms",
+          "Influencer contact information",
+          "Campaign details finalized"
+        ],
+        "dependencies": [
+          "influencer_onboarding_process"
+        ],
+        "related_flows": [
+          "influencer_onboarding_process",
+          "campaign_proposal_process",
+          "payment_processing"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Onboarding Influencers.pdf"
+        ]
+      }
+    },
+    "payment_management": {
+      "payment_processing": {
+        "flow_id": "payment_processing",
+        "title": "Sending Payments to Influencers",
+        "description": "Complete process for processing and sending payments to influencers via Tipalti",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access payment dashboard",
+            "details": "Navigate to the payments section of the Influence platform"
+          },
+          {
+            "step": 2,
+            "action": "Select influencers for payment",
+            "details": "Choose influencers who have completed deliverables and are ready for payment"
+          },
+          {
+            "step": 3,
+            "action": "Verify payment amounts",
+            "details": "Confirm payment amounts based on completed work and agreed compensation rates"
+          },
+          {
+            "step": 4,
+            "action": "Review payment details",
+            "details": "Check recipient information, payment method, and currency settings"
+          },
+          {
+            "step": 5,
+            "action": "Add payment notes if needed",
+            "details": "Include reference information or campaign details for payment tracking"
+          },
+          {
+            "step": 6,
+            "action": "Submit payment batch to Tipalti",
+            "details": "Send payment requests to Tipalti payment processing system"
+          },
+          {
+            "step": 7,
+            "action": "Monitor payment status",
+            "details": "Track payment processing progress through Tipalti integration"
+          },
+          {
+            "step": 8,
+            "action": "Confirm payment completion",
+            "details": "Verify payments have been successfully sent to influencers"
+          },
+          {
+            "step": 9,
+            "action": "Update payment records",
+            "details": "Record payment completion in influencer profiles and campaign tracking"
+          }
+        ],
+        "prerequisites": [
+          "Tipalti integration configured",
+          "Influencers have completed payment setup",
+          "Completed deliverables verified",
+          "Payment approval obtained"
+        ],
+        "dependencies": [
+          "payment_system_configuration",
+          "payment_invitation_process"
+        ],
+        "related_flows": [
+          "payment_system_configuration",
+          "payment_invitation_process",
+          "payment_history_tracking"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Paying Influencers/Paying Influencers.pdf"
+        ]
+      },
+      "payment_system_configuration": {
+        "flow_id": "payment_system_configuration",
+        "title": "Configuring Tipalti Payment System",
+        "description": "Process for setting up and configuring the Tipalti payment integration",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access payment configuration settings",
+            "details": "Navigate to the payment system configuration section in admin settings"
+          },
+          {
+            "step": 2,
+            "action": "Enter Tipalti API credentials",
+            "details": "Input Tipalti account API keys and authentication credentials"
+          },
+          {
+            "step": 3,
+            "action": "Configure payment methods",
+            "details": "Set up available payment options such as bank transfer, PayPal, and other methods"
+          },
+          {
+            "step": 4,
+            "action": "Set default currency settings",
+            "details": "Define primary currency and configure multi-currency support if needed"
+          },
+          {
+            "step": 5,
+            "action": "Configure approval workflows",
+            "details": "Set up payment approval processes and authorization levels"
+          },
+          {
+            "step": 6,
+            "action": "Set payment scheduling options",
+            "details": "Configure automatic payment schedules and batch processing settings"
+          },
+          {
+            "step": 7,
+            "action": "Test payment integration",
+            "details": "Perform test transactions to verify Tipalti integration is working correctly"
+          },
+          {
+            "step": 8,
+            "action": "Configure notification settings",
+            "details": "Set up email notifications for payment status updates and confirmations"
+          },
+          {
+            "step": 9,
+            "action": "Activate payment system",
+            "details": "Enable the payment system for production use with influencers"
+          }
+        ],
+        "prerequisites": [
+          "Tipalti account created",
+          "API credentials obtained from Tipalti",
+          "Payment system admin access",
+          "Company banking information configured"
+        ],
+        "dependencies": [
+          "account_creation"
+        ],
+        "related_flows": [
+          "payment_processing",
+          "payment_invitation_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Paying Influencers/Configuring Payments.pdf"
+        ]
+      },
+      "payment_invitation_process": {
+        "flow_id": "payment_invitation_process",
+        "title": "Inviting Influencers to Set Up Payment Details",
+        "description": "Process for inviting influencers to configure their payment information through Tipalti",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access payment invitation interface",
+            "details": "Navigate to the payment setup section for influencer management"
+          },
+          {
+            "step": 2,
+            "action": "Select influencers for payment setup",
+            "details": "Choose influencers who need to complete their payment configuration"
+          },
+          {
+            "step": 3,
+            "action": "Generate payment setup invitations",
+            "details": "Create personalized invitations with Tipalti onboarding links"
+          },
+          {
+            "step": 4,
+            "action": "Customize invitation messages",
+            "details": "Add personalized content explaining the payment setup process"
+          },
+          {
+            "step": 5,
+            "action": "Send invitations to influencers",
+            "details": "Distribute payment setup invitations via email or platform messaging"
+          },
+          {
+            "step": 6,
+            "action": "Monitor setup progress",
+            "details": "Track which influencers have completed their payment configuration"
+          },
+          {
+            "step": 7,
+            "action": "Send reminder notifications",
+            "details": "Follow up with influencers who haven't completed payment setup"
+          },
+          {
+            "step": 8,
+            "action": "Verify completed setups",
+            "details": "Confirm that payment details have been properly configured in Tipalti"
+          },
+          {
+            "step": 9,
+            "action": "Update influencer payment status",
+            "details": "Mark influencers as payment-ready in the system once setup is complete"
+          }
+        ],
+        "prerequisites": [
+          "Tipalti integration active",
+          "Influencer contact information available",
+          "Payment invitation templates configured"
+        ],
+        "dependencies": [
+          "payment_system_configuration",
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "payment_system_configuration",
+          "payment_processing",
+          "influencer_onboarding_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Paying Influencers/Inviting Influencers to Receive Payments.pdf"
+        ]
+      },
+      "payment_history_tracking": {
+        "flow_id": "payment_history_tracking",
+        "title": "Tracking Payment History and Status",
+        "description": "Process for monitoring and managing payment history and transaction status",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access payment history dashboard",
+            "details": "Navigate to the payment tracking and history section"
+          },
+          {
+            "step": 2,
+            "action": "Filter payment records",
+            "details": "Apply filters by date range, influencer, campaign, or payment status"
+          },
+          {
+            "step": 3,
+            "action": "Review individual payment details",
+            "details": "Examine specific payment transactions for amounts, dates, and status"
+          },
+          {
+            "step": 4,
+            "action": "Track payment processing stages",
+            "details": "Monitor payments through various stages: pending, processing, completed, failed"
+          },
+          {
+            "step": 5,
+            "action": "Investigate payment issues",
+            "details": "Research and resolve any failed or delayed payment transactions"
+          },
+          {
+            "step": 6,
+            "action": "Generate payment reports",
+            "details": "Create reports showing payment summaries, trends, and financial data"
+          },
+          {
+            "step": 7,
+            "action": "Export payment data",
+            "details": "Download payment records for accounting, tax purposes, or external analysis"
+          },
+          {
+            "step": 8,
+            "action": "Reconcile payment records",
+            "details": "Match payment records with banking statements and accounting systems"
+          }
+        ],
+        "prerequisites": [
+          "Payment transactions exist in system",
+          "Payment tracking permissions",
+          "Integration with payment processor active"
+        ],
+        "dependencies": [
+          "payment_processing"
+        ],
+        "related_flows": [
+          "payment_processing",
+          "data_export_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Paying Influencers/Paying Influencers.pdf"
+        ]
+      }
+    },
+    "communication": {
+      "bulk_messaging_to_influencers": {
+        "flow_id": "bulk_messaging_to_influencers",
+        "title": "Sending Bulk Messages to Influencers",
+        "description": "Process for creating and sending bulk email messages to multiple influencers",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access messaging interface",
+            "details": "Navigate to the messaging or communication section of the platform"
+          },
+          {
+            "step": 2,
+            "action": "Select bulk email option",
+            "details": "Choose the bulk messaging feature for sending to multiple recipients"
+          },
+          {
+            "step": 3,
+            "action": "Choose recipient list",
+            "details": "Select influencers by campaign, tags, filters, or manual selection"
+          },
+          {
+            "step": 4,
+            "action": "Select or create email template",
+            "details": "Choose from existing templates or create a new message template"
+          },
+          {
+            "step": 5,
+            "action": "Customize message content",
+            "details": "Edit subject line, body content, and personalization elements"
+          },
+          {
+            "step": 6,
+            "action": "Add dynamic content fields",
+            "details": "Insert personalization tokens like influencer name, campaign details, or custom fields"
+          },
+          {
+            "step": 7,
+            "action": "Preview message for recipients",
+            "details": "Review how the message will appear for different influencers"
+          },
+          {
+            "step": 8,
+            "action": "Schedule or send immediately",
+            "details": "Choose to send now or schedule for later delivery"
+          },
+          {
+            "step": 9,
+            "action": "Monitor delivery status",
+            "details": "Track email delivery rates, opens, and responses"
+          }
+        ],
+        "prerequisites": [
+          "Influencer email addresses available",
+          "Messaging permissions granted",
+          "Message content prepared"
+        ],
+        "dependencies": [
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "influencer_profile_management",
+          "message_template_management",
+          "bulk_influencer_actions"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Sending Messages to Influencers.pdf"
+        ]
+      },
+      "message_template_management": {
+        "flow_id": "message_template_management",
+        "title": "Managing Message Templates",
+        "description": "Process for creating and managing reusable email templates for influencer communication",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access template management section",
+            "details": "Navigate to the message templates area within communication settings"
+          },
+          {
+            "step": 2,
+            "action": "Create new template",
+            "details": "Start creating a new email template or select existing template to edit"
+          },
+          {
+            "step": 3,
+            "action": "Define template purpose",
+            "details": "Specify template category such as campaign invitations, onboarding, or follow-ups"
+          },
+          {
+            "step": 4,
+            "action": "Design template layout",
+            "details": "Create email structure with header, body sections, and footer elements"
+          },
+          {
+            "step": 5,
+            "action": "Add dynamic placeholders",
+            "details": "Insert merge fields for personalization like {{influencer_name}}, {{campaign_name}}"
+          },
+          {
+            "step": 6,
+            "action": "Format template styling",
+            "details": "Apply branding, colors, fonts, and visual elements to match company style"
+          },
+          {
+            "step": 7,
+            "action": "Test template rendering",
+            "details": "Preview template with sample data to ensure proper formatting and personalization"
+          },
+          {
+            "step": 8,
+            "action": "Save and categorize template",
+            "details": "Store template with descriptive name and organize into appropriate categories"
+          },
+          {
+            "step": 9,
+            "action": "Set template permissions",
+            "details": "Control which team members can use, edit, or delete the template"
+          }
+        ],
+        "prerequisites": [
+          "Template content strategy defined",
+          "Branding guidelines available",
+          "Personalization fields identified"
+        ],
+        "dependencies": [
+          "bulk_messaging_to_influencers"
+        ],
+        "related_flows": [
+          "bulk_messaging_to_influencers",
+          "influencer_onboarding_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Sending Messages to Influencers.pdf"
+        ]
+      },
+      "message_tracking_and_analytics": {
+        "flow_id": "message_tracking_and_analytics",
+        "title": "Tracking Message Performance and Analytics",
+        "description": "Process for monitoring email delivery, engagement, and response metrics",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access message analytics dashboard",
+            "details": "Navigate to the messaging analytics and reporting section"
+          },
+          {
+            "step": 2,
+            "action": "Select message campaign to analyze",
+            "details": "Choose specific bulk message or template to review performance"
+          },
+          {
+            "step": 3,
+            "action": "Review delivery metrics",
+            "details": "Check delivery rates, bounce rates, and delivery failures"
+          },
+          {
+            "step": 4,
+            "action": "Analyze engagement metrics",
+            "details": "Examine open rates, click-through rates, and time-based engagement patterns"
+          },
+          {
+            "step": 5,
+            "action": "Track response rates",
+            "details": "Monitor reply rates and response quality from influencers"
+          },
+          {
+            "step": 6,
+            "action": "Identify top performing content",
+            "details": "Determine which message templates and content types generate best results"
+          },
+          {
+            "step": 7,
+            "action": "Generate performance reports",
+            "details": "Create reports showing messaging effectiveness and ROI metrics"
+          },
+          {
+            "step": 8,
+            "action": "Optimize future messaging",
+            "details": "Use analytics insights to improve subject lines, content, and send timing"
+          }
+        ],
+        "prerequisites": [
+          "Sent messages to track",
+          "Analytics tracking configured",
+          "Sufficient data for analysis"
+        ],
+        "dependencies": [
+          "bulk_messaging_to_influencers"
+        ],
+        "related_flows": [
+          "bulk_messaging_to_influencers",
+          "message_template_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Sending Messages to Influencers.pdf"
+        ]
+      }
+    },
+    "social_media_integration": {
+      "social_account_authentication": {
+        "flow_id": "social_account_authentication",
+        "title": "Authenticating Social Media Accounts",
+        "description": "Process for connecting and verifying influencer social media accounts",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access social account settings",
+            "details": "Navigate to the social media authentication section in influencer profile"
+          },
+          {
+            "step": 2,
+            "action": "Select platform to connect",
+            "details": "Choose from available platforms: Instagram Business/Creator, Facebook Page, TikTok, YouTube"
+          },
+          {
+            "step": 3,
+            "action": "Initiate OAuth authentication",
+            "details": "Click connect button to start OAuth flow with selected social platform"
+          },
+          {
+            "step": 4,
+            "action": "Grant required permissions",
+            "details": "Authorize Influence platform to access account data and posting capabilities"
+          },
+          {
+            "step": 5,
+            "action": "Select specific accounts",
+            "details": "Choose which accounts to connect if multiple accounts are available"
+          },
+          {
+            "step": 6,
+            "action": "Verify account ownership",
+            "details": "Complete verification process to confirm account ownership and authenticity"
+          },
+          {
+            "step": 7,
+            "action": "Configure data sync settings",
+            "details": "Set up automatic syncing of metrics, posts, and audience data"
+          },
+          {
+            "step": 8,
+            "action": "Test connection functionality",
+            "details": "Verify that data is flowing correctly and posting capabilities work"
+          },
+          {
+            "step": 9,
+            "action": "Save authentication settings",
+            "details": "Complete setup and activate social media integration"
+          }
+        ],
+        "prerequisites": [
+          "Valid social media accounts",
+          "Administrative access to social accounts",
+          "Accounts meet platform requirements (e.g., Instagram Business/Creator account)"
+        ],
+        "dependencies": [
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "influencer_profile_management",
+          "influencer_onboarding_process"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Authenticating Social Accounts in Influence.pdf"
+        ]
+      },
+      "instagram_business_account_setup": {
+        "flow_id": "instagram_business_account_setup",
+        "title": "Setting Up Instagram Business/Creator Account",
+        "description": "Specific process for connecting Instagram Business or Creator accounts",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Verify Instagram account type",
+            "details": "Ensure Instagram account is set to Business or Creator account type"
+          },
+          {
+            "step": 2,
+            "action": "Connect Facebook Page if needed",
+            "details": "Link Instagram account to associated Facebook Page for Business accounts"
+          },
+          {
+            "step": 3,
+            "action": "Start Instagram authentication",
+            "details": "Begin OAuth flow for Instagram Business/Creator account connection"
+          },
+          {
+            "step": 4,
+            "action": "Grant Instagram permissions",
+            "details": "Authorize access to Instagram Insights, posting, and profile data"
+          },
+          {
+            "step": 5,
+            "action": "Select Instagram account",
+            "details": "Choose specific Instagram Business/Creator account to connect"
+          },
+          {
+            "step": 6,
+            "action": "Verify account metrics access",
+            "details": "Confirm that Instagram Insights data is accessible through the connection"
+          },
+          {
+            "step": 7,
+            "action": "Test content posting capability",
+            "details": "Verify ability to post content through the Influence platform"
+          },
+          {
+            "step": 8,
+            "action": "Confirm connection status",
+            "details": "Ensure Instagram account shows as successfully connected and active"
+          }
+        ],
+        "prerequisites": [
+          "Instagram Business or Creator account",
+          "Facebook Page connected (for Business accounts)",
+          "Admin access to Instagram account"
+        ],
+        "dependencies": [
+          "social_account_authentication"
+        ],
+        "related_flows": [
+          "social_account_authentication",
+          "facebook_page_connection"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Authenticating Social Accounts in Influence.pdf"
+        ]
+      },
+      "facebook_page_connection": {
+        "flow_id": "facebook_page_connection",
+        "title": "Connecting Facebook Pages",
+        "description": "Process for connecting Facebook Pages for content management and analytics",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access Facebook integration settings",
+            "details": "Navigate to Facebook connection options in social media settings"
+          },
+          {
+            "step": 2,
+            "action": "Initiate Facebook OAuth",
+            "details": "Start authentication process with Facebook platform"
+          },
+          {
+            "step": 3,
+            "action": "Grant Facebook permissions",
+            "details": "Authorize access to Facebook Pages, insights, and posting capabilities"
+          },
+          {
+            "step": 4,
+            "action": "Select Facebook Pages",
+            "details": "Choose which Facebook Pages to connect from available pages"
+          },
+          {
+            "step": 5,
+            "action": "Configure page permissions",
+            "details": "Set specific permissions for each connected Facebook Page"
+          },
+          {
+            "step": 6,
+            "action": "Verify insights access",
+            "details": "Confirm access to Facebook Page Insights and analytics data"
+          },
+          {
+            "step": 7,
+            "action": "Test posting functionality",
+            "details": "Verify ability to create and schedule posts to connected pages"
+          },
+          {
+            "step": 8,
+            "action": "Complete page connection",
+            "details": "Finalize Facebook Page integration and activate data syncing"
+          }
+        ],
+        "prerequisites": [
+          "Facebook Page admin access",
+          "Facebook Page with sufficient permissions",
+          "Valid Facebook account"
+        ],
+        "dependencies": [
+          "social_account_authentication"
+        ],
+        "related_flows": [
+          "social_account_authentication",
+          "instagram_business_account_setup"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Authenticating Social Accounts in Influence.pdf"
+        ]
+      },
+      "tiktok_account_authentication": {
+        "flow_id": "tiktok_account_authentication",
+        "title": "Authenticating TikTok Accounts",
+        "description": "Process for connecting and verifying TikTok accounts for influencer management",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access TikTok integration option",
+            "details": "Navigate to TikTok connection settings in social media section"
+          },
+          {
+            "step": 2,
+            "action": "Start TikTok OAuth flow",
+            "details": "Begin authentication process with TikTok platform"
+          },
+          {
+            "step": 3,
+            "action": "Login to TikTok account",
+            "details": "Authenticate with TikTok credentials for the account to be connected"
+          },
+          {
+            "step": 4,
+            "action": "Grant TikTok permissions",
+            "details": "Authorize Influence platform to access TikTok account data and analytics"
+          },
+          {
+            "step": 5,
+            "action": "Verify account connection",
+            "details": "Confirm that TikTok account is successfully linked and data is accessible"
+          },
+          {
+            "step": 6,
+            "action": "Configure data sync settings",
+            "details": "Set up automatic syncing of TikTok analytics and content data"
+          },
+          {
+            "step": 7,
+            "action": "Test analytics access",
+            "details": "Verify that TikTok analytics and metrics are properly accessible"
+          },
+          {
+            "step": 8,
+            "action": "Complete TikTok integration",
+            "details": "Finalize connection and activate TikTok account monitoring"
+          }
+        ],
+        "prerequisites": [
+          "Valid TikTok account",
+          "TikTok account with analytics access",
+          "Account credentials for authentication"
+        ],
+        "dependencies": [
+          "social_account_authentication"
+        ],
+        "related_flows": [
+          "social_account_authentication",
+          "youtube_account_authentication"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Authenticating Social Accounts in Influence.pdf"
+        ]
+      },
+      "youtube_account_authentication": {
+        "flow_id": "youtube_account_authentication",
+        "title": "Authenticating YouTube Accounts",
+        "description": "Process for connecting YouTube channels for content tracking and analytics",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access YouTube integration settings",
+            "details": "Navigate to YouTube connection options in social media authentication"
+          },
+          {
+            "step": 2,
+            "action": "Initiate Google OAuth process",
+            "details": "Start authentication flow with Google account linked to YouTube channel"
+          },
+          {
+            "step": 3,
+            "action": "Select Google account",
+            "details": "Choose the Google account associated with the YouTube channel to connect"
+          },
+          {
+            "step": 4,
+            "action": "Grant YouTube permissions",
+            "details": "Authorize access to YouTube Analytics and channel data"
+          },
+          {
+            "step": 5,
+            "action": "Select YouTube channel",
+            "details": "Choose specific YouTube channel from available channels on the account"
+          },
+          {
+            "step": 6,
+            "action": "Configure analytics access",
+            "details": "Set up access to YouTube Analytics and performance metrics"
+          },
+          {
+            "step": 7,
+            "action": "Verify channel connection",
+            "details": "Confirm that YouTube channel data is accessible and syncing properly"
+          },
+          {
+            "step": 8,
+            "action": "Complete YouTube integration",
+            "details": "Finalize connection and activate YouTube channel monitoring"
+          }
+        ],
+        "prerequisites": [
+          "YouTube channel with content",
+          "Google account with channel admin access",
+          "YouTube Analytics enabled"
+        ],
+        "dependencies": [
+          "social_account_authentication"
+        ],
+        "related_flows": [
+          "social_account_authentication",
+          "tiktok_account_authentication"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Using Influence/Managing Influencers/Authenticating Social Accounts in Influence.pdf"
+        ]
+      }
+    },
+    "administration": {
+      "user_management": {
+        "flow_id": "user_management",
+        "title": "Adding Users and Managing Permissions",
+        "description": "Process for adding new users to the platform and configuring their access permissions",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access user management section",
+            "details": "Navigate to the administration area and select user management"
+          },
+          {
+            "step": 2,
+            "action": "Click 'Add New User'",
+            "details": "Select the option to create a new user account"
+          },
+          {
+            "step": 3,
+            "action": "Enter user basic information",
+            "details": "Provide user's name, email address, and contact information"
+          },
+          {
+            "step": 4,
+            "action": "Select user role",
+            "details": "Choose from Company Admin, Group Admin, or Talent Manager roles"
+          },
+          {
+            "step": 5,
+            "action": "Configure role-specific permissions",
+            "details": "Set specific permissions based on selected role and business requirements"
+          },
+          {
+            "step": 6,
+            "action": "Assign to groups if applicable",
+            "details": "Associate user with specific influencer groups or organizational units"
+          },
+          {
+            "step": 7,
+            "action": "Set access restrictions",
+            "details": "Configure any limitations on data access, campaigns, or features"
+          },
+          {
+            "step": 8,
+            "action": "Send invitation email",
+            "details": "Send user invitation with login credentials and setup instructions"
+          },
+          {
+            "step": 9,
+            "action": "Monitor user activation",
+            "details": "Track whether new user has completed account setup and first login"
+          }
+        ],
+        "prerequisites": [
+          "Admin permissions for user management",
+          "User information collected",
+          "Role requirements defined"
+        ],
+        "dependencies": [
+          "account_creation"
+        ],
+        "related_flows": [
+          "permission_level_configuration",
+          "group_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Administration/Adding Users and Managing Permissions.pdf"
+        ]
+      },
+      "permission_level_configuration": {
+        "flow_id": "permission_level_configuration",
+        "title": "Configuring User Permission Levels",
+        "description": "Process for setting up and managing different permission levels and access controls",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access permission configuration",
+            "details": "Navigate to the permissions and roles management section"
+          },
+          {
+            "step": 2,
+            "action": "Review existing permission levels",
+            "details": "Examine current Company Admin, Group Admin, and Talent Manager permission sets"
+          },
+          {
+            "step": 3,
+            "action": "Define custom permission sets",
+            "details": "Create custom combinations of permissions for specific business needs"
+          },
+          {
+            "step": 4,
+            "action": "Set campaign access controls",
+            "details": "Configure which users can create, edit, or view specific campaigns"
+          },
+          {
+            "step": 5,
+            "action": "Configure influencer access",
+            "details": "Set permissions for influencer profile viewing, editing, and management"
+          },
+          {
+            "step": 6,
+            "action": "Set financial permissions",
+            "details": "Control access to payment processing, financial reporting, and budget information"
+          },
+          {
+            "step": 7,
+            "action": "Configure administrative access",
+            "details": "Set permissions for user management, settings, and system configuration"
+          },
+          {
+            "step": 8,
+            "action": "Test permission settings",
+            "details": "Verify that permission configurations work as expected for different user types"
+          },
+          {
+            "step": 9,
+            "action": "Apply permissions to users",
+            "details": "Assign configured permission levels to existing and new users"
+          }
+        ],
+        "prerequisites": [
+          "Admin access to permission settings",
+          "Understanding of organizational roles",
+          "Permission strategy defined"
+        ],
+        "dependencies": [
+          "user_management"
+        ],
+        "related_flows": [
+          "user_management",
+          "group_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Administration/Adding Users and Managing Permissions.pdf"
+        ]
+      },
+      "group_management": {
+        "flow_id": "group_management",
+        "title": "Managing Influencer Groups and Talent Managers",
+        "description": "Process for creating and managing influencer groups with assigned talent managers",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access group management interface",
+            "details": "Navigate to the influencer groups administration section"
+          },
+          {
+            "step": 2,
+            "action": "Create new influencer group",
+            "details": "Set up a new group with name, description, and organizational purpose"
+          },
+          {
+            "step": 3,
+            "action": "Assign talent manager to group",
+            "details": "Select a user with Talent Manager role to oversee the group"
+          },
+          {
+            "step": 4,
+            "action": "Add influencers to group",
+            "details": "Select and assign influencers to the newly created group"
+          },
+          {
+            "step": 5,
+            "action": "Configure group permissions",
+            "details": "Set access levels and management permissions for the group"
+          },
+          {
+            "step": 6,
+            "action": "Set up revenue sharing if applicable",
+            "details": "Configure revenue sharing arrangements between group members and managers"
+          },
+          {
+            "step": 7,
+            "action": "Define group communication settings",
+            "details": "Set up group messaging and notification preferences"
+          },
+          {
+            "step": 8,
+            "action": "Configure reporting structure",
+            "details": "Set up reporting hierarchy and performance tracking for the group"
+          },
+          {
+            "step": 9,
+            "action": "Activate group management",
+            "details": "Enable the group structure and notify relevant stakeholders"
+          }
+        ],
+        "prerequisites": [
+          "Group management permissions",
+          "Talent managers identified and created",
+          "Influencers available for grouping"
+        ],
+        "dependencies": [
+          "user_management",
+          "influencer_profile_management"
+        ],
+        "related_flows": [
+          "user_management",
+          "talent_manager_assignment",
+          "revenue_sharing_configuration"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Administration/Managing Influencer Groups and Talent Managers.pdf"
+        ]
+      },
+      "talent_manager_assignment": {
+        "flow_id": "talent_manager_assignment",
+        "title": "Assigning Talent Managers to Influencers",
+        "description": "Process for assigning talent managers to oversee specific influencers or groups",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access talent manager assignment interface",
+            "details": "Navigate to the talent manager configuration section"
+          },
+          {
+            "step": 2,
+            "action": "Select influencers for assignment",
+            "details": "Choose individual influencers or groups that need talent manager oversight"
+          },
+          {
+            "step": 3,
+            "action": "Choose talent manager",
+            "details": "Select appropriate talent manager based on expertise and capacity"
+          },
+          {
+            "step": 4,
+            "action": "Define management scope",
+            "details": "Set specific responsibilities and authority levels for the talent manager"
+          },
+          {
+            "step": 5,
+            "action": "Configure communication channels",
+            "details": "Set up direct communication paths between talent manager and assigned influencers"
+          },
+          {
+            "step": 6,
+            "action": "Set performance targets",
+            "details": "Establish KPIs and goals for the talent manager-influencer relationship"
+          },
+          {
+            "step": 7,
+            "action": "Configure revenue sharing terms",
+            "details": "Set up any commission or revenue sharing arrangements"
+          },
+          {
+            "step": 8,
+            "action": "Notify all parties",
+            "details": "Inform talent manager and influencers about the new management relationship"
+          },
+          {
+            "step": 9,
+            "action": "Monitor assignment effectiveness",
+            "details": "Track the success of talent manager assignments and make adjustments as needed"
+          }
+        ],
+        "prerequisites": [
+          "Talent managers created in system",
+          "Influencers available for assignment",
+          "Management structure defined"
+        ],
+        "dependencies": [
+          "group_management",
+          "user_management"
+        ],
+        "related_flows": [
+          "group_management",
+          "revenue_sharing_configuration",
+          "user_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Administration/Managing Influencer Groups and Talent Managers.pdf"
+        ]
+      },
+      "revenue_sharing_configuration": {
+        "flow_id": "revenue_sharing_configuration",
+        "title": "Configuring Revenue Sharing Arrangements",
+        "description": "Process for setting up revenue sharing between influencers, talent managers, and company",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access revenue sharing settings",
+            "details": "Navigate to the financial configuration section for revenue sharing"
+          },
+          {
+            "step": 2,
+            "action": "Define revenue sharing model",
+            "details": "Choose between percentage-based, flat fee, or tiered revenue sharing structures"
+          },
+          {
+            "step": 3,
+            "action": "Set influencer commission rates",
+            "details": "Configure what percentage or amount influencers receive from campaigns"
+          },
+          {
+            "step": 4,
+            "action": "Configure talent manager commissions",
+            "details": "Set commission rates for talent managers based on their managed influencers' performance"
+          },
+          {
+            "step": 5,
+            "action": "Define company retention",
+            "details": "Set the percentage or amount retained by the company for platform costs"
+          },
+          {
+            "step": 6,
+            "action": "Set up performance bonuses",
+            "details": "Configure additional revenue sharing based on performance milestones"
+          },
+          {
+            "step": 7,
+            "action": "Configure payment timing",
+            "details": "Set when revenue sharing payments are calculated and distributed"
+          },
+          {
+            "step": 8,
+            "action": "Test revenue calculations",
+            "details": "Verify that revenue sharing calculations work correctly with sample data"
+          },
+          {
+            "step": 9,
+            "action": "Activate revenue sharing",
+            "details": "Enable the revenue sharing system and begin tracking for future payments"
+          }
+        ],
+        "prerequisites": [
+          "Revenue sharing strategy defined",
+          "Payment system configured",
+          "Talent managers and influencers in place"
+        ],
+        "dependencies": [
+          "talent_manager_assignment",
+          "payment_system_configuration"
+        ],
+        "related_flows": [
+          "talent_manager_assignment",
+          "payment_processing",
+          "group_management"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Administration/Managing Influencer Groups and Talent Managers.pdf"
+        ]
+      },
+      "platform_settings_management": {
+        "flow_id": "platform_settings_management",
+        "title": "Managing Platform Settings",
+        "description": "Process for configuring general platform settings and preferences",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access platform settings",
+            "details": "Navigate to the main settings and configuration section"
+          },
+          {
+            "step": 2,
+            "action": "Configure account settings",
+            "details": "Set up company information, branding, and account preferences"
+          },
+          {
+            "step": 3,
+            "action": "Set up company settings",
+            "details": "Configure company-wide policies, default settings, and organizational preferences"
+          },
+          {
+            "step": 4,
+            "action": "Configure campaign defaults",
+            "details": "Set default campaign settings, approval workflows, and standard terms"
+          },
+          {
+            "step": 5,
+            "action": "Set notification preferences",
+            "details": "Configure email notifications, alerts, and communication settings"
+          },
+          {
+            "step": 6,
+            "action": "Configure data retention policies",
+            "details": "Set policies for data storage, archiving, and deletion"
+          },
+          {
+            "step": 7,
+            "action": "Set security preferences",
+            "details": "Configure security settings, password policies, and access controls"
+          },
+          {
+            "step": 8,
+            "action": "Configure integration settings",
+            "details": "Set up default settings for third-party integrations and API access"
+          },
+          {
+            "step": 9,
+            "action": "Save and apply settings",
+            "details": "Confirm all configuration changes and apply them platform-wide"
+          }
+        ],
+        "prerequisites": [
+          "Admin access to platform settings",
+          "Company policies defined",
+          "Configuration requirements identified"
+        ],
+        "dependencies": [
+          "account_creation"
+        ],
+        "related_flows": [
+          "user_management",
+          "permission_level_configuration"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Administration/Settings in Influence.pdf"
+        ]
+      }
+    },
+    "integrations": {
+      "bitly_integration_setup": {
+        "flow_id": "bitly_integration_setup",
+        "title": "Connecting Bitly Account for Link Tracking",
+        "description": "Process for integrating Bitly for campaign link tracking and analytics",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access integration settings",
+            "details": "Navigate to the integrations section in platform administration"
+          },
+          {
+            "step": 2,
+            "action": "Select Bitly integration option",
+            "details": "Choose Bitly from the list of available third-party integrations"
+          },
+          {
+            "step": 3,
+            "action": "Enter Bitly API credentials",
+            "details": "Input Bitly API access token and account information"
+          },
+          {
+            "step": 4,
+            "action": "Configure link shortening settings",
+            "details": "Set default domain, link format, and shortening preferences"
+          },
+          {
+            "step": 5,
+            "action": "Set up campaign link tracking",
+            "details": "Configure how campaign links will be automatically shortened and tracked"
+          },
+          {
+            "step": 6,
+            "action": "Test Bitly connection",
+            "details": "Create test shortened links to verify integration is working properly"
+          },
+          {
+            "step": 7,
+            "action": "Configure analytics sync",
+            "details": "Set up automatic syncing of Bitly click analytics back to campaign reporting"
+          },
+          {
+            "step": 8,
+            "action": "Set link naming conventions",
+            "details": "Define how shortened links will be named and organized in Bitly"
+          },
+          {
+            "step": 9,
+            "action": "Activate Bitly integration",
+            "details": "Enable the integration for use in campaigns and link tracking"
+          }
+        ],
+        "prerequisites": [
+          "Bitly account with API access",
+          "Bitly API access token obtained",
+          "Integration permissions in Influence platform"
+        ],
+        "dependencies": [
+          "platform_settings_management"
+        ],
+        "related_flows": [
+          "campaign_creation",
+          "campaign_reporting"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Integrations/Connecting a Bitly Account to Influence.pdf"
+        ]
+      },
+      "shopify_integration_setup": {
+        "flow_id": "shopify_integration_setup",
+        "title": "Connecting Shopify Account for Sales Tracking",
+        "description": "Process for integrating Shopify to track sales performance from influencer campaigns",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Access Shopify integration settings",
+            "details": "Navigate to the Shopify integration section in platform integrations"
+          },
+          {
+            "step": 2,
+            "action": "Connect to Shopify store",
+            "details": "Enter Shopify store URL and initiate OAuth connection process"
+          },
+          {
+            "step": 3,
+            "action": "Authorize Influence platform access",
+            "details": "Grant permissions for Influence to access Shopify sales data and customer information"
+          },
+          {
+            "step": 4,
+            "action": "Configure sales tracking settings",
+            "details": "Set up which sales metrics and data points will be tracked from Shopify"
+          },
+          {
+            "step": 5,
+            "action": "Set up product catalog sync",
+            "details": "Configure automatic syncing of Shopify product information for campaign use"
+          },
+          {
+            "step": 6,
+            "action": "Configure coupon code integration",
+            "details": "Set up automatic creation and tracking of influencer-specific coupon codes"
+          },
+          {
+            "step": 7,
+            "action": "Set up referral tracking",
+            "details": "Configure referral link tracking to attribute sales to specific influencers"
+          },
+          {
+            "step": 8,
+            "action": "Test sales data flow",
+            "details": "Verify that sales data is flowing correctly from Shopify to Influence platform"
+          },
+          {
+            "step": 9,
+            "action": "Configure reporting integration",
+            "details": "Set up Shopify sales data to appear in campaign performance reports"
+          },
+          {
+            "step": 10,
+            "action": "Activate Shopify integration",
+            "details": "Enable the integration for live sales tracking in campaigns"
+          }
+        ],
+        "prerequisites": [
+          "Active Shopify store with admin access",
+          "Shopify API permissions configured",
+          "Sales tracking strategy defined"
+        ],
+        "dependencies": [
+          "platform_settings_management"
+        ],
+        "related_flows": [
+          "campaign_creation",
+          "campaign_reporting",
+          "influencer_performance_tracking"
+        ],
+        "source_documents": [
+          "/Users/ashutoshbijoor/Documents/Accion Labs/Projects/Cision/Nexus/Brandwatch/brandwatch-docs-viewer/docs/pdfs/Influence/Influence/Integrations/Connecting a Shopify Account to Influence.pdf"
+        ]
+      }
+    }
+  }
+}

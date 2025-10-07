@@ -1,0 +1,19 @@
+{
+  "name": "brandwatch-docs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for querying Brandwatch documentation",
+  "main": "server.js",
+  "bin": {
+    "brandwatch-mcp": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2"
+  }
+}

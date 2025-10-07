@@ -1,0 +1,31 @@
+{
+  "workflows": [
+    {
+      "workflow_id": "crisis_management",
+      "workflow_name": "Crisis Management Workflow",
+      "description": "Real-time crisis detection, analysis, response, and tracking",
+      "modules_involved": ["listen", "consumer_research", "engage", "measure", "vizia"],
+      "complexity": "high",
+      "implementation_time": "1-3 months",
+      "file": "cross_module_crisis_management.json"
+    },
+    {
+      "workflow_id": "content_strategy_optimization",
+      "workflow_name": "Content Strategy Optimization Loop",
+      "description": "Data-driven content creation and optimization cycle",
+      "modules_involved": ["listen", "consumer_research", "publish", "measure", "benchmark"],
+      "complexity": "medium",
+      "implementation_time": "1-3 months",
+      "file": "cross_module_content_strategy.json"
+    },
+    {
+      "workflow_id": "influencer_campaign_lifecycle",
+      "workflow_name": "Influencer Campaign Lifecycle",
+      "description": "End-to-end influencer marketing from discovery to ROI",
+      "modules_involved": ["consumer_research", "influence", "publish", "advertise", "measure", "reviews"],
+      "complexity": "high",
+      "implementation_time": "3-6 months",
+      "file": "cross_module_influencer_campaign.json"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "adminEmails": [
+    "ashutosh.bijoor@accionlabs.com",
+    "ashutosh@example.com"
+  ],
+  "description": "List of email addresses with admin rights to edit source documents"
+}

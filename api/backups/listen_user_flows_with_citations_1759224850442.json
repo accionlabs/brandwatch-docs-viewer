@@ -1,0 +1,976 @@
+{
+  "module": "Listen",
+  "description": "Brandwatch Listen enables comprehensive social media monitoring and analysis through advanced search queries, real-time alerts, and detailed analytics across multiple social platforms.",
+  "metadata": {
+    "extracted_from": "Brandwatch Listen Module Documentation",
+    "total_flows": 15,
+    "categories": [
+      "Search Setup and Configuration",
+      "Data Analysis and Visualization",
+      "Content Source Management",
+      "Filtering and Refinement",
+      "Alerting and Notifications",
+      "Data Export and Sharing"
+    ],
+    "extraction_date": "2025-09-29"
+  },
+  "user_flows": [
+    {
+      "id": "flow_001",
+      "name": "Creating a Quick Search",
+      "category": "Search Setup and Configuration",
+      "description": "Create a new search to preview mentions matching your query",
+      "prerequisites": [
+        "Access to Brandwatch Listen",
+        "Social Media Management user account"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Navigate to Quick Search tab in Listen",
+          "details": "Access the main Listen interface"
+        },
+        {
+          "step": 2,
+          "action": "Choose search method",
+          "details": "Select from: Simple word/phrase, Guided Search, or Advanced Query",
+          "decision_points": [
+            "Simple search: Enter brand, person, event, handle, topic, or hashtag",
+            "Guided search: Use structured fields for Brand, Issue, Campaign, Person, or Topic",
+            "Advanced query: Use Boolean operators and search operators"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Enter search query",
+          "details": "Input search terms (max 600 characters for Quick Search)"
+        },
+        {
+          "step": 4,
+          "action": "Execute search",
+          "details": "Hit Enter or click Search button"
+        },
+        {
+          "step": 5,
+          "action": "Review results",
+          "details": "View last month of mentions and basic analytics"
+        }
+      ],
+      "expected_outcomes": [
+        "Preview of search results displayed",
+        "Basic graphs and metrics visible",
+        "Mentions from last month shown",
+        "Option to refine or save search available"
+      ],
+      "limitations": [
+        "Limited to last month of data",
+        "Some insights unavailable",
+        "Cannot create alerts",
+        "Cannot share with team"
+      ],
+      "source_documents": [
+        "Listen/Getting Started/Creating and Saving Searches.pdf",
+        "Listen/Getting Started/Introduction to Listen.pdf"
+      ],
+      "citations": [
+        "Listen/Getting Started/Introduction to Listen.pdf",
+        "Listen/Getting Started/Creating and Saving Searches.pdf"
+      ],
+      "related_flows": [
+        "flow_002",
+        "flow_003",
+        "flow_004"
+      ]
+    },
+    {
+      "id": "flow_002",
+      "name": "Saving a Quick Search as Saved Search",
+      "category": "Search Setup and Configuration",
+      "description": "Convert a Quick Search to a Saved Search for full functionality",
+      "prerequisites": [
+        "Existing Quick Search with satisfactory results",
+        "User role of Team Leader or Admin",
+        "Available Saved Search slots in organization contract"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Review Quick Search results",
+          "details": "Ensure search query produces desired mentions"
+        },
+        {
+          "step": 2,
+          "action": "Click Save Search button",
+          "details": "Located in top right of interface"
+        },
+        {
+          "step": 3,
+          "action": "Provide search details",
+          "details": "Enter name, select team, add optional description"
+        },
+        {
+          "step": 4,
+          "action": "Save the search",
+          "details": "Click Save button to confirm"
+        }
+      ],
+      "expected_outcomes": [
+        "Search saved to Saved Searches tab",
+        "Full year of historical data accessible",
+        "All insights and metrics available",
+        "Team members can access search",
+        "Email alerts can be created",
+        "Mention tags can be applied"
+      ],
+      "source_documents": [
+        "Listen/Getting Started/Creating and Saving Searches.pdf",
+        "Listen/Getting Started/Quick Search vs. Saved Search.pdf",
+        "Listen/Getting Started/Creating and Managing Listen Email Alerts.pdf",
+        "Listen/Getting Started/Creating and Saving Searches.pdf"
+      ],
+      "citations": [
+        "Listen/Getting Started/Creating and Saving Searches.pdf",
+        "Listen/Getting Started/Quick Search vs. Saved Search.pdf"
+      ],
+      "related_flows": [
+        "flow_001",
+        "flow_005",
+        "flow_006"
+      ]
+    },
+    {
+      "id": "flow_003",
+      "name": "Building Advanced Queries with Search Operators",
+      "category": "Search Setup and Configuration",
+      "description": "Create sophisticated searches using Boolean operators and content/source operators",
+      "prerequisites": [
+        "Understanding of search operators",
+        "Clear search objectives",
+        "Knowledge of target content sources"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Identify search requirements",
+          "details": "Determine keywords, exclusions, sources, and demographics needed"
+        },
+        {
+          "step": 2,
+          "action": "Build query using content operators",
+          "details": "Use quotations, AND, OR, NOT, parentheses, tilde, brackets, wildcards, etc.",
+          "examples": [
+            "\"apple juice\" (exact phrase)",
+            "apple AND juice (both terms)",
+            "apple OR orange (either term)",
+            "apple NOT fruit (exclude fruit)"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Add source operators if needed",
+          "details": "Specify sites, URLs, authors, subreddits, etc.",
+          "examples": [
+            "site:bbc.com",
+            "author:username",
+            "subreddit:technology"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Include location operators",
+          "details": "Filter by continent, country, region, city, or coordinates"
+        },
+        {
+          "step": 5,
+          "action": "Test and refine query",
+          "details": "Run Quick Search to validate results before saving"
+        }
+      ],
+      "expected_outcomes": [
+        "Precise targeting of desired mentions",
+        "Reduced noise and irrelevant results",
+        "Focused data collection",
+        "More accurate insights"
+      ],
+      "source_documents": [
+        "Listen/Getting Started/Building Advanced Queries in Listen.pdf",
+        "Listen/Getting Started/Creating and Managing Listen Email Alerts.pdf"
+      ],
+      "citations": [
+        "Listen/Getting Started/Building Advanced Queries in Listen.pdf"
+      ],
+      "related_flows": [
+        "flow_001",
+        "flow_007"
+      ]
+    },
+    {
+      "id": "flow_004",
+      "name": "Setting Up Content Sources",
+      "category": "Content Source Management",
+      "description": "Add owned and non-owned social accounts, pages, and hashtags as targeted data sources",
+      "prerequisites": [
+        "User role of Team Leader or Admin",
+        "Social account credentials for owned sources",
+        "Available content source slots (up to 1,000)"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access Content Source Settings",
+          "details": "Click cog icon in top-right corner of Listen"
+        },
+        {
+          "step": 2,
+          "action": "Choose content source type",
+          "details": "Select from owned/non-owned Facebook Pages, Instagram accounts, LinkedIn Pages, TikTok accounts, or Instagram hashtags"
+        },
+        {
+          "step": 3,
+          "action": "Authenticate accounts (if owned)",
+          "details": "Connect Facebook, Instagram, LinkedIn, or TikTok accounts with proper permissions"
+        },
+        {
+          "step": 4,
+          "action": "Add specific sources",
+          "details": "Enter URLs, usernames, page names, or hashtags",
+          "decision_points": [
+            "Owned sources: Require authentication and admin permissions",
+            "Non-owned sources: Can be added directly with URLs/usernames",
+            "Instagram hashtags: Limited to 30 per connected channel"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Configure source settings",
+          "details": "Set team access permissions and custom names if needed"
+        },
+        {
+          "step": 6,
+          "action": "Confirm and start tracking",
+          "details": "Activate data collection for the source"
+        }
+      ],
+      "expected_outcomes": [
+        "Historical data available (365 days for most sources)",
+        "Ongoing data collection activated",
+        "Source appears in Content Source Settings",
+        "Data becomes available within 1 hour"
+      ],
+      "limitations": [
+        "1,000 content source limit per organization",
+        "Instagram hashtags: 30 per channel, cannot be deleted for 7 days",
+        "LinkedIn: Pulls all posts regardless of query due to privacy policy"
+      ],
+      "source_documents": [
+        "Listen/Getting Started/Tracking Content Sources in Listen.pdf",
+        "Listen/Interacting with Data/Viewing and Analyzing Listen Searches.pdf"
+      ],
+      "citations": [
+        "Listen/Getting Started/Tracking Content Sources in Listen.pdf"
+      ],
+      "related_flows": [
+        "flow_001",
+        "flow_008",
+        "flow_009"
+      ]
+    },
+    {
+      "id": "flow_005",
+      "name": "Creating and Managing Email Alerts",
+      "category": "Alerting and Notifications",
+      "description": "Set up automated email notifications for mention volume increases or new mentions",
+      "prerequisites": [
+        "Existing Saved Search",
+        "User role of Team Leader or Admin"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Open Saved Search",
+          "details": "Navigate to the search for which alerts are needed"
+        },
+        {
+          "step": 2,
+          "action": "Click Create Alert",
+          "details": "Button located in top right of search interface"
+        },
+        {
+          "step": 3,
+          "action": "Configure alert name",
+          "details": "Enter descriptive name that will appear in email subject"
+        },
+        {
+          "step": 4,
+          "action": "Select alert type",
+          "details": "Choose between volume increase alerts or new mention alerts",
+          "decision_points": [
+            "Volume increase: Set percentage threshold for triggering",
+            "New mentions: Set frequency (hourly, daily, weekly) and timing"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Set mention count",
+          "details": "Choose number of mentions to include in alert (default: 10)"
+        },
+        {
+          "step": 6,
+          "action": "Add recipients",
+          "details": "Enter email addresses (can include non-users)"
+        },
+        {
+          "step": 7,
+          "action": "Save alert configuration",
+          "details": "Recipients receive confirmation email with activation link"
+        }
+      ],
+      "expected_outcomes": [
+        "Alert activated after recipient confirmation",
+        "Automated emails sent based on configured triggers",
+        "Alert visible in email alerts management interface"
+      ],
+      "management_actions": [
+        "Edit: Modify name, type, frequency, recipients",
+        "Pause: Temporarily disable without deleting",
+        "Delete: Permanently remove alert"
+      ],
+      "source_documents": [
+        "Listen/Getting Started/Creating and Managing Listen Email Alerts.pdf",
+        "Listen/Interacting with Data/Sentiment and Emotion Analysis.pdf",
+        "Listen/Interacting with Data/Mention Tags.pdf"
+      ],
+      "citations": [
+        "Listen/Getting Started/Creating and Managing Listen Email Alerts.pdf"
+      ],
+      "related_flows": [
+        "flow_002",
+        "flow_001"
+      ]
+    },
+    {
+      "id": "flow_006",
+      "name": "Filtering Search Results",
+      "category": "Filtering and Refinement",
+      "description": "Apply filters to narrow down search results and focus analysis",
+      "prerequisites": [
+        "Active Quick Search or Saved Search"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access filter menu",
+          "details": "Click Filter icon on left-hand side of search interface"
+        },
+        {
+          "step": 2,
+          "action": "Select filter types",
+          "details": "Choose from available filters based on search type",
+          "available_filters": {
+            "all_searches": [
+              "Keyword",
+              "Platform",
+              "Sentiment",
+              "Emotion",
+              "Gender",
+              "Author (include/exclude)"
+            ],
+            "saved_searches_only": [
+              "Site (include/exclude)",
+              "Tags (include/exclude)",
+              "Language (include/exclude)",
+              "Location (include/exclude)",
+              "Twitter account type",
+              "Mention type"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "action": "Apply filter criteria",
+          "details": "Select specific values or use include/exclude options"
+        },
+        {
+          "step": 4,
+          "action": "Review filtered results",
+          "details": "All graphs, metrics, and mentions update to reflect filter"
+        },
+        {
+          "step": 5,
+          "action": "Adjust or clear filters as needed",
+          "details": "Deselect individual filters or use Clear All option"
+        }
+      ],
+      "expected_outcomes": [
+        "Results limited to filter criteria",
+        "All visualizations update to show filtered data only",
+        "Filter count displayed on filter icon",
+        "Filters persist when revisiting search"
+      ],
+      "source_documents": [
+        "Listen/Interacting with Data/Filtering Searches in Listen.pdf",
+        "Listen/Interacting with Data/Mention Tags.pdf"
+      ],
+      "citations": [
+        "Listen/Interacting with Data/Filtering Searches in Listen.pdf"
+      ],
+      "related_flows": [
+        "flow_002",
+        "flow_010"
+      ]
+    },
+    {
+      "id": "flow_007",
+      "name": "Viewing and Analyzing Listen Mentions",
+      "category": "Data Analysis and Visualization",
+      "description": "Examine individual mentions with detailed metadata and classifications",
+      "prerequisites": [
+        "Active search with mention results"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Locate Mentions panel",
+          "details": "Find mentions list on right-hand side of interface"
+        },
+        {
+          "step": 2,
+          "action": "Browse mention list",
+          "details": "Scroll through available mentions with preview information"
+        },
+        {
+          "step": 3,
+          "action": "Expand mention details",
+          "details": "Click on mention to view full information",
+          "available_data": [
+            "Website name and domain",
+            "Social media network",
+            "Author name and handle",
+            "Author profile image (Twitter only)",
+            "Text preview and media",
+            "Publication date",
+            "Reach and impressions",
+            "Sentiment and emotion",
+            "Location and language",
+            "Existing tags"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Access original source",
+          "details": "Click timestamp to view mention on original platform"
+        },
+        {
+          "step": 5,
+          "action": "Sort mentions",
+          "details": "Use Sort By options: reach, newest/oldest first, random, retweets, impressions"
+        }
+      ],
+      "expected_outcomes": [
+        "Detailed understanding of individual mentions",
+        "Access to original content context",
+        "Ability to identify high-impact mentions",
+        "Data for manual analysis and tagging"
+      ],
+      "source_documents": [
+        "Listen/Interacting with Data/Viewing Listen Mentions.pdf",
+        "Listen/Interacting with Data/Mention Tags.pdf",
+        "Listen/Interacting with Data/Ready to Use Social Panels in Listen.pdf"
+      ],
+      "citations": [
+        "Listen/Interacting with Data/Viewing Listen Mentions.pdf"
+      ],
+      "related_flows": [
+        "flow_003",
+        "flow_001"
+      ]
+    },
+    {
+      "id": "flow_008",
+      "name": "Exporting Listen Data and Mentions",
+      "category": "Data Export and Sharing",
+      "description": "Export mention data and insights for external analysis or reporting",
+      "prerequisites": [
+        "Saved Search with data to export",
+        "Appropriate user permissions"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Navigate to export options",
+          "details": "Access export functionality from mentions panel or insights section"
+        },
+        {
+          "step": 2,
+          "action": "Choose export scope",
+          "details": "Select time range and apply any desired filters"
+        },
+        {
+          "step": 3,
+          "action": "Select export format",
+          "details": "Choose appropriate format for intended use"
+        },
+        {
+          "step": 4,
+          "action": "Configure export parameters",
+          "details": "Specify data fields and mention limits if applicable"
+        },
+        {
+          "step": 5,
+          "action": "Execute export",
+          "details": "Generate and download export file"
+        }
+      ],
+      "expected_outcomes": [
+        "Comprehensive data file for external analysis",
+        "Detailed mention metadata including demographics",
+        "Filtered data matching current search criteria",
+        "Insights data for reporting purposes"
+      ],
+      "source_documents": [
+        "Listen/Interacting with Data/Exporting Mentions in Listen.pdf",
+        "Listen/Interacting with Data/Viewing and Analyzing Listen Searches.pdf"
+      ],
+      "citations": [
+        "Listen/Interacting with Data/Exporting Mentions in Listen.pdf"
+      ],
+      "related_flows": [
+        "flow_004",
+        "flow_009"
+      ]
+    },
+    {
+      "id": "flow_009",
+      "name": "Using Guided Search for Brand Monitoring",
+      "category": "Search Setup and Configuration",
+      "description": "Create structured searches for brands, issues, campaigns, persons, or topics using guided interface",
+      "prerequisites": [
+        "Clear understanding of search objective",
+        "Knowledge of relevant keywords and hashtags"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Select Guided Search option",
+          "details": "Choose from Brand, Issue, Campaign, Person, or Topic"
+        },
+        {
+          "step": 2,
+          "action": "Enter search criteria in structured fields",
+          "details": "Add keywords and hashtags using comma separation"
+        },
+        {
+          "step": 3,
+          "action": "Configure Include tab",
+          "details": "Specify terms that must be present in mentions"
+        },
+        {
+          "step": 4,
+          "action": "Configure Exclude tab",
+          "details": "Specify terms to filter out from results"
+        },
+        {
+          "step": 5,
+          "action": "Review auto-generated query",
+          "details": "Listen automatically creates advanced query based on inputs"
+        },
+        {
+          "step": 6,
+          "action": "Execute search",
+          "details": "Click Search to view results"
+        },
+        {
+          "step": 7,
+          "action": "Optionally create contextual searches",
+          "details": "For brands, create additional searches within brand context"
+        }
+      ],
+      "expected_outcomes": [
+        "Structured, comprehensive search query",
+        "Balanced inclusion and exclusion criteria",
+        "Professional-grade search configuration",
+        "Foundation for ongoing monitoring"
+      ],
+      "source_documents": [
+        "Listen/Getting Started/Creating and Saving Searches.pdf",
+        "Listen/Interacting with Data/Filtering Searches in Listen.pdf"
+      ],
+      "citations": [
+        "Listen/Getting Started/Creating and Saving Searches.pdf"
+      ],
+      "related_flows": [
+        "flow_004",
+        "flow_008"
+      ]
+    },
+    {
+      "id": "flow_010",
+      "name": "Managing Mention Tags",
+      "category": "Data Analysis and Visualization",
+      "description": "Create and apply custom tags to categorize mentions for better organization",
+      "prerequisites": [
+        "Saved Search (tags not available in Quick Search)",
+        "User role of Team Leader or Admin for tag management"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Open mention details",
+          "details": "Click on specific mention to expand full view"
+        },
+        {
+          "step": 2,
+          "action": "Access tag options",
+          "details": "Look for 'Add tag' option in mention interface"
+        },
+        {
+          "step": 3,
+          "action": "Create or select tag",
+          "details": "Enter new tag name or choose from existing tags"
+        },
+        {
+          "step": 4,
+          "action": "Apply tag to mention",
+          "details": "Confirm tag assignment"
+        },
+        {
+          "step": 5,
+          "action": "Use tags for filtering",
+          "details": "Filter search results by applied tags for analysis"
+        }
+      ],
+      "expected_outcomes": [
+        "Mentions categorized by custom criteria",
+        "Improved search organization",
+        "Enhanced filtering capabilities",
+        "Better trend identification"
+      ],
+      "source_documents": [
+        "Listen/Interacting with Data/Mention Tags.pdf",
+        "Listen/Interacting with Data/Filtering Searches in Listen.pdf"
+      ],
+      "citations": [
+        "Listen/Interacting with Data/Mention Tags.pdf"
+      ],
+      "related_flows": [
+        "flow_006",
+        "flow_002"
+      ]
+    },
+    {
+      "id": "flow_011",
+      "name": "Comparing Multiple Content Sources",
+      "category": "Data Analysis and Visualization",
+      "description": "Compare performance and metrics across different owned social channels",
+      "prerequisites": [
+        "Multiple content sources set up",
+        "Sufficient data across sources",
+        "Team access to all sources being compared"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Start with single content source",
+          "details": "Create search for one owned channel using Content Source Settings"
+        },
+        {
+          "step": 2,
+          "action": "Save the initial search",
+          "details": "Convert to Saved Search to enable multi-source comparison"
+        },
+        {
+          "step": 3,
+          "action": "Add additional content sources",
+          "details": "Use 'Add Saved Search' or include additional sources during save process"
+        },
+        {
+          "step": 4,
+          "action": "Review comparative analytics",
+          "details": "Analyze metrics like sentiment, engagement, reach across channels"
+        },
+        {
+          "step": 5,
+          "action": "Apply filters for specific comparisons",
+          "details": "Use platform, timeframe, or other filters to focus analysis"
+        }
+      ],
+      "expected_outcomes": [
+        "Side-by-side channel performance comparison",
+        "Identification of best-performing content types",
+        "Understanding of audience preferences by platform",
+        "Data-driven content strategy insights"
+      ],
+      "source_documents": [
+        "Listen/Listen - Additional Features/Comparing Multiple Listen Searches.pdf"
+      ],
+      "citations": [
+        "Listen/Listen - Additional Features/Comparing Multiple Listen Searches.pdf"
+      ],
+      "related_flows": [
+        "flow_001"
+      ]
+    },
+    {
+      "id": "flow_012",
+      "name": "Setting Up Targeted Data Sources Authentication",
+      "category": "Content Source Management",
+      "description": "Authenticate social media accounts to enable tracking of owned content sources",
+      "prerequisites": [
+        "Admin access to social media accounts",
+        "User role of Team Leader or Admin in Listen",
+        "Valid account credentials"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Initiate authentication process",
+          "details": "Select content source type that requires authentication"
+        },
+        {
+          "step": 2,
+          "action": "Connect with social platform",
+          "details": "Click platform-specific connection button (Connect with Facebook, etc.)"
+        },
+        {
+          "step": 3,
+          "action": "Authorize Brandwatch access",
+          "details": "Grant required permissions on social platform",
+          "platform_requirements": {
+            "Facebook": "Page admin access required",
+            "Instagram": "Business or Creator account needed",
+            "LinkedIn": "Company Page admin access required",
+            "TikTok": "Business account required"
+          }
+        },
+        {
+          "step": 4,
+          "action": "Verify connection",
+          "details": "Confirm successful authentication in Listen interface"
+        },
+        {
+          "step": 5,
+          "action": "Select specific sources to track",
+          "details": "Choose which pages/accounts from authenticated connection to monitor"
+        }
+      ],
+      "expected_outcomes": [
+        "Successful account authentication",
+        "Access to owned page/account data",
+        "Ability to track posts, comments, and engagement",
+        "Historical data access (typically 365 days)"
+      ],
+      "troubleshooting": [
+        "Ensure account has proper admin permissions",
+        "Check for special characters in organization names",
+        "Verify account hasn't become unauthenticated",
+        "Contact support if data doesn't appear within 1 hour"
+      ],
+      "source_documents": [
+        "Listen/Listen - Additional Features/Sources for Listen Mentions.pdf"
+      ],
+      "citations": [
+        "Listen/Listen - Additional Features/Sources for Listen Mentions.pdf"
+      ],
+      "related_flows": [
+        "flow_001"
+      ]
+    },
+    {
+      "id": "flow_013",
+      "name": "Creating Shareable Report Links",
+      "category": "Data Export and Sharing",
+      "description": "Generate public links to share Listen search results with external stakeholders",
+      "prerequisites": [
+        "Saved Search with data to share",
+        "Appropriate permissions for external sharing"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Open target Saved Search",
+          "details": "Navigate to search intended for sharing"
+        },
+        {
+          "step": 2,
+          "action": "Access sharing options",
+          "details": "Look for sharing or report link functionality"
+        },
+        {
+          "step": 3,
+          "action": "Configure sharing parameters",
+          "details": "Set timeframe, data visibility, and access permissions"
+        },
+        {
+          "step": 4,
+          "action": "Generate shareable link",
+          "details": "Create public URL that doesn't require Login credentials"
+        },
+        {
+          "step": 5,
+          "action": "Distribute link to stakeholders",
+          "details": "Share URL via email or other communication channels"
+        }
+      ],
+      "expected_outcomes": [
+        "External stakeholders can view search results",
+        "No Login required for link recipients",
+        "Professional presentation of data",
+        "Controlled access to specific insights"
+      ],
+      "source_documents": [
+        "Listen/Listen - Additional Features/Creating a Shareable Report Link in Listen.pdf"
+      ],
+      "citations": [
+        "Listen/Listen - Additional Features/Creating a Shareable Report Link in Listen.pdf"
+      ],
+      "related_flows": [
+        "flow_001"
+      ]
+    },
+    {
+      "id": "flow_014",
+      "name": "Scheduling and Emailing Reports",
+      "category": "Data Export and Sharing",
+      "description": "Set up automated delivery of Listen reports to stakeholders on recurring schedule",
+      "prerequisites": [
+        "Saved Search with relevant data",
+        "User role of Team Leader or Admin",
+        "List of report recipients"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access report scheduling",
+          "details": "Navigate to reporting options within target search"
+        },
+        {
+          "step": 2,
+          "action": "Configure report content",
+          "details": "Select data elements, timeframes, and format"
+        },
+        {
+          "step": 3,
+          "action": "Set delivery schedule",
+          "details": "Choose frequency: daily, weekly, monthly, or custom interval"
+        },
+        {
+          "step": 4,
+          "action": "Add recipients",
+          "details": "Include internal team members and external stakeholders"
+        },
+        {
+          "step": 5,
+          "action": "Configure email settings",
+          "details": "Set subject line, message, and delivery time"
+        },
+        {
+          "step": 6,
+          "action": "Activate scheduled reporting",
+          "details": "Save configuration and enable automatic delivery"
+        }
+      ],
+      "expected_outcomes": [
+        "Automated report delivery on schedule",
+        "Consistent stakeholder communication",
+        "Reduced manual reporting effort",
+        "Timely insights distribution"
+      ],
+      "source_documents": [
+        "Listen/Listen - Additional Features/Scheduling and Emailing Listen Reports.pdf"
+      ],
+      "citations": [
+        "Listen/Listen - Additional Features/Scheduling and Emailing Listen Reports.pdf"
+      ],
+      "related_flows": [
+        "flow_001"
+      ]
+    },
+    {
+      "id": "flow_015",
+      "name": "Using Ready-to-Use Social Panels",
+      "category": "Data Analysis and Visualization",
+      "description": "Access pre-built dashboard panels for common social media monitoring scenarios",
+      "prerequisites": [
+        "Active Listen search with social media data",
+        "Understanding of panel objectives"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Access social panels",
+          "details": "Navigate to Ready-to-Use Social Panels section"
+        },
+        {
+          "step": 2,
+          "action": "Select appropriate panel",
+          "details": "Choose panel matching analysis needs and data type"
+        },
+        {
+          "step": 3,
+          "action": "Apply panel to search",
+          "details": "Connect panel visualization to current search data"
+        },
+        {
+          "step": 4,
+          "action": "Review panel insights",
+          "details": "Analyze pre-configured metrics and visualizations"
+        },
+        {
+          "step": 5,
+          "action": "Customize panel if needed",
+          "details": "Adjust timeframes, filters, or display options"
+        },
+        {
+          "step": 6,
+          "action": "Export or share panel results",
+          "details": "Use panel data for reporting or further analysis"
+        }
+      ],
+      "expected_outcomes": [
+        "Quick access to professional visualizations",
+        "Standardized analysis approach",
+        "Time-saving dashboard setup",
+        "Industry best practice insights"
+      ],
+      "source_documents": [
+        "Listen/Getting Started/Creating and Managing Listen Email Alerts.pdf",
+        "Listen/Getting Started/Creating and Managing Listen Email Alerts.pdf"
+      ],
+      "citations": [
+        "Listen/Interacting with Data/Ready to Use Social Panels in Listen.pdf"
+      ],
+      "related_flows": [
+        "flow_001"
+      ]
+    },
+    {
+      "flow_name": "Updated API Test Flow",
+      "description": "Updated test flow via API",
+      "flowCategory": "Testing",
+      "steps": [
+        "Step 1: Initialize test",
+        "Step 2: Execute test",
+        "Step 3: Verify results",
+        "Step 4: Additional verification"
+      ],
+      "source_documents": [
+        "Test Document 1",
+        "Test Document 2"
+      ],
+      "flow_id": "LST_MG6D1Y4I",
+      "created_at": "2025-09-30T09:34:10.434Z",
+      "updated_at": "2025-09-30T09:34:10.439Z",
+      "version": "1.0.1",
+      "change_log": [
+        {
+          "version": "1.0.1",
+          "date": "2025-09-30T09:34:10.439Z",
+          "changes": [
+            "Flow updated via API"
+          ],
+          "source": "API"
+        }
+      ]
+    }
+  ]
+}

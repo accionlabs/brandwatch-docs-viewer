@@ -24,8 +24,11 @@ const ModuleSelector = ({
   const setExpandedState = setExpandedModules !== undefined ? setExpandedModules : setLocalExpandedModules;
   const moduleRefs = useRef({});
 
-  const handleModuleClick = (moduleId) => {
-    if (selectedModule === moduleId) {
+  const handleModuleClick = (module) => {
+    const moduleId = typeof module === 'string' ? module : module.id;
+    const currentSelectedId = typeof selectedModule === 'string' ? selectedModule : selectedModule?.id;
+
+    if (currentSelectedId === moduleId) {
       // If already selected, toggle expand/collapse
       setExpandedState(prev => ({
         ...prev,
@@ -33,7 +36,7 @@ const ModuleSelector = ({
       }));
     } else {
       // If selecting a new module, select it and expand it
-      onSelectModule(moduleId);
+      onSelectModule(module);
       setExpandedState(prev => ({
         ...prev,
         [moduleId]: true
@@ -41,12 +44,14 @@ const ModuleSelector = ({
     }
   };
 
-  // Scroll to module when flows are loaded
+  // Scroll to module when flows are loaded (but NOT if a specific flow is selected)
   useEffect(() => {
-    if (selectedModule && flows.length > 0 && expandedState[selectedModule]) {
+    const currentSelectedId = typeof selectedModule === 'string' ? selectedModule : selectedModule?.id;
+    // Only scroll to module if there's no selected flow - this prevents overriding flow scroll
+    if (currentSelectedId && flows.length > 0 && expandedState[currentSelectedId] && !selectedFlow) {
       // Small delay to ensure DOM is updated
       setTimeout(() => {
-        const moduleElement = moduleRefs.current[selectedModule];
+        const moduleElement = moduleRefs.current[currentSelectedId];
         if (moduleElement) {
           const sidebar = moduleElement.closest('.sidebar-content');
           if (sidebar) {
@@ -71,27 +76,39 @@ const ModuleSelector = ({
         }
       }, 150); // Slightly longer delay to ensure flows are rendered
     }
-  }, [selectedModule, flows.length, expandedState]);
+  }, [selectedModule, flows.length, expandedState, selectedFlow]);
 
   const isExpanded = (moduleId) => {
-    return expandedState[moduleId] && selectedModule === moduleId;
+    const currentSelectedId = typeof selectedModule === 'string' ? selectedModule : selectedModule?.id;
+    return expandedState[moduleId] && currentSelectedId === moduleId;
   };
 
   return (
     <div className="module-selector">
       {modules.map((module) => {
-        const isSelected = selectedModule === module.id;
+        // Handle divider
+        if (module.isDivider) {
+          return (
+            <div key={module.id} className="module-divider">
+              <hr />
+            </div>
+          );
+        }
+
+        const currentSelectedId = typeof selectedModule === 'string' ? selectedModule : selectedModule?.id;
+        const isSelected = currentSelectedId === module.id;
         const expanded = isExpanded(module.id);
+        const isCrossModule = module.isCrossModule;
 
         return (
           <div
             key={module.id}
-            className="module-item"
+            className={`module-item ${isCrossModule ? 'cross-module-item' : ''}`}
             ref={el => moduleRefs.current[module.id] = el}
           >
             <div
-              className={`module-card ${isSelected ? 'selected' : ''}`}
-              onClick={() => handleModuleClick(module.id)}
+              className={`module-card ${isSelected ? 'selected' : ''} ${isCrossModule ? 'cross-module' : ''}`}
+              onClick={() => handleModuleClick(module)}
             >
               <div className="module-expand-icon">
                 {expanded ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
@@ -99,7 +116,7 @@ const ModuleSelector = ({
               <div className="module-icon">{module.icon}</div>
               <div className="module-info">
                 <h4>{module.name}</h4>
-                <p>{module.flows} flows</p>
+                <p>{module.flows} {isCrossModule ? 'workflows' : 'flows'}</p>
               </div>
             </div>
 
@@ -120,8 +137,8 @@ const ModuleSelector = ({
                   <FlowList
                     flows={filteredFlows}
                     selectedFlow={selectedFlow}
-                    onSelectFlow={onSelectFlow}
                     loading={loading}
+                    moduleId={module.id}
                   />
                 ) : (
                   <div className="no-flows">No flows available</div>

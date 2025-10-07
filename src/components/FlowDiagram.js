@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { ZoomIn, ZoomOut, Maximize2, Move } from 'lucide-react';
 import './FlowDiagram.css';
 
-const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }) => {
+const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true, onModuleFlowClick }) => {
   const [nodes, setNodes] = useState([]);
   const [containerSize, setContainerSize] = useState({ width: 800, height: 600 });
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -118,10 +118,27 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
 
   const generateNodesFromFlow = (flowData) => {
     const generatedNodes = [];
-    const steps = flowData.steps || [];
+    const isCrossModule = flowData.isCrossModule || !!flowData.workflow_steps;
+    const steps = isCrossModule ? (flowData.workflow_steps || []) : (flowData.steps || []);
     let currentY = 60;
     const nodeSpacing = 40; // Reduced base spacing between nodes
     const decisionExtraSpace = 10; // Reduced extra space for decision nodes
+    const moduleSpacing = 60; // Extra spacing between modules
+
+    // Module colors for cross-module workflows
+    const moduleColors = {
+      'listen': '#4A90E2',
+      'consumer_research': '#7B68EE',
+      'engage': '#50C878',
+      'measure': '#FFB347',
+      'vizia': '#FF6B6B',
+      'publish': '#9370DB',
+      'advertise': '#FF69B4',
+      'influence': '#20B2AA',
+      'benchmark': '#87CEEB',
+      'reviews': '#DDA0DD',
+      'audience': '#F0E68C'
+    };
 
     // Add start node
     generatedNodes.push({
@@ -133,21 +150,61 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
     });
     currentY += 50 + nodeSpacing;
 
+    // Track current module for cross-module workflows
+    let currentModule = null;
+
     // Add step nodes
     steps.forEach((step, index) => {
       let stepText = '';
+      let stepModule = null;
 
-      // Handle different step formats
-      if (typeof step === 'string') {
-        stepText = step;
-      } else if (step.action) {
-        stepText = step.action;
-      } else if (step.description) {
-        stepText = step.description;
-      } else if (step.step_description) {
-        stepText = step.step_description;
+      // Handle cross-module workflow steps
+      if (isCrossModule) {
+        stepModule = step.module;
+        stepText = step.step_description || step.description || `Step ${index + 1}`;
+
+        // Add module label if module changes
+        if (stepModule && stepModule !== currentModule) {
+          // Get proper module display name
+          const moduleDisplayNames = {
+            'listen': 'LISTEN',
+            'consumer_research': 'CONSUMER RESEARCH',
+            'engage': 'ENGAGE',
+            'measure': 'MEASURE',
+            'vizia': 'VIZIA',
+            'publish': 'PUBLISH',
+            'advertise': 'ADVERTISE',
+            'influence': 'INFLUENCE',
+            'benchmark': 'BENCHMARK',
+            'reviews': 'REVIEWS',
+            'audience': 'AUDIENCE'
+          };
+          const moduleName = moduleDisplayNames[stepModule] || stepModule.toUpperCase();
+          generatedNodes.push({
+            id: `module-label-${stepModule}`,
+            type: 'module-label',
+            label: `📦 ${moduleName} MODULE`,
+            position: { x: 400, y: currentY },
+            height: 30,
+            module: stepModule,
+            color: moduleColors[stepModule]
+          });
+          currentY += 40;
+          currentModule = stepModule;
+        }
       } else {
-        stepText = `Step ${index + 1}`;
+        // Handle regular flow steps
+        if (typeof step === 'string') {
+          stepText = step;
+        } else if (step.action) {
+          stepText = step.action;
+        } else if (step.description) {
+          stepText = step.description;
+        } else if (step.step_description) {
+          stepText = step.step_description;
+        } else {
+          stepText = `Step ${index + 1}`;
+        }
       }
 
       const isDecision = stepText.toLowerCase().includes('if ') ||
@@ -170,10 +227,22 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
         type: isDecision ? 'decision' : 'process',
         label: stepText,
         position: { x: 400, y: currentY + nodeHeight/2 },
-        height: nodeHeight
+        height: nodeHeight,
+        module: stepModule,
+        color: stepModule ? moduleColors[stepModule] : null,
+        moduleFlowReference: isCrossModule ? step.module_flow_reference : null,
+        stepData: step
       });
 
+      // Add extra spacing between different modules
+      const nextStep = steps[index + 1];
+      const nextModule = nextStep?.module;
+      const moduleChanges = isCrossModule && stepModule && nextModule && stepModule !== nextModule;
+
       currentY += nodeHeight + (isDecision ? nodeSpacing + decisionExtraSpace : nodeSpacing);
+      if (moduleChanges) {
+        currentY += moduleSpacing;
+      }
     });
 
     // Add end node
@@ -219,10 +288,41 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
       'start': '#4CAF50',
       'end': '#F44336',
       'process': '#2196F3',
-      'decision': '#FF9800'
+      'decision': '#FF9800',
+      'module-label': '#6B7280'
     };
 
-    if (node.type === 'decision') {
+    // Use module-specific color if available
+    const nodeColor = node.color || colors[node.type];
+
+    if (node.type === 'module-label') {
+      // Module label for cross-module workflows
+      return (
+        <g key={node.id}>
+          <rect
+            x={node.position.x - 150}
+            y={node.position.y - 15}
+            width="300"
+            height="35"
+            rx="8"
+            ry="8"
+            fill={node.color || nodeColor}
+            stroke="white"
+            strokeWidth="2"
+          />
+          <text
+            x={node.position.x}
+            y={node.position.y + 4}
+            textAnchor="middle"
+            fill="white"
+            fontSize="14"
+            fontWeight="bold"
+          >
+            {node.label}
+          </text>
+        </g>
+      );
+    } else if (node.type === 'decision') {
       // Diamond shape for decision nodes
       const size = 60;
       const points = [
@@ -240,7 +340,7 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
         <g key={node.id}>
           <polygon
             points={points}
-            fill={colors[node.type]}
+            fill={nodeColor}
             stroke="white"
             strokeWidth="2"
           />
@@ -270,7 +370,7 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
             height="50"
             rx="25"
             ry="25"
-            fill={colors[node.type]}
+            fill={nodeColor}
             stroke="white"
             strokeWidth="2"
           />
@@ -302,7 +402,7 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
             height={boxHeight}
             rx="8"
             ry="8"
-            fill={colors[node.type]}
+            fill={nodeColor}
             stroke="white"
             strokeWidth="2"
           />
@@ -326,8 +426,16 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
   const renderConnectionsAsSVG = () => {
     const connections = [];
     for (let i = 0; i < nodes.length - 1; i++) {
-      const fromNode = nodes[i];
-      const toNode = nodes[i + 1];
+      let fromNode = nodes[i];
+      let toNode = nodes[i + 1];
+
+      // Skip module-label nodes for connections
+      if (fromNode && fromNode.type === 'module-label') {
+        continue;
+      }
+      if (toNode && toNode.type === 'module-label' && i + 2 < nodes.length) {
+        toNode = nodes[i + 2];
+      }
 
       // Calculate connection points based on node type and height
       let y1Offset = 25; // Default for start/end nodes
@@ -531,6 +639,46 @@ const FlowDiagram = ({ flow, allFlows = [], onFlowSelect, showCitations = true }
               );
             })}
           </ul>
+        </div>
+      )}
+      {/* Related Module Flows for Cross-Module Workflows */}
+      {flow.workflow_steps && flow.workflow_steps.length > 0 && (
+        <div className="related-module-flows">
+          <h4>Related Module Flows</h4>
+          <div className="module-flows-grid">
+            {flow.workflow_steps.filter(step => step.module_flow_reference).map((step, idx) => {
+              const moduleDisplayNames = {
+                'listen': 'Listen',
+                'consumer_research': 'Consumer Research',
+                'engage': 'Engage',
+                'measure': 'Measure',
+                'vizia': 'Vizia',
+                'publish': 'Publish',
+                'advertise': 'Advertise',
+                'influence': 'Influence',
+                'benchmark': 'Benchmark',
+                'reviews': 'Reviews',
+                'audience': 'Audience'
+              };
+
+              const moduleName = moduleDisplayNames[step.module] || step.module;
+              const flowRef = step.module_flow_reference;
+
+              return (
+                <div key={idx} className="module-flow-item">
+                  <div className="module-flow-step">Step {step.step_id}</div>
+                  <div className="module-flow-module">{moduleName}</div>
+                  <a
+                    href={`#/${step.module}/${flowRef.flow_id}`}
+                    className="module-flow-link"
+                    title={`${flowRef.description} (${flowRef.flow_id})`}
+                  >
+                    {flowRef.flow_name}
+                  </a>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
       {showCitations && flow.source_documents && flow.source_documents.length > 0 && (

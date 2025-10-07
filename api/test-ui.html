@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandwatch API Test Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .status {
+            margin-left: auto;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .status.online {
+            background: #10b981;
+            color: white;
+        }
+
+        .status.offline {
+            background: #ef4444;
+            color: white;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
+
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        .sidebar h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .endpoint-list {
+            list-style: none;
+        }
+
+        .endpoint-list li {
+            margin-bottom: 8px;
+        }
+
+        .endpoint-list button {
+            width: 100%;
+            text-align: left;
+            padding: 10px 12px;
+            border: none;
+            background: #f3f4f6;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .endpoint-list button:hover {
+            background: #e5e7eb;
+        }
+
+        .endpoint-list button.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .endpoint-list .method {
+            display: inline-block;
+            width: 50px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .method.get { color: #10b981; }
+        .method.post { color: #3b82f6; }
+        .method.put { color: #f59e0b; }
+        .method.delete { color: #ef4444; }
+        .method.patch { color: #8b5cf6; }
+
+        .endpoint-list button.active .method {
+            color: white;
+        }
+
+        .content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .endpoint-section {
+            display: none;
+        }
+
+        .endpoint-section.active {
+            display: block;
+        }
+
+        .endpoint-header {
+            margin-bottom: 25px;
+        }
+
+        .endpoint-header h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .endpoint-header .description {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #374151;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-group textarea {
+            min-height: 150px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 13px;
+        }
+
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .response-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .response-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .response-status {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .response-status.success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .response-status.error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .response-body {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f4f6;
+            border-radius: 50%;
+            border-top-color: #667eea;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .quick-actions {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .quick-actions h4 {
+            color: #374151;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .quick-actions .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .quick-actions .btn {
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+
+        .tab-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: #6b7280;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .tab:hover {
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                🧪 Brandwatch API Test Interface
+                <span id="api-status" class="status offline">Checking...</span>
+            </h1>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>API Endpoints</h2>
+                <ul class="endpoint-list">
+                    <li><button onclick="showEndpoint('health')" class="active"><span class="method get">GET</span> Health Check</button></li>
+                    <li><button onclick="showEndpoint('list-modules')"><span class="method get">GET</span> List Modules</button></li>
+                    <li><button onclick="showEndpoint('get-module')"><span class="method get">GET</span> Get Module</button></li>
+                    <li><button onclick="showEndpoint('module-stats')"><span class="method get">GET</span> Module Stats</button></li>
+                    <li><button onclick="showEndpoint('list-flows')"><span class="method get">GET</span> List Flows</button></li>
+                    <li><button onclick="showEndpoint('get-flow')"><span class="method get">GET</span> Get Flow</button></li>
+                    <li><button onclick="showEndpoint('create-flow')"><span class="method post">POST</span> Create Flow</button></li>
+                    <li><button onclick="showEndpoint('update-flow')"><span class="method put">PUT</span> Update Flow</button></li>
+                    <li><button onclick="showEndpoint('delete-flow')"><span class="method delete">DEL</span> Delete Flow</button></li>
+                    <li><button onclick="showEndpoint('search')"><span class="method get">GET</span> Search</button></li>
+                    <li><button onclick="showEndpoint('advanced-search')"><span class="method post">POST</span> Adv. Search</button></li>
+                    <li><button onclick="showEndpoint('cross-module')"><span class="method get">GET</span> Cross-Module</button></li>
+                    <li><button onclick="showEndpoint('validate-workflow')"><span class="method get">GET</span> Validate Workflow</button></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <!-- Health Check -->
+                <div id="health" class="endpoint-section active">
+                    <div class="endpoint-header">
+                        <h2>Health Check</h2>
+                        <p class="description">Check if the API server is running and responsive</p>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testHealthCheck()">Test Endpoint</button>
+                    </div>
+                    <div class="response-section" id="health-response" style="display: none;"></div>
+                </div>
+
+                <!-- List Modules -->
+                <div id="list-modules" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>List All Modules</h2>
+                        <p class="description">Get a list of all available modules with flow counts</p>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testListModules()">Test Endpoint</button>
+                    </div>
+                    <div class="response-section" id="list-modules-response" style="display: none;"></div>
+                </div>
+
+                <!-- Get Module -->
+                <div id="get-module" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Get Module Details</h2>
+                        <p class="description">Get detailed information about a specific module</p>
+                    </div>
+                    <div class="input-group">
+                        <label>Module ID</label>
+                        <select id="get-module-id">
+                            <option value="listen">Listen</option>
+                            <option value="measure">Measure</option>
+                            <option value="engage">Engage</option>
+                            <option value="publish">Publish</option>
+                            <option value="advertise">Advertise</option>
+                            <option value="audience">Audience</option>
+                            <option value="benchmark">Benchmark</option>
+                            <option value="consumer_research">Consumer Research</option>
+                            <option value="influence">Influence</option>
+                            <option value="reviews">Reviews</option>
+                            <option value="vizia">VIZIA</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testGetModule()">Test Endpoint</button>
+                    </div>
+                    <div class="response-section" id="get-module-response" style="display: none;"></div>
+                </div>
+
+                <!-- Module Stats -->
+                <div id="module-stats" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Module Statistics</h2>
+                        <p class="description">Get statistics for a specific module</p>
+                    </div>
+                    <div class="input-group">
+                        <label>Module ID</label>
+                        <select id="module-stats-id">
+                            <option value="listen">Listen</option>
+                            <option value="measure">Measure</option>
+                            <option value="engage">Engage</option>
+                            <option value="publish">Publish</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testModuleStats()">Test Endpoint</button>
+                    </div>
+                    <div class="response-section" id="module-stats-response" style="display: none;"></div>
+                </div>
+
+                <!-- List Flows -->
+                <div id="list-flows" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>List Flows</h2>
+                        <p class="description">Get all flows for a specific module</p>
+                    </div>
+                    <div class="input-group">
+                        <label>Module</label>
+                        <select id="list-flows-module">
+                            <option value="listen">Listen</option>
+                            <option value="measure">Measure</option>
+                            <option value="engage">Engage</option>
+                            <option value="publish">Publish</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testListFlows()">Test Endpoint</button>
+                    </div>
+                    <div class="response-section" id="list-flows-response" style="display: none;"></div>
+                </div>
+
+                <!-- Get Flow -->
+                <div id="get-flow" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Get Specific Flow</h2>
+                        <p class="description">Get details of a specific flow</p>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Module</label>
+                            <select id="get-flow-module">
+                                <option value="listen">Listen</option>
+                                <option value="measure">Measure</option>
+                                <option value="engage">Engage</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Flow ID</label>
+                            <input type="text" id="get-flow-id" placeholder="e.g., flow_001" value="flow_001">
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testGetFlow()">Test Endpoint</button>
+                    </div>
+                    <div class="response-section" id="get-flow-response" style="display: none;"></div>
+                </div>
+
+                <!-- Create Flow -->
+                <div id="create-flow" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Create New Flow</h2>
+                        <p class="description">Create a new flow in a module</p>
+                    </div>
+                    <div class="input-group">
+                        <label>Module</label>
+                        <select id="create-flow-module">
+                            <option value="listen">Listen</option>
+                            <option value="measure">Measure</option>
+                            <option value="engage">Engage</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Flow Data (JSON)</label>
+                        <textarea id="create-flow-data">{
+  "flow_name": "Test Flow from UI",
+  "description": "This is a test flow created from the API test interface",
+  "flowCategory": "Testing",
+  "steps": [
+    "Step 1: Initialize the process",
+    "Step 2: Execute main operation",
+    "Step 3: Verify results",
+    "Step 4: Complete workflow"
+  ],
+  "source_documents": [
+    "Test Document 1",
+    "Test Document 2"
+  ],
+  "tags": ["test", "api", "demo"]
+}</textarea>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testCreateFlow()">Create Flow</button>
+                        <button class="btn btn-secondary" onclick="resetCreateForm()">Reset Form</button>
+                    </div>
+                    <div class="response-section" id="create-flow-response" style="display: none;"></div>
+                </div>
+
+                <!-- Update Flow -->
+                <div id="update-flow" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Update Flow</h2>
+                        <p class="description">Update an existing flow</p>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Module</label>
+                            <select id="update-flow-module">
+                                <option value="listen">Listen</option>
+                                <option value="measure">Measure</option>
+                                <option value="engage">Engage</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Flow ID</label>
+                            <input type="text" id="update-flow-id" placeholder="Enter flow ID to update">
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <h4>Quick Actions</h4>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" onclick="loadFlowForUpdate()">Load Existing Flow</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Updated Flow Data (JSON)</label>
+                        <textarea id="update-flow-data">{
+  "flow_name": "Updated Flow Name",
+  "description": "Updated description",
+  "steps": [
+    "Updated Step 1",
+    "Updated Step 2",
+    "New Step 3"
+  ]
+}</textarea>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testUpdateFlow()">Update Flow</button>
+                    </div>
+                    <div class="response-section" id="update-flow-response" style="display: none;"></div>
+                </div>
+
+                <!-- Delete Flow -->
+                <div id="delete-flow" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Delete Flow</h2>
+                        <p class="description">Delete a flow from a module</p>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Module</label>
+                            <select id="delete-flow-module">
+                                <option value="listen">Listen</option>
+                                <option value="measure">Measure</option>
+                                <option value="engage">Engage</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Flow ID</label>
+                            <input type="text" id="delete-flow-id" placeholder="Enter flow ID to delete">
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-danger" onclick="testDeleteFlow()">Delete Flow</button>
+                    </div>
+                    <div class="response-section" id="delete-flow-response" style="display: none;"></div>
+                </div>
+
+                <!-- Search -->
+                <div id="search" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Search Flows</h2>
+                        <p class="description">Search for flows across all modules</p>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Search Query</label>
+                            <input type="text" id="search-query" placeholder="Enter search term..." value="alert">
+                        </div>
+                        <div class="input-group">
+                            <label>Module Filter (optional)</label>
+                            <select id="search-module">
+                                <option value="">All Modules</option>
+                                <option value="listen">Listen</option>
+                                <option value="measure">Measure</option>
+                                <option value="engage">Engage</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Limit</label>
+                            <input type="number" id="search-limit" value="10" min="1" max="100">
+                        </div>
+                        <div class="input-group">
+                            <label>Offset</label>
+                            <input type="number" id="search-offset" value="0" min="0">
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testSearch()">Search</button>
+                    </div>
+                    <div class="response-section" id="search-response" style="display: none;"></div>
+                </div>
+
+                <!-- Advanced Search -->
+                <div id="advanced-search" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Advanced Search</h2>
+                        <p class="description">Search with multiple filters</p>
+                    </div>
+                    <div class="input-group">
+                        <label>Search Configuration (JSON)</label>
+                        <textarea id="advanced-search-data">{
+  "query": "data",
+  "modules": ["listen", "measure"],
+  "hasDocumentation": true,
+  "hasDependencies": false,
+  "limit": 10,
+  "offset": 0
+}</textarea>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testAdvancedSearch()">Search</button>
+                    </div>
+                    <div class="response-section" id="advanced-search-response" style="display: none;"></div>
+                </div>
+
+                <!-- Cross-Module Workflows -->
+                <div id="cross-module" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Cross-Module Workflows</h2>
+                        <p class="description">Get all cross-module workflows</p>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testCrossModule()">Get Workflows</button>
+                    </div>
+                    <div class="response-section" id="cross-module-response" style="display: none;"></div>
+                </div>
+
+                <!-- Validate Workflow -->
+                <div id="validate-workflow" class="endpoint-section">
+                    <div class="endpoint-header">
+                        <h2>Validate Cross-Module Workflow</h2>
+                        <p class="description">Validate that all flow references in a workflow exist</p>
+                    </div>
+                    <div class="input-group">
+                        <label>Workflow ID</label>
+                        <select id="validate-workflow-id">
+                            <option value="crisis_management">Crisis Management</option>
+                            <option value="content_strategy">Content Strategy</option>
+                            <option value="influencer_campaign">Influencer Campaign</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="testValidateWorkflow()">Validate</button>
+                    </div>
+                    <div class="response-section" id="validate-workflow-response" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3001/api';
+        let currentEndpoint = 'health';
+
+        // Check API status on load
+        window.onload = async function() {
+            await checkApiStatus();
+            // Automatically test health endpoint on load
+            await testHealthCheck();
+        };
+
+        async function checkApiStatus() {
+            const statusEl = document.getElementById('api-status');
+            try {
+                const response = await fetch(`${API_BASE}/health`);
+                if (response.ok) {
+                    statusEl.textContent = 'Online';
+                    statusEl.className = 'status online';
+                } else {
+                    statusEl.textContent = 'Offline';
+                    statusEl.className = 'status offline';
+                }
+            } catch (error) {
+                statusEl.textContent = 'Offline';
+                statusEl.className = 'status offline';
+            }
+        }
+
+        function showEndpoint(endpointId) {
+            // Hide all sections
+            document.querySelectorAll('.endpoint-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.endpoint-list button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(endpointId).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.closest('button').classList.add('active');
+
+            currentEndpoint = endpointId;
+        }
+
+        async function makeApiCall(method, endpoint, data = null) {
+            const options = {
+                method,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            if (data && method !== 'GET') {
+                options.body = JSON.stringify(data);
+            }
+
+            const response = await fetch(`${API_BASE}${endpoint}`, options);
+            const result = await response.json();
+
+            return {
+                status: response.status,
+                statusText: response.statusText,
+                ok: response.ok,
+                data: result
+            };
+        }
+
+        function showResponse(elementId, response) {
+            const responseEl = document.getElementById(elementId);
+            responseEl.style.display = 'block';
+
+            const statusClass = response.ok ? 'success' : 'error';
+            const statusText = `${response.status} ${response.statusText}`;
+
+            responseEl.innerHTML = `
+                <h3>
+                    Response
+                    <span class="response-status ${statusClass}">${statusText}</span>
+                </h3>
+                <div class="response-body">${JSON.stringify(response.data, null, 2)}</div>
+            `;
+        }
+
+        // Test Functions
+        async function testHealthCheck() {
+            const response = await makeApiCall('GET', '/health');
+            showResponse('health-response', response);
+            await checkApiStatus();
+        }
+
+        async function testListModules() {
+            const response = await makeApiCall('GET', '/modules');
+            showResponse('list-modules-response', response);
+        }
+
+        async function testGetModule() {
+            const moduleId = document.getElementById('get-module-id').value;
+            const response = await makeApiCall('GET', `/modules/${moduleId}`);
+            showResponse('get-module-response', response);
+        }
+
+        async function testModuleStats() {
+            const moduleId = document.getElementById('module-stats-id').value;
+            const response = await makeApiCall('GET', `/modules/${moduleId}/stats`);
+            showResponse('module-stats-response', response);
+        }
+
+        async function testListFlows() {
+            const module = document.getElementById('list-flows-module').value;
+            const response = await makeApiCall('GET', `/flows/${module}`);
+            showResponse('list-flows-response', response);
+        }
+
+        async function testGetFlow() {
+            const module = document.getElementById('get-flow-module').value;
+            const flowId = document.getElementById('get-flow-id').value;
+            const response = await makeApiCall('GET', `/flows/${module}/${flowId}`);
+            showResponse('get-flow-response', response);
+        }
+
+        async function testCreateFlow() {
+            const module = document.getElementById('create-flow-module').value;
+            const flowData = JSON.parse(document.getElementById('create-flow-data').value);
+            const response = await makeApiCall('POST', `/flows/${module}`, flowData);
+            showResponse('create-flow-response', response);
+
+            if (response.ok && response.data.flow) {
+                // Store the created flow ID for easy testing
+                const flowId = response.data.flow.flow_id;
+                document.getElementById('update-flow-id').value = flowId;
+                document.getElementById('delete-flow-id').value = flowId;
+            }
+        }
+
+        async function testUpdateFlow() {
+            const module = document.getElementById('update-flow-module').value;
+            const flowId = document.getElementById('update-flow-id').value;
+            const flowData = JSON.parse(document.getElementById('update-flow-data').value);
+            const response = await makeApiCall('PUT', `/flows/${module}/${flowId}`, flowData);
+            showResponse('update-flow-response', response);
+        }
+
+        async function testDeleteFlow() {
+            const module = document.getElementById('delete-flow-module').value;
+            const flowId = document.getElementById('delete-flow-id').value;
+
+            if (confirm(`Are you sure you want to delete flow ${flowId}?`)) {
+                const response = await makeApiCall('DELETE', `/flows/${module}/${flowId}`);
+                showResponse('delete-flow-response', response);
+            }
+        }
+
+        async function testSearch() {
+            const query = document.getElementById('search-query').value;
+            const module = document.getElementById('search-module').value;
+            const limit = document.getElementById('search-limit').value;
+            const offset = document.getElementById('search-offset').value;
+
+            let endpoint = `/search?q=${encodeURIComponent(query)}`;
+            if (module) endpoint += `&module=${module}`;
+            endpoint += `&limit=${limit}&offset=${offset}`;
+
+            const response = await makeApiCall('GET', endpoint);
+            showResponse('search-response', response);
+        }
+
+        async function testAdvancedSearch() {
+            const searchData = JSON.parse(document.getElementById('advanced-search-data').value);
+            const response = await makeApiCall('POST', '/search/advanced', searchData);
+            showResponse('advanced-search-response', response);
+        }
+
+        async function testCrossModule() {
+            const response = await makeApiCall('GET', '/cross-module');
+            showResponse('cross-module-response', response);
+        }
+
+        async function testValidateWorkflow() {
+            const workflowId = document.getElementById('validate-workflow-id').value;
+            const response = await makeApiCall('GET', `/cross-module/${workflowId}/validate`);
+            showResponse('validate-workflow-response', response);
+        }
+
+        // Helper Functions
+        function resetCreateForm() {
+            document.getElementById('create-flow-data').value = `{
+  "flow_name": "Test Flow from UI",
+  "description": "This is a test flow created from the API test interface",
+  "flowCategory": "Testing",
+  "steps": [
+    "Step 1: Initialize the process",
+    "Step 2: Execute main operation",
+    "Step 3: Verify results",
+    "Step 4: Complete workflow"
+  ],
+  "source_documents": [
+    "Test Document 1",
+    "Test Document 2"
+  ],
+  "tags": ["test", "api", "demo"]
+}`;
+        }
+
+        async function loadFlowForUpdate() {
+            const module = document.getElementById('update-flow-module').value;
+            const flowId = document.getElementById('update-flow-id').value;
+
+            if (!flowId) {
+                alert('Please enter a Flow ID first');
+                return;
+            }
+
+            const response = await makeApiCall('GET', `/flows/${module}/${flowId}`);
+
+            if (response.ok && response.data.flow) {
+                const flow = response.data.flow;
+                // Remove metadata fields
+                delete flow.created_at;
+                delete flow.updated_at;
+                delete flow.version;
+                delete flow.change_log;
+                delete flow.flow_id;
+
+                document.getElementById('update-flow-data').value = JSON.stringify(flow, null, 2);
+                alert('Flow loaded! Modify the JSON and click Update Flow.');
+            } else {
+                alert('Could not load flow. Check the Flow ID.');
+            }
+        }
+    </script>
+</body>
+</html>

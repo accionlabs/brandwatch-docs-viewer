@@ -106,3 +106,33 @@
   color: #666;
   font-size: 0.875rem;
 }
+
+/* Module divider */
+.module-divider {
+  margin: 1rem 0;
+  padding: 0 0.5rem;
+}
+
+.module-divider hr {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 0;
+}
+
+/* Cross-module styling */
+.cross-module-item .module-card.cross-module {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.cross-module-item .module-card.cross-module:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.cross-module-item .module-card.cross-module.selected {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b5b95 100%);
+}
+
+.cross-module-item .module-card.cross-module p {
+  color: rgba(255, 255, 255, 0.9);
+}

@@ -1,0 +1,98 @@
+{
+  "workflow_id": "content_strategy_optimization",
+  "workflow_name": "Content Strategy Optimization Loop",
+  "description": "Data-driven content creation and optimization using insights from listening, research, publishing, and performance measurement",
+  "modules_involved": ["listen", "consumer_research", "publish", "measure", "benchmark"],
+  "business_value": "Maximizes content ROI through continuous optimization based on audience insights and competitive benchmarking",
+  "workflow_steps": [
+    {
+      "step_id": 1,
+      "module": "listen",
+      "module_flow_reference": {
+        "flow_name": "Using Guided Search for Brand Monitoring",
+        "flow_id": "flow_009",
+        "description": "Monitor trending topics and audience conversations"
+      },
+      "step_description": "Identify content opportunities",
+      "outputs": ["Trending topics", "Audience interests", "Content gaps"],
+      "source_documents": ["docs/cross_module_content_strategy.md"]
+    },
+    {
+      "step_id": 2,
+      "module": "consumer_research",
+      "module_flow_reference": null,
+      "step_description": "Research content themes",
+      "inputs": ["Trending topics from Listen"],
+      "outputs": ["Content insights", "Audience preferences", "Engagement patterns"],
+      "source_documents": ["docs/cross_module_content_strategy.md"]
+    },
+    {
+      "step_id": 3,
+      "module": "publish",
+      "module_flow_reference": {
+        "flow_name": "Post Scheduling Workflow",
+        "flow_id": "BW_PUB_006",
+        "description": "Create optimized content based on insights"
+      },
+      "step_description": "Create and publish content",
+      "inputs": ["Content insights", "Audience preferences"],
+      "outputs": ["Published content", "Publishing metrics"],
+      "source_documents": ["docs/cross_module_content_strategy.md"]
+    },
+    {
+      "step_id": 4,
+      "module": "measure",
+      "module_flow_reference": {
+        "flow_name": "Apply Content Performance Filters",
+        "flow_id": "widget_filtering_content",
+        "description": "Analyze content performance metrics"
+      },
+      "step_description": "Measure content effectiveness",
+      "inputs": ["Published content data"],
+      "outputs": ["Performance metrics", "Engagement rates", "ROI data"],
+      "source_documents": ["docs/cross_module_content_strategy.md"]
+    },
+    {
+      "step_id": 5,
+      "module": "benchmark",
+      "module_flow_reference": null,
+      "step_description": "Competitive content analysis",
+      "inputs": ["Performance metrics"],
+      "outputs": ["Competitive insights", "Performance gaps", "Best practices"],
+      "source_documents": ["docs/cross_module_content_strategy.md"]
+    },
+    {
+      "step_id": 6,
+      "module": "publish",
+      "module_flow_reference": {
+        "flow_name": "Content Calendar Management",
+        "flow_id": "BW_PUB_023",
+        "description": "Update content calendar based on optimization insights"
+      },
+      "step_description": "Implement optimization insights",
+      "inputs": ["Performance data", "Competitive insights"],
+      "outputs": ["Optimized content strategy"],
+      "source_documents": ["docs/cross_module_content_strategy.md"]
+    }
+  ],
+  "workflow_triggers": [
+    "Weekly content planning cycle",
+    "Monthly strategy review",
+    "Campaign launch",
+    "Performance threshold alerts"
+  ],
+  "success_metrics": [
+    "Engagement rate improvement",
+    "Content reach growth",
+    "Share of voice increase",
+    "Conversion rate from content",
+    "Time to content creation"
+  ],
+  "best_practices": [
+    "Establish content pillars aligned with brand",
+    "Create content templates for efficiency",
+    "Set performance benchmarks",
+    "Document successful content patterns",
+    "Regular competitive content audits"
+  ]
+}

@@ -13,10 +13,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flow-renderer": "^10.3.17",
+    "react-markdown": "^10.1.0",
     "react-pdf": "^7.5.1",
     "react-resizable-panels": "^3.0.6",
     "react-router-dom": "^7.9.3",
     "react-scripts": "5.0.1",
+    "remark-gfm": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

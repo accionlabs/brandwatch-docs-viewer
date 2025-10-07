@@ -1,0 +1,105 @@
+{
+  "workflow_id": "influencer_campaign_lifecycle",
+  "workflow_name": "Influencer Campaign Lifecycle",
+  "description": "End-to-end influencer marketing campaign from discovery to ROI measurement",
+  "modules_involved": ["consumer_research", "influence", "publish", "advertise", "measure", "reviews"],
+  "business_value": "Maximizes influencer campaign ROI through data-driven selection, coordinated content, and multi-channel amplification",
+  "workflow_steps": [
+    {
+      "step_id": 1,
+      "module": "consumer_research",
+      "module_flow_reference": null,
+      "step_description": "Research campaign themes",
+      "outputs": ["Trending topics", "Audience insights", "Content themes"],
+      "source_documents": ["docs/cross_module_influencer_campaign.md"]
+    },
+    {
+      "step_id": 2,
+      "module": "influence",
+      "module_flow_reference": null,
+      "step_description": "Identify and recruit influencers",
+      "inputs": ["Campaign themes", "Target audience"],
+      "outputs": ["Influencer list", "Partnership agreements"],
+      "source_documents": ["docs/cross_module_influencer_campaign.md"]
+    },
+    {
+      "step_id": 3,
+      "module": "publish",
+      "module_flow_reference": {
+        "flow_name": "Content Approval Workflow",
+        "flow_id": "BW_PUB_009",
+        "description": "Manage content creation and approval process"
+      },
+      "step_description": "Content creation and approval",
+      "inputs": ["Campaign brief", "Influencer partnerships"],
+      "outputs": ["Approved content", "Publishing schedule"],
+      "source_documents": ["docs/cross_module_influencer_campaign.md"]
+    },
+    {
+      "step_id": 4,
+      "module": "publish",
+      "module_flow_reference": {
+        "flow_name": "Bulk Post Scheduling",
+        "flow_id": "BW_PUB_008",
+        "description": "Execute synchronized content publishing across channels"
+      },
+      "step_description": "Launch campaign content",
+      "inputs": ["Approved content", "Optimal timing data"],
+      "outputs": ["Published content", "Initial metrics"],
+      "source_documents": ["docs/cross_module_influencer_campaign.md"]
+    },
+    {
+      "step_id": 5,
+      "module": "advertise",
+      "module_flow_reference": null,
+      "step_description": "Paid content amplification",
+      "inputs": ["Top performing content", "Target audiences"],
+      "outputs": ["Amplified reach", "Ad performance data"],
+      "source_documents": ["docs/cross_module_influencer_campaign.md"]
+    },
+    {
+      "step_id": 6,
+      "module": "measure",
+      "module_flow_reference": {
+        "flow_name": "Cross-Network Performance Analysis",
+        "flow_id": "cross_network_analysis",
+        "description": "Measure campaign KPIs and ROI across networks"
+      },
+      "step_description": "Analyze campaign performance",
+      "inputs": ["Publishing data", "Ad metrics", "Influencer metrics"],
+      "outputs": ["Performance report", "ROI analysis", "Insights"],
+      "source_documents": ["docs/cross_module_influencer_campaign.md"]
+    },
+    {
+      "step_id": 7,
+      "module": "reviews",
+      "module_flow_reference": null,
+      "step_description": "Capture customer sentiment",
+      "inputs": ["Campaign products/services"],
+      "outputs": ["Customer feedback", "Sentiment analysis", "Product insights"],
+      "source_documents": ["docs/cross_module_influencer_campaign.md"]
+    }
+  ],
+  "workflow_triggers": [
+    "Campaign planning cycle",
+    "Product launch",
+    "Seasonal campaigns",
+    "Brand awareness initiatives"
+  ],
+  "success_metrics": [
+    "Influencer reach and engagement",
+    "Content amplification rate",
+    "Campaign ROI",
+    "Brand sentiment improvement",
+    "Conversion attribution",
+    "Customer feedback scores"
+  ],
+  "best_practices": [
+    "Clear campaign briefs and guidelines",
+    "Authentic influencer partnerships",
+    "Content quality over quantity",
+    "Multi-channel amplification strategy",
+    "Real-time performance monitoring",
+    "Post-campaign relationship maintenance"
+  ]
+}

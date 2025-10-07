@@ -1,0 +1,95 @@
+{
+  "workflow_id": "crisis_management",
+  "workflow_name": "Crisis Management Workflow",
+  "description": "Real-time crisis detection, analysis, response, and tracking across multiple Brandwatch modules",
+  "modules_involved": ["listen", "consumer_research", "engage", "measure", "vizia"],
+  "business_value": "Enables rapid crisis response with coordinated multi-channel management and executive visibility",
+  "workflow_steps": [
+    {
+      "step_id": 1,
+      "module": "listen",
+      "module_flow_reference": {
+        "flow_name": "Creating and Managing Email Alerts",
+        "flow_id": "flow_005",
+        "description": "Configure real-time alerts for unusual mention volume or negative sentiment spikes"
+      },
+      "step_description": "Set up crisis detection alerts",
+      "outputs": ["Alert triggers", "Initial mention data"],
+      "source_documents": [
+        "docs/cross_module_crisis_management.md"
+      ]
+    },
+    {
+      "step_id": 2,
+      "module": "consumer_research",
+      "module_flow_reference": null,
+      "step_description": "Analyze crisis scope and sentiment",
+      "inputs": ["Alert data from Listen"],
+      "outputs": ["Crisis insights", "Sentiment analysis", "Key influencer identification"],
+      "source_documents": [
+        "docs/cross_module_crisis_management.md"
+      ]
+    },
+    {
+      "step_id": 3,
+      "module": "engage",
+      "module_flow_reference": {
+        "flow_name": "Create and Manage Cases",
+        "flow_id": "CASE_001",
+        "description": "Create cases for crisis-related customer interactions"
+      },
+      "step_description": "Execute crisis response strategy",
+      "inputs": ["Crisis insights", "Response templates"],
+      "outputs": ["Response metrics", "Customer interactions"],
+      "source_documents": [
+        "docs/cross_module_crisis_management.md"
+      ]
+    },
+    {
+      "step_id": 4,
+      "module": "measure",
+      "module_flow_reference": {
+        "flow_name": "Create Dashboard Using Template",
+        "flow_id": "dashboard_creation_template",
+        "description": "Track sentiment recovery and response effectiveness"
+      },
+      "step_description": "Monitor crisis recovery metrics",
+      "inputs": ["Response data", "Engagement metrics"],
+      "outputs": ["Performance reports", "Recovery timeline"],
+      "source_documents": [
+        "docs/cross_module_crisis_management.md"
+      ]
+    },
+    {
+      "step_id": 5,
+      "module": "vizia",
+      "module_flow_reference": null,
+      "step_description": "Executive crisis reporting",
+      "inputs": ["All module metrics"],
+      "outputs": ["Executive dashboard", "Stakeholder reports"],
+      "source_documents": [
+        "docs/cross_module_crisis_management.md"
+      ]
+    }
+  ],
+  "workflow_triggers": [
+    "Mention volume spike >300% normal",
+    "Negative sentiment >70%",
+    "Trending crisis hashtag",
+    "Manual activation"
+  ],
+  "success_metrics": [
+    "Time to crisis detection",
+    "Response time to customer concerns",
+    "Sentiment recovery rate",
+    "Message reach and engagement",
+    "Crisis resolution time"
+  ],
+  "best_practices": [
+    "Pre-configure crisis response templates",
+    "Establish escalation protocols",
+    "Define stakeholder notification lists",
+    "Create crisis severity levels",
+    "Document post-crisis learnings"
+  ]
+}

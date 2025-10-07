@@ -4,12 +4,16 @@
   gap: 0.5rem;
 }
 
+a.flow-item,
 .flow-item {
+  display: block;
   padding: 0.75rem;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.2s;
   border: 1px solid transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 .flow-item:hover {
