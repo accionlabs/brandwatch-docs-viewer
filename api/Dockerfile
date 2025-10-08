@@ -1,15 +1,40 @@
-# Stage 1: Build the React app
-FROM node:22-alpine as builder
-WORKDIR /app
+# Base image
+FROM node:18-alpine
+ 
+# Set working directory
+WORKDIR /usr/src
+ 
+# Copy package files first for caching
 COPY package.json package-lock.json ./
+ 
+# Prevent Puppeteer from downloading Chromium
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+ 
+# Install Chromium and required dependencies
+RUN apk update && apk add --no-cache \
+    chromium \
+    nss \
+    freetype \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont \
+    udev \
+    bash \
+    --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
+    --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
+ 
+# Install Node.js dependencies
 RUN npm install
+ 
+# Copy application source code
 COPY . .
+ 
+# Build your app (if you have a build step)
 RUN npm run build
-
-# Stage 2: Serve the React app using a lightweight server
-FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf 
-
+ 
+# Expose app port
 EXPOSE 3001
-CMD ["nginx", "-g", "daemon off;"]
+ 
+# Start the app
+CMD ["npm", "start"]
